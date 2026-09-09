@@ -40,6 +40,7 @@ STAGE = "BFtol"          # Twisted Timespace
 STAGE_COMMENT = "Twisted Timespace"
 SPAWN_POINTS = [0, 1, 2]  # TRESPASS disponiveis no BFtol
 TIME_LIMIT = 1800        # 30 minutos
+EX_TIME_LIMIT = 900.0    # 15 minutos: janela do Ultimate Finish (ex_success)
 LEVEL = 85
 DIFFICULTY = 5
 QUEST_ID = "TMQ_JUN_01"
@@ -101,6 +102,9 @@ TEXTS = {
     "warning": ("-Defeat the Junin of the Future",
                 "-Derrote o Junin do Futuro",
                 "-Derrota al Junin del Futuro"),
+    "ex_success": ("-Clear in under 15 minutes",
+                   "-Zere em menos de 15 minutos",
+                   "-Termínala en menos de 15 minutos"),
 }
 
 
@@ -167,7 +171,7 @@ def build_quest() -> str:
         mods.append(f"X2mMod {ident}\n{{\n\tname: \"{name}\"\n\tguid: \"{guid}\"\n}}\n")
 
     texts = []
-    for i, key in enumerate(("title", "success", "failure", "outline", "warning")):
+    for i, key in enumerate(("title", "success", "failure", "outline", "warning", "ex_success")):
         en, pt, es = TEXTS[key]
         texts.append(
             f"TextEntry {QUEST_ID}_{i}\n{{\n\ten: \"{en}\"\n\tpt: \"{pt}\"\n\tes: \"{es}\"\n}}\n")
@@ -183,6 +187,7 @@ def build_quest() -> str:
 \tfailure: {QUEST_ID}_2 ; -All team HP depleted / time expires
 \toutline: {QUEST_ID}_3 ; Seventy-six Junins are flooding the Twisted Timespace.
 \twarning: {QUEST_ID}_4 ; -Defeat the Junin of the Future
+\tex_success: {QUEST_ID}_5 ; -Clear in under 15 minutes
 
 \ti40: 1
 \tparent_quest: "TMQ_1400" ; Being a Time Patroller
@@ -328,11 +333,11 @@ def build_positions() -> str:
 # ----------------------------------------------------------------- script ---
 def build_script() -> str:
     n_pairs = N_JUNINS // 2
-    out = ["Flag FlagFase2", "", "Script", "{"]
+    out = ["Flag FlagFase2", "Flag FlagExOpen ; janela do Ultimate Finish (15 min)", "", "Script", "{"]
 
     # State 0 - inicializacao
     out += ["\tState 0", "\t{", "\t\tEvent 0", "\t\t{", "\t\t\tCondition Always", ""]
-    for a in ("InitQuest", "Unk20", "BattleModeStart",
+    for a in ("InitQuest", "SetFlag(FlagExOpen, true)", "Unk20", "BattleModeStart",
               f"ShowEnemyKoCounter(true, {N_JUNINS})",
               "DontRemoveOnKo(JuninFuturoEnemy)",
               f'SetThereAreEnemies("{STAGE}", true)',
@@ -373,6 +378,7 @@ def build_script() -> str:
     # State 2 - entrada do chefe
     out += ["\tState 2", "\t{", "\t\tEvent 0", "\t\t{", "\t\t\tCondition Always", "",
             f'\t\t\tAction CharaSpawn(JuninFuturoEnemy, {SPAWN_POINTS[2]}, -1, 20, "{STAGE}", 0)',
+            "\t\t\tAction ShowWarning ; -Defeat the Junin of the Future",
             "\t\t\tAction GotoState(3)", "\t\t}", "\t}", ""]
 
     # State 3 - chefe em duas fases
@@ -387,11 +393,38 @@ def build_script() -> str:
             "\t\t\tCondition CheckFlag(FlagFase2, true)", "",
             "\t\t\tAction GotoState(4)", "\t\t}", "\t}", ""]
 
-    # State 4 - conclusao
+    # State 4 - conclusao: se ainda dentro da janela (FlagExOpen true),
+    # vai pro State 5 (ULTIMATE_FINISH); senao, encerra normal.
     out += ["\tState 4", "\t{", "\t\tEvent 0", "\t\t{", "\t\t\tCondition Always", "",
-            "\t\t\tAction QuestFinishState(COMPLETE)",
+            "\t\t\tAction QuestFinishState(COMPLETE)", "\t\t}", "",
+            "\t\tEvent 1", "\t\t{", "\t\t\tCondition CheckFlag(FlagExOpen, false)", "",
+            "\t\t\tAction QuestClear", "\t\t}", "",
+            "\t\tEvent 2", "\t\t{", "\t\t\tCondition CheckFlag(FlagExOpen, true)", "",
+            "\t\t\tAction GotoState(5)", "\t\t}", "\t}", "",
+            "\tState 5", "\t{", "\t\tEvent 0", "\t\t{", "\t\t\tCondition Always", "",
+            "\t\t\tAction QuestFinishState(ULTIMATE_FINISH)",
             "\t\t\tAction QuestClear", "\t\t}", "\t}", "}"]
     return "\n".join(out) + "\n"
+
+
+def build_script1() -> str:
+    """script1.x2qs roda em paralelo ao fluxo principal (estado vigia):
+    inicia a FlagExOpen em true e, depois de 15 min (900s), fecha a janela
+    do Ultimate Finish (SetFlag false) - mesmo padrao do TMQ_URA_01."""
+    return "\n".join([
+        "; script vigia: controla a janela de 15 min do Ultimate Finish.",
+        "Script", "{",
+        "\tState 0", "\t{",
+        "\t\tEvent -1", "\t\t{", "\t\t\tCondition Never", "\t\t}", "",
+        "\t\tEvent 0", "\t\t{", "\t\t\tCondition Always", "",
+        "\t\t\tAction GotoState(1)", "\t\t}", "\t}", "",
+        "\tState 1", "\t{",
+        "\t\tEvent -1", "\t\t{", "\t\t\tCondition Never", "\t\t}", "",
+        "\t\tEvent 0", "\t\t{",
+        f"\t\t\tCondition TimePassed(>=, {EX_TIME_LIMIT:.1f}) ; {EX_TIME_LIMIT / 60:.0f} min", "",
+        "\t\t\tAction SetFlag(FlagExOpen, false)",
+        "\t\t}", "\t}", "}", "",
+    ])
 
 
 def main() -> None:
@@ -402,6 +435,7 @@ def main() -> None:
         "dialogue.x2qs": "",          # sem dialogo: os Junins so apanham em silencio
         "positions.x2qs": build_positions(),
         "script.x2qs": build_script(),
+        "script1.x2qs": build_script1(),  # vigia: janela de 15 min do Ultimate Finish
     }
     for name, body in files.items():
         with open(os.path.join(OUT, name), "w", encoding="utf-8") as fh:

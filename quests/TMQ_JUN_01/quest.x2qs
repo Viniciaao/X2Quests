@@ -151,6 +151,13 @@ TextEntry TMQ_JUN_01_4
 	es: "-Derrota al Junin del Futuro"
 }
 
+TextEntry TMQ_JUN_01_5
+{
+	en: "-Clear in under 15 minutes"
+	pt: "-Zere em menos de 15 minutos"
+	es: "-Termínala en menos de 15 minutos"
+}
+
 ItemCollection Collection60
 {
 	ItemCollectionEntry { item: 0 type: MATERIAL i6: 1 i8: 2 i10: 0 } ; Small Mix Capsule
@@ -249,6 +256,7 @@ Quest TMQ_JUN_01
 	failure: TMQ_JUN_01_2 ; -All team HP depleted / time expires
 	outline: TMQ_JUN_01_3 ; Seventy-six Junins are flooding the Twisted Timespace.
 	warning: TMQ_JUN_01_4 ; -Defeat the Junin of the Future
+	ex_success: TMQ_JUN_01_5 ; -Clear in under 15 minutes
 
 	i40: 1
 	parent_quest: "TMQ_1400" ; Being a Time Patroller

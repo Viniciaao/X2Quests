@@ -1,4 +1,5 @@
 Flag FlagFase2
+Flag FlagExOpen ; janela do Ultimate Finish (15 min)
 
 Script
 {
@@ -9,6 +10,7 @@ Script
 			Condition Always
 
 			Action InitQuest
+			Action SetFlag(FlagExOpen, true)
 			Action Unk20
 			Action BattleModeStart
 			Action ShowEnemyKoCounter(true, 76)
@@ -353,6 +355,7 @@ Script
 			Condition Always
 
 			Action CharaSpawn(JuninFuturoEnemy, 2, -1, 20, "BFtol", 0)
+			Action ShowWarning ; -Defeat the Junin of the Future
 			Action GotoState(3)
 		}
 	}
@@ -385,6 +388,30 @@ Script
 			Condition Always
 
 			Action QuestFinishState(COMPLETE)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(FlagExOpen, false)
+
+			Action QuestClear
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(FlagExOpen, true)
+
+			Action GotoState(5)
+		}
+	}
+
+	State 5
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action QuestFinishState(ULTIMATE_FINISH)
 			Action QuestClear
 		}
 	}
