@@ -1,0 +1,320 @@
+CharPosition PlayerPosition
+{
+	char: Player ; Player
+	stage: "BFkoh" ; Capsule Corporation
+	position: "QUEST_0304_POS_00"
+	type: 3
+	i40: 0
+	i50: 0
+}
+
+CharPosition Player2Position
+{
+	char: Player2 ; Player
+	stage: "BFkoh" ; Capsule Corporation
+	position: "QUEST_0304_POS_01"
+	type: 3
+	i40: 0
+	i50: 0
+}
+
+CharPosition Player3Position
+{
+	char: Player3 ; Player
+	stage: "BFkoh" ; Capsule Corporation
+	position: "QUEST_0304_POS_02"
+	type: 3
+	i40: 0
+	i50: 0
+}
+
+CharPosition TeacherAllyPosition
+{
+	char: TeacherAlly ; Teacher
+	stage: "BFkoh" ; Capsule Corporation
+	position: "MSTSPASS_0"
+	type: 3
+	i40: 0
+	i50: 0
+}
+
+ItemPosition Collection61Position
+{
+	item_collection: Collection61 
+	stage: "BFkoh" ; Capsule Corporation
+	position: "QUEST_ITEM_00"
+	chance: 50
+}
+
+ItemPosition Collection61Position2
+{
+	item_collection: Collection61 
+	stage: "BFkoh" ; Capsule Corporation
+	position: "QUEST_ITEM_01"
+	chance: 50
+}
+
+ItemPosition Collection61Position3
+{
+	item_collection: Collection61 
+	stage: "BFkoh" ; Capsule Corporation
+	position: "QUEST_ITEM_02"
+	chance: 50
+}
+
+ItemPosition Collection61Position4
+{
+	item_collection: Collection61 
+	stage: "BFkoh" ; Capsule Corporation
+	position: "QUEST_ITEM_03"
+	chance: 50
+}
+
+ItemPosition Collection61Position5
+{
+	item_collection: Collection61 
+	stage: "BFkoh" ; Capsule Corporation
+	position: "QUEST_ITEM_04"
+	chance: 50
+}
+
+ItemPosition Collection61Position6
+{
+	item_collection: Collection61 
+	stage: "BFkoh" ; Capsule Corporation
+	position: "QUEST_ITEM_05"
+	chance: 50
+}
+
+CharPosition GuldoEnemyPosition
+{
+	char: GuldoEnemy ; Guldo - Battle Suit 1
+	stage: "BFsky" ; West City (Industrial Sector)
+	position: "QUEST_0304_POS_00"
+	type: 2
+	i40: 0
+	i50: 0
+}
+
+CharPosition JeiceEnemyPosition
+{
+	char: JeiceEnemy ; Jeice - Battle Suit 1
+	stage: "BFsky" ; West City (Industrial Sector)
+	position: "QUEST_0304_POS_01"
+	type: 2
+	i40: 0
+	i50: 0
+}
+
+ItemPosition Collection71Position
+{
+	item_collection: Collection71 
+	stage: "BFsky" ; West City (Industrial Sector)
+	position: "QUEST_ITEM_00"
+	chance: 20
+}
+
+ItemPosition Collection71Position2
+{
+	item_collection: Collection71 
+	stage: "BFsky" ; West City (Industrial Sector)
+	position: "QUEST_ITEM_01"
+	chance: 20
+}
+
+ItemPosition Collection71Position3
+{
+	item_collection: Collection71 
+	stage: "BFsky" ; West City (Industrial Sector)
+	position: "QUEST_ITEM_02"
+	chance: 20
+}
+
+ItemPosition Collection71Position4
+{
+	item_collection: Collection71 
+	stage: "BFsky" ; West City (Industrial Sector)
+	position: "QUEST_ITEM_03"
+	chance: 20
+}
+
+ItemPosition Collection71Position5
+{
+	item_collection: Collection71 
+	stage: "BFsky" ; West City (Industrial Sector)
+	position: "QUEST_ITEM_04"
+	chance: 20
+}
+
+ItemPosition Collection71Position6
+{
+	item_collection: Collection71 
+	stage: "BFsky" ; West City (Industrial Sector)
+	position: "QUEST_ITEM_05"
+	chance: 20
+}
+
+ItemPosition Collection71Position7
+{
+	item_collection: Collection71 
+	stage: "BFsky" ; West City (Industrial Sector)
+	position: "QUEST_ITEM_06"
+	chance: 20
+}
+
+ItemPosition Collection71Position8
+{
+	item_collection: Collection71 
+	stage: "BFsky" ; West City (Industrial Sector)
+	position: "QUEST_ITEM_07"
+	chance: 20
+}
+
+ItemPosition Collection71Position9
+{
+	item_collection: Collection71 
+	stage: "BFsky" ; West City (Industrial Sector)
+	position: "QUEST_ITEM_08"
+	chance: 20
+}
+
+ItemPosition Collection71Position10
+{
+	item_collection: Collection71 
+	stage: "BFsky" ; West City (Industrial Sector)
+	position: "QUEST_ITEM_09"
+	chance: 20
+}
+
+ItemPosition Collection71Position11
+{
+	item_collection: Collection71 
+	stage: "BFsky" ; West City (Industrial Sector)
+	position: "QUEST_ITEM_10"
+	chance: 20
+}
+
+ItemPosition Collection71Position12
+{
+	item_collection: Collection71 
+	stage: "BFsky" ; West City (Industrial Sector)
+	position: "QUEST_ITEM_11"
+	chance: 20
+}
+
+ItemPosition Collection71Position13
+{
+	item_collection: Collection71 
+	stage: "BFsky" ; West City (Industrial Sector)
+	position: "QUEST_ITEM_12"
+	chance: 20
+}
+
+ItemPosition Collection71Position14
+{
+	item_collection: Collection71 
+	stage: "BFsky" ; West City (Industrial Sector)
+	position: "QUEST_ITEM_13"
+	chance: 20
+}
+
+ItemPosition Collection71Position15
+{
+	item_collection: Collection71 
+	stage: "BFsky" ; West City (Industrial Sector)
+	position: "QUEST_ITEM_14"
+	chance: 20
+}
+
+ItemPosition Collection71Position16
+{
+	item_collection: Collection71 
+	stage: "BFsky" ; West City (Industrial Sector)
+	position: "QUEST_ITEM_15"
+	chance: 20
+}
+
+CharPosition RecoomeEnemyPosition
+{
+	char: RecoomeEnemy ; Recoome - Battle Suit 2
+	stage: "BFspe" ; West City (Suburbs)
+	position: "QUEST_0304_POS_00"
+	type: 2
+	i40: 0
+	i50: 0
+}
+
+CharPosition BurterEnemyPosition
+{
+	char: BurterEnemy ; Burter - Battle Suit 2
+	stage: "BFspe" ; West City (Suburbs)
+	position: "QUEST_0304_POS_01"
+	type: 2
+	i40: 0
+	i50: 0
+}
+
+ItemPosition Collection81Position
+{
+	item_collection: Collection81 
+	stage: "BFspe" ; West City (Suburbs)
+	position: "QUEST_ITEM_00"
+	chance: 40
+}
+
+ItemPosition Collection81Position2
+{
+	item_collection: Collection81 
+	stage: "BFspe" ; West City (Suburbs)
+	position: "QUEST_ITEM_01"
+	chance: 40
+}
+
+ItemPosition Collection81Position3
+{
+	item_collection: Collection81 
+	stage: "BFspe" ; West City (Suburbs)
+	position: "QUEST_ITEM_02"
+	chance: 40
+}
+
+ItemPosition Collection81Position4
+{
+	item_collection: Collection81 
+	stage: "BFspe" ; West City (Suburbs)
+	position: "QUEST_ITEM_03"
+	chance: 40
+}
+
+ItemPosition Collection81Position5
+{
+	item_collection: Collection81 
+	stage: "BFspe" ; West City (Suburbs)
+	position: "QUEST_ITEM_04"
+	chance: 40
+}
+
+ItemPosition Collection81Position6
+{
+	item_collection: Collection81 
+	stage: "BFspe" ; West City (Suburbs)
+	position: "QUEST_ITEM_05"
+	chance: 40
+}
+
+ItemPosition Collection81Position7
+{
+	item_collection: Collection81 
+	stage: "BFspe" ; West City (Suburbs)
+	position: "QUEST_ITEM_06"
+	chance: 40
+}
+
+ItemPosition Collection81Position8
+{
+	item_collection: Collection81 
+	stage: "BFspe" ; West City (Suburbs)
+	position: "QUEST_ITEM_07"
+	chance: 40
+}
+

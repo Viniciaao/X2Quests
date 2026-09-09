@@ -1,0 +1,263 @@
+
+TextAudioEntry GinyuOne
+{
+  en: "¡La fuerza de Kefla ahora es mio! ¡Este es el cuerpo perfecto para el Capitán Ginyu!"
+  voice: ""
+}
+
+TextAudioEntry GinyuTwo
+{
+  en: "¡Ahora veamos si puedes derrotarme antes de que descubra todo el potencial de este cuerpo!"
+  voice: ""
+}
+
+TextAudioEntry GinyuThree
+{
+  en: "La agilidad y flexibilidad de este cuerpo es increible"
+  voice: ""
+}
+
+TextAudioEntry GinyuFour
+{
+  en: "¡No subestimes al Capitán Ginyu, aunque esté usando este cuerpo!"
+  voice: ""
+}
+
+TextAudioEntry GinyuFive
+{
+  en: "¡Esta energía no se agota! ¡Puedo seguir luchando sin cansarme! ¡Este cuerpo es perfecto para una batalla interminable!"
+  voice: ""
+}
+
+TextAudioEntry GinyuSix
+{
+  en: "¡Con todas estas habilidades, ni siquiera yo sé de qué soy capaz!"
+  voice: ""
+}
+
+TextAudioEntry GinyuSeven
+{
+  en: "I'll pluck my comrades out of this pickle! Captain Ginyu is here to save the day!"
+  voice: ""
+}
+
+TextAudioEntry GinyuEight
+{
+  en: "A real challenge for once? Alright, you have my undivied attention."
+  voice: ""
+}
+
+TextAudioEntry GinyuNine
+{
+  en: "Least you can do is last long enough for me to have some fun..."
+  voice: ""
+}
+
+TextAudioEntry GinyuTen
+{
+  en: "I'd be happy to take you on... Because that's the kind of compassionate leader I am!"
+  voice: ""
+}
+
+TextAudioEntry GinyuEleven
+{
+  en: "You're all so quick and\nannoying... like stinking flies!"
+  voice: ""
+}
+
+TextAudioEntry GinyuTwelve
+{
+  en: "You're not Goku... wait a sec... did you have the same idea to switch bodies with him too?"
+  voice: ""
+}
+Dialogue Dialogue0
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "KFL" ; Recoome
+		costume: 0
+		transformation: -1
+
+		text_audio: GinyuOne
+		i8: 0
+	}
+	
+}
+
+Dialogue Dialogue1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "KFL" ; Recoome
+		costume: 0
+		transformation: -1
+
+		text_audio: GinyuTwo
+		i8: 0
+	}
+	
+}
+
+Dialogue Dialogue2
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "GVD" ; Recoome
+		costume: 5
+		transformation: -1
+
+		text_audio: GinyuThree
+		i8: 0
+	}
+	
+}
+
+Dialogue Dialogue3
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "GVD" ; Recoome
+		costume: 5
+		transformation: -1
+
+		text_audio: GinyuFour
+		i8: 0
+	}
+	
+}
+
+Dialogue Dialogue4
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "G18" ; Recoome
+		costume: 0
+		transformation: -1
+
+		text_audio: GinyuFive
+		i8: 0
+	}
+	
+}
+
+Dialogue Dialogue5
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "TE1" ; Recoome
+		costume: 0
+		transformation: -1
+
+		text_audio: GinyuSix
+		i8: 0
+	}
+	
+}
+
+Dialogue Dialogue6
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "VDS" ; Recoome
+		costume: 0
+		transformation: -1
+
+		text_audio: GinyuSeven
+		i8: 0
+	}
+	
+}
+
+Dialogue Dialogue7
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "VDS" ; Recoome
+		costume: 0
+		transformation: -1
+
+		text_audio: GinyuEight
+		i8: 0
+	}
+	
+}
+
+Dialogue Dialogue8
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "VDS" ; Recoome
+		costume: 0
+		transformation: -1
+
+		text_audio: GinyuNine
+		i8: 0
+	}
+	
+}
+
+Dialogue Dialogue9
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "VDS" ; Recoome
+		costume: 0
+		transformation: -1
+
+		text_audio: GinyuTen
+		i8: 0
+	}
+	
+}
+
+Dialogue Dialogue10
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "VDS" ; Recoome
+		costume: 0
+		transformation: -1
+
+		text_audio: GinyuEleven
+		i8: 0
+	}
+	
+}
+
+Dialogue Dialogue11
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "VDS" ; Recoome
+		costume: 0
+		transformation: -1
+
+		text_audio: GinyuTwelve
+		i8: 0
+	}
+	
+}
