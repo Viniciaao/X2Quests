@@ -144,6 +144,8 @@ def qxd_char(ident: str, char_ref: str, costume: int, skills: list, *,
 
 def qml_char(ident: str, base: str, index: int, *, ai: str, team: str,
              spawn_at_start: str) -> str:
+    # o compilador exige o bloco de skills no QmlChar (super1..awaken);
+    # -1 = nao sobrescreve, herda os valores do QxdChar base (vanilla).
     return "\n".join([
         f"QmlChar {ident} : {base}", "{",
         f"\tbattle_index: {index}", "\ti12: 0",
@@ -151,7 +153,10 @@ def qml_char(ident: str, base: str, index: int, *, ai: str, team: str,
         f"\tspawn_at_start: {spawn_at_start}", "",
         f"\tai: {ai}", f"\tteam: {team}", "",
         "\ti36: 9999", "\ti40: 5", "\ti44: 0", "\ti48: -1",
-        "\ti50: -1", "\ti52: 0", "\ti56: 0", "}",
+        "\ti50: -1", "\ti52: 0", "\ti56: 0", "",
+        "\tsuper1: -1", "\tsuper2: -1", "\tsuper3: -1", "\tsuper4: -1", "",
+        "\tultimate1: -1", "\tultimate2: -1", "",
+        "\tevasive: -1", "\tblast: -1", "\tawaken: -1", "}",
     ])
 
 

@@ -295,6 +295,18 @@ QmlChar Player : PlayerBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Player2 : PlayerBase
@@ -314,6 +326,18 @@ QmlChar Player2 : PlayerBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Player3 : PlayerBase
@@ -333,6 +357,18 @@ QmlChar Player3 : PlayerBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 ; 76 Junins. Cada um tem o seu proprio QmlChar para que o
@@ -355,6 +391,18 @@ QmlChar Junin01 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin02 : JuninEmoBase
@@ -374,6 +422,18 @@ QmlChar Junin02 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin03 : JuninBruto
@@ -393,6 +453,18 @@ QmlChar Junin03 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin04 : JuninEmoBase
@@ -412,6 +484,18 @@ QmlChar Junin04 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin05 : JuninBruto
@@ -431,6 +515,18 @@ QmlChar Junin05 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin06 : JuninEmoBase
@@ -450,6 +546,18 @@ QmlChar Junin06 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin07 : JuninBruto
@@ -469,6 +577,18 @@ QmlChar Junin07 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin08 : JuninEmoBase
@@ -488,6 +608,18 @@ QmlChar Junin08 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin09 : JuninBruto
@@ -507,6 +639,18 @@ QmlChar Junin09 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin10 : JuninEmoBase
@@ -526,6 +670,18 @@ QmlChar Junin10 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin11 : JuninBruto
@@ -545,6 +701,18 @@ QmlChar Junin11 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin12 : JuninEmoBase
@@ -564,6 +732,18 @@ QmlChar Junin12 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin13 : JuninBruto
@@ -583,6 +763,18 @@ QmlChar Junin13 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin14 : JuninEmoBase
@@ -602,6 +794,18 @@ QmlChar Junin14 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin15 : JuninBruto
@@ -621,6 +825,18 @@ QmlChar Junin15 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin16 : JuninEmoBase
@@ -640,6 +856,18 @@ QmlChar Junin16 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin17 : JuninBruto
@@ -659,6 +887,18 @@ QmlChar Junin17 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin18 : JuninEmoBase
@@ -678,6 +918,18 @@ QmlChar Junin18 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin19 : JuninBruto
@@ -697,6 +949,18 @@ QmlChar Junin19 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin20 : JuninEmoBase
@@ -716,6 +980,18 @@ QmlChar Junin20 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin21 : JuninBruto
@@ -735,6 +1011,18 @@ QmlChar Junin21 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin22 : JuninEmoBase
@@ -754,6 +1042,18 @@ QmlChar Junin22 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin23 : JuninBruto
@@ -773,6 +1073,18 @@ QmlChar Junin23 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin24 : JuninEmoBase
@@ -792,6 +1104,18 @@ QmlChar Junin24 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin25 : JuninBruto
@@ -811,6 +1135,18 @@ QmlChar Junin25 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin26 : JuninEmoBase
@@ -830,6 +1166,18 @@ QmlChar Junin26 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin27 : JuninBruto
@@ -849,6 +1197,18 @@ QmlChar Junin27 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin28 : JuninEmoBase
@@ -868,6 +1228,18 @@ QmlChar Junin28 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin29 : JuninBruto
@@ -887,6 +1259,18 @@ QmlChar Junin29 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin30 : JuninEmoBase
@@ -906,6 +1290,18 @@ QmlChar Junin30 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin31 : JuninBruto
@@ -925,6 +1321,18 @@ QmlChar Junin31 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin32 : JuninEmoBase
@@ -944,6 +1352,18 @@ QmlChar Junin32 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin33 : JuninBruto
@@ -963,6 +1383,18 @@ QmlChar Junin33 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin34 : JuninEmoBase
@@ -982,6 +1414,18 @@ QmlChar Junin34 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin35 : JuninBruto
@@ -1001,6 +1445,18 @@ QmlChar Junin35 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin36 : JuninEmoBase
@@ -1020,6 +1476,18 @@ QmlChar Junin36 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin37 : JuninBruto
@@ -1039,6 +1507,18 @@ QmlChar Junin37 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin38 : JuninEmoBase
@@ -1058,6 +1538,18 @@ QmlChar Junin38 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin39 : JuninBruto
@@ -1077,6 +1569,18 @@ QmlChar Junin39 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin40 : JuninEmoBase
@@ -1096,6 +1600,18 @@ QmlChar Junin40 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin41 : JuninBruto
@@ -1115,6 +1631,18 @@ QmlChar Junin41 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin42 : JuninEmoBase
@@ -1134,6 +1662,18 @@ QmlChar Junin42 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin43 : JuninBruto
@@ -1153,6 +1693,18 @@ QmlChar Junin43 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin44 : JuninEmoBase
@@ -1172,6 +1724,18 @@ QmlChar Junin44 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin45 : JuninBruto
@@ -1191,6 +1755,18 @@ QmlChar Junin45 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin46 : JuninEmoBase
@@ -1210,6 +1786,18 @@ QmlChar Junin46 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin47 : JuninBruto
@@ -1229,6 +1817,18 @@ QmlChar Junin47 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin48 : JuninEmoBase
@@ -1248,6 +1848,18 @@ QmlChar Junin48 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin49 : JuninBruto
@@ -1267,6 +1879,18 @@ QmlChar Junin49 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin50 : JuninEmoBase
@@ -1286,6 +1910,18 @@ QmlChar Junin50 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin51 : JuninBruto
@@ -1305,6 +1941,18 @@ QmlChar Junin51 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin52 : JuninEmoBase
@@ -1324,6 +1972,18 @@ QmlChar Junin52 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin53 : JuninBruto
@@ -1343,6 +2003,18 @@ QmlChar Junin53 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin54 : JuninEmoBase
@@ -1362,6 +2034,18 @@ QmlChar Junin54 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin55 : JuninBruto
@@ -1381,6 +2065,18 @@ QmlChar Junin55 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin56 : JuninEmoBase
@@ -1400,6 +2096,18 @@ QmlChar Junin56 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin57 : JuninBruto
@@ -1419,6 +2127,18 @@ QmlChar Junin57 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin58 : JuninEmoBase
@@ -1438,6 +2158,18 @@ QmlChar Junin58 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin59 : JuninBruto
@@ -1457,6 +2189,18 @@ QmlChar Junin59 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin60 : JuninEmoBase
@@ -1476,6 +2220,18 @@ QmlChar Junin60 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin61 : JuninBruto
@@ -1495,6 +2251,18 @@ QmlChar Junin61 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin62 : JuninEmoBase
@@ -1514,6 +2282,18 @@ QmlChar Junin62 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin63 : JuninBruto
@@ -1533,6 +2313,18 @@ QmlChar Junin63 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin64 : JuninEmoBase
@@ -1552,6 +2344,18 @@ QmlChar Junin64 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin65 : JuninBruto
@@ -1571,6 +2375,18 @@ QmlChar Junin65 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin66 : JuninEmoBase
@@ -1590,6 +2406,18 @@ QmlChar Junin66 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin67 : JuninBruto
@@ -1609,6 +2437,18 @@ QmlChar Junin67 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin68 : JuninEmoBase
@@ -1628,6 +2468,18 @@ QmlChar Junin68 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin69 : JuninBruto
@@ -1647,6 +2499,18 @@ QmlChar Junin69 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin70 : JuninEmoBase
@@ -1666,6 +2530,18 @@ QmlChar Junin70 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin71 : JuninBruto
@@ -1685,6 +2561,18 @@ QmlChar Junin71 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin72 : JuninEmoBase
@@ -1704,6 +2592,18 @@ QmlChar Junin72 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin73 : JuninBruto
@@ -1723,6 +2623,18 @@ QmlChar Junin73 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin74 : JuninEmoBase
@@ -1742,6 +2654,18 @@ QmlChar Junin74 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin75 : JuninBruto
@@ -1761,6 +2685,18 @@ QmlChar Junin75 : JuninBruto
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar Junin76 : JuninEmoBase
@@ -1780,6 +2716,18 @@ QmlChar Junin76 : JuninEmoBase
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar JuninFuturoEnemy : JuninFuturoFase1
@@ -1799,6 +2747,18 @@ QmlChar JuninFuturoEnemy : JuninFuturoFase1
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 ; battle_index diferente do fase 1: ModelChange exige indices distintos.
@@ -1819,6 +2779,18 @@ QmlChar JuninFuturoEnemy2 : JuninFuturoFase2
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
 
 QmlChar TeacherAlly : Teacher
@@ -1838,4 +2810,16 @@ QmlChar TeacherAlly : Teacher
 	i50: -1
 	i52: 0
 	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
 }
