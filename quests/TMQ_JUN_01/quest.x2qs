@@ -275,10 +275,10 @@ Quest TMQ_JUN_01
 	start_stage: "BFtol" ; Twisted Timespace
 	start_demo: 0
 
-	CharPortrait { char: "HUM" costume: 0 i40: 0 i44: 0 }
-	CharPortrait { char: JuninChar costume: 1 i40: 0 i44: 0 }
-	CharPortrait { char: JuninEmoChar costume: 0 i40: 0 i44: 0 }
-	CharPortrait { char: JuninFuturoChar costume: 1 i40: 0 i44: 0 }
+	CharPortrait { char: "HUM" costume: 0 trans: -1 }
+	CharPortrait { char: JuninChar costume: 1 trans: -1 }
+	CharPortrait { char: JuninEmoChar costume: 0 trans: -1 }
+	CharPortrait { char: JuninFuturoChar costume: 1 trans: -1 }
 
 	ItemReward { item: Collection60 type: COLLECTION condition: 1 chance: 100 flags: 0 i12: 0 i20: 0 }
 	ItemReward { item: Collection70 type: COLLECTION condition: 0 chance: 100 flags: 0 i12: 0 i20: 0 }

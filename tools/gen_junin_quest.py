@@ -209,10 +209,10 @@ def build_quest() -> str:
 \tstart_stage: "{STAGE}" ; {STAGE_COMMENT}
 \tstart_demo: 0
 
-\tCharPortrait {{ char: "HUM" costume: 0 i40: 0 i44: 0 }}
-\tCharPortrait {{ char: JuninChar costume: 1 i40: 0 i44: 0 }}
-\tCharPortrait {{ char: JuninEmoChar costume: 0 i40: 0 i44: 0 }}
-\tCharPortrait {{ char: JuninFuturoChar costume: 1 i40: 0 i44: 0 }}
+\tCharPortrait {{ char: "HUM" costume: 0 trans: -1 }}
+\tCharPortrait {{ char: JuninChar costume: 1 trans: -1 }}
+\tCharPortrait {{ char: JuninEmoChar costume: 0 trans: -1 }}
+\tCharPortrait {{ char: JuninFuturoChar costume: 1 trans: -1 }}
 
 \tItemReward {{ item: Collection60 type: COLLECTION condition: 1 chance: 100 flags: 0 i12: 0 i20: 0 }}
 \tItemReward {{ item: Collection70 type: COLLECTION condition: 0 chance: 100 flags: 0 i12: 0 i20: 0 }}
