@@ -272,10 +272,32 @@ def build_quest() -> str:
 
 
 # ------------------------------------------------------------------ chars ---
+def qxd_special_char(ident: str, char_code: str, ait: int, comment: str = "") -> str:
+    """QxdSpecialChar completo (PlayerBase/Teacher), como nos quests vanilla:
+    o compilador exige 'costume' e o bloco inteiro, nao so 'char'."""
+    lines = [f"QxdSpecialChar {ident}", "{", f"\tchar: {char_code}",
+             "\tcostume: 0", "\ttransformation: -1", "\tspecial_effect: -1", "",
+             "\ti12: 0", "\tlevel: 1", "\thealth: -1.0", "\tf24: -1.0",
+             "\tki: -1.0", "\tstamina: -1.0", "\tatk: -1.0", "\tki_atk: -1.0",
+             "\tsuper_atk: -1.0", "\tsuper_ki: -1.0", "\tatk_damage: -1.0",
+             "\tki_damage: -1.0", "\tsuper_atk_damage: -1.0",
+             "\tsuper_ki_damage: -1.0", "\tguard_atk: -1.0",
+             "\tguard_damage: -1.0", "\tmove_speed: -1.0", "\tboost_speed: -1.0",
+             "\tf84: -1.0", f"\tait_table_entry: {ait}", "",
+             "\tsuper1: -1", "\tsuper2: -1", "\tsuper3: -1", "\tsuper4: -1", "",
+             "\tultimate1: -1", "\tultimate2: -1", "",
+             "\tevasive: -1", "\tblast: -1", "\tawaken: -1", "",
+             "\ti106: 0", "\ti108: 0", "\ti112: 0", "\ti124: -1", "\ti126: 0", "}"]
+    body = "\n".join(lines)
+    return f"; {comment}\n{body}" if comment else body
+
+
 def build_chars() -> str:
     out = [
-        "QxdSpecialChar PlayerBase", "{", '\tchar: "HUM"', "}", "",
-        "QxdSpecialChar Teacher", "{", '\tchar: "MST"', "}", "",
+        qxd_special_char("PlayerBase", '"HUM"', 138, "Player"),
+        "",
+        qxd_special_char("Teacher", '"MST"', 140, "Teacher"),
+        "",
         "; O Junin normal: mais tanque (costume 1 do mod [OC] Junin).",
         qxd_char("JuninBruto", "JuninChar", 1, JUNIN_TANK_SKILLS,
                  level=LEVEL, health=900.0, atk=1.25, atk_dmg=1.35), "",

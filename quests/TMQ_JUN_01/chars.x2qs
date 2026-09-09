@@ -1,11 +1,97 @@
+; Player
 QxdSpecialChar PlayerBase
 {
 	char: "HUM"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 1
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 138
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
 }
 
+; Teacher
 QxdSpecialChar Teacher
 {
 	char: "MST"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 1
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 140
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
 }
 
 ; O Junin normal: mais tanque (costume 1 do mod [OC] Junin).
