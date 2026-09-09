@@ -1,0 +1,239 @@
+; ===========================================================================
+;  TMQ_URA_01 - script principal
+;
+;  Fluxo:
+;    State 0  init
+;    State 1  ONDA 1 - os tres Fiscais de Uranio (Saibamen "radioativos")
+;    State 2  ONDA 2 - os tres Moderadores (soldados)
+;    State 3  CHEFE  - o Grande Moderador (Hercule), com Villainous Mode
+;    State 4  fim normal / abre a fase extra se ainda estiver dentro dos 5 min
+;    State 5  FASE EXTRA - Grande Moderador Enfurecido + 2 fiscais
+;    State 6  ULTIMATE FINISH
+;
+;  As flags sao levantadas pelo script1.x2qs (script "vigia"), que observa
+;  Ko()/Health()/TimePassed(). Aqui a gente so reage a elas.
+; ===========================================================================
+
+Flag Flag0 ; onda 1 eliminada
+Flag Flag1 ; onda 2 eliminada
+Flag Flag2 ; Grande Moderador derrotado
+Flag Flag3 ; Grande Moderador com <= 50% de vida
+Flag Flag4 ; fase extra concluida
+Flag Flag63 ; ainda da tempo de pegar o ULTIMATE FINISH (5 minutos)
+
+Script
+{
+	State 0
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			; o chefe nao some sozinho ao cair: ele ainda tem uma fala de derrota
+			Action DontRemoveOnKo(GrandeModeradorEnemy); Hercule - Gi 1
+			Action InitQuest
+		}
+
+		Event 1
+		{
+			Condition TimeWithinState(1.0)
+
+			Action Unk20
+			Action BattleModeStart
+			Action GotoState(1)
+		}
+	}
+
+	State 1
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action SetThereAreEnemies("BFrrg", true); Red Ribbon Army (Yard)
+			Action CharaSpawn3(FiscalVerdeEnemy, FiscalPalidoEnemy, FiscalListradoEnemy, 1, Dialogue0, "BFrrg", 0, -1); Char: Saibaman - Saibaman 1 --- Stage: Red Ribbon Army (Yard)
+		}
+
+		Event 1
+		{
+			Condition DialogueFinish(Dialogue0); EI, VOCÊ AÍ! NÃO! COMA! O! URÂNIO!
+
+			Action PlayDialogue(Dialogue1, 1000, "BFrrg", -1); Stage: Red Ribbon Army (Yard)
+		}
+
+		Event 2
+		{
+			Condition DialogueFinish(Dialogue1); Eu comi um pedaço em 762...
+
+			Action PlayDialogue(Dialogue2, 1000, "BFrrg", -1); Stage: Red Ribbon Army (Yard)
+		}
+
+		Event 3
+		{
+			Condition DialogueFinish(Dialogue2); ...a gente reparou no tamanho do seu canhão de ki.
+
+			Action PlayDialogue(Dialogue3, 1000, "BFrrg", -1); Stage: Red Ribbon Army (Yard)
+		}
+
+		Event 4
+		{
+			Condition CheckFlag(Flag0, true)
+
+			Action GotoState(2)
+		}
+	}
+
+	State 2
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action CharaSpawn3(ModeradorGupreiEnemy, ModeradorOrlenEnemy, ModeradorFramboEnemy, 2, Dialogue4, "BFrrg", 0, -1); Char: Guprei - Battle Suit --- Stage: Red Ribbon Army (Yard)
+		}
+
+		Event 1
+		{
+			Condition DialogueFinish(Dialogue4); A gente mediu o seu poder de luta...
+
+			Action PlayDialogue(Dialogue5, 1000, "BFrrg", -1); Stage: Red Ribbon Army (Yard)
+		}
+
+		Event 2
+		{
+			Condition DialogueFinish(Dialogue5); Tamanho não é documento. No seu caso, é laudo médico.
+
+			Action PlayDialogue(Dialogue6, 1000, "BFrrg", -1); Stage: Red Ribbon Army (Yard)
+		}
+
+		Event 3
+		{
+			Condition CheckFlag(Flag1, true)
+
+			Action GotoState(3)
+		}
+	}
+
+	State 3
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action CharaSpawn(GrandeModeradorEnemy, 3, Dialogue7, 20, "BFrrg", 0); Char: Hercule - Gi 1 --- Stage: Red Ribbon Army (Yard)
+		}
+
+		Event 1
+		{
+			Condition DialogueFinish(Dialogue7); EU sou o GRANDE MODERADOR!
+
+			Action PlayDialogue(Dialogue8, 1000, "BFrrg", -1); Stage: Red Ribbon Army (Yard)
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag3, true)
+
+			Action PlayDialogue(Dialogue9, 1000, "BFrrg", -1); Stage: Red Ribbon Army (Yard)
+		}
+
+		Event 3
+		{
+			Condition CheckFlag(Flag2, true)
+
+			; o Grande Moderador admite a derrota (e mesmo assim nao larga o tema) e vaza
+			Action CharaLeave(GrandeModeradorEnemy, 0, Dialogue10, 26, true, -1); Char: Hercule - Gi 1 --- Dialogue: Tá bom, tá bom! A gente para de falar do urânio...
+			Action GotoState(4)
+		}
+	}
+
+	State 4
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action QuestFinishState(COMPLETE)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag63, false)
+
+			Action SetThereAreEnemies("BFrrg", false); Red Ribbon Army (Yard)
+			Action QuestClear
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag63, true)
+
+			Action ShowWarning
+			Action GotoState(5)
+		}
+	}
+
+	State 5
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action CharaSpawn(ModeradorEnfurecidoEnemy, 3, Dialogue11, 58, "BFrrg", 0); Char: Hercule - 0 --- Stage: Red Ribbon Army (Yard)
+			Action CharaSpawn2(FiscalRadioativoEnemy, FiscalToxicoEnemy, 1, -1, "BFrrg", 0, -1, -1); Char: Tennenman - Tennenman --- Stage: Red Ribbon Army (Yard)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag4, true)
+
+			Action GotoState(6)
+		}
+	}
+
+	State 6
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action QuestFinishState(ULTIMATE_FINISH)
+			Action QuestClear
+		}
+	}
+}

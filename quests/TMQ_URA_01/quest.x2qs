@@ -1,0 +1,234 @@
+ItemCollection Collection60
+{
+	ItemCollectionEntry { item: 0 type: MATERIAL i6: 1 i8: 2 i10: 0 } ; Small Mix Capsule
+	ItemCollectionEntry { item: 1 type: MATERIAL i6: 1 i8: 1 i10: 0 } ; Med. Mix Capsule
+	ItemCollectionEntry { item: 2 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; High Mix Capsule
+	ItemCollectionEntry { item: 3 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Ultimate Mix Capsule
+	ItemCollectionEntry { item: 4 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Energy Shard
+	ItemCollectionEntry { item: 5 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Energy Crystal
+	ItemCollectionEntry { item: 6 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Energy Shard
+	ItemCollectionEntry { item: 7 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Energy Crystal
+	ItemCollectionEntry { item: 8 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Shard
+	ItemCollectionEntry { item: 9 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Crystal
+	ItemCollectionEntry { item: 10 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Shard
+	ItemCollectionEntry { item: 11 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Crystal
+	ItemCollectionEntry { item: 12 type: MATERIAL i6: 1 i8: 5 i10: 0 } ; Aura Shard
+	ItemCollectionEntry { item: 13 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Aura Crystal
+	ItemCollectionEntry { item: 14 type: MATERIAL i6: 1 i8: 2 i10: 0 } ; All-Aura Shard
+	ItemCollectionEntry { item: 15 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Aura Crystal
+	ItemCollectionEntry { item: 16 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Guard Shard
+	ItemCollectionEntry { item: 17 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Guard Crystal
+	ItemCollectionEntry { item: 18 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Guard Shard
+	ItemCollectionEntry { item: 19 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Guard Crystal
+	ItemCollectionEntry { item: 20 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Drop
+	ItemCollectionEntry { item: 21 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Essence
+	ItemCollectionEntry { item: 22 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Drop
+	ItemCollectionEntry { item: 23 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Essence
+	ItemCollectionEntry { item: 24 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Senzu Beansprout
+}
+
+ItemCollection Collection70
+{
+	ItemCollectionEntry { item: 0 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Small Mix Capsule
+	ItemCollectionEntry { item: 1 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Med. Mix Capsule
+	ItemCollectionEntry { item: 2 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; High Mix Capsule
+	ItemCollectionEntry { item: 3 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Ultimate Mix Capsule
+	ItemCollectionEntry { item: 4 type: MATERIAL i6: 1 i8: 5 i10: 0 } ; Energy Shard
+	ItemCollectionEntry { item: 5 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Energy Crystal
+	ItemCollectionEntry { item: 6 type: MATERIAL i6: 1 i8: 2 i10: 0 } ; All-Energy Shard
+	ItemCollectionEntry { item: 7 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Energy Crystal
+	ItemCollectionEntry { item: 8 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Shard
+	ItemCollectionEntry { item: 9 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Crystal
+	ItemCollectionEntry { item: 10 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Shard
+	ItemCollectionEntry { item: 11 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Crystal
+	ItemCollectionEntry { item: 12 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Aura Shard
+	ItemCollectionEntry { item: 13 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Aura Crystal
+	ItemCollectionEntry { item: 14 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Aura Shard
+	ItemCollectionEntry { item: 15 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Aura Crystal
+	ItemCollectionEntry { item: 16 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Guard Shard
+	ItemCollectionEntry { item: 17 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Guard Crystal
+	ItemCollectionEntry { item: 18 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Guard Shard
+	ItemCollectionEntry { item: 19 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Guard Crystal
+	ItemCollectionEntry { item: 20 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Drop
+	ItemCollectionEntry { item: 21 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Essence
+	ItemCollectionEntry { item: 22 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Drop
+	ItemCollectionEntry { item: 23 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Essence
+	ItemCollectionEntry { item: 24 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Senzu Beansprout
+}
+
+ItemCollection Collection80
+{
+	ItemCollectionEntry { item: 0 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Small Mix Capsule
+	ItemCollectionEntry { item: 1 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Med. Mix Capsule
+	ItemCollectionEntry { item: 2 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; High Mix Capsule
+	ItemCollectionEntry { item: 3 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Ultimate Mix Capsule
+	ItemCollectionEntry { item: 4 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Energy Shard
+	ItemCollectionEntry { item: 5 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Energy Crystal
+	ItemCollectionEntry { item: 6 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Energy Shard
+	ItemCollectionEntry { item: 7 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Energy Crystal
+	ItemCollectionEntry { item: 8 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Shard
+	ItemCollectionEntry { item: 9 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Crystal
+	ItemCollectionEntry { item: 10 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Shard
+	ItemCollectionEntry { item: 11 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Crystal
+	ItemCollectionEntry { item: 12 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Aura Shard
+	ItemCollectionEntry { item: 13 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Aura Crystal
+	ItemCollectionEntry { item: 14 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Aura Shard
+	ItemCollectionEntry { item: 15 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Aura Crystal
+	ItemCollectionEntry { item: 16 type: MATERIAL i6: 1 i8: 5 i10: 0 } ; Guard Shard
+	ItemCollectionEntry { item: 17 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Guard Crystal
+	ItemCollectionEntry { item: 18 type: MATERIAL i6: 1 i8: 2 i10: 0 } ; All-Guard Shard
+	ItemCollectionEntry { item: 19 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Guard Crystal
+	ItemCollectionEntry { item: 20 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Drop
+	ItemCollectionEntry { item: 21 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Essence
+	ItemCollectionEntry { item: 22 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Drop
+	ItemCollectionEntry { item: 23 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Essence
+	ItemCollectionEntry { item: 24 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Senzu Beansprout
+}
+
+; ===========================================================================
+;  TMQ_URA_01 - "NAO COMA O URANIO!"  /  "DON'T EAT THE URANIUM!"
+;  Missao paralela customizada.
+;  Todos os textos usam TextEntry / TextAudioEntry, ou seja, a missao nao
+;  depende de nenhum arquivo .msg vanilla.
+; ===========================================================================
+
+TextEntry TMQ_URA_01_0
+{
+	en: "DON'T EAT THE URANIUM!"
+	pt: "NÃO COMA O URÂNIO!"
+	es: "¡NO TE COMAS EL URANIO!"
+}
+
+TextEntry TMQ_URA_01_1
+{
+	en: "-Defeat all the uranium inspectors"
+	pt: "-Derrote todos os fiscais de urânio"
+	es: "-Derrota a todos los inspectores de uranio"
+}
+
+TextEntry TMQ_URA_01_2
+{
+	en: "-All team HP depleted\n-Time expires"
+	pt: "-A vida da equipe acabar\n-O tempo acabar"
+	es: "-La vida del equipo se agota\n-Se acaba el tiempo"
+}
+
+TextEntry TMQ_URA_01_3
+{
+	en: "A gang of loudmouths has taken over the Red Ribbon Army Yard. They only\ntalk about two things: that you must NOT eat uranium, and the size of your...\n\"equipment\". Somebody please shut them up."
+	pt: "Um bando de desocupados tomou o Pátio do Exército Red Ribbon e só sabe falar\nde duas coisas: que você NÃO deve comer urânio e do tamanho do seu...\n\"equipamento\". Alguém precisa calar a boca deles."
+	es: "Una pandilla de bocazas tomó el Patio del Ejército Red Ribbon y solo habla\nde dos cosas: de que NO debes comer uranio y del tamaño de tu... \"equipo\".\nQue alguien los mande callar."
+}
+
+TextEntry TMQ_URA_01_4
+{
+	en: "-Clear in under 5 minutes"
+	pt: "-Termine em menos de 5 minutos"
+	es: "-Termínala en menos de 5 minutos"
+}
+
+TextEntry TMQ_URA_01_5
+{
+	en: "-Defeat the Enraged Grand Moderator"
+	pt: "-Derrote o Grande Moderador Enfurecido"
+	es: "-Derrota al Gran Moderador Enfurecido"
+}
+
+Quest TMQ_URA_01
+{
+	episode: 3 ; Textos proprios via TextEntry/TextAudioEntry (nao usa .msg vanilla).
+	sub_type: 0
+	num_players: 3
+
+	title: TMQ_URA_01_0 ; DON'T EAT THE URANIUM!
+	success: TMQ_URA_01_1 ; -Defeat all the uranium inspectors
+	failure: TMQ_URA_01_2 ; -All team HP depleted\n-Time expires
+	outline: TMQ_URA_01_3 ; A gang of loudmouths took over the Red Ribbon Army Yard...
+	warning: TMQ_URA_01_4 ; -Clear in under 5 minutes
+	ex_success: TMQ_URA_01_5 ; -Defeat the Enraged Grand Moderator
+
+	i40: 1
+	parent_quest: "TMQ_1400" ; Being a Time Patroller
+	i44: 0
+	i48: 1
+	i52: -1
+	i56: -1
+	i60: -1
+	unlock_requirement: "TMQ_1400" ; Being a Time Patroller
+	i68: -1
+	i72: -1
+	i76: -1
+	i80: 1
+	i84: 1
+
+	QxdUnk1(3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	QxdUnk2(0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	QxdUnk2(1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+	time_limit: 900
+	difficulty: 2
+	level: 20
+	i112: 0
+	start_stage: "BFrrg" ; Red Ribbon Army (Yard)
+	start_demo: 0
+
+	xp_reward: 2400
+	ult_xp_reward: 4200
+	fail_xp_reward: 500
+	zeni_reward: 3200
+	ult_zeni_reward: 5600
+	fail_zeni_reward: 650
+	tp_medals_once: 5
+	tp_medals: 3
+	tp_medals_special: 0
+	resistance_points: 0
+
+	; --- tabelas de material (1a vez / repeticao / repeticao) ----------------
+	ItemReward { item: Collection60 type: COLLECTION condition: 1 i12: 0 flags: NORMAL i20: 1 chance: 100.0 }
+	ItemReward { item: Collection70 type: COLLECTION condition: 0 i12: 0 flags: NORMAL i20: 1 chance: 100.0 }
+	ItemReward { item: Collection80 type: COLLECTION condition: 0 i12: 0 flags: NORMAL i20: 1 chance: 100.0 }
+
+	; "Sr. Antidoto S": a piada interna da missao (antidoto pra quem comeu uranio)
+	ItemReward { item: 20 type: BATTLE condition: 0 i12: 0 flags: NORMAL i20: 1 chance: 100.0 } ; Mr. Antidote S
+
+	; --- as skills dos propios zoadores, dadas como recompensa ---------------
+	SkillReward { skill: 330 condition: 1 i12: 0 chance: 100.0 } ; Taunt
+	SkillReward { skill: 522 condition: 3 i12: 4 chance: 40.0 } ; Present For You
+
+	; --- o proprio Grande Moderador vira personagem jogavel ------------------
+	CharReward { char: "STN" costume: 0 i6: -1 } ; Hercule - 0
+
+	; Red Ribbon Army (Yard)
+	stages: ("BFrrg", -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1)
+	i192: 1
+
+	CharPortrait { char: "SBM" costume: 3 trans: -1 } ; Saibaman - Saibaman 1
+	CharPortrait { char: "SBM" costume: 0 trans: -1 } ; Kaiwareman - Kaiwareman
+	CharPortrait { char: "RSB" costume: 3 trans: -1 } ; Guprei - Battle Suit
+	CharPortrait { char: "APL" costume: 4 trans: -1 } ; Orlen - Battle Suit
+	CharPortrait { char: "STN" costume: 1 trans: -1 } ; Hercule - Gi 1
+	CharPortrait { char: "STD" costume: 0 trans: -1 } ; Hercule - 0
+
+	i232: 1
+	i234: 3
+	i236: 6
+	i238: 8
+	i240: 11
+	i242: 14
+	i244: -1
+	i246: -1
+	i248: -1
+	i250: -1
+	flags: 0x400000
+
+	update_requirement: ANY
+	dlc_requirement: NONE
+
+	i264: 0
+	no_enemy_bgm: 9
+	enemy_near_bgm: 24
+	battle_bgm: 16
+	ultimate_finish_bgm: 14
+	f276: 1.0
+	i280: 0
+}
