@@ -1,0 +1,805 @@
+
+QxdSpecialChar PlayerBase
+{
+	; Player
+	char: "HUM"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 1
+	health: -1.0
+	f24: -1.0
+        f84: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	ait_table_entry: 138
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdSpecialChar Teacher
+{
+	; Teacher
+	char: "MST"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 1
+	health: -1.0
+	f24: -1.0
+        f84: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	ait_table_entry: 140
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Goku2
+{
+	; Ginyu (towa)
+	char: "STW"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 99
+	health: 9000.0
+	f24: -1.0
+        f84: -1.0
+	ki: 1000.0
+	stamina: 1000.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: 1.4
+	ki_damage: 1.4
+	super_atk_damage: 1.4
+	super_ki_damage: 1.4
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	ait_table_entry: 145
+
+	super1: 0
+	super2: 220
+	super3: 222
+	super4: 224
+
+	ultimate1: 5420
+	ultimate2: 5510
+
+	evasive: 10420
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Guldo
+{
+	; Ginyu (Videl) - Traje 5
+	char: "GVD"
+	costume: 5
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 99
+	health: 9000.0
+	f24: -1.0
+        f84: -1.0
+	ki: 1000.0
+	stamina: 1000.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: 1.2
+	ki_damage: 1.2
+	super_atk_damage: 1.2
+	super_ki_damage: 1.2
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	ait_table_entry: 144
+
+	super1: 220
+	super2: 222
+	super3: 341
+	super4: 224
+
+	ultimate1: 5800
+	ultimate2: 5270
+
+	evasive: 10340
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Recoome
+{
+	; Ginyu (Android 21)
+	char: "GYA"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 99
+	health: 9000.0
+	f24: -1.0
+        f84: -1.0
+	ki: 1000.0
+	stamina: 1000.0
+	atk: 3.0
+	ki_atk: 3.0
+	super_atk: 3.0
+	super_ki: 3.0
+	atk_damage: 0.7
+	ki_damage: 0.7
+	super_atk_damage: 0.7
+	super_ki_damage: 0.7
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	ait_table_entry: 144
+
+	super1: 224
+	super2: 1111
+	super3: 222
+	super4: 1110
+
+	ultimate1: 6110
+	ultimate2: 6111
+
+	evasive: 11110
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Burter
+{
+	; Ginyu (Android 18)
+	char: "M01"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 99
+	health: 9000.0
+	f24: -1.0
+        f84: -1.0
+	ki: 1000.0
+	stamina: 1000.0
+	atk: 2.5
+	ki_atk: 2.5
+	super_atk: 2.5
+	super_ki: 2.5
+	atk_damage: 0.75
+	ki_damage: 0.75
+	super_atk_damage: 0.75
+	super_ki_damage: 0.75
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	ait_table_entry: 145
+
+	super1: 224
+	super2: 302
+	super3: 220
+	super4: 222
+
+	ultimate1: 5280
+	ultimate2: 5011
+
+	evasive: 10300
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Jeice
+{
+	; Ginyu (kale)
+	char: "GYK"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 99
+	health: 9000.0
+	f24: -1.0
+        f84: -1.0
+	ki: 1000.0
+	stamina: 1000.0
+	atk: 7.0
+	ki_atk: 7.0
+	super_atk: 7.0
+	super_ki: 7.0
+	atk_damage: 0.3
+	ki_damage: 0.3
+	super_atk_damage: 0.3
+	super_ki_damage: 0.3
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	ait_table_entry: 144
+
+	super1: 1520
+	super2: 220
+	super3: 222
+	super4: 224
+
+	ultimate1: 6520
+	ultimate2: 5800
+
+	evasive: 11520
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Goku
+{
+	; Ginyu (Vados)
+	char: "GYV"
+	costume: 0
+	transformation: -1
+	special_effect: 186
+
+	i12: 0
+	level: 99
+	health: 9000.0
+	f24: -1.0
+        f84: -1.0
+	ki: 1000.0
+	stamina: 1000.0
+	atk: 8.5
+	ki_atk: 8.5
+	super_atk: 8.5
+	super_ki: 8.5
+	atk_damage: 0.15
+	ki_damage: 0.15
+	super_atk_damage: 0.15
+	super_ki_damage: 0.15
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	ait_table_entry: 146
+
+	super1: 1361
+	super2: 222
+	super3: 224
+	super4: 220
+
+	ultimate1: 5650
+	ultimate2: 6500
+
+	evasive: 10650
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar FriezaFullPower
+{
+	; Ginyu (Supreme Kai of Time)
+	char: "EL2"
+	costume: 0
+	transformation: -1
+	special_effect: 238
+
+	i12: 0
+	level: 99
+	health: 9000.0
+	f24: -1.0
+        f84: -1.0
+	ki: 1000.0
+	stamina: 1000.0
+	atk: 8.0
+	ki_atk: 8.0
+	super_atk: 8.0
+	super_ki: 8.0
+	atk_damage: 0.2
+	ki_damage: 0.2
+	super_atk_damage: 0.2
+	super_ki_damage: 0.2
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	ait_table_entry: 147
+
+	super1: 220
+	super2: 224
+	super3: 1122
+	super4: 222
+
+	ultimate1: 6500
+	ultimate2: 6120
+
+	evasive: 11120
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QmlChar Player : PlayerBase
+{
+	battle_index: 0
+	i12: 0
+	stage: "BFkoh" ; Capsule Corporation
+	spawn_at_start: true
+
+	ai: HUMAN
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar Player2 : PlayerBase
+{
+	battle_index: 1
+	i12: 0
+	stage: "BFkoh" ; Capsule Corporation
+	spawn_at_start: true
+
+	ai: HUMAN
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar Player3 : PlayerBase
+{
+	battle_index: 2
+	i12: 0
+	stage: "BFkoh" ; Capsule Corporation
+	spawn_at_start: true
+
+	ai: HUMAN
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar FriezaFullPowerEnemy : FriezaFullPower
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFkoh" ; Capsule Corporation
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar GuldoEnemy : Guldo
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFsky" ; West City (Industrial Sector)
+	spawn_at_start: true
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar JeiceEnemy : Jeice
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFsky" ; West City (Industrial Sector)
+	spawn_at_start: true
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 1
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar GokuEnemy : Goku
+{
+	battle_index: 5
+	i12: 14
+	stage: "BFsky" ; West City (Industrial Sector)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar RecoomeEnemy : Recoome
+{
+	battle_index: 3
+	i12: 1
+	stage: "BFspe" ; West City (Suburbs)
+	spawn_at_start: true
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar BurterEnemy : Burter
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFspe" ; West City (Suburbs)
+	spawn_at_start: true
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar GokuEnemy2 : Goku
+{
+	battle_index: 5
+	i12: 14
+	stage: "BFspe" ; West City (Suburbs)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar TeacherAlly : Teacher
+{
+	battle_index: -1
+	i12: 0
+	stage: "BFkoh" ; Capsule Corporation
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar Goku2Enemy : Goku2
+{
+	battle_index: -1
+	i12: 14
+	stage: "BFkoh" ; Capsule Corporation
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+

@@ -1,0 +1,242 @@
+Script
+{
+	State 0
+	{
+		Event 0
+		{
+			Condition CheckFlag(Flag30, true)
+
+			Action FadeOut(20.0, WHITE, true, 0)
+			Action Wait(0.400000006)
+			Action Unk108(1, false)
+			Action SetCharVisible_(FuAlly, false); Fu - 0
+			Action RecoverHp(Player, 100.0); Player
+			Action Unk105("EFCT_BH", 2, 67)
+			Action Unk154
+			Action LoadBev("T37_07_00_QTE")
+			Action GotoState(1)
+		}
+	}
+
+	State 1
+	{
+		Event 0
+		{
+			Condition IsBevLoadCompleted
+
+			Action Unk80(0, 0)
+			Action PlayBev(0, Player, PerdioDoFuturoEnemy, 7, 7, 7, 7, 7)
+			Action GotoState(2)
+		}
+	}
+
+	State 2
+	{
+		Event 0
+		{
+			Condition BevPlayEnded
+
+			Action FadeOut(0.0, WHITE, true, 0)
+			Action GotoState(3)
+		}
+	}
+
+	State 3
+	{
+		Event 0
+		{
+			Condition Unk71(10)
+
+			Action GotoState(4)
+		}
+
+		Event 1
+		{
+			Condition Unk71(11)
+
+			Action GotoState(15)
+		}
+	}
+
+	State 4
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action MoveTo("TRESPASS_3", Player); Player
+			Action MoveTo("CTP_27_03_POS_00", FuAlly); Fu - 0
+			Action MoveTo("TRESPASS_1", PerdioDoFuturoEnemy); Perdição do Futuro - 0
+			Action SetCharVisible(PerdioDoFuturoEnemy, true); Perdição do Futuro - 0
+			Action SetCharVisible_(FuAlly, true); Fu - 0
+			Action Unk148(PerdioDoFuturoEnemy, 0); Perdição do Futuro - 0
+			Action Unk105("EFCT_BH", 3, 67)
+			Action Unk140(0, 6, 42)
+			Action SetFlag(Flag31, true)
+			Action GotoState(5)
+		}
+	}
+
+	State 5
+	{
+		Event 0
+		{
+			Condition CheckFlag(Flag38, true)
+
+			Action FadeOut(30.0, WHITE, true, 0)
+			Action Wait(1.0)
+			Action Unk108(1, false)
+			Action Unk105("EFCT_BH", 2, 67)
+			Action LoadBev("T37_07_02")
+			Action GotoState(6)
+		}
+	}
+
+	State 6
+	{
+		Event 0
+		{
+			Condition IsBevLoadCompleted
+
+			Action Unk80(0, 0)
+			Action PlayBev(0, Player, FuAlly, PerdioDoFuturoEnemy, 7, 7, 7, 7)
+			Action GotoState(7)
+		}
+	}
+
+	State 7
+	{
+		Event 0
+		{
+			Condition BevPlayEnded
+
+			Action FadeOut(0.0, WHITE, true, 0)
+			Action GotoState(8)
+		}
+	}
+
+	State 8
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action MoveTo("TRESPASS_1", Player); Player
+			Action MoveTo("CTP_27_02_POS_00", FuAlly); Fu - 0
+			Action MoveTo("TRESPASS_3", PerdioDoFuturoEnemy); Perdição do Futuro - 0
+			Action SetCharVisible(PerdioDoFuturoEnemy, true); Perdição do Futuro - 0
+			Action SetCharVisible_(FuAlly, true); Fu - 0
+			Action Unk148(PerdioDoFuturoEnemy, 0); Perdição do Futuro - 0
+			Action Unk148(Player, 2); Player
+			Action Unk105("EFCT_BH", 3, 67)
+			Action Unk140(0, 6, 42)
+			Action SetFlag(Flag39, true)
+			Action GotoState(9)
+		}
+	}
+
+	State 9
+	{
+		Event 0
+		{
+			Condition CheckFlag(Flag15, true)
+
+			Action Wait(2.0)
+			Action SetCharVisible(PerdioDoFuturoEnemy, false); Perdição do Futuro - 0
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag33, true)
+
+			Action FadeOut(10.0, WHITE, true, 0)
+			Action Wait(0.5)
+			Action Unk108(1, false)
+			Action Unk141(0, 6, 42)
+			Action RecoverHp(PerdioDoFuturoEnemy, 10.0); Perdição do Futuro - 0
+			Action SetCharVisible(PerdioDoFuturoEnemy, true); Perdição do Futuro - 0
+			Action SetCharVisible_(FuAlly, false); Fu - 0
+			Action Unk105("EFCT_BH", 2, 67)
+			Action LoadBev("T37_07_01_QTE")
+			Action GotoState(10)
+		}
+	}
+
+	State 10
+	{
+		Event 0
+		{
+			Condition IsBevLoadCompleted
+
+			Action Unk80(0, 0)
+			Action PlayBev(0, Player, PerdioDoFuturoEnemy, 7, 7, 7, 7, 7)
+			Action GotoState(11)
+		}
+	}
+
+	State 11
+	{
+		Event 0
+		{
+			Condition BevPlayEnded
+
+			Action GotoState(12)
+			Action FadeOut(0.0, WHITE, true, 0)
+		}
+	}
+
+	State 12
+	{
+		Event 0
+		{
+			Condition Unk71(8)
+
+			Action StopBgm(false, 0, 3500)
+			Action RegisterActorForDemo(Player); Player
+			Action LoadDemo("D22_07", WHITE)
+			Action GotoState(13)
+		}
+
+		Event 1
+		{
+			Condition Unk71(9)
+
+			Action GotoState(15)
+		}
+	}
+
+	State 13
+	{
+		Event 0
+		{
+			Condition IsDemoLoadCompleted
+
+			Action PlayDemo
+			Action GotoState(14)
+		}
+	}
+
+	State 14
+	{
+		Event 0
+		{
+			Condition DemoPlayEnded
+
+			Action Unk9(0, 0, 0)
+			Action FadeOut(0.0, WHITE, true, 0)
+			Action SetFlag(Flag34, true)
+		}
+	}
+
+	State 15
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action Unk105("EFCT_BH", 3, 67)
+			Action SetFlag(Flag36, true)
+		}
+	}
+}
+

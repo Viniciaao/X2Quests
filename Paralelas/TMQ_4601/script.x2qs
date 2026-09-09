@@ -1,0 +1,271 @@
+Flag Flag0
+Flag Flag1
+Flag Flag2
+Flag Flag3
+Flag Flag4
+Flag Flag5
+Flag Flag6
+Flag Flag7
+Flag Flag8
+Flag Flag9
+Flag Flag10
+Flag Flag11
+Flag Flag12
+Flag Flag13
+Flag Flag14
+Flag Flag15
+Flag Flag16
+Flag Flag17
+Flag Flag18
+Flag Flag19
+Flag Flag20
+Flag Flag21
+Flag Flag22
+Flag Flag23
+Flag Flag24
+Flag Flag25
+Flag Flag29
+Flag Flag30
+Flag Flag31
+Flag Flag32
+Flag Flag33
+Flag Flag37
+Flag Flag38
+Flag Flag39
+Flag Flag40
+Flag Flag41
+Flag Flag42
+Flag Flag46
+Flag Flag47
+Flag Flag48
+Flag Flag51
+Flag Flag52
+Flag Flag53
+Flag Flag54
+Flag Flag55
+Flag Flag56
+Flag Flag57
+Flag Flag58
+Flag Flag61
+Flag Flag62
+Flag Flag63
+
+Script
+{
+	State 0
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action InitQuest
+		}
+
+		Event 1
+		{
+			Condition TimeWithinState(1.0)
+
+			Action Unk20
+			Action BattleModeStart
+			Action GotoState(1)
+		}
+	}
+
+	State 1
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action SetFlag(Flag0, true)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag3, true)
+
+			Action GotoState(2)
+		}
+	}
+
+	State 2
+	{
+		Event 0
+		{
+			Condition InStage(Player, "BFkoh", true); Char: Player --- Stage: Deserto
+
+			Action SetFlag(Flag10, true)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag11, true)
+
+			Action CharaSpawn2(RazberryEnemy, NabanaEnemy, 15, -1, "BFkoh", 0, -1, -1); Deserto
+			Action SetFlag(Flag12, true)
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag18, true)
+
+			Action GotoState(3)
+		}
+	}
+
+	State 3
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action CharaSpawn2(DodoriaEnemy, ZarbonEnemy, 4, -1, "BFkoh", 0, -1, -1); Deserto
+			Action SetFlag(Flag20, true)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag25, true)
+
+			Action GotoState(4)
+		}
+	}
+
+	State 4
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action CharaSpawn2(GurdoEnemy, RikumEnemy, 6, -1, "BFkoh", 0, -1, -1); Deserto
+			Action SetFlag(Flag29, true)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag33, true)
+
+			Action GotoState(5)
+		}
+	}
+
+	State 5
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action CharaSpawn2(JessEnemy, BoterEnemy, 8, -1, "BFkoh", 0, -1, -1); Deserto
+			Action SetFlag(Flag37, true)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag42, true)
+
+			Action GotoState(6)
+		}
+	}
+
+	State 6
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action CharaSpawn(CapitoGinyuEnemy, 9, -1, 20, "BFkoh", 0); Char: Capitão Ginyu - Traje de Batalha 1 --- Stage: Deserto
+			Action SetFlag(Flag46, true)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag62, true)
+
+			Action QuestFinishState(COMPLETE)
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag47, true)
+
+			Action GotoState(7)
+		}
+	}
+
+	State 7
+	{
+		Event 0
+		{
+			Condition CheckFlag(Flag63, true)
+
+			Action GotoState(8)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag63, false)
+
+			Action GotoState(9)
+		}
+	}
+
+	State 8
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action SetFlag(Flag51, true)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag52, true)
+
+			Action ShowWarning
+			Action SetCharVisible(FreezaFormaFinalEnemy2, true); Freeza (Forma Final) - Forma Final 1
+			Action ModelChange(FreezaFormaFinalEnemy2, FreezaDouradoEnemy, 0, -1, 156)
+			Action SetFlag(Flag53, true)
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag54, true)
+
+			Action CharaSpawn(CoolaFormaFinalEnemy, 12, -1, 21, "BFkoh", 0); Char: Coola (Forma Final) - Forma Final 1 --- Stage: Deserto
+			Action SetFlag(Flag55, true)
+		}
+
+		Event 3
+		{
+			Condition CheckFlag(Flag57, true)
+
+			Action QuestFinishState(ULTIMATE_FINISH)
+		}
+
+		Event 4
+		{
+			Condition CheckFlag(Flag56, true)
+
+			Action GotoState(9)
+		}
+
+		Event 5
+		{
+			Condition CheckFlag(Flag61, true)
+
+			Action Unk84("BFkoh"); Deserto
+		}
+	}
+
+	State 9
+	{
+		Event 0
+		{
+			Condition CheckFlag(Flag48, true)
+
+			Action QuestClear
+		}
+	}
+}
+

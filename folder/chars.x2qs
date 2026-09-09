@@ -1,0 +1,409 @@
+QxdSpecialChar PlayerBase
+{
+	; Player
+	char: "HUM"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 1
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 120
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: 27321 ; Superando o poder
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdSpecialChar Fu
+{
+	; Fu - 0
+	char: "XBM"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 100
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 0.5
+	ki_atk: 1.0
+	super_atk: 1.0
+	super_ki: 1.0
+	atk_damage: 0.300000012
+	ki_damage: 0.300000012
+	super_atk_damage: 0.300000012
+	super_ki_damage: 0.300000012
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 280
+
+	super1: 2370 ; Lâmina de Confusão
+	super2: 1501 ; Golpe Furtivo
+	super3: 1502 ; Mina de Energia
+	super4: 16 ; Onda de Ki Carregada
+
+	ultimate1: 6500 ; Bomba Crítica Remota
+	ultimate2: 5050 ; Explosão de Energia Máxima
+
+	evasive: 10340 ; Super Pulo para Trás
+	blast: 21083 ; HOM
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar PerdioDoFuturo
+{
+	; Perdição do Futuro - 0
+	char: "XBL"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 32
+	level: 180
+	health: 9000.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 3.5
+	ki_atk: 3.5
+	super_atk: 3.0
+	super_ki: 3.0
+	atk_damage: 1.35000002
+	ki_damage: 1.35000002
+	super_atk_damage: 1.35000002
+	super_ki_damage: 1.35000002
+	guard_atk: 0.699999988
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 270
+
+	super1: 2350 ; - Erro -
+	super2: 2351 ; - Erro -
+	super3: 2352 ; - Erro -
+	super4: 2353 ; - Erro -
+
+	ultimate1: 7350 ; - Erro -
+	ultimate2: 7351 ; - Erro -
+
+	evasive: 12350 ; - Erro -
+	blast: 21083 ; HOM
+	awaken: 25332 ; VCL
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar PerdioDoFuturo2
+{
+	; Perdição do Futuro - 0
+	char: "XBL"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 32
+	level: 180
+	health: 2000.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 3.5
+	ki_atk: 3.5
+	super_atk: 3.0
+	super_ki: 3.0
+	atk_damage: 1.60000002
+	ki_damage: 1.60000002
+	super_atk_damage: 1.60000002
+	super_ki_damage: 1.60000002
+	guard_atk: 0.699999988
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 272
+
+	super1: 2350 ; - Erro -
+	super2: 2351 ; - Erro -
+	super3: 2352 ; - Erro -
+	super4: 2353 ; - Erro -
+
+	ultimate1: 7350 ; - Erro -
+	ultimate2: 7351 ; - Erro -
+
+	evasive: 12350 ; - Erro -
+	blast: 21083 ; HOM
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QmlChar Player : PlayerBase
+{
+	battle_index: 0
+	i12: 0
+	stage: "BFtol" ; Espaço-tempo Distorcido
+	spawn_at_start: true
+
+	ai: HUMAN
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar FuAlly : Fu
+{
+	battle_index: 1
+	i12: 0
+	stage: "BFtol" ; Espaço-tempo Distorcido
+	spawn_at_start: true
+
+	ai: NORMAL
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar PerdioDoFuturoEnemy : PerdioDoFuturo
+{
+	battle_index: 2
+	i12: 0
+	stage: "BFtol" ; Espaço-tempo Distorcido
+	spawn_at_start: true
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar PerdioDoFuturo2Enemy : PerdioDoFuturo2
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFtol" ; Espaço-tempo Distorcido
+	spawn_at_start: true
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar PerdioDoFuturo2Enemy2 : PerdioDoFuturo2
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFtol" ; Espaço-tempo Distorcido
+	spawn_at_start: true
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar PerdioDoFuturo2Enemy3 : PerdioDoFuturo2
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtol" ; Espaço-tempo Distorcido
+	spawn_at_start: true
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar PerdioDoFuturo2Enemy4 : PerdioDoFuturo2
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtol" ; Espaço-tempo Distorcido
+	spawn_at_start: true
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+

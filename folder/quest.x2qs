@@ -1,0 +1,85 @@
+Quest CTP_27_07
+{
+	episode: 56 ; Dialogue will be loaded from qs_cep37. Audio will be loaded from TPQ/tpq_cep37_VOX.
+	sub_type: 0
+	num_players: 1
+
+	title: "CTP_27_07_Title" ; Ultimate All-Out Showdown
+	success: "CTP_27_07_Success" ; -Defeat all enemies
+	failure: "CTP_27_07_Failure" ; -Player HP depleted
+	outline: "CTP_27_07_Outline" ; As history and allies keep vanishing, the situation grows dire. In that moment, Goku entrusts you with his final power as he fades away. Now only you can save everything. This is the final battle for the future!
+
+	i40: 0
+	parent_quest: "TPQ_00_01" ; Historic Fight
+	i44: 0
+	i48: -1
+	i52: -1
+	i56: -1
+	i60: -1
+	unlock_requirement: -1
+	i68: -1
+	i72: -1
+	i76: -1
+	i80: 1
+	i84: 1
+
+	QxdUnk1(3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	QxdUnk2(1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+	time_limit: 0
+	difficulty: 6
+	level: 120
+	i112: 0
+	start_stage: "BFtol" ; Espaço-tempo Distorcido
+	start_demo: 0
+
+	xp_reward: 30000
+	ult_xp_reward: 0
+	fail_xp_reward: 13000
+	zeni_reward: 20000
+	ult_zeni_reward: 0
+	fail_zeni_reward: 5000
+	tp_medals_once: 0
+	tp_medals: 0
+	tp_medals_special: 0
+	resistance_points: 0
+
+	SkillReward { skill: 27320 condition: 0 i12: 0 chance: 100.0 } ; Superando o poder
+
+	CharReward { char: "" costume: 0 i6: 67 } ;  - 0
+
+	; Espaço-tempo Distorcido
+	stages: ("BFtol", -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1)
+	i192: 65537
+
+	CharPortrait { char: "XBL" costume: 0 trans: -1 } ; Perdição do Futuro - 0
+	CharPortrait { char: -1 costume: 0 trans: -1 }
+	CharPortrait { char: -1 costume: 0 trans: -1 }
+	CharPortrait { char: -1 costume: 0 trans: -1 }
+	CharPortrait { char: -1 costume: 0 trans: -1 }
+	CharPortrait { char: -1 costume: 0 trans: -1 }
+
+	i232: 0
+	i234: 2
+	i236: 3
+	i238: 4
+	i240: 5
+	i242: 7
+	i244: 0
+	i246: 0
+	i248: 0
+	i250: 0
+	flags: 0x400280
+
+	update_requirement: DLC21
+	dlc_requirement: DLC21
+
+	i264: 0
+	no_enemy_bgm: 0
+	enemy_near_bgm: 0
+	battle_bgm: 0
+	ultimate_finish_bgm: 0
+	f276: 1.0
+	i280: 0
+}
+

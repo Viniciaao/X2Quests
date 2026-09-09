@@ -1,0 +1,286 @@
+Script
+{
+	State 0
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action GotoState(1)
+		}
+	}
+
+	State 1
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition RandomPercentSmallerThan(100)
+
+			Action SetFlag(Flag63, true)
+		}
+
+		Event 1
+		{
+			Condition Always
+
+			Action GotoState(6)
+		}
+	}
+
+	State 2
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition RandomPercentSmallerThan(100)
+
+			Action SetFlag(Flag0, true)
+		}
+
+		Event 2
+		{
+			Condition Ko(GuldoEnemy, false, 0); Guldo - Battle Suit 1
+
+			Action SetFlag(Flag2, true)
+		}
+
+		Event 6
+		{
+			Condition Ko(GuldoEnemy, false, 0); Guldo - Battle Suit 1
+			Condition Ko(JeiceEnemy, false, 0); Jeice - Battle Suit 1
+			Condition CheckFlag(Flag13, false)
+
+			Action SetFlag(Flag6, true)
+		}
+
+		Event 13
+		{
+			Condition Ko(RecoomeEnemy, false, 0); Recoome - Battle Suit 2
+			Condition Ko(BurterEnemy, false, 0); Burter - Battle Suit 2
+			Condition CheckFlag(Flag6, false)
+
+			Action SetFlag(Flag13, true)
+		}
+
+		Event 20
+		{
+			Condition Ko(RecoomeEnemy, true, 0); Recoome - Battle Suit 2
+			Condition Ko(BurterEnemy, true, 0); Burter - Battle Suit 2
+			Condition CheckFlag(Flag6, true)
+
+			Action GotoState(8)
+		}
+
+		Event 21
+		{
+			Condition Ko(GuldoEnemy, true, 0); Guldo - Battle Suit 1
+			Condition Ko(JeiceEnemy, true, 0); Jeice - Battle Suit 1
+			Condition CheckFlag(Flag13, true)
+
+			Action GotoState(10)
+		}
+
+		Event 31
+		{
+			Condition CheckFlag(Flag6, true)
+			Condition CheckFlag(Flag13, false)
+			Condition InStage(Player, "BFspe", false); Char: Player --- Stage: West City (Suburbs)
+
+			Action SetFlag(Flag14, true)
+		}
+
+		Event 32
+		{
+			Condition CheckFlag(Flag6, false)
+			Condition CheckFlag(Flag13, true)
+			Condition InStage(Player, "BFsky", false); Char: Player --- Stage: West City (Industrial Sector)
+
+			Action SetFlag(Flag15, true)
+		}
+	}
+
+	State 3
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Health(<=, GokuEnemy2, 80.0); Captain Ginyu - Goku
+
+			Action SetFlag(Flag30, true)
+			Action GotoState(4)
+		}
+
+		Event 1
+		{
+			Condition Health(<=, GokuEnemy, 80.0); Captain Ginyu - Goku
+
+			Action SetFlag(Flag31, true)
+			Action GotoState(4)
+		}
+	}
+
+	State 4
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Ko(GokuEnemy, false, 0); Captain Ginyu - Goku
+
+			Action SetFlag(Flag32, true)
+			Action GotoState(5)
+		}
+
+		Event 1
+		{
+			Condition Ko(GokuEnemy2, false, 0); Captain Ginyu - Goku
+
+			Action SetFlag(Flag32, true)
+			Action GotoState(5)
+		}
+
+		Event 2
+		{
+			Condition TimePassed(>=, 1800.0)
+
+			Action SetFlag(Flag63, false)
+		}
+	}
+
+	State 5
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition InStage(Player, "BFkoh", true); Char: Player --- Stage: Capsule Corporation
+
+			Action SetFlag(Flag40, true)
+		}
+
+		Event 1
+		{
+			Condition Ko(FriezaFullPowerEnemy, false, 0); Frieza (Full Power) - Full Power 1
+			Condition Ko(Goku2Enemy, false, -1); Captain Ginyu - Goku
+
+			Action SetFlag(Flag41, true)
+		}
+
+		Event 65
+		{
+			Condition EventDone(0, 6, 0)
+
+			Action SetFlag(Flag49, true)
+		}
+
+		Event 71
+		{
+			Condition Health(<=, FriezaFullPowerEnemy, 70.0); Frieza (Full Power) - Full Power 1
+			Condition Ko(GokuEnemy2, true, -1); Captain Ginyu - Goku
+
+			Action SetFlag(Flag42, true)
+		}
+
+		Event 72
+		{
+			Condition Health(<=, FriezaFullPowerEnemy, 70.0); Frieza (Full Power) - Full Power 1
+			Condition Ko(GokuEnemy, true, -1); Captain Ginyu - Goku
+
+			Action SetFlag(Flag43, true)
+		}
+
+		Event 73
+		{
+			Condition Always
+
+			Action SetFlag(Flag44, true)
+		}
+
+		Event 74
+		{
+			Condition Always
+
+			Action SetFlag(Flag45, true)
+		}
+
+		Event 75
+		{
+			Condition Always
+
+			Action SetFlag(Flag46, true)
+		}
+	}
+
+	State 6
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action SetFlag(Flag48, true)
+			Action GotoState(2)
+		}
+	}
+
+	State 8
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action SetFlag(Flag25, true)
+			Action GotoState(3)
+		}
+	}
+
+	State 10
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action SetFlag(Flag26, true)
+			Action GotoState(3)
+		}
+	}
+}
+

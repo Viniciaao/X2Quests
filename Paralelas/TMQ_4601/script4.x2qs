@@ -1,0 +1,28 @@
+Script
+{
+	State 0
+	{
+		Event 0
+		{
+			Condition CheckFlag(Flag58, true)
+
+			Action SetAITable(RazberryEnemy, 145); Razberry - Traje de Batalha
+			Action SetAITable(NabanaEnemy, 144); Appule - Traje de Batalha
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag14, true)
+
+			Action SetAITable(NabanaEnemy, 144); Appule - Traje de Batalha
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag15, true)
+
+			Action SetAITable(RazberryEnemy, 145); Razberry - Traje de Batalha
+		}
+	}
+}
+

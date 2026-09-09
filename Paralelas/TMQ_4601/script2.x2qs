@@ -1,0 +1,282 @@
+Script
+{
+	State 0
+	{
+		Event 0
+		{
+			Condition CheckFlag(Flag0, true)
+
+			Action GotoState(1)
+		}
+	}
+
+	State 1
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action PlayDialogue(Dialogue0, 1000, "BFgen", -1); Dialogue: And who might you be exactly? Oh, a new addition to my forces? [MORE DIALOGUE PARTS] --- Stage: Campo Aberto
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag1, true)
+
+			Action Wait(5.0)
+			Action PlayDialogue(Dialogue1, 1000, "BFgen", -1); Dialogue: I see you have some potential. If you serve me well, then perhaps, hmm... [MORE DIALOGUE PARTS] --- Stage: Campo Aberto
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag2, true)
+
+			Action PlayDialogue(Dialogue2, 1000, "BFgen", -1); Dialogue: I know how strong you are, so I expect much from you. Don't disappoint me. [MORE DIALOGUE PARTS] --- Stage: Campo Aberto
+		}
+
+		Event 3
+		{
+			Condition CheckFlag(Flag3, true)
+
+			Action GotoState(2)
+		}
+	}
+
+	State 2
+	{
+		Event 0
+		{
+			Condition CheckFlag(Flag10, true)
+
+			Action PlayDialogue(Dialogue3, 1000, "BFkoh", -1); Dialogue: Ahem... [MORE DIALOGUE PARTS] --- Stage: Deserto
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag12, true)
+
+			Action PlayDialogue(Dialogue4, 1000, "BFkoh", -1); Dialogue: L-Lord Frieza, is there a reason why you've summoned us so suddenly just to fight? [MORE DIALOGUE PARTS] --- Stage: Deserto
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag13, true)
+			Condition CheckFlag(Flag14, false)
+			Condition CheckFlag(Flag15, false)
+
+			Action PlayDialogue(Dialogue5, 1000, "BFkoh", -1); Dialogue: H-He's gone... Lord Frieza sure has some strange ideas sometimes. [MORE DIALOGUE PARTS] --- Stage: Deserto
+		}
+
+		Event 3
+		{
+			Condition CheckFlag(Flag13, true)
+			Condition CheckFlag(Flag16, false)
+			Condition CheckFlag(Flag17, false)
+			Condition CheckFlag(Flag14, true)
+
+			Action CancelDialogue
+			Action SetFlag(Flag17, true)
+		}
+
+		Event 4
+		{
+			Condition CheckFlag(Flag13, true)
+			Condition CheckFlag(Flag16, false)
+			Condition CheckFlag(Flag17, false)
+			Condition CheckFlag(Flag15, true)
+
+			Action CancelDialogue
+			Action SetFlag(Flag17, true)
+		}
+
+		Event 5
+		{
+			Condition CheckFlag(Flag17, true)
+			Condition CheckFlag(Flag14, true)
+
+			Action PlayDialogue(Dialogue7, 1000, "BFkoh", -1); Dialogue: Dang it... It's not fair... We're gonna be grunts forever! --- Stage: Deserto
+		}
+
+		Event 6
+		{
+			Condition CheckFlag(Flag17, true)
+			Condition CheckFlag(Flag15, true)
+
+			Action PlayDialogue(Dialogue6, 1000, "BFkoh", -1); Dialogue: What the heck? There's no way you're a newbie! --- Stage: Deserto
+		}
+
+		Event 7
+		{
+			Condition CheckFlag(Flag18, true)
+
+			Action GotoState(3)
+		}
+	}
+
+	State 3
+	{
+		Event 0
+		{
+			Condition CheckFlag(Flag20, true)
+
+			Action PlayDialogue(Dialogue8, 1000, "BFkoh", -1); Dialogue: I saw how you fought just now. You have some pretty good instincts. [MORE DIALOGUE PARTS] --- Stage: Deserto
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag21, false)
+			Condition CheckFlag(Flag22, false)
+			Condition CheckFlag(Flag23, true)
+
+			Action CancelDialogue
+			Action SetFlag(Flag22, true)
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag21, false)
+			Condition CheckFlag(Flag22, false)
+			Condition CheckFlag(Flag24, true)
+
+			Action CancelDialogue
+			Action SetFlag(Flag22, true)
+		}
+
+		Event 3
+		{
+			Condition CheckFlag(Flag22, true)
+			Condition CheckFlag(Flag23, true)
+
+			Action PlayDialogue(Dialogue10, 1000, "BFkoh", -1); Dialogue: Curse you... I'll get you for this!　 --- Stage: Deserto
+		}
+
+		Event 4
+		{
+			Condition CheckFlag(Flag22, true)
+			Condition CheckFlag(Flag24, true)
+
+			Action PlayDialogue(Dialogue9, 1000, "BFkoh", -1); Dialogue: Damn it! How could I lose to a newbie?! --- Stage: Deserto
+		}
+
+		Event 5
+		{
+			Condition CheckFlag(Flag25, true)
+
+			Action GotoState(4)
+		}
+	}
+
+	State 4
+	{
+		Event 0
+		{
+			Condition CheckFlag(Flag29, true)
+
+			Action PlayDialogue(Dialogue11, 1000, "BFkoh", -1); Dialogue: Are you the new recruit I keep hearing about? I'm impressed you took down Dodoria and Zarbon. [MORE DIALOGUE PARTS] --- Stage: Deserto
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag32, true)
+
+			Action PlayDialogue(Dialogue12, 1000, "BFkoh", -1); Dialogue: W-we lost to someone greener than me... [MORE DIALOGUE PARTS] --- Stage: Deserto
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag33, true)
+
+			Action GotoState(5)
+		}
+	}
+
+	State 5
+	{
+		Event 0
+		{
+			Condition CheckFlag(Flag37, true)
+
+			Action PlayDialogue(Dialogue13, 1000, "BFkoh", -1); Dialogue: We're about to have a bit of a biffo, you and us! [MORE DIALOGUE PARTS] --- Stage: Deserto
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag38, true)
+
+			Action Wait(2.0)
+			Action PlayDialogue(Dialogue14, 1000, "BFkoh", -1); Dialogue: Listen, everyone. I think you're misunderstanding something. I don't want to be Lord Frieza's right hand! [MORE DIALOGUE PARTS] --- Stage: Deserto
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag41, true)
+
+			Action PlayDialogue(Dialogue15, 1000, "BFkoh", -1); Dialogue: No way... I'm the Blue Hurricane... How are you faster than me?! [MORE DIALOGUE PARTS] --- Stage: Deserto
+		}
+
+		Event 3
+		{
+			Condition CheckFlag(Flag42, true)
+
+			Action GotoState(6)
+		}
+	}
+
+	State 6
+	{
+		Event 0
+		{
+			Condition CheckFlag(Flag46, true)
+
+			Action PlayDialogue(Dialogue16, 1000, "BFkoh", -1); Dialogue: You've utterly devastated my Ginyu Force, without so much as breaking a sweat. You are the real deal. [MORE DIALOGUE PARTS] --- Stage: Deserto
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag47, true)
+			Condition CheckFlag(Flag63, false)
+
+			Action PlayDialogue(Dialogue17, 1000, "BFkoh", -1); Dialogue: Wh-What?! How?! [MORE DIALOGUE PARTS] --- Stage: Deserto
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag47, true)
+			Condition CheckFlag(Flag63, true)
+
+			Action GotoState(7)
+		}
+	}
+
+	State 7
+	{
+		Event 0
+		{
+			Condition CheckFlag(Flag51, true)
+
+			Action PlayDialogue(Dialogue18, 1000, "BFkoh", -1); Dialogue: Wh-What?! How?! [MORE DIALOGUE PARTS] --- Stage: Deserto
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag53, true)
+
+			Action PlayDialogue(Dialogue19, 1000, "BFkoh", -1); Dialogue: Allow me to demonstrate firsthand that I, Frieza, am the strongest being in the universe! [MORE DIALOGUE PARTS] --- Stage: Deserto
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag55, true)
+
+			Action PlayDialogue(Dialogue20, 1000, "BFkoh", -1); Dialogue: What are you doing here, brother? [MORE DIALOGUE PARTS] --- Stage: Deserto
+		}
+
+		Event 3
+		{
+			Condition CheckFlag(Flag56, true)
+
+			Action PlayDialogue(Dialogue21, 1000, "BFkoh", -1); Dialogue: I never expected such incredible power! [MORE DIALOGUE PARTS] --- Stage: Deserto
+		}
+	}
+}
+

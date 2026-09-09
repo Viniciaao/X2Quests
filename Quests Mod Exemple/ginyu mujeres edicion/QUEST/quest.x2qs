@@ -1,0 +1,219 @@
+ItemCollection Collection61
+{
+	ItemCollectionEntry { item: 0 type: MATERIAL i6: 1 i8: 1 i10: 0 } ; Small Mix Capsule
+	ItemCollectionEntry { item: 1 type: MATERIAL i6: 1 i8: 2 i10: 0 } ; Med. Mix Capsule
+	ItemCollectionEntry { item: 2 type: MATERIAL i6: 1 i8: 1 i10: 0 } ; High Mix Capsule
+	ItemCollectionEntry { item: 3 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Ultimate Mix Capsule
+	ItemCollectionEntry { item: 4 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Energy Shard
+	ItemCollectionEntry { item: 5 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Energy Crystal
+	ItemCollectionEntry { item: 6 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Energy Shard
+	ItemCollectionEntry { item: 7 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Energy Crystal
+	ItemCollectionEntry { item: 8 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Shard
+	ItemCollectionEntry { item: 9 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Crystal
+	ItemCollectionEntry { item: 10 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Shard
+	ItemCollectionEntry { item: 11 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Crystal
+	ItemCollectionEntry { item: 12 type: MATERIAL i6: 1 i8: 5 i10: 0 } ; Aura Shard
+	ItemCollectionEntry { item: 13 type: MATERIAL i6: 1 i8: 2 i10: 0 } ; Aura Crystal
+	ItemCollectionEntry { item: 14 type: MATERIAL i6: 1 i8: 2 i10: 0 } ; All-Aura Shard
+	ItemCollectionEntry { item: 15 type: MATERIAL i6: 1 i8: 1 i10: 0 } ; All-Aura Crystal
+	ItemCollectionEntry { item: 16 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Guard Shard
+	ItemCollectionEntry { item: 17 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Guard Crystal
+	ItemCollectionEntry { item: 18 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Guard Shard
+	ItemCollectionEntry { item: 19 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Guard Crystal
+	ItemCollectionEntry { item: 20 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Drop
+	ItemCollectionEntry { item: 21 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Essence
+	ItemCollectionEntry { item: 22 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Drop
+	ItemCollectionEntry { item: 23 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Essence
+	ItemCollectionEntry { item: 24 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Senzu Beansprout
+}
+
+ItemCollection Collection71
+{
+	ItemCollectionEntry { item: 0 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Small Mix Capsule
+	ItemCollectionEntry { item: 1 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Med. Mix Capsule
+	ItemCollectionEntry { item: 2 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; High Mix Capsule
+	ItemCollectionEntry { item: 3 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Ultimate Mix Capsule
+	ItemCollectionEntry { item: 4 type: MATERIAL i6: 1 i8: 5 i10: 0 } ; Energy Shard
+	ItemCollectionEntry { item: 5 type: MATERIAL i6: 1 i8: 2 i10: 0 } ; Energy Crystal
+	ItemCollectionEntry { item: 6 type: MATERIAL i6: 1 i8: 2 i10: 0 } ; All-Energy Shard
+	ItemCollectionEntry { item: 7 type: MATERIAL i6: 1 i8: 1 i10: 0 } ; All-Energy Crystal
+	ItemCollectionEntry { item: 8 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Shard
+	ItemCollectionEntry { item: 9 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Crystal
+	ItemCollectionEntry { item: 10 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Shard
+	ItemCollectionEntry { item: 11 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Crystal
+	ItemCollectionEntry { item: 12 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Aura Shard
+	ItemCollectionEntry { item: 13 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Aura Crystal
+	ItemCollectionEntry { item: 14 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Aura Shard
+	ItemCollectionEntry { item: 15 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Aura Crystal
+	ItemCollectionEntry { item: 16 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Guard Shard
+	ItemCollectionEntry { item: 17 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Guard Crystal
+	ItemCollectionEntry { item: 18 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Guard Shard
+	ItemCollectionEntry { item: 19 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Guard Crystal
+	ItemCollectionEntry { item: 20 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Drop
+	ItemCollectionEntry { item: 21 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Essence
+	ItemCollectionEntry { item: 22 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Drop
+	ItemCollectionEntry { item: 23 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Essence
+	ItemCollectionEntry { item: 24 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Senzu Beansprout
+}
+
+ItemCollection Collection81
+{
+	ItemCollectionEntry { item: 0 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Small Mix Capsule
+	ItemCollectionEntry { item: 1 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Med. Mix Capsule
+	ItemCollectionEntry { item: 2 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; High Mix Capsule
+	ItemCollectionEntry { item: 3 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Ultimate Mix Capsule
+	ItemCollectionEntry { item: 4 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Energy Shard
+	ItemCollectionEntry { item: 5 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Energy Crystal
+	ItemCollectionEntry { item: 6 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Energy Shard
+	ItemCollectionEntry { item: 7 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Energy Crystal
+	ItemCollectionEntry { item: 8 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Shard
+	ItemCollectionEntry { item: 9 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Crystal
+	ItemCollectionEntry { item: 10 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Shard
+	ItemCollectionEntry { item: 11 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Crystal
+	ItemCollectionEntry { item: 12 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Aura Shard
+	ItemCollectionEntry { item: 13 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Aura Crystal
+	ItemCollectionEntry { item: 14 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Aura Shard
+	ItemCollectionEntry { item: 15 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Aura Crystal
+	ItemCollectionEntry { item: 16 type: MATERIAL i6: 1 i8: 5 i10: 0 } ; Guard Shard
+	ItemCollectionEntry { item: 17 type: MATERIAL i6: 1 i8: 2 i10: 0 } ; Guard Crystal
+	ItemCollectionEntry { item: 18 type: MATERIAL i6: 1 i8: 2 i10: 0 } ; All-Guard Shard
+	ItemCollectionEntry { item: 19 type: MATERIAL i6: 1 i8: 1 i10: 0 } ; All-Guard Crystal
+	ItemCollectionEntry { item: 20 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Drop
+	ItemCollectionEntry { item: 21 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Essence
+	ItemCollectionEntry { item: 22 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Drop
+	ItemCollectionEntry { item: 23 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Essence
+	ItemCollectionEntry { item: 24 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Senzu Beansprout
+}
+
+TextEntry TMQ_TPQ_GYF_0
+{
+	en: "¡El Cambio de Cuerpo Extremo!"
+}
+TextEntry TMQ_TPQ_GYF_1
+{
+	en: "-Derrota a todos los Ginyu"
+}
+TextEntry TMQ_TPQ_GYF_2
+{
+	en: "-Salud del equipo agotada\n-Se acaba el tiempo"
+}
+TextEntry TMQ_TPQ_GYF_3
+{
+	en: "¡Ginyu ha tomado los cuerpos de varias guerreras! Derrótalos a todos y restaura la línea temporal."
+}
+TextEntry TMQ_TPQ_GYF_4
+{
+	en: "-Derrota a Ginyu (Vados) rápidamente"
+}
+TextEntry TMQ_TPQ_GYF_5
+{
+	en: "-Derrota a todos los enemigos"
+}
+
+Quest TMQ_TPQ_GYF
+{
+	episode: 3 ; Dialogue will be loaded from qe_ep03. Audio will be loaded from TMQ/CBQM_ep03_VOX.
+	sub_type: 0
+	num_players: 3
+
+	title: TMQ_TPQ_GYF_0 ; Return of Ginyu Force!
+	success: TMQ_TPQ_GYF_1 ; -Defeat all Ginyu Force members
+	failure: TMQ_TPQ_GYF_2 ; -All team HP depleted\n-Time expires
+	outline: TMQ_TPQ_GYF_3 ; The Ginyu Force is back to Earth again! But this time, the members seem a bit...different?!
+	warning: TMQ_TPQ_GYF_4 ; -Clear in under 5 minutes
+	ex_success: TMQ_TPQ_GYF_5 ; -Defeat Frieza and revived Ginyu
+
+	i40: 1
+	parent_quest: "TMQ_1400" ; Earth in Danger!
+	i44: 0
+	i48: 1
+	i52: -1
+	i56: -1
+	i60: -1
+	unlock_requirement: "TMQ_1400" ; Earth in Danger!
+	i68: -1
+	i72: -1
+	i76: -1
+	i80: 1
+	i84: 1
+
+	QxdUnk1(3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	QxdUnk2(0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	QxdUnk2(1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+	time_limit: 3000
+	difficulty: 7
+	level: 0
+	i112: 0
+	start_stage: "BFkoh" ; Capsule Corporation
+	start_demo: 0
+
+	xp_reward: 18400
+	ult_xp_reward: 276000
+	fail_xp_reward: 3700
+	zeni_reward: 1740000
+	ult_zeni_reward: 2610000
+	fail_zeni_reward: 3500
+	tp_medals_once: 70
+	tp_medals: 50
+	tp_medals_special: 0
+	resistance_points: 0
+
+	ItemReward { item: Collection61 type: COLLECTION condition: 1 i12: 0 flags: NORMAL i20: 1 chance: 100.0 }
+	ItemReward { item: Collection71 type: COLLECTION condition: 0 i12: 0 flags: NORMAL i20: 1 chance: 100.0 }
+	ItemReward { item: Collection81 type: COLLECTION condition: 0 i12: 0 flags: NORMAL i20: 1 chance: 100.0 }
+        
+
+	; Recompensa de Ropa 
+        ItemReward { item: 320 type: TOP condition: 1 i12: 0 flags: NORMAL i20: 1 chance: 100.0 }
+	ItemReward { item: 320 type: BOTTOM condition: 1 i12: 0 flags: NORMAL i20: 1 chance: 100.0 }
+        ItemReward { item: 320 type: SHOES condition: 1 i12: 0 flags: NORMAL i20: 1 chance: 100.0 }
+        ItemReward { item: 294 type: BOTTOM condition: 1 i12: 0 flags: NORMAL i20: 1 chance: 100.0 }
+        ItemReward { item: 294 type: GLOVES condition: 1 i12: 0 flags: NORMAL i20: 1 chance: 100.0 }
+        ItemReward { item: 294 type: TOP condition: 1 i12: 0 flags: NORMAL i20: 1 chance: 100.0 }
+        ItemReward { item: 294 type: SHOES condition: 1 i12: 0 flags: NORMAL i20: 1 chance: 100.0 }
+               
+
+	; Recompensa de Material estándar (Cápsula de Mezcla Z)
+	ItemReward { item: 3 type: MATERIAL condition: 1 i12: 0 flags: NORMAL i20: 1 chance: 100.0 }
+        
+        ; Recompensas de Habilidades
+	SkillReward { skill: 5800 condition: 1 i12: 0 chance: 100.0 }
+
+	CharReward { char: "GOK" costume: 7 i6: -1 } ; Goku - Turtle Hermit Gi (Go) 4
+	CharReward { char: "GOK" costume: 20 i6: -1 } ; Goku - 20
+
+	; Capsule Corporation, West City (Industrial Sector), West City (Suburbs)
+	stages: ("BFkoh", "BFsky", "BFspe", -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1)
+	i192: 1
+
+	CharPortrait { char: "GVD" costume: 5 trans: -1 } ; Ginyu (Videl)
+	CharPortrait { char: "GYK" costume: 0 trans: -1 } ; Ginyu (KALE)
+	CharPortrait { char: "M01" costume: 0 trans: -1 } ; Ginyu (Android 18)
+	CharPortrait { char: "GYA" costume: 0 trans: -1 } ; Ginyu (Android 21)
+	CharPortrait { char: "GYV" costume: 0 trans: -1 } ; Ginyu (Vados)
+	CharPortrait { char: -1 costume: 0 trans: -1 }
+
+	i232: 1
+	i234: 4
+	i236: 8
+	i238: 10
+	i240: 13
+	i242: 15
+	i244: -1
+	i246: -1
+	i248: -1
+	i250: -1
+	flags: 0x400000
+
+	update_requirement: ANY
+	dlc_requirement: NONE
+
+	i264: 0
+	no_enemy_bgm: 26
+	enemy_near_bgm: 24
+	battle_bgm: 11
+	ultimate_finish_bgm: 2
+	f276: 1.0
+	i280: 0
+}

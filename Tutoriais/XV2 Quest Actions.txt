@@ -1,0 +1,1073 @@
+XV2 Quest Actions
+
+
+Note that although this list shows the underlying .qed opcode number, the opcode number is not needed in the X2QS language, as you will only use the condition/action name.
+Also note, that although generally this list could be used as a .qed documentation, the X2QS lang internally changes a few things (for example, it applies reverse boolean logic in a couple of cases, where 0 is true, and 1 is false, of course the compiler will write things as the game expect them, once it creates the .qed file). When writing the quest, you don't need to be aware of these internal details, this warning is only for those that want to use this list as .qed documentation.)
+
+
+Nop (opcode 0)
+Description: No operation, it literally does nothing but waste the time it takes in being executed.
+Parameters: none
+
+
+
+
+InitQuest (opcode 1)
+Description: It internally initiates the quest, usually you put this at the very beginning of the script, in the first State, first Event.
+Parameters: none
+Notes: if this action is not called, weirdness can happen.
+
+
+
+
+FadeIn and FadeOut (opcodes 2 and 3 respectively)
+Description: these actions will perform opposite actions. FadeOut will make the screen go to black/white, while FadeIn will go from black/white to render. They have the same Parameters.
+Parameter 1: a float number, that usually gets degrees-like numbers. Increasing this number will decrease the speed of the fade (up to a limit, after that it seems to reset?)
+Parameter 2: fade mode, one of the following constants: WHITE or BLACK.
+Parameter 3: keep ui (boolean). If false, the ui is hidden while the fade happens, if true, the ui is kept.
+Parameter 4: an integer whose purpose is unknown.
+
+
+
+
+PlayBgm (opcode 4)
+Description: Plays a music track (CAR_BGM.acb/awb)
+Parameter 1: Unknown purpose integer, the game checks for range 0-2, but 0 is the value usually used by vanilla quests and the recommended one to use.
+Parameter 2: The cue id of the track to play. Use the beta of Eternity Audio Tool to see the cue id (warning: EAT may fail in properly listing the last cue id's of the BGM .acb in concrete)
+Parameter 3: audio fade-in time. An integer that specifies the number of millisecs that the music will go from silent to normal volume.
+Notes: if music was already specified on the Quest object, the one played with this apparently plays mixed with it.
+
+
+
+
+StopBgm (opcode 5)
+Description: Stops a music track (it can stop both, music played with PlayBgm action, and music specified in the Quest object).
+Parameter 1: Unknown purpose boolean. Recommended to set it to false, like all vanilla quests that use this do.
+Parameter 2: The cue id of the track to stop.
+Parameter 3: audio fade-out time. An integer that specifies the number of millisecs that the music will go from normal volume to silent. Use 0 if you need to stop the music asap.
+
+
+
+
+LoadDemo (opcode 6)
+Description: it loads a demo file, but does not play it yet.
+Parameter 1: the demo file (string). E.g.: "D01_05" will load the demo file  data\demo\D01_05\D01_05.dem)
+Parameter 2: fade type for the load screen. The following constants can be used: BLACK, WHITE, or NONBG. If NONBG, the screen will preserve its current render.
+Notes: the demo load happens asynchronously, that means that the action may return before the demo load is complete. Use the condition "IsDemoLoadCompleted" in another event to wait for its load.
+
+
+
+
+RegisterActorForDemo (opcode 7)
+Description: it registers an actor for a demo, replacing the default ones specified in the .dem.
+Parameter 1: a QmlChar object.
+Notes: only 7 chars can be registered for a demo. The order in which RegisterActorForDemo is called will determine the char in the .dem that they will replace. The original name of this function in the game is ActorRegist.
+
+
+
+
+PlayDemo (opcode 8)
+Description: it plays the demo that was previously loaded with LoadDemo.
+Parameters: none.
+Notes: before using this Action, make sure to wait for the demo load completion. (Condition IsDemoLoadCompleted).
+Also, the play of the demo is asynchronously, using the condition DemoPlayEnded in another Event to wait for the demo play to be completed.
+
+
+
+
+Unk9 (opcode 9)
+Description: unknown purpose action.
+Parameter 1: an integer that is ignored by the game code.
+Parameter 2: an integer with unknown purpose.
+Parameter 3: a boolean with unknown purpose.
+Notes: This action is involved with demos. Parameter 2 needs to be a value of 4 or higher or the game will freeze following a demo.
+
+
+
+
+Unk10 (opcode 10)
+Description: unknown purpose action.
+Parameter 1: a QmlChar object.
+Parameter 2: an integer that is logged by the game debug functions, but unused otherwise.
+
+
+
+
+
+
+
+
+QuickPowerup (opcode 11)
+Description: it applies a quick powerup transformation without any wait or scene, suitable for usage in scenes before the battle.
+Parameter 1: a QmlChar object.
+Parameter 2: integer with transformation id (not skill id!!!). 100 is super saiyan. 400 is villian.  (200 and 300 are probably ss2 and ss3, but not checked).
+Notes: this function should be only used for scenes or things alike. If you for example use this on a cac, and you have custom hair, the result won't be the one you expect: it will not apply to your custom hair.
+
+
+
+
+RemoveChara and RemoveChara_ (opcodes 16 and 12 respectively)
+Description: removes a char from the quest.
+Parameter 1: a QmlChar object.
+Parameter 2: apply vanish effect (boolean). If true, it applies a simple vanish effect on the char before being removed.
+Notes: RemoveChara and RemoveChara_ are IDENTICAL. They call exactly the same game function, with no branching or anything different, the only thing that differs is the opcode they use.
+
+
+
+
+SetReplaceCharaLoad and SetReplaceCharaLoad_ (opcodes 13 and 17 respectively)
+Description: It loads/spawns a char.
+Parameter 1: position (string)
+Parameter 2: a QmlChar object.
+Parameter 3: spawn (boolean). If true, the char is spawned IF possible. If false, char is loaded, but not spawned yet.
+Parameter 4: fade mode (BLACK, WHITE, NONBG or DEFAULT, usually it is DEFAULT).
+Notes: SetReplaceCharaLoad and SetReplaceCharaLoad_ are the same function in the game, only difference is the opcode number. The name of the function matches the one used by the game devs.
+
+
+
+
+SetCharVisible and SetCharVisible_ (opcodes 14 and 18 respectively)
+Description: it toggles the visibility of a character.
+Parameter 1: a QmlChar object.
+Parameter 2: toggle visibility (boolean). If false, it hides the char. If true, it shows it.
+Notes: SetCharVisible and SetCharVisible_ are the same function in the game, only difference is the opcode number. The original name of the function given by devs is "EnemyDraw", which is a pretty bad name, because the function also works with allies and even with the Player character.
+
+
+
+
+RecoverHp (opcode 15)
+Description: it makes the specified character to recover hp.
+Parameter 1: a QmlChar object.
+Parameter 2: percent of total health to recover (float)
+Notes: some aclaration about what this function does. Let's say, player health is at 20%.  (Assume each of this line is run alone without the other)
+Action RecoverHp(Player, 40.0) -> player would end with 40% of health (e.g.NOT 20+40 =60)
+Action RecoverHp(Player, 15.0) -> would do nothing, the player would remain with 20% of health.
+
+
+
+
+QuestClear (opcode 19)
+Description: Clears quest, starting the quest result and rewards screen appear, etc.
+Parameters: none.
+Notes: the official name of the function used by devs is "EventEnd", but that name would cause confusion.
+
+
+
+
+Unk20 (opcode 20)
+Description: unknown purpose action.
+Parameters: none
+Notes: although the purpose is unknown, it is known that the game code accesses the internal player object in this action.
+
+
+
+
+BattleModeStart (opcode 21)
+Description: it sets the quest in battle mode. In quests with no scenes (like non main quests), this function is called around the beginning. Otherwise, it is called whenever the battle should start.
+Parameters: none.
+Notes: if you don't call this action, weirdness will happen.
+
+
+
+
+Unk22 (opcode 22)
+Description: unknown purpose action.
+Parameters: none
+Notes: Only seen used in OSQ quests. Game code seems to do something to either player or to all loaded chars?
+
+
+
+
+GotoState and GotoState_ (opcodes 23 and 69)
+Description: it leaves the current script state, and changes the flow to the specified one. Any event in the current state that was not executed won't longer have the opportunity to run.
+Parameter 1: the state to go to (integer).
+Notes: GotoState_ is an alias of GotoState with a different opcode. However, no quest in the game uses that variant, so, to avoid any problems in future updates of the game, stick to GotoState, and forget about the existence of GotoState_.
+
+
+
+
+PortalControl (opcode 25)
+Description: it locks or unlocks a stage portal (gate)
+Parameter 1: The departure stage (stage code, id or X2mMod object)
+Parameter 2: The destination stage (stage code, id or X2mMod object)
+Parameter 3: unlock (boolean). If true, it unlocks the portal, if false, it locks it.
+Parameter 4: play scene (boolean). If true, it plays a small scene. If false, it doesn't.
+
+
+
+
+PlayDialogue (opcode 26)
+Description: it plays a dialogue. A regular dialogue (don't use InteractiveDialogue or EventDialogue here).
+Parameter 1: the Dialogue object to play.
+Parameter 2: integer with unknown purpose.
+Parameter 3: stage code, id or X2mMod object, indicating the stage where the dialogue must be played. Can be -1 (for current stage, i guess)
+Parameter 4: integer that is unused by game code.
+
+
+
+
+CharaSpawn (opcode 27)
+Description: it spawns a char, and plays a small scene. If char cannot be spawned immediately because number of chars  is complete, it will spawn it when possible when other chars are removed/defeated)
+Parameter 1: a QmlChar object (the char to spawn)
+Parameter 2: position integer. This is the N in TRESPASS_N position within the stage (usually defined in the _QST.map of the stages).
+Parameter 3: A Dialogue object (or set to -1 for no dialogue).
+Parameter 4: scene id (integer)
+Parameter 5: stage (stage code, id or X2mMod object)
+Parameter 6: integer with unknown purpose
+Notes: if the dialogue Parameter is valid (not -1), that dialogue subtitles will use this char portrait, overriding the portrait specified in the Dialog object itself. This function, along with the 2-3 chars version of it, is internally called "Trespass" by the game devs.
+
+
+
+
+PlayScene (opcode 28)
+Description: it makes the specified char to play a scene. This scene is like the ones available for CharaSpawn and some other functions.
+Parameter 1: a QmlChar object.
+Parameter 2: a scene id.
+Parameter 3: a Dialogue object (can be set to -1 for no dialogue)
+Parameter 4: position integer
+Notes: the game devs call this "PlayEtoolEvent".
+
+
+
+
+Unk29 (opcode 29)
+Description: action with unknown purpose.
+Parameter 1: boolean (if Parameter 2 is true, this Parameter is ignored by game code).
+Parameter 2: boolean
+Notes: the function has only been seen used in quests with story. If Parameter 2 is false, the game code seems to load result.iggy.
+
+
+
+
+ShowQuestSummary (opcode 30)
+Description: it shows the quest summary (that thing at the beginning that shows the quest title, objectives and defeat conditions). This is only needed in main quests, fuu quests and legend patrol quests. Don't use this in any other quest type, because the game already shows the quest summary on its own in those.
+Parameters: none
+
+
+
+
+SetAITable (opcode 31)
+Description: it sets the ai table of a character controlled by AI.
+Parameter 1: a QmlChar object.
+Parameter 2: the ait entry in ai_table.ait.
+
+
+
+
+UnlockQuest (opcode 32)
+Description: unlocks a quest. The quest must be of the same type. It is unknown if this action works with any quest type, vanilla only uses it in main quest, legend patrol and fuu quests.
+Parameter 1: the quest to start (quest code or X2mMod object). The quest must be of the same type. If it is a quest code and the quest type doesn't match, it will be considered a compilation error. If it is a X2mMod object and the quest type doesn't match (or mod is not aquest), it will be considered an installation error.
+
+
+
+
+QuestFinishState (opcode 33)
+Description: it sets the quest finish state (result).
+Parameter 1: one of the following constants: COMPLETE, ULTIMATE_FINISH or FAIL.
+Notes: about QuestFinishState(FAIL). The game automatically fails the quest when the party is wiped or time out. But if you need special failure conditions (such as a quest ally killed, etc), you will have to code the logic yourself and eventually call QuestFinishState(FAIL)
+
+
+
+
+SetFlag (opcode 34)
+Description: it sets the boolean value of a flag variable.
+Parameter 1: the flag variable.
+Parameter 2: the value to set (boolean)
+
+
+
+
+ShowWarning (opcode 35)
+Description: it shows one of those "red warnings'' screen. In parallel quests, this is usually called when ultimate finish has started. In expert quests, you will usually see this before the enemy.
+Parameters: none
+
+
+
+
+TimeControl (opcode 36)
+Description: it performs an action on the quest time (add time, remove time, or set elapsed time). Note that this function doesn't inform the player about the operation (no +XXX time popup, use the action AddTime for that)
+Parameter 1: one of the following constants: ADD_TIME, REMOVE_TIME, SET_ELAPSED.
+Parameter 2: the time in seconds.
+Example cases: consider that the quest has 15 minutes, and that 23 seconds have elapsed since beginning (e.g. clock is currently at 14:37)
+(Assume that every one of the following lines is run alone, without the other two)
+Action TimeControl(ADD_TIME, 13.0) -> the clock will be now at 14:50
+Action TimeControl(REMOVE_TIME, 13.0) -> the clock will be now at 14:24
+Action TimeControl(SET_ELAPSED, 13.0) -> the clock will be now at 14:47
+
+
+
+
+HealthCap (opcode 37)
+Description: it avoids the hp of the specified character to drop below the specified amount.
+Parameter 1: toggle (boolean). If true, it enables the health cap. If false, it removes a previous health cap.
+Parameter 2: the char (a QmlChar object)
+Parameter 3: the percentage of total health (float)
+
+
+
+
+CancelDialogue (opcode 38)
+Description: cancels any dialogue that is currently playing (if any). Not only those started from script, but also event dialogues and common dialogues.
+Parameters: none
+
+
+
+
+SetStat (opcode 39)
+Description: sets or mods a stat. For some stats such as HEALTH, the action acts as a mod of current value (e.g, positive value acts as restore, and negative value as damage). For some stats such as MAX_KI, the action sets the absolute value instead.
+Parameter 1: the char (QmlChar object)
+Parameter 2: the stat. One of the following constants allowed: LEVEL, HEALTH, KI, STAMINA, ATK, KI_ATK, SUPER_ATK, SUPER_KI, ATK_DAMAGE, KI_DAMAGE, SUPER_ATK_DAMAGE, SUPER_KI_DAMAGE, MAX_HEALTH, MAX_KI, MAX_STAMINA, GUARD_ATK, GUARD_DAMAGE, MOVE_SPEED and BOOST_SPEED.
+Parameter 3: the value to set or mod the stat (integer)
+
+
+
+
+Unk40 (opcode 40)
+Description: action with unknown purpose.
+Parameter 1: a QmlChar object.
+Parameter 2: boolean. Whatever this action does, this boolean as a toggle.
+Notes: in vanilla quests, this action is used only by the quest CTP_05_03.
+
+
+
+
+UseSkill (opcode 41)
+Description: it causes the specified char to run one of its assigned skills. Only works for AI chars.
+Parameter 1: a QmlChar object.
+Parameter 2: the skill slot. One of the following constants: SUPER1, SUPER2, SUPER3, SUPER4, ULTIMATE1, ULTIMATE2, BLAST, AWAKEN. Note that although the compiler understands BLAST and AWAKEN, these don't seem to work with this function.
+Parameter 3: a boolean with unknown purpose.
+Notes: please note that the order of super (1-4) and ultimate (1-2) doesn't match the order used in the game gui. It matches the order used in the QxdChar and QmlChar objects, and also the order used in cus files and x2m chars mods (e.g. this is the internal order the game uses)
+
+
+
+
+SetAttackTarget (opcode 42)
+Description: it makes the char in Parameter2, the attack target of the char in Parameter 1.
+Parameter 1: the char whose attack target is going to be set. (a QmlChar object)
+Parameter 2: the char that will become the target of the char in Parameter 1. (a QmlChar object, can be -1).
+Parameter 3: toggle (boolean). If true, it activates the target, if false, the char in Parameter1 will not target anything.
+Notes: this function works for both AI and human chars.
+
+
+
+
+ActivateInteractiveChar (opcode 43)
+Description: it activates/spawns an interactive char. Interactive chars are those chars that don't fight and that may have an interactive dialogue. They are defined as "NEUTRAL" in their QmlChar object, and referenced by an InteractiveCharPosition in positions.x2qs. If they have dialogue, their interactive dialogue is specified in their InteractiveCharPosition. (see one of the sample parallel quests for more info on that)
+Parameter 1: the char to activate (a QmlChar object)
+Parameter 2: toggle (boolean). If true, it activates/spawns the char (if possible and chars limit hasn't been reached). If false, it deactivates it/removes it.
+Parameter 3: boolean with unknown purpose. In most cases, it gets the same value as Parameter 2.
+Notes: it looks that the cases of 3 random avatar interactive chars are some kind of special case for the game, and activating one of them activates the other two in the chain. Also their dialogue is automatic and not defined in dialogue.x2qs.
+
+
+
+
+CharaSpawn2 (opcode 44)
+Description: it spawns two chars (if possible) and shows a scene. If chars can't be spawned because all chars slots are used, they are apparently put in a queue and spawned later if possible.
+Parameter 1: the first char to spawn. (a QmlChar object).
+Parameter 2: the second char to spawn (a QmlChar object). If the dialogue Parameter is a valid Dialogue object, that dialogue will get this char portrait in the subs, overriding the one specified in the dialogue object.
+Parameter 3: position integer. This is the N in TRESPASS_N position within the stage (usually defined in the _QST.map of the stages).
+Parameter 4: the dialogue to play. A Dialogue object, or use -1 (or any negative number) if you don't need any dialogue.
+Parameter 5: the stage where to spawn (stage code, id or X2mMod object). The stage field in the QmlChar object may have to be the same as this.
+Parameter 6: an integer with unknown purpose.
+Parameter 7: an integer with unknown purpose.
+Parameter 8: an integer with unknown purpose.
+Notes: the game official name for this action and its 1-3 chars variants is "TresPass". Unlike the 1-char variant, this one doesn't allow to set a scene (it always plays the same scene of the two chars flying)
+
+
+
+
+CharaSpawn3 (opcode 45)
+Description: it spawns three chars (if possible) and shows a scene. If chars can't be spawned because all chars slots are used, they are apparently put in a queue and spawned later if possible.
+Parameter 1: the first char to spawn (a QmlChar object)
+Parameter 2: the second char to spawn (a QmlChar object).
+Parameter 3: the third char to spawn (a QmlChar object). If the dialogue Parameter is a valid Dialogue object, that dialogue will get this char portrait in the subs, overriding the one specified in the dialogue object.
+Parameter 4: position integer. This is the N in TRESPASS_N position within the stage (usually defined in the _QST.map of the stages).
+Parameter 5: the dialogue to play. A Dialogue object, or use -1 (or any negative number) if you don't need any dialogue.
+Parameter 6: the stage where to spawn (stage code, id or X2mMod object). The stage field in the QmlChar object may have to be the same as this.
+Parameter 7: an integer with unknown purpose.
+Parameter 8: an integer with unknown purpose.
+Notes: the game official name for this action and its 1-2 chars variants is "TresPass". Unlike the 1-char variant, this one doesn't allow to set a scene (it always plays the same scene of the three chars flying)
+
+
+
+
+CharaLeave (opcode 46)
+Description: it makes the specified char leave the quest (or flee to another stage), and plays a scene.
+Parameter 1: the char that leaves (a QmlChar object)
+Parameter 2: position (an integer). Probably the same thing that in the trespass functions (e.g., the integer is the N in TRESPASS_N)
+Parameter 3: dialogue to play. A Dialogue object or set to -1 for no dialogue.
+Parameter 4: the scene to play (integer). You will usually use scene 26 for CharaLeave.
+Parameter 5: boolean with unknown purpose.
+Parameter 6: the stage to flee to. A stage code, id or X2mMod object. Can be set to -1, in that case, the chara just leaves the quest.
+Notes: the official name of game devs for this is "ExitDemo". If the dialogue is valid (not -1), that dialogue will use this char portrait in the subs, overriding the one specified in the Dialogue object.
+
+
+
+
+Unk47 (opcode 47)
+Description: action with unknown purpose.
+Parameter 1: a QmlChar object.
+Parameter 2: an integer of unknown purpose.
+Notes: the only vanilla quest that uses this is TMQ_0801.
+
+
+
+
+Revive (opcode 48)
+Description: it revives a character that has been ko'd, and plays a scene.
+Parameter 1: the char to revive (a QmlChar object). The char shouldn't have been deleted (see Notes)
+Parameter 2: dialogue to play. A Dialogue object or -1 for no dialogue.
+Parameter 3: scene to play for the revive (an integer).
+Parameter 4: the percentage of total health to revive with.
+Notes: for this action to succeed, you must stop the char from being auto-removed on ko. You do that by using the action "DontAutoRemoveOnKo". You usually call that action at the beginning for chars that auto-spawn, or whenever they spawn otherwise (actually, apparently the action works even before the char is spawned, so just do it at beginning). The official game name for this action is "RevivalDemo". If the dialogue Parameter is valid, that dialogue will use this char portrait in the subs, overriding whatever is specified in the Dialog object itself.
+
+
+
+
+Powerup (opcode 49)
+Description: it plays a scene, and makes a character to power up using its assigned awaken skill.
+Parameter 1: the char to powerup (a QmlChar object)
+Parameter 2: a dialogue to play. A DialogueObject or use -1 for no dialogue.
+Parameter 3: scene to play for the power up (an integer).
+Notes: if the dialogue Parameter is valid, that dialogue subs will use this char portrait before the transformation, overriding whatever is specified in the Dialog object itself. The official game name for this action is PowerupDemo.
+
+
+
+
+SetThereAreEnemies (opcode 50)
+Description: it sets if there are enemies on a stage (which has an effect on the stage portal icon being green or gray)
+Parameter 1: the stage. Stage code, id or X2mMod object.
+Parameter 2: toggle (boolean). If true, it tells the game to behave as if there were enemies (may not have any effect other than making the portal icon green). If false, the opposite (but see Notes).
+Notes: if there are enemies chars loaded in the specified stage, SetThereAreEnemies(stage, false) won't have an effect on the icon of the portal, as the game knows there are still enemies and will remain as green.
+
+
+
+
+Unk51 (opcode 51)
+Description: action of unknown purpose.
+Parameter 1: a QmlChar object.
+Parameter 2: an integer of unknown purpose.
+
+
+
+
+MoveTo (opcode 52)
+Description: moves the specified character to the specified position in this stage.
+Parameter 1: the position in the stage (string)
+Parameter 2: the char to move (a QmlChar object)
+
+
+
+
+ModelChange (opcode 54)
+Description: it "transforms" a QmlChar into another QmlChar, if possible (if the number of chars currently loaded allows the game to load one more), and plays a scene. The other char can be one using a totally different model (cms). You may need to use LoadChara on the second char (the transform to) at some point prior to using this.
+Parameter 1: the char that will transform (a QmlChar object)
+Parameter 2: the char to transform to (a QmlChar object)
+Parameter 3: position integer. This is the N in TRESPASS_N position within the stage (usually defined in the _QST.map of the stages).
+Parameter 4: dialogue to play. A Dialogue object, or use -1 for no dialogue. The dialogue will use the char in Parameter 1 as the portrait, overriding the one set in the Dialogue object itself.
+Parameter 5: scene to play (integer)
+Notes: the official game name for this action is ModelChangeDemo. If you want to make the dialogue have the char in Parameter 2 as portrait, use the ModelChange2 action instead.
+
+
+
+
+
+
+LoadChara (opcode 55)
+Description: it loads a char. If the char has the spawn_at_start set , the char will appear (if its stage is the current one...). Otherwise, the action will act as a preload (loading a char is a time consuming operation, so most quests use LoadChara at points prior to CharaSpawn).
+Parameter 1: the char to load (QmlChar object)
+
+
+
+
+DontRemoveOnKo (opcode 56)
+Description: it avoids the specified char from being auto-removed when it gets ko. If this action is called, his body will be on the ground when ko. You will normally use this when you are going to use the Revive action later on this char. Make sure to use this action as early as possible, because once the char is ko, it would be too late.
+Parameter 1:  the char (QmlChar object)
+Notes: don't use this on the party chars (Player, Player2, Player3, etc), because those don't get auto removed on ko.
+
+
+
+
+Wait (opcode 57)
+Description: it ceases the execution of current event for the specified amount of time.
+Parameter 1: seconds to wait (float)
+Notes: it is possible that the game doesn't like more than one Wait per Event (it may ignore the second call)
+
+
+
+
+ChangeStage (opcode 58)
+Description: it changes the current stage.
+Parameter 1: the stage to go to. A stage code, id or X2mMod object.
+Parameter 2: fade type. One of the following constants: WHITE, BLACK, NONBG. Although NONBG here actually shows a background (it shows the loading stage background like when going through a portal). If you are going to use this action on a parallel quest or expert quest, I recommend you to always use NONBG. Otherwise, if you use fade types BLACK/WHITE after the stage change, you will be stuck in a white/black screen after the change stage (although you should be able to leave that with a FadeIn call, but weirdness will still happen...)
+
+
+
+
+PlayBev (opcode 59)
+Description: it plays a bev file previously loaded with LoadBev. Make sure to wait for bev load completion with Condition IsBevLoadCompleted before calling this action.
+Parameter 1: an integer with unknown purpose.
+Parameter 2: the first char that participates in the scene (a QmlChar object)
+Parameter 3: the second char that participates in the scene (a QmlChar object). If the scene has less than 2 chars, this can be set to -1, to a big number outside qml range, or just to any character.
+Parameter 4: the third char that participates in the scene (a QmlChar object). If the scene has less than 3 chars, this can be set to -1, to a big number outside qml range, or just to any character.
+Parameter 5: the 4th char that participates in the scene (a QmlChar object). If the scene has less than 4 chars, this can be set to -1, to a big number outside qml range, or just to any character.
+Parameter 6: the 5th char that participates in the scene (a QmlChar object). If the scene has less than 5 chars, this can be set to -1, to a big number outside qml range, or just to any character.
+Parameter 7: the 6th char that participates in the scene (a QmlChar object). If the scene has less than 6 chars, this can be set to -1, to a big number outside qml range, or just to any character.
+Parameter 8: the 7th char that participates in the scene (a QmlChar object). If the scene has less than 7 chars, this can be set to -1, to a big number outside qml range, or just to any character.
+Notes: the call is asynchronous. Use the condition PlayBevEnded in another event to wait for play completion.
+
+
+
+
+DamageHp (opcode 60)
+Description: it causes health damage to the specified char.
+Parameter 1: the char (a QmlChar object)
+Parameter 2: percentage of total health to damage (float)
+
+
+
+
+Unk61 (opcode 61)
+Description: action with unknown purpose.
+Parameter 1: a QmlChar object.
+Parameter 2: an integer with unknown purpose (game checks for range 0-22, the compiler doesn't care)
+Parameter 3: an integer with unknown purpose.
+Parameter 4: an integer with unknown purpose.
+Notes: this function is used in most parallel quests (and nowhere else) at the very beginning of the first script, before even InitQuest is called, and called once for most of the quest chars.
+It is possible that this action is related somehow with AI and ai difficulty, but not confirmed.
+
+
+
+
+LockAISkill (opcode 62)
+Description: it prevents an AI controlled character from using a skill (doesn't work with human players)
+Parameter 1: the char (a QmlChar object)
+Parameter 2: the skill slot. One of the following constants: SUPER1, SUPER2, SUPER3, SUPER4, ULTIMATE1, ULTIMATE2, EVASIVE, BLAST, AWAKEN. BLAST is understood by the compiler but will likely not work. Locking an awaken skill won't have an effect on the xv2patcher transformation patch for ai. (although maybe I should implement that...)
+Parameter 3: toggle (boolean). True to lock the skill. False to unlock a previously locked skill.
+
+
+
+
+Unk63 (opcode 63)
+Description: action with unknown purpose.
+Parameter 1: a QmlChar object.
+Parameter 2: a float number. Although the game code will convert this into an integer, discarding any fractional values it may have.
+Notes: Used in very few quests, some PQ, and only 1 CTP. Although its purpose is unknown, it is known that the game a) converts the float into integer. b) sets the unknown "i36" field of the QmlChar object to the converted integer value (and that's all it does, so finding out what i36 is would mean figuring out what this function does)
+
+
+
+
+Unk64 (opcode 64)
+Description: action with unknown purpose.
+Parameter 1: a QmlChar object.
+Parameter 2: an integer with unknown purpose.
+
+
+
+
+PlaceDragonBall (opcode 65)
+Description: it places a dragon ball in the current stage (only if the map supports it). A stage supports dragon balls, if it has in some .map files objects with names in QUEST_DB_POS_N, where N is a number that is calculated by this function (see Parameters description)
+Parameter 1: integer. If >= 0, it tells the N in QUEST_DB_POS_N. If negative, the game will use a random number between Parameter 3 and Parameter 4 to determine N.
+Parameter 2: integer. If >= 0, it tells the game which ball to set (0 is 1-star, 1 is 2-star,...,6 is 7-star). If negative, the game choses one randomly from the ones not placed yet.
+Parameter 3: integer. if Parameter 1 was >= 0, this Parameter is ignored. If Parameter 1 was < 0, this Parameter is the lowest random number used to calculate the N in QUEST_DB_POS_N.
+Parameter 4: integer. if Parameter 1 was >= 0, this Parameter is ignored. If Parameter 1 was < 0, this Parameter is the highest random number used to calculate the N in QUEST_DB_POS_N.
+Example usages:
+Action PlaceDragonBall(14, 4, -1, -1); It places the 5-star dragon ball in QUEST_DB_POS_14.
+Action PlaceDragonBall(-1, 3, 0, 13); It places the 4-star dragon ball in a random position between QUEST_DB_POS_00 and QUEST_DB_POS_13.
+Action PlaceDragonBall(-1, -1, 14, 29); It places a random dragon ball (from the ones not placed yet) in a random position between QUEST_DB_POS_14 and QUEST_DB_POS_29.
+Notes: This action requires you to set the "sub_type" field in the Quest object to 1. (this tells the game that the quest is a dragon ball one, which will in turn make the time machine appear, and enable the dragon balls script actions and conditions).
+
+
+
+
+SetCanCarryDragonBall (opcode 66)
+Description: it sets if a char is allowed to pick/carry a dragon ball.
+Parameter 1: the char (a QmlChar object).
+Parameter 2: toggle (boolean). If true, the char can carry dragon balls. If it's false, he can't.
+Example usage: Action SetCanCarryDragonBall(Player, false); Enjoy not being able to pick up the balls!
+
+
+
+
+LoadBev (opcode 67)
+Description: it loads a bev file, but doesn't play it yet. Bev files are... scene files that are more simple than demos (.dem) (apparently at least, because I didn't do any research on them).
+Parameter 1: the bev filename (string). The filename is without the extension, and relative to data/event/Battle/XXX/, where XXX is the quest type of this quest (TPQ, TMQ, etc).
+Notes: the bev loading happens asynchronously. That means that this call may return before the bev has finished loading. Use the Condition IsBevLoadCompleted in another event to wait for load completion.
+
+
+
+
+SetInvulnerable (opcode 68)
+Description: it makes a character invulnerable (he cannot be hit).
+Parameter 1: the char (a QmlChar object).
+Parameter 2: toggle (boolean). If true, it makes the character invulnerable. If false, it makes the character vulnerable again.
+
+
+
+
+
+
+
+
+DisableCommonDialogue (opcode 70)
+Description: it disables common dialogue (TTB) between the specified chars. Because common dialogue only happens in parallel and expert quests, don't use this on other quest types.
+Parameter 1: An integer with unknown purpose. Probably some kind of flags/mode about what part of common dialogue to disable.
+Parameter 2: the first char (a QmlChar object)
+Parameter 3: the second char (a QmlChar object).
+Parameter 4: the third char (a QmlChar object). Can be set to -1 or to values over qml max id if you only need two chars.
+Parameters 5-8: integers ignored by the game code. Set to anything.
+Example usage: (disabling all common dialogue between GT lead chars)
+Action DisableCommonDialogue(3, GokuGtEnemy, TrunksGtEnemy, PanEnemy, 0, 0, 0, 0); Disable the common dialogue that happens when Goku GT, Trunks GT and Pan gather together.
+Action DisableCommonDialogue(2, GokuGtenemy, PanEnemy, -1, 0, 0, 0, 0); Disable common dialogue between Goku GT and Pan.
+Action DisableCommonDialogue(2, GokuGtEnemy, TrunksGtEnemy, -1, 0, 0, 0, 0); Disable common dialogue between Goku GT and Trunks GT.
+Action DisableCommonDialogue(2, PanEnemy, TrunksGtEnemy, -1, 0, 0, 0, 0); Disable common dialogue between Pan and Trunks GT.
+Notes: single-char common dialogue (TTC) hasn't been tested, so it is unknown if this can cancel those.
+
+
+
+
+TutPopup (opcode 71)
+Description: it shows a tutorial (custom tutorials can't yet be written with my tools, but you can use a existing one with this)
+Parameter 1: the tutorial id (an integer)
+Parameter 2: an integer that is ignored by game code.
+
+
+
+
+Unk73 (opcode 73)
+Description: action with unknown purpose.
+Parameter 1: a QmlChar object.
+Notes: Even if the action purpose is unknown, it is known that in its execution, the game code checks if the quest is being run online. That means that whatever this action does could behave differently when being online, or that maybe it only works online.
+
+
+
+
+Unk74 (opcode)
+Description: action with unknown purpose.
+Parameter 1: a QmlChar object.
+
+
+
+
+PlayClock (opcode 75)
+Description: it plays/pauses the quest clock. Because clock is automatically played, i guess you could say it is more like pause/resume. Have in mind that while the clock is paused, the pause menu won't work either.
+Parameter 1: toggle (boolean). If false, it pauses the clock. If true, it resumes the clock previously paused.
+Example usage: (freeze clock for 14 seconds)
+Action PlayClock(false)
+Action Wait(14.0)
+Action PlayClock(true)
+
+
+
+
+CopyHealth (opcode 76)
+Description: it copies the health (current health, not total) of char in Parameter 1 into the char in Parameter 2. This action is usually called to transfer the health from two qml instances of the same char, so that the player doesn't notice that a character has been replaced with another copy.
+Parameter 1: the char, whose health is going to be copied (QmlChar object)
+Parameter 2: the char that will receive the health of the char in Parameter 1. (QmlChar object)
+Example vanilla usage: consider the parallel quest "Whis's Special Training" (TMQ_3102). The Goku ally you see in the first stage (pod landing) is not the same instance as the Goku ally in the second stage (Sky), but this action is used to transfer its health so that the player wouldn't notice the trick.
+
+
+
+
+Unk78 (opcode 78)
+Description: it performs an unknown action related to a demo.
+Parameter 1: demo file (string).
+Notes: this action is only used by the quest TPQ_09_03, which happens to be the end of Legend Patrol XV1 story.
+
+
+
+
+Credits (opcode 79)
+Description: it loads and starts the credits screen.
+Parameters: none.
+
+
+
+
+Unk80 (opcode 80)
+Description: action with unknown purpose. In vanilla usages of it, it tends to precede PlayBev.
+Parameter 1: integer.
+Parameter 2: integer.
+
+
+
+
+Unk81 (opcode 81)
+Description: action with unknown purpose.
+Parameter 1: a QmlChar object.
+Parameter 2: boolean.
+
+
+
+
+PlayDialogue2 (opcode 82)
+Description: a variant of PlayDialogue that allows to force a portrait in the subs, overriding the one in the Dialog object itself.
+Parameter 1: The dialogue (a Dialogue object)
+Parameter 2: an integer with unknown purpose. Whatever this is, it is the same than in PlayDialogue.
+Parameter 3: the stage where the dialogue can be played. A stage code, id or X2mMod object.
+Parameter 4: integer that is unused by the game code.
+Parameter 5: the char whose portrait will be forced into the dialogue subs portrait (a QmlChar object)
+
+
+
+
+ModelChange2 (opcode 83)
+Description: a variant of ModelChange. The difference is who appears in the dialogue subs: it is the char after the transformation (Parameter 2), while in the original ModelChange it was the char before the transformation (Parameter 1). Other than that, anything else that was said back in the ModelChange description applies.
+Parameter 1: the char that will transform (a QmlChar object)
+Parameter 2: the char to transform to (a QmlChar object)
+Parameter 3: position integer. This is the N in TRESPASS_N position within the stage (usually defined in the _QST.map of the stages).
+Parameter 4: dialogue to play. A Dialogue object, or use -1 for no dialogue. The dialogue will use the char in Parameter 2 as the portrait, overriding the one set in the Dialogue object itself.
+Parameter 5: scene to play (integer)
+
+
+
+
+Unk84 (opcode 84)
+Description: it performs an unknown action.
+Parameter 1: stage code, id or X2mMod object.
+Notes: Every of the 122 vanilla parallel quests call this function near the end (using its last stage as Parameter), and no other vanilla quest type uses this. Removing the call didn't seem to cause any visible side effects on my tests.
+
+
+
+
+AddTime (opcode 85)
+Description: it adds the specified amount of time to the quest time, and it shows the added time in the gui.
+Parameter 1: boolean. If true, the time is added. If false, the game only does an internal refresh of the gui clock and ignores Parameter 2.
+Parameter 2: the time to add, in seconds (float)
+Notes: a negative number works, and the quest time is removed, but... sadly, the gui part of it is broken: a negative number will show a "+9.00" added, even if the clock itself will appear as intended.
+
+
+
+
+ShowEnemyKoCounter (opcode 86)
+Description: it shows an enemy ko counter in the upper right of the screen. You set up the initial counter, but the game takes care of automatically filling it on every enemy ko.
+Parameter 1: toggle (boolean). If true, it shows the counter, if false it removes it.
+Parameter 2: the total number of enemies for the counter.
+Notes: Please note that the counter can go above the specified total number. For example, it could show 4/3. It is your responsibility to remove the counter when you don't need it, to avoid that (reminder that you can use the condition NumCharsDefeated to monitorize the number of enemies defeated).
+
+
+
+
+ShowRadar (opcode 87)
+Description: it shows the dragon ball radar.
+Parameter 1: toggle (boolean). If true, it shows the radar. If false, it hides the radar.
+Notes: this action requires the sub_type field in the Quest object to be 1. That tells the game that this is a dragon ball quest, which will enable this and other dragon ball actions/conditions.
+
+
+
+
+EquipSkills (opcode 88)
+Description: it allows to equip/unequip the skills slots of the specified character.
+Parameter 1: the char (a QmlChar object)
+Parameter 2: toggle (boolean). If true, it unequips the character default skills (or the qxd skills) and equip the ones defined in theQmlchar. If false, it unequips the skills defined in the QmlChar and equips the regular skills (which may be the one from QxdChar or the default skills for player in certain quest types).
+Parameter 3: combination of skill slots. Either "ALL", or any combination of the following: SUPER1, SUPER2, SUPER3, SUPER4, ULTIMATE1, ULTIMATE2, EVASIVE, BLAST, AWAKEN. You combine these using the combinational operator "|" (see example).
+Example: let's say that this quest is a parallel quest. And that player is using either a cac or a roster char that normally has these super1 and super2 skills: Kamehameha and Super Destructo Disc. And let's say the the "QmlChar Player" object was modified to make the player have the following skills as super 1 and super2: Masenko and Eagle Kick.
+By default, the player will have their normal skills, not the qml one (at least this is behavior for player in parallel quests, but likely not the case of enemies or quest allies):
+
+
+Action EquipSkills(Player, true, SUPER1|SUPER2); After this, the player will have Masenko and Eagle Kick equipped.
+Action EquipSkills(Player, false, SUPER2); If this is run after above one, player will now have Masenko and Super Destructor Disc equipped.
+(the above example may behave differently on other quest types, I'm not sure)
+
+
+
+
+ShowName (opcode 89)
+Description: it shows/hides the name of the char above their head (and the COM/P2/P3, etc thing), and also the ones in the left part.
+Parameter 1: the char (a QmlChar object)
+Parameter 2: toggle (boolean). If false, it hides the name. If true, it shows the name again.
+
+
+
+
+ShowComboAndListen (opcode 90)
+Description: it shows a combo in the left part of the screen, and begin listening the input of the specified character (game takes care of automatically filling/resetting the combo in the gui as the steps are done successfully or not) You can use the Condition ComboSuccess to wait for the combo to succeed.
+Parameter 1: toggle (boolean). If true, it shows the combo and starts listening input. If false, it hides the combo, and stops any listening.
+Parameter 2: the combo (integer). This is probably some id of some sort (probably related with data\quest\KEYDISP\CHQ_KeyDisp.kdp, but i didn't research it).
+Parameter 3: the char to listen on (the one that has to execute the combo). Although in most cases you will specify the Player here, surprisingly the function works with AI characters too, and in fact, the training quests use it in the demonstration part.
+
+
+
+
+ShowDemonstrationText (opcode 91)
+Description: it shows the text "Demonstration" (in user language) in the bottom part of the screen.
+Parameter 1: toggle (boolean). If true, it shows the text. If false, it hides it.
+
+
+
+
+EnableMovement (opcode 92)
+Description: it enables/disables the movement of the specified char.
+Parameter 1: toggle (boolean). If false, it disables the movement, if true, it re-enables it.
+Parameter 2: the char (a QmlChar object)
+
+
+
+
+LoadAic (opcode 93)
+Description: it loads an aic file. AIC files are used in the teacher demonstrations in the CHQ quests.
+Parameter 1: the file (string). Without extension, and relative to data/battle/aic.
+Parameter 2: id (integer). That's the official name given by devs to the Parameter, I assume it is an entry in the aic, but who knows.
+Parameter 3: a boolean with unknown purpose.
+Notes: it is worth mentioning that there is only one .aic file in the game, "test.aic". So, you will only see "test" in the first Parameter in vanilla quests.
+
+
+Unk94 (opcode 94)
+Description: it performs an unknown action.
+Parameter 1: integer that does absolutely nothing (unused by exe)
+Notes: This function has existed for a while, but it has been used for the first time in some CTP quest of 1.17. In the exe, this calls a function that according to some of my old reverse notes, it *may* be related with the gui clock, so there is that.
+
+
+
+
+ShowTip (opcode 96)
+Description: it shows a message in the upper-right part of the game. Usually intended to show tips to the user.
+Parameter 1: the text. This is either an existing msg entry in the dialogue file of the quest  (a string) or a TextEntry if you want to use custom text.
+Parameter 2: toggle. If true, it shows the text. If false, it hides the text (in that case, you can set the first Parameter to an empty string if you want).
+Example usage:
+To show an existing vanilla text: Action ShowTip("TMQ_0300_TUT_00", true)  (this assumes that you quest use the proper dialogue file that has that msg string, that is explained in the Quest object comments of the sample quests).
+
+
+To show a custom text: (here, you don't need to bother with which dialogue file your quest uses)
+
+
+TextEntry HelloWorld
+{
+        en: "Hello world"
+        es: "Hola mundo"
+        ca: "Hola mundo"
+}
+
+
+Script 
+{
+        State 0
+        {
+                Event 0
+                {
+                        Condition Always
+                        Action ShowTip(HelloWorld, true)
+                }
+        }
+}
+
+
+
+
+ScatterAttack (opcode 97)
+Description: it makes the current enemy to run the expert mission/raid attack that sends a player to another place to fight other enemies. Apparently the game gathers all stages from the stages Parameter of the Quest object (except the first one), and choses one of those stages randomly. (i52 of QmlChar of must be set to 16 or they may not appear in the stage). The game takes care of automatically opening portals of those stages when the char is defeated.
+Parameter 1: an integer. All the vanilla quests that use this action set this value to 70.
+Parameter 2: an integer. All the vanilla quests that use this action set this value to 71.
+Parameter 3: an integer. All the vanilla quests that use this action set this value to 72.
+Parameter 4: an integer. Vanilla quests either use 0 or -1 here.
+Notes: this attack requires the field "sub_type" in the Quest object to be set to either 4 or 5, or the attack won't work.
+If the stages Parameter in the Quest object in quest.x2qs is not filled with the stages, ScatterAttack will crash.
+If the quest sub_type is 4, the attack seem to only send you to one stage, and if set to 5, it can send you to more than one stage, but this needs further confirmation.
+It is unknown if this action only works in HLQ/RBQ quests or if it could work somewhere else (assuming the sub_type in the Quest is set to proper value). It is unknown what would happen if there were more than one enemy on screen, who would run the attack or if it would work at all. Due to how expert missions are designed (6 players + enemy), there is no place for the game to have another enemy on screen (but if a custom quest were to break the typical expert mission design and reduce the number of allies, it could be technically possible) and is unknown what would happen in such situation.
+
+
+
+
+ListenForAction (opcode 99)
+Description: it starts listening for the specified player action. Use along with Condition ActionDone to wait for the specified action to be performed.
+Parameter 1: the action (integer). Take a look at the decompiled CHQ_0100. You will be able to figure out several of them thanks to the comments next to ShowTip.
+
+
+
+
+TeacherDialogue (opcode 100)
+Description: it plays a teacher dialogue. Teacher dialogue use the files Teacher_XXX_[lang/voice].msg, where XXX is the cms of the teacher.
+Parameter 1: the dialogue id (integer). This would be the "NNN" in CAT_XXX_NNN in the teacher .msg files.
+Notes: currently, custom teacher dialogue is not supported by my tools.I haven't tested if this action works outside CHQ quests (the teacher msg files may not be loaded in all quest types).
+
+
+
+
+EnableItems (opcode 101)
+Description: it enables or disables items (capsules, etc) in this battle.
+Parameter 1: toggle (boolean). If false, it disables items, if true, it enables items.
+
+
+
+
+PlayAic (opcode 102)
+Description: it plays an aic file+entry previously loaded with LoadAic. AIC files are used in the teacher demonstrations in the CHQ quests. (e.g., LoadAic+PlayAic is what makes the cpu do the combo)
+Parameters: none
+
+
+
+
+Unk103 (opcode 103)
+Description: action with unknown purpose
+Parameter 1: a QmlChar object.
+Notes: this action is only used by "Art of Battle" CHQ quests.
+
+
+
+
+ResetCamera (opcode 104)
+Descriptions: restores camera to original position.
+Parameters: none.
+
+
+
+
+Unk105 (opcode 105)
+Description: it performs an unknown action related with demos.
+Parameter 1: a string. In the few vanilla quest that use this action, this gets things like "EFCT_sakeme" and "bnBFtwfDM00_D15".
+Parameter 2: boolean.
+Parameter 3: integer.
+
+
+
+
+BodyChange (opcode 106)
+Description: it performs a body change between the two specified chars, as if the Ginyu skill had been used (but without the skill animation, those are supposed to be implemented with demo or bev). This action doesn't work in parallel or expert quests. This action doesn't work in any kind of online quest. This action cannot work if there are any stage portals around (even if they were closed).
+Parameter 1: the first char (QmlChar object)
+Parameter 2: the second char (QmlChar object)
+Notes: the official game name by devs for this is "SystemBodyChange". After the initial checks, the function lands in the same function used by some of the .bac opcodes of the Ginyu skill.
+
+
+
+
+HCStart (opcode 107)
+Description: Starts hero colosseum game.
+Parameter 1: QmlChar of the enemy master.
+Parameter 2: QmlChar of first enemy figure, or set to -1.
+Parameter 3: QmlChar of second enemy figure, or set to -1.
+Parameter 4: QmlChar of third enemy figure, or set to -1.
+Parameter 5: QmlChar of fourth enemy figure, or set to -1.
+Parameter 6: QmlChar of fifth enemy figure, or set to -1.
+Parameter 7: an integer with unknown purpose.
+Parameter 8: an integer with unknown purpose.
+Notes: all vanilla hero colosseum quests (TTQ, TNB, TFB) leave the 5 figures QmlChar as -1. But the game code debug strings don't leave any doubts: if used, these are the QmlChar of figures.
+
+
+
+
+Unk108 (opcode 108)
+Description: action with unknown purpose.
+Parameter 1: integer.
+Parameter 2: boolean.
+Notes: this opcode is fairly recent, and only seen used in Fu quests (OSQ).
+
+
+
+
+StatsRegeneration (opcode 109)
+Description: it applies a regeneration effect of Health/ki/stamina to the specified character.
+Parameter 1: the char (a QmlChar object)
+Parameter 2: toggle (boolean). If true, the effect is applied. If false, the effect is removed.
+Parameter 3: the stat to regenerate. Any combination of the following constants: HEALTH, STAMINA, KI. You can combine any of these using the combinational operator "|".
+Parameter 4: the regeneration rate/speed or whatever (float)
+Example usages:
+Action StatsRegeneration(Player, true, HEALTH, 50.0); Applies to player the same health regeneration that Zamasu has in some of the teacher quests.
+Action StatsRegeneration(Player, true, KI|STAMINA, 300.0); Applies to the player both, a ki and stamina regeneration.
+
+
+
+
+HCHint (opcode 110)
+Description: it shows a hero colosseum hint (only works in hero colosseum quests)
+Parameter 1: the msg code (string). This is a msg code in the tb_hint_xx.msg files. Currently, my tools don't allow custom text here.
+
+
+
+
+ReviveEx (opcode 111)
+Description: an improved version of Revive, which allows to specify a position.
+Parameter 1: the char to revive (QmlChar object)
+Parameter 2: the dialogue to play. A Dialogue object or set to -1 for no dialogue.
+Parameter 3: the scene id to play (integer)
+Parameter 4: the position where to revive. This is a StringVar variable (not constant!) previously set by SetStringVar action (see example).
+Parameter 5: the percentage of total health to revive with (float)
+
+
+PowerupEx (opcode 112)
+Description: an improved version of PowerUp action that allows to set a position where the power up will happen.
+Parameter 1: the char that will power up (QmlChar object)
+Parameter 2: the dialogue. Dialogue object or -1 for no dialogue.
+Parameter 3: scene id (integer)
+Parameter 4: the position where to do the power up. A StringVar variable (not a string constant!)
+
+
+
+
+SetStringVar (opcode 113)
+Description: it allows to set a StringVar value. StringVar are variables that can store a string and must be declared before the first script. They are shared across all scripts. The game supports only a maximum of 10 StringVar. The StringVar can then later be used on the few functions that have them as Parameter..
+Parameter 1: the string value(string constant)
+Parameter 2: the StringVar variable.
+Example usage: see ReviveEx example.
+
+
+
+
+PlayDialogue3 (opcode 115)
+Description: yet another variant of PlayDialogue. This is mostly like the first version, but here the fourth Parameter is not ignored by the game code (however, its purpose is unknown).
+Parameter 1: the dialogue to play (a Dialogue object)
+Parameter 2: an integer with unknown purpose (identical thing that second Parameter of original PlayDialogue)
+Parameter 3: the stage where to play the dialogue. A stage code, id or X2mMod object.
+Parameter 4: an integer with unknown purpose. Unlike the original PlayDialogue, this Parameter is not ignored by game code.
+
+
+
+
+Unk116 (opcode 116)
+Description: an action with unknown purpose, but which is related with bgm.
+Parameter 1: a cue id of CAR_BGM.acb (integer)
+Parameter 2: an integer with unknown purpose.
+Notes: only vanilla quest that uses this is OSQ_0500.
+
+
+
+
+Unk117 (opcode 117)
+Description: an action with unknown purpose, likely related with audio.
+Parameters: none
+Notes: only vanilla quest that uses this is OSQ_0500.
+
+
+
+
+CharaReset (opcode 118)
+Description: it resets a chara? This is one of the few actions whose name was leaked by the game debug strings, so I just copied the name. Still, I'm unsure of what this is supposed to reset.
+Parameter 1: the char (a QmlChar object)
+Notes: the only vanilla quest that uses this is the Dual Ultimate Attack Tutorial (CHQ_1600)
+
+
+
+
+Unk119 (opcode 119)
+Description: an action with unknown purpose.
+Parameter 1: a QmlChar object.
+Notes: only vanilla quest that use this are few Fu quests.
+
+
+
+
+Unk120 (opcode 120)
+Description: an action with unknown purpose.
+Parameter 1: an integer within range 0-127.
+Parameter 2: an integer that the exe treats as some kind of subopcode. Range: 0-5.
+Parameter 3: an integer with unknown purpose.
+Parameter 4: an integer with unknown purpose.
+Notes: this action was added in version 1.10 of the game.
+
+
+
+
+Unk121 (opcode 121)
+Description: an action with unknown purpose.
+Parameter 1: a QmlChar object.
+Parameter 2: an integer, some kind of subopcode, range 0-18.
+Parameter 3: an integer, range 0-127.
+Notes: this action was added in version 1.10 of the game.
+
+
+
+
+Unk122 (opcode 122)
+Description: an action with unknown purpose.
+Parameter 1: q QmlChar object.
+Parameter 2: an integer, range 0-127.
+Notes: this action was added in version 1.10 of the game.

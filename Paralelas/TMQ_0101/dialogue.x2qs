@@ -1,0 +1,59 @@
+Dialogue Dialogue0
+{
+	i28: 0
+	debug_actor: "KLL" ; Kuririn
+
+	DialoguePart
+	{
+		actor: "KLL" ; Kuririn
+		costume: -1
+		transformation: -1
+
+		text_audio: "TMQ_0101_00" ; All right then, I'm not going to be holding back!
+		i8: 0
+		debug_actor: "KLL" ; Kuririn
+	}
+
+	DialoguePart
+	{
+		actor: "YMC" ; Yamcha
+		costume: -1
+		transformation: -1
+
+		text_audio: "TMQ_0101_00-1" ; Are you ready?
+		i8: 0
+		debug_actor: "YMC" ; Yamcha
+	}
+
+	DialoguePart
+	{
+		actor: "TSH" ; Tenshinhan
+		costume: -1
+		transformation: -1
+
+		text_audio: "TMQ_0101_00-2" ; Here I go!
+		i8: 0
+		debug_actor: "TSH" ; Tenshinhan
+	}
+
+}
+
+Dialogue Dialogue1
+{
+	b_use_i2: true
+	i28: 0
+	debug_actor: "PIC" ; Piccolo
+
+	DialoguePart
+	{
+		actor: "PIC" ; Piccolo
+		costume: -1
+		transformation: -1
+
+		text_audio: "TMQ_0101_01" ; Hmph... Not bad. But, not for much longer!
+		i8: 0
+		debug_actor: "PIC" ; Piccolo
+	}
+
+}
+
