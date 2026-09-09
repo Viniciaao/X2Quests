@@ -1,0 +1,1755 @@
+QxdSpecialChar PlayerBase
+{
+	char: "HUM"
+}
+
+QxdSpecialChar Teacher
+{
+	char: "MST"
+}
+
+; O Junin normal: mais tanque (costume 1 do mod [OC] Junin).
+QxdChar JuninBruto
+{
+	char: JuninChar
+	costume: 1
+	transformation: 0
+	special_effect: -1
+
+	i12: 0
+	level: 85
+	health: 900.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 1.25
+	ki_atk: -1.0
+	super_atk: 1.25
+	super_ki: -1.0
+	atk_damage: 1.35
+	ki_damage: -1.0
+	super_atk_damage: 1.35
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 144
+
+	super1: 801
+	super2: 355
+	super3: JunSkillRaPreto
+	super4: JunSkillLimitBreaker
+	ultimate1: 5420
+	ultimate2: 5060
+	evasive: 10360
+	blast: 21080
+	awaken: JunSkillSuperVillainous
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+; O Junin EMO: mais fraco e mais rapido (costume 0 do mod [OC] Junin EMO).
+QxdChar JuninEmoBase
+{
+	char: JuninEmoChar
+	costume: 0
+	transformation: 0
+	special_effect: -1
+
+	i12: 0
+	level: 85
+	health: 520.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 1.05
+	ki_atk: -1.0
+	super_atk: 1.05
+	super_ki: -1.0
+	atk_damage: 1.05
+	ki_damage: -1.0
+	super_atk_damage: 1.05
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 144
+
+	super1: JueSkillPowerTrip
+	super2: JueSkillPiin
+	super3: JueSkillBurningSwan
+	super4: 1
+	ultimate1: JueSkillJibaku
+	ultimate2: JueSkillJibaku
+	evasive: 10341
+	blast: 21081
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+; Chefe fase 1 - camiseta da Shinya (stats mais leves do mod).
+QxdChar JuninFuturoFase1
+{
+	char: JuninFuturoChar
+	costume: 0
+	transformation: 0
+	special_effect: -1
+
+	i12: 0
+	level: 88
+	health: 1300.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 1.45
+	ki_atk: -1.0
+	super_atk: 1.45
+	super_ki: -1.0
+	atk_damage: 1.50
+	ki_damage: -1.0
+	super_atk_damage: 1.50
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 144
+
+	super1: 620
+	super2: MuroDeDefesaSkill
+	super3: JufSkillExplosiveBullet
+	super4: JufSkillDualGunShot
+	ultimate1: JufSkillJackal
+	ultimate2: 5800
+	evasive: 10300
+	blast: 21081
+	awaken: JufSkillSurgeMode
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+; Chefe fase 2 - Agent Coat (stats fortes do mod: HEALTH 2.0, defesas altas).
+QxdChar JuninFuturoFase2
+{
+	char: JuninFuturoChar
+	costume: 1
+	transformation: 0
+	special_effect: -1
+
+	i12: 4
+	level: 92
+	health: 2200.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 1.70
+	ki_atk: -1.0
+	super_atk: 1.70
+	super_ki: -1.0
+	atk_damage: 1.90
+	ki_damage: -1.0
+	super_atk_damage: 1.90
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 144
+
+	super1: 620
+	super2: MuroDeDefesaSkill
+	super3: JufSkillExplosiveBullet
+	super4: JufSkillDualGunShot
+	ultimate1: JufSkillJackal
+	ultimate2: 5800
+	evasive: 10310
+	blast: JufSkillGunKiBlast
+	awaken: JufSkillSurgeMode
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QmlChar Player : PlayerBase
+{
+	battle_index: 0
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: true
+
+	ai: HUMAN
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Player2 : PlayerBase
+{
+	battle_index: 1
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: true
+
+	ai: HUMAN
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Player3 : PlayerBase
+{
+	battle_index: 2
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: true
+
+	ai: HUMAN
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+; 76 Junins. Cada um tem o seu proprio QmlChar para que o
+; script consiga identificar qual caiu e chamar o proximo.
+; Dupla impar -> battle_index 3/4 | dupla par -> battle_index 5/6.
+QmlChar Junin01 : JuninBruto
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin02 : JuninEmoBase
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin03 : JuninBruto
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin04 : JuninEmoBase
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin05 : JuninBruto
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin06 : JuninEmoBase
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin07 : JuninBruto
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin08 : JuninEmoBase
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin09 : JuninBruto
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin10 : JuninEmoBase
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin11 : JuninBruto
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin12 : JuninEmoBase
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin13 : JuninBruto
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin14 : JuninEmoBase
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin15 : JuninBruto
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin16 : JuninEmoBase
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin17 : JuninBruto
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin18 : JuninEmoBase
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin19 : JuninBruto
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin20 : JuninEmoBase
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin21 : JuninBruto
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin22 : JuninEmoBase
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin23 : JuninBruto
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin24 : JuninEmoBase
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin25 : JuninBruto
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin26 : JuninEmoBase
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin27 : JuninBruto
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin28 : JuninEmoBase
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin29 : JuninBruto
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin30 : JuninEmoBase
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin31 : JuninBruto
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin32 : JuninEmoBase
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin33 : JuninBruto
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin34 : JuninEmoBase
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin35 : JuninBruto
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin36 : JuninEmoBase
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin37 : JuninBruto
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin38 : JuninEmoBase
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin39 : JuninBruto
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin40 : JuninEmoBase
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin41 : JuninBruto
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin42 : JuninEmoBase
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin43 : JuninBruto
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin44 : JuninEmoBase
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin45 : JuninBruto
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin46 : JuninEmoBase
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin47 : JuninBruto
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin48 : JuninEmoBase
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin49 : JuninBruto
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin50 : JuninEmoBase
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin51 : JuninBruto
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin52 : JuninEmoBase
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin53 : JuninBruto
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin54 : JuninEmoBase
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin55 : JuninBruto
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin56 : JuninEmoBase
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin57 : JuninBruto
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin58 : JuninEmoBase
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin59 : JuninBruto
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin60 : JuninEmoBase
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin61 : JuninBruto
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin62 : JuninEmoBase
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin63 : JuninBruto
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin64 : JuninEmoBase
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin65 : JuninBruto
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin66 : JuninEmoBase
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin67 : JuninBruto
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin68 : JuninEmoBase
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin69 : JuninBruto
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin70 : JuninEmoBase
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin71 : JuninBruto
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin72 : JuninEmoBase
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin73 : JuninBruto
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin74 : JuninEmoBase
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin75 : JuninBruto
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar Junin76 : JuninEmoBase
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar JuninFuturoEnemy : JuninFuturoFase1
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+; battle_index diferente do fase 1: ModelChange exige indices distintos.
+QmlChar JuninFuturoEnemy2 : JuninFuturoFase2
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}
+
+QmlChar TeacherAlly : Teacher
+{
+	battle_index: -1
+	i12: 0
+	stage: "BFtol" ; Twisted Timespace
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+}

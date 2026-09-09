@@ -1,0 +1,288 @@
+; Personagens e skills vindos de mods .x2m externos.
+; Se o usuario nao tiver esses mods instalados, o XV2 Mods Installer
+; avisa e cancela a instalacao (comportamento esperado).
+
+X2mMod JuninChar
+{
+	name: "[OC] Junin"
+	guid: "5f6e184a-a144-e8bc-b8e8-27c0be55388d"
+}
+
+X2mMod JuninEmoChar
+{
+	name: "[OC] Junin EMO"
+	guid: "65cbcff2-b81b-ce77-f4e6-6d1220c2e330"
+}
+
+X2mMod JuninFuturoChar
+{
+	name: "[OC] Junin do Futuro"
+	guid: "1e471bf4-cf30-6d50-7d1f-4fcb705e0a27"
+}
+
+X2mMod JunSkillTektek
+{
+	name: "[JUN Skill]Tektek Tchuruq"
+	guid: "0a06569e-7cc6-1965-5e50-237f6d2f05f1"
+}
+
+X2mMod JunSkillLimitBreaker
+{
+	name: "[JUN Skill]Limit Breaker Charge [KICH]"
+	guid: "4cf2608c-1129-b12f-a62e-8d95c3f3c824"
+}
+
+X2mMod JunSkillSuperVillainous
+{
+	name: "[JUN Skill]Super Villainous Mode"
+	guid: "4d061ab3-42a3-cf82-f2b9-56028c20be1b"
+}
+
+X2mMod JunSkillFacaMaluca
+{
+	name: "[JUNSkill]Faca Maluca"
+	guid: "e60c9833-3a8a-2f40-a65f-879d79c75073"
+}
+
+X2mMod JunSkillRaPreto
+{
+	name: "[JUN Skill]Soltar Ra Preto"
+	guid: "2c76c4e9-3f0d-75a3-6111-e2eebaeb3c0e"
+}
+
+X2mMod JueSkillJibaku
+{
+	name: "[JUE Skill]Jibaku"
+	guid: "2f407646-50c4-eaf8-5a07-580b136adbac"
+}
+
+X2mMod JueSkillPiin
+{
+	name: "[JUE Skill]Piin"
+	guid: "318e9d53-6d53-f4e6-86c4-2e2881ed0a6d"
+}
+
+X2mMod JueSkillBurningSwan
+{
+	name: "[JUE Skill]Burning Swan"
+	guid: "c29942cc-3d1f-0cad-1533-e94eff0aa327"
+}
+
+X2mMod JueSkillCowardly
+{
+	name: "[JUE Skill]Cowardly Deception"
+	guid: "0a826011-525d-1ea2-561f-49842b128538"
+}
+
+X2mMod JueSkillPowerTrip
+{
+	name: "[JUE Skill]Power Trip"
+	guid: "32e9e79a-d7b8-999d-4d2a-7ebecd65e959"
+}
+
+X2mMod MuroDeDefesaSkill
+{
+	name: "[JUE Skill] Muro de Defesa"
+	guid: "a46e6d7f-d13a-2ce9-adf7-6a167916ee78"
+}
+
+X2mMod JufSkillSurgeMode
+{
+	name: "[JUF Skill]Surge Mode"
+	guid: "c8ca0cf7-40d5-0319-c972-5de6e792b3e9"
+}
+
+X2mMod JufSkillJackal
+{
+	name: "[JUF Skill]The Jackal"
+	guid: "805e330f-0f4b-848d-39b4-da6bcd163a35"
+}
+
+X2mMod JufSkillExplosiveBullet
+{
+	name: "[JUF Skill]Explosive bullet"
+	guid: "e0f49bb6-9802-38fe-0f9a-56f5d1919e0e"
+}
+
+X2mMod JufSkillDualGunShot
+{
+	name: "[JUF Skill]Dual gun shot"
+	guid: "c6ad9982-18b1-cc5e-d326-4ace42e6ef49"
+}
+
+X2mMod JufSkillGunKiBlast
+{
+	name: "[JUF Skill]Gun Ki Blast"
+	guid: "5f9f8dac-4e2d-2ddf-64fe-cdb91614f344"
+}
+
+TextEntry TMQ_JUN_01_0
+{
+	en: "ONE BILLION JUNINS"
+	pt: "1 BILHÃO DE JUNINS"
+	es: "¡MIL MILLONES DE JUNINS!"
+}
+
+TextEntry TMQ_JUN_01_1
+{
+	en: "-Defeat all 76 Junins\n-Defeat the Junin of the Future"
+	pt: "-Derrote os 76 Junins\n-Derrote o Junin do Futuro"
+	es: "-Derrota a los 76 Junins\n-Derrota al Junin del Futuro"
+}
+
+TextEntry TMQ_JUN_01_2
+{
+	en: "-All team HP depleted\n-Time expires"
+	pt: "-Vida do time esgotada\n-Tempo esgotado"
+	es: "-Salud del equipo agotada\n-Se acaba el tiempo"
+}
+
+TextEntry TMQ_JUN_01_3
+{
+	en: "Seventy-six Junins are flooding the Twisted Timespace. They keep coming. Just keep swinging."
+	pt: "Setenta e seis Junins estão invadindo o Espaço-tempo Distorcido. Eles não param de aparecer. Continua batendo."
+	es: "Setenta y seis Junins están invadiendo el Espacio-tiempo Distorsionado. No paran de aparecer. Sigue golpeando."
+}
+
+TextEntry TMQ_JUN_01_4
+{
+	en: "-Defeat the Junin of the Future"
+	pt: "-Derrote o Junin do Futuro"
+	es: "-Derrota al Junin del Futuro"
+}
+
+ItemCollection Collection60
+{
+	ItemCollectionEntry { item: 0 type: MATERIAL i6: 1 i8: 2 i10: 0 } ; Small Mix Capsule
+	ItemCollectionEntry { item: 1 type: MATERIAL i6: 1 i8: 1 i10: 0 } ; Med. Mix Capsule
+	ItemCollectionEntry { item: 2 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; High Mix Capsule
+	ItemCollectionEntry { item: 3 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Ultimate Mix Capsule
+	ItemCollectionEntry { item: 4 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Energy Shard
+	ItemCollectionEntry { item: 5 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Energy Crystal
+	ItemCollectionEntry { item: 6 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Energy Shard
+	ItemCollectionEntry { item: 7 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Energy Crystal
+	ItemCollectionEntry { item: 8 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Shard
+	ItemCollectionEntry { item: 9 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Crystal
+	ItemCollectionEntry { item: 10 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Shard
+	ItemCollectionEntry { item: 11 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Crystal
+	ItemCollectionEntry { item: 12 type: MATERIAL i6: 1 i8: 5 i10: 0 } ; Aura Shard
+	ItemCollectionEntry { item: 13 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Aura Crystal
+	ItemCollectionEntry { item: 14 type: MATERIAL i6: 1 i8: 2 i10: 0 } ; All-Aura Shard
+	ItemCollectionEntry { item: 15 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Aura Crystal
+	ItemCollectionEntry { item: 16 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Guard Shard
+	ItemCollectionEntry { item: 17 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Guard Crystal
+	ItemCollectionEntry { item: 18 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Guard Shard
+	ItemCollectionEntry { item: 19 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Guard Crystal
+	ItemCollectionEntry { item: 20 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Drop
+	ItemCollectionEntry { item: 21 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Essence
+	ItemCollectionEntry { item: 22 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Drop
+	ItemCollectionEntry { item: 23 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Essence
+	ItemCollectionEntry { item: 24 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Senzu Beansprout
+}
+
+ItemCollection Collection70
+{
+	ItemCollectionEntry { item: 0 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Small Mix Capsule
+	ItemCollectionEntry { item: 1 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Med. Mix Capsule
+	ItemCollectionEntry { item: 2 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; High Mix Capsule
+	ItemCollectionEntry { item: 3 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Ultimate Mix Capsule
+	ItemCollectionEntry { item: 4 type: MATERIAL i6: 1 i8: 5 i10: 0 } ; Energy Shard
+	ItemCollectionEntry { item: 5 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Energy Crystal
+	ItemCollectionEntry { item: 6 type: MATERIAL i6: 1 i8: 2 i10: 0 } ; All-Energy Shard
+	ItemCollectionEntry { item: 7 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Energy Crystal
+	ItemCollectionEntry { item: 8 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Shard
+	ItemCollectionEntry { item: 9 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Crystal
+	ItemCollectionEntry { item: 10 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Shard
+	ItemCollectionEntry { item: 11 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Crystal
+	ItemCollectionEntry { item: 12 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Aura Shard
+	ItemCollectionEntry { item: 13 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Aura Crystal
+	ItemCollectionEntry { item: 14 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Aura Shard
+	ItemCollectionEntry { item: 15 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Aura Crystal
+	ItemCollectionEntry { item: 16 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Guard Shard
+	ItemCollectionEntry { item: 17 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Guard Crystal
+	ItemCollectionEntry { item: 18 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Guard Shard
+	ItemCollectionEntry { item: 19 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Guard Crystal
+	ItemCollectionEntry { item: 20 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Drop
+	ItemCollectionEntry { item: 21 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Essence
+	ItemCollectionEntry { item: 22 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Drop
+	ItemCollectionEntry { item: 23 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Essence
+	ItemCollectionEntry { item: 24 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Senzu Beansprout
+}
+
+ItemCollection Collection80
+{
+	ItemCollectionEntry { item: 0 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Small Mix Capsule
+	ItemCollectionEntry { item: 1 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Med. Mix Capsule
+	ItemCollectionEntry { item: 2 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; High Mix Capsule
+	ItemCollectionEntry { item: 3 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Ultimate Mix Capsule
+	ItemCollectionEntry { item: 4 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Energy Shard
+	ItemCollectionEntry { item: 5 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Energy Crystal
+	ItemCollectionEntry { item: 6 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Energy Shard
+	ItemCollectionEntry { item: 7 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Energy Crystal
+	ItemCollectionEntry { item: 8 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Shard
+	ItemCollectionEntry { item: 9 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Crystal
+	ItemCollectionEntry { item: 10 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Shard
+	ItemCollectionEntry { item: 11 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Crystal
+	ItemCollectionEntry { item: 12 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Aura Shard
+	ItemCollectionEntry { item: 13 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Aura Crystal
+	ItemCollectionEntry { item: 14 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Aura Shard
+	ItemCollectionEntry { item: 15 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Aura Crystal
+	ItemCollectionEntry { item: 16 type: MATERIAL i6: 1 i8: 5 i10: 0 } ; Guard Shard
+	ItemCollectionEntry { item: 17 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Guard Crystal
+	ItemCollectionEntry { item: 18 type: MATERIAL i6: 1 i8: 2 i10: 0 } ; All-Guard Shard
+	ItemCollectionEntry { item: 19 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Guard Crystal
+	ItemCollectionEntry { item: 20 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Drop
+	ItemCollectionEntry { item: 21 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Essence
+	ItemCollectionEntry { item: 22 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Drop
+	ItemCollectionEntry { item: 23 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Essence
+	ItemCollectionEntry { item: 24 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Senzu Beansprout
+}
+
+Quest TMQ_JUN_01
+{
+	episode: 3 ; textos proprios via TextEntry (nao usa .msg vanilla).
+	sub_type: 0
+	num_players: 3
+
+	title: TMQ_JUN_01_0 ; ONE BILLION JUNINS
+	success: TMQ_JUN_01_1 ; -Defeat all 76 Junins
+	failure: TMQ_JUN_01_2 ; -All team HP depleted / time expires
+	outline: TMQ_JUN_01_3 ; Seventy-six Junins are flooding the Twisted Timespace.
+	warning: TMQ_JUN_01_4 ; -Defeat the Junin of the Future
+
+	i40: 1
+	parent_quest: "TMQ_1400" ; Being a Time Patroller
+	i44: 0
+	i48: 1
+	i52: -1
+	i56: -1
+	i60: -1
+	unlock_requirement: "TMQ_1400" ; Being a Time Patroller
+	i68: -1
+	i72: -1
+	i76: -1
+	i80: 1
+	i84: 1
+
+	QxdUnk1(3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	QxdUnk2(0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	QxdUnk2(1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+	time_limit: 1800
+	difficulty: 5
+	level: 85
+	i112: 0
+	start_stage: "BFtol" ; Twisted Timespace
+	start_demo: 0
+
+	CharPortrait { char: "HUM" costume: 0 i40: 0 i44: 0 }
+	CharPortrait { char: JuninChar costume: 1 i40: 0 i44: 0 }
+	CharPortrait { char: JuninEmoChar costume: 0 i40: 0 i44: 0 }
+	CharPortrait { char: JuninFuturoChar costume: 1 i40: 0 i44: 0 }
+
+	ItemReward { item: Collection60 type: COLLECTION condition: 1 chance: 100 flags: 0 i12: 0 i20: 0 }
+	ItemReward { item: Collection70 type: COLLECTION condition: 0 chance: 100 flags: 0 i12: 0 i20: 0 }
+	ItemReward { item: Collection80 type: COLLECTION condition: 0 chance: 100 flags: 0 i12: 0 i20: 0 }
+	ItemReward { item: 12 type: BATTLE condition: 0 chance: 100 flags: 0 i12: 0 i20: 0 } ; Senzu Bean
+	SkillReward { skill: 330 condition: 1 chance: 100 i12: 0 } ; Taunt
+}

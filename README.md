@@ -7,9 +7,12 @@ formato **X2QS**, mais as ferramentas para validar e empacotar essas missões.
 
 | Caminho | O que é |
 | --- | --- |
-| `quests/TMQ_URA_01/` | **"NÃO COMA O URÂNIO!"** — a Parallel Quest pronta, em 6 arquivos `.x2qs` |
-| `dist/Nao Coma o Uranio.x2m` | a mesma missão já empacotada, pronta para o XV2 Mods Installer |
-| `docs/IDEIA_MISSAO.md` | ficha completa da missão: roteiro, elenco, falas, recompensas, instalação |
+| `quests/TMQ_URA_01/` | **"NÃO COMA O URÂNIO!"** — Parallel Quest em 6 arquivos `.x2qs` |
+| `quests/TMQ_JUN_01/` | **"1 BILHÃO DE JUNINS"** — horda de 76 Junins + chefe em 2 fases, em 5 arquivos `.x2qs` |
+| `dist/` | as duas missões já empacotadas, prontas para o XV2 Mods Installer |
+| `docs/IDEIA_MISSAO.md` | ficha de `TMQ_URA_01`: roteiro, elenco, falas, recompensas, instalação |
+| `docs/IDEIA_1BILHAO_DE_JUNINS.md` | ficha de `TMQ_JUN_01`: horda, mods referenciados, chefe em 2 fases |
+| `tools/gen_junin_quest.py` | gerador da `TMQ_JUN_01` (76 `QmlChar` + eventos — mexa nas constantes e rode de novo) |
 | `tools/gen_reference.py` | extrai a base de referência (actions, conditions, personagens, estágios, skills…) dos quests vanilla |
 | `tools/x2qs_reference.json` | a base gerada — é o que o linter consulta |
 | `tools/x2qs_lint.py` | valida uma pasta de quest X2QS contra essa base |
@@ -17,14 +20,22 @@ formato **X2QS**, mais as ferramentas para validar e empacotar essas missões.
 | `Vanilla quests.rar` | os 1160 quests vanilla descompilados (corpus de referência) |
 | `ginyu mujeres edicion.x2m` | mod de exemplo, usado como referência de formato |
 
-## A missão
+## As missões
 
+**`TMQ_URA_01` — "NÃO COMA O URÂNIO!"**
 Uma gangue tomou o Pátio do Exército Red Ribbon e só fala de duas coisas: que
 você **não deve comer urânio** e do **tamanho do seu "equipamento"**. Três ondas
 de inimigos bocudos, um Hercule como "Grande Moderador" e um final alternativo
 para quem terminar em menos de 5 minutos. Textos em pt/en/es.
-
 Detalhes em [`docs/IDEIA_MISSAO.md`](docs/IDEIA_MISSAO.md).
+
+**`TMQ_JUN_01` — "1 BILHÃO DE JUNINS"**
+Setenta e seis Junins invadem o Espaço-tempo Distorcido sem aviso e sem cutscene:
+caiu a dupla, entra outra. Placar de 76 no canto da tela e, no fim, o Junin do
+Futuro em duas fases (Shinya → Agent Coat). Usa os mods `[OC] Junin`,
+`[OC] Junin EMO` e `[OC] Junin do Futuro` por referência `X2mMod`, com o skillset
+original de cada um.
+Detalhes em [`docs/IDEIA_1BILHAO_DE_JUNINS.md`](docs/IDEIA_1BILHAO_DE_JUNINS.md).
 
 ## Ferramentas
 

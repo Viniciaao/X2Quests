@@ -60,8 +60,13 @@ MANIFEST = """<?xml version="1.0" encoding="utf-8" ?>
     <MOD_AUTHOR value="{author}" />
     <MOD_VERSION value="{version}" />
     <MOD_GUID value="{guid}" />
+    <UDATA value="" />
 </X2M>
 """
+# O XV2 Mods Installer escreve/mods oficiais trazem um <UDATA> (blob base64 com
+# metadados do instalador). Ele vai vazio aqui: o preenchimento e feito pelo
+# proprio installer. O que nao pode e o elemento faltar - foi o que quebrou a
+# primeira versao do .x2m da TMQ_URA_01.
 
 
 def xml_escape(value: str) -> str:

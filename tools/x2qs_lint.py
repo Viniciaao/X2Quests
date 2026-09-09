@@ -147,10 +147,17 @@ class Linter:
                 ok = False
         if not ok:
             return False
+        # O compilador le os arquivos numa ordem fixa (quest, chars, dialogue,
+        # positions, script, script1..3) e nao aceita referencia a algo que ainda
+        # nao foi definido. O lint precisa ler na mesma ordem, senao ele reclama
+        # de coisa que o compilador aceitaria (ex.: X2mMod declarado em quest.x2qs
+        # e usado em chars.x2qs).
+        present = [f for f in os.listdir(self.qdir) if f.endswith(".x2qs")]
+        order = [f for f in REQUIRED_FILES if f in present]
+        order += sorted(f for f in present if f not in order)
         self.files = {
             f: open(os.path.join(self.qdir, f), encoding="utf-8", errors="replace").read()
-            for f in sorted(os.listdir(self.qdir))
-            if f.endswith(".x2qs")
+            for f in order
         }
         for f, raw in self.files.items():
             self._syntax(raw, f)
@@ -302,7 +309,7 @@ class Linter:
 
     # ------------------------------------------------------------------ #
     def _check_qxd(self, name: str, body: str, fname: str, line: int) -> None:
-        m = re.search(r'char:\s*"([^"]+)"', body)
+        m = re.search(r'char:\s*"?([A-Za-z0-9_\-]+)"?', body)
         if not m:
             self.err(f"{fname}:{line}: {name} sem campo 'char'")
         else:
@@ -315,12 +322,16 @@ class Linter:
     def _check_char(self, code: str, fname: str, line: int) -> None:
         if code.lstrip("-").isdigit():
             return  # vanilla aceita id numerico de personagem em rewards/portraits
+        if self.declared.get(code) == "X2mMod":
+            return  # personagem vindo de um mod .x2m (char: NomeDoX2mMod)
         if code not in self.ref["char_codes"]:
             self.err(f"{fname}:{line}: codigo de personagem desconhecido '{code}'")
 
     def _check_skill(self, sid: str, fname: str, line: int) -> None:
         # a lista de skills vem dos comentarios dos quests vanilla, entao ela e
         # incompleta: id fora da lista e aviso, nao erro.
+        if self.declared.get(sid) == "X2mMod":
+            return  # skill customizada de um mod .x2m
         if sid not in self.ref["skill_ids"]:
             self.warn(f"{fname}:{line}: id de skill '{sid}' nao aparece em nenhuma quest vanilla")
 
