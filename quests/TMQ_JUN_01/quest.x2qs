@@ -275,14 +275,53 @@ Quest TMQ_JUN_01
 	start_stage: "BFtol" ; Twisted Timespace
 	start_demo: 0
 
-	CharPortrait { char: "HUM" costume: 0 trans: -1 }
-	CharPortrait { char: JuninChar costume: 1 trans: -1 }
-	CharPortrait { char: JuninEmoChar costume: 0 trans: -1 }
-	CharPortrait { char: JuninFuturoChar costume: 1 trans: -1 }
+	xp_reward: 26000
+	ult_xp_reward: 45000
+	fail_xp_reward: 8000
+	zeni_reward: 14000
+	ult_zeni_reward: 22000
+	fail_zeni_reward: 7500
+	tp_medals_once: 5
+	tp_medals: 0
+	tp_medals_special: 0
+	resistance_points: 0
 
 	ItemReward { item: Collection60 type: COLLECTION condition: 1 chance: 100 flags: 0 i12: 0 i20: 0 }
 	ItemReward { item: Collection70 type: COLLECTION condition: 0 chance: 100 flags: 0 i12: 0 i20: 0 }
 	ItemReward { item: Collection80 type: COLLECTION condition: 0 chance: 100 flags: 0 i12: 0 i20: 0 }
 	ItemReward { item: 12 type: BATTLE condition: 0 chance: 100 flags: 0 i12: 0 i20: 0 } ; Senzu Bean
 	SkillReward { skill: 330 condition: 1 chance: 100 i12: 0 } ; Taunt
+
+	stages: ("BFtol", -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1) ; Twisted Timespace
+	i192: 1
+
+	CharPortrait { char: "HUM" costume: 0 trans: -1 }
+	CharPortrait { char: JuninChar costume: 1 trans: -1 }
+	CharPortrait { char: JuninEmoChar costume: 0 trans: -1 }
+	CharPortrait { char: JuninFuturoChar costume: 1 trans: -1 }
+	CharPortrait { char: -1 costume: 0 trans: -1 }
+	CharPortrait { char: -1 costume: 0 trans: -1 }
+
+	i232: 0
+	i234: 2
+	i236: 3
+	i238: 4
+	i240: 5
+	i242: 7
+	i244: 0
+	i246: 0
+	i248: 0
+	i250: 0
+	flags: 0x400000
+
+	update_requirement: ANY
+	dlc_requirement: NONE
+
+	i264: 0
+	no_enemy_bgm: 9
+	enemy_near_bgm: 24
+	battle_bgm: 16
+	ultimate_finish_bgm: 14
+	f276: 1.0
+	i280: 0
 }

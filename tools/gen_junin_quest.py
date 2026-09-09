@@ -209,16 +209,55 @@ def build_quest() -> str:
 \tstart_stage: "{STAGE}" ; {STAGE_COMMENT}
 \tstart_demo: 0
 
-\tCharPortrait {{ char: "HUM" costume: 0 trans: -1 }}
-\tCharPortrait {{ char: JuninChar costume: 1 trans: -1 }}
-\tCharPortrait {{ char: JuninEmoChar costume: 0 trans: -1 }}
-\tCharPortrait {{ char: JuninFuturoChar costume: 1 trans: -1 }}
+\txp_reward: 26000
+\tult_xp_reward: 45000
+\tfail_xp_reward: 8000
+\tzeni_reward: 14000
+\tult_zeni_reward: 22000
+\tfail_zeni_reward: 7500
+\ttp_medals_once: 5
+\ttp_medals: 0
+\ttp_medals_special: 0
+\tresistance_points: 0
 
 \tItemReward {{ item: Collection60 type: COLLECTION condition: 1 chance: 100 flags: 0 i12: 0 i20: 0 }}
 \tItemReward {{ item: Collection70 type: COLLECTION condition: 0 chance: 100 flags: 0 i12: 0 i20: 0 }}
 \tItemReward {{ item: Collection80 type: COLLECTION condition: 0 chance: 100 flags: 0 i12: 0 i20: 0 }}
 \tItemReward {{ item: 12 type: BATTLE condition: 0 chance: 100 flags: 0 i12: 0 i20: 0 }} ; Senzu Bean
 \tSkillReward {{ skill: 330 condition: 1 chance: 100 i12: 0 }} ; Taunt
+
+\tstages: ("{STAGE}", -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1) ; {STAGE_COMMENT}
+\ti192: 1
+
+\tCharPortrait {{ char: "HUM" costume: 0 trans: -1 }}
+\tCharPortrait {{ char: JuninChar costume: 1 trans: -1 }}
+\tCharPortrait {{ char: JuninEmoChar costume: 0 trans: -1 }}
+\tCharPortrait {{ char: JuninFuturoChar costume: 1 trans: -1 }}
+\tCharPortrait {{ char: -1 costume: 0 trans: -1 }}
+\tCharPortrait {{ char: -1 costume: 0 trans: -1 }}
+
+\ti232: 0
+\ti234: 2
+\ti236: 3
+\ti238: 4
+\ti240: 5
+\ti242: 7
+\ti244: 0
+\ti246: 0
+\ti248: 0
+\ti250: 0
+\tflags: 0x400000
+
+\tupdate_requirement: ANY
+\tdlc_requirement: NONE
+
+\ti264: 0
+\tno_enemy_bgm: 9
+\tenemy_near_bgm: 24
+\tbattle_bgm: 16
+\tultimate_finish_bgm: 14
+\tf276: 1.0
+\ti280: 0
 }}
 """
     # o compilador le quest.x2qs de cima para baixo: o que o Quest referencia
