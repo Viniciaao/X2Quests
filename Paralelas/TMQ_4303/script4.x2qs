@@ -1,0 +1,66 @@
+Script
+{
+	State 0
+	{
+		Event 0
+		{
+			Condition CheckFlag(Flag9, true)
+
+			Action LoadChara(VegetaSSGSSEvoludoEnemy); Vegeta SSGSS (Evoluído) - Traje de Batalha
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag12, true)
+
+			Action LoadChara(CabbaEnemy); Cabba - Traje de Batalha 1 (Planeta Sadala)
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag15, true)
+
+			Action LoadChara(CauliflaSuperSaiyajin2Enemy); Caulifla (Super Saiyajin 2) - Traje da Caulifla
+		}
+
+		Event 3
+		{
+			Condition CheckFlag(Flag17, true)
+
+			Action LoadChara(KaleSuperSaiyajin2Enemy); Kale (Super Saiyajin 2) - Traje da Kale
+		}
+
+		Event 4
+		{
+			Condition CheckFlag(Flag25, true)
+
+			Action Wait(2.0)
+			Action LoadChara(GokuSSGSSEnemy); Goku SSGSS - Gi 1 da Tartaruga
+		}
+
+		Event 5
+		{
+			Condition CheckFlag(Flag27, true)
+
+			Action Wait(2.0)
+			Action LoadChara(JirenPoderTotalEnemy); Jiren (Poder Total) - Uniforme da Tropa do Orgulho
+			Action LoadChara(VegetaEnemy2); Vegeta - Traje de Batalha 8
+		}
+
+		Event 6
+		{
+			Condition CheckFlag(Flag31, true)
+
+			Action Wait(2.0)
+			Action LoadChara(VegetaDeusSuperSaiyajin2Enemy); Vegeta (Deus Super Saiyajin) - Traje de Batalha
+		}
+
+		Event 7
+		{
+			Condition CheckFlag(Flag34, true)
+
+			Action LoadChara(GokuSSGSS2Ally); Goku SSGSS - Gi 1 da Tartaruga
+		}
+	}
+}
+

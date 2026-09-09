@@ -1,0 +1,918 @@
+Dialogue Dialogue0
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "JRN" ; Jiren
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_00_0_JRN" ; I take it you will be the one assisting me in this mission. Very well then. Your skill and reputation precede you.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "JRN" ; Jiren
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_00_1_JRN" ; But I expect you to be on your guard at all times, even just on patrol.
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "VGT" ; Vegeta
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_01_0_VGT" ; Hold it, Jiren!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "JRN" ; Jiren
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_01_1_JRN" ; You're from Universe 7... What do you want?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "VGT" ; Vegeta
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_01_2_VGT" ; I demand you show me how that uncanny power you used during the Tournament of Power works.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "VGT" ; Vegeta
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_01_3_VGT" ; If I can defeat you and learn its secrets, I'll become stronger than ever!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "JRN" ; Jiren
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_01_4_JRN" ; You came all this way just for that? Fine, but if you bring ANY danger to Universe 11, you will be punished.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "JRN" ; Jiren
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_01_5_JRN" ; I discovered an intruder while on patrol who needs to be swiftly dealt with. I'll be depending on you for assistance.
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue2
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "VGT" ; Vegeta
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_02_0_VGT" ; Jiren... Your power should be quite comparable to my own.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "VGT" ; Vegeta
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_02_1_VGT" ; If anything, the difference lies in how masterfully you wield it.　
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "VGT" ; Vegeta
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_02_2_VGT" ; But I'm not going to just sit back and covet your skill. I'll make it my own!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue3
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "JRN" ; Jiren
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_03_0_JRN" ; You seem quite exhausted. Have you already learned how to wield the power you seek?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "VGT" ; Vegeta
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_03_1_VGT" ; Kgh! You haven't seen anything from me yet!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "VGT" ; Vegeta
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_03_2_VGT" ; HaaaaaaaAAAAH!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue4
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "JRN" ; Jiren
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_04_0_JRN" ; I see your power level has spiked. However, this alone will change nothing.　
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "VGT" ; Vegeta
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_04_1_VGT" ; Keep spouting your high-and-mighty drivel! Your bravado won't last for long!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue5
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "VGT" ; Vegeta
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_05_0_VGT" ; H-How's this even possible?!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "VGT" ; Vegeta
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_05_1_VGT" ; Well, I'm not through yet! Watch THIS! Haaaaaa!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue6
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "JRN" ; Jiren
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_06_0_JRN" ; A waste of energy. That transformation was incomparable to my strength. Or have you forgotten already?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GVG" ; Vegeta SSGSS
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_06_1_GVG" ; Hmph! You'd be a fool to judge on appearance alone! I'm not the same warrior I was back then!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue7
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "GVG" ; Vegeta SSGSS
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_07_0_GVG" ; Now I see... Of course.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GVG" ; Vegeta SSGSS
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_07_1_GVG" ; Not a drop of your power is wasted. You focus it all on the precise moment you need it.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GVG" ; Vegeta SSGSS
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_07_2_GVG" ; I won't reach your level if I'm only fighting at full power all the time.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GVG" ; Vegeta SSGSS
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_07_3_GVG" ; Alright... Then how about this?! HaaaAAAH!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue8
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "JRN" ; Jiren
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_08_0_JRN" ; A more efficient form, from what I can determine... I expect you wish to test it on me?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "NI2" ; Vegeta (Deus Super Saiyajin)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_08_1_NI2" ; Yes, this is the perfect opportunity. Jiren, you will help me evolve further.
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue9
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "NI2" ; Vegeta (Deus Super Saiyajin)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_09_0_NI2" ; Excellent! The more we trade blows, the more I understand!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "NI2" ; Vegeta (Deus Super Saiyajin)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_09_1_NI2" ; Now is the moment I surpass you! Face my full power! HAAAAAAA!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue10
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "NI1" ; Vegeta SSGSS (Evoluído)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_10_0_NI1" ; Have a taste of my power when it's pushed past ALL limits!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "JRN" ; Jiren
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_10_1_JRN" ; You're brave, I'll give you that! Come!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue11
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "CAB" ; Cabba
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_11_2_CAB" ; Are you all right? Just leave the rest to me!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "NI1" ; Vegeta SSGSS (Evoluído)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_11_3_NI1" ; Hey, what the hell are you doing?! Don't you interfere with my battle! Step aside!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "NI1" ; Vegeta SSGSS (Evoluído)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_11_4_NI1" ; Wait a second... Are you insinuating I can't win against this moron without your help?!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue12
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "THC" ; Caulifla (Super Saiyajin 2)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_11_0_THC" ; HRAAGH!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "JRN" ; Jiren
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_11_5_JRN" ; More intruders? Vegeta, let's set our match aside for now. I must thin out their numbers, at once.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "NI1" ; Vegeta SSGSS (Evoluído)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_11_6_NI1" ; You... bunch of imbeciles... You think you can just make a fool of me?!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue13
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "CAB" ; Cabba
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_12_0_CAB" ; I never hold back when it comes to a fight!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "CAB" ; Cabba
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_12_1_CAB" ; Let's fight fair and square!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue14
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "CAB" ; Cabba
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_13_0_CAB" ; I don't think I can ever look Vegeta in the eyes again...
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue15
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "THC" ; Caulifla (Super Saiyajin 2)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_14_0_THC" ; Heh! You're gonna need more than that to beat me!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "THC" ; Caulifla (Super Saiyajin 2)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_14_1_THC" ; Get ready!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue16
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "THC" ; Caulifla (Super Saiyajin 2)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_15_0_THC" ; No way I'm done. I'm not throwin' in the towel just yet...!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue17
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "THK" ; Kale (Super Saiyajin 2)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_16_0_THK" ; I'm not going to let you win so easily!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "THK" ; Kale (Super Saiyajin 2)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_16_1_THK" ; HAAAAH!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue18
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "THK" ; Kale (Super Saiyajin 2)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_17_0_THK" ; If only... if only I had more power...
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue19
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "JRN" ; Jiren
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_18_0_JRN" ; The threat is quelled at last. Now, only you remain.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "NI1" ; Vegeta SSGSS (Evoluído)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_18_1_NI1" ; Tch... Save your breath! Prepare yourself, the real battle begins now!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GGK" ; Goku SSGSS - Gi 1 da Tartaruga
+		costume: 2
+		transformation: -1
+
+		text_audio: "CAQ_4303_18_2_GGK" ; Hey! Mind if I join in, guys?
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue20
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "NI1" ; Vegeta SSGSS (Evoluído)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_19_0_NI1" ; Kakarot?! The hell are you doing here?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GGK" ; Goku SSGSS - Gi 1 da Tartaruga
+		costume: 2
+		transformation: -1
+
+		text_audio: "CAQ_4303_19_1_GGK" ; Well, I felt all these crazy waves of energy clashing, so I couldn't help but fly over and check it out!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GGK" ; Goku SSGSS - Gi 1 da Tartaruga
+		costume: 2
+		transformation: -1
+
+		text_audio: "CAQ_4303_19_2_GGK" ; Jiren... you don't mind fighting me again, do ya? C'mon, whaddya say?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "NI1" ; Vegeta SSGSS (Evoluído)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_19_3_NI1" ; Hey, I didn't give you permission to interrupt! Why do you people keep on butting in?!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GGK" ; Goku SSGSS - Gi 1 da Tartaruga
+		costume: 2
+		transformation: -1
+
+		text_audio: "CAQ_4303_19_4_GGK" ; Sorry, Vegeta! I'll let you have a turn later! Don't worry about it!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue21
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "GGK" ; Goku SSGSS - Gi 1 da Tartaruga
+		costume: 2
+		transformation: -1
+
+		text_audio: "CAQ_4303_20_0_GGK" ; Whew, Jiren's still a tough cookie! I'm gettin' excited all over again!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "NI1" ; Vegeta SSGSS (Evoluído)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_20_1_NI1" ; Hmph... Huh? Oh, Bulma's calling... What?!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "NI1" ; Vegeta SSGSS (Evoluído)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_20_2_NI1" ; You want me to come home NOW?! I'm busy—hey!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue22
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "GGK" ; Goku SSGSS - Gi 1 da Tartaruga
+		costume: 2
+		transformation: -1
+
+		text_audio: "CAQ_4303_21_0_GGK" ; Oww! Man, that hurts! Agghh, I was so close to winning that time too! Wha... huh? Vegeta, are you headin' home already?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "VGT" ; Vegeta - Traje de Batalha 8
+		costume: 8
+		transformation: -1
+
+		text_audio: "CAQ_4303_21_1_VGT" ; Yes, Bulma gave me a call while you were fooling around. Dammit! That woman has the worst timing...
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "VGT" ; Vegeta - Traje de Batalha 8
+		costume: 8
+		transformation: -1
+
+		text_audio: "CAQ_4303_21_2_VGT" ; At the very least, I've learned the secrets of your power. The next time we fight, I WILL surpass you... Jiren!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "JRN" ; Jiren
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_21_3_JRN" ; Your fighting spirit is admirable. I shall be waiting for when you challenge me next... and I will be prepared.
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue23
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "GGK" ; Goku SSGSS - Gi 1 da Tartaruga
+		costume: 2
+		transformation: -1
+
+		text_audio: "CAQ_4303_22_0_GGK" ; Guess it's about time for me to head back then, too! Hey, what's the matter? Wh-What's up with you guys?!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "VGT" ; Vegeta - Traje de Batalha 8
+		costume: 8
+		transformation: -1
+
+		text_audio: "CAQ_4303_22_1_VGT" ; Gnh... Gnhh!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "JRN" ; Jiren
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_22_2_JRN" ; Wh-What is this sensation? Argh...
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue24
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "EIG" ; Vegeta (Deus Super Saiyajin)
+		costume: -1
+		transformation: 900
+
+		text_audio: "CAQ_4303_23_0_EIG" ; Graaaaaaaagh!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "NTJ" ; Jiren (Poder Total)
+		costume: -1
+		transformation: 900
+
+		text_audio: "CAQ_4303_23_1_NTJ" ; ...
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GGK" ; Goku SSGSS - Gi 1 da Tartaruga
+		costume: 2
+		transformation: -1
+
+		text_audio: "CAQ_4303_23_2_GGK" ; G-Guys! Seriously, what's going on?!　
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: 91
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_23_3_FUU" ; That's funny... I haven't interfered with this timeline.
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue25
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "EIG" ; Vegeta (Deus Super Saiyajin)
+		costume: -1
+		transformation: 900
+
+		text_audio: "CAQ_4303_24_0_EIG" ; Gaaaaaugh!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue26
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "NTJ" ; Jiren (Poder Total)
+		costume: -1
+		transformation: 900
+
+		text_audio: "CAQ_4303_25_0_NTJ" ; Strength is justice! Strength is absolute! The weak are without worth!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: 91
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_25_1_FUU" ; Actually, this could be a great new source of energy. Hahaha, what a happy coincidence!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue27
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "VGT" ; Vegeta - Traje de Batalha 8
+		costume: 8
+		transformation: -1
+
+		text_audio: "CAQ_4303_26_0_VGT" ; Ugh, what was I...?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GGK" ; Goku SSGSS - Gi 1 da Tartaruga
+		costume: 2
+		transformation: -1
+
+		text_audio: "CAQ_4303_26_1_GGK" ; Oh! Good, you're back to normal! What a relief. You two just went ballistic outta nowhere! Took me totally by surprise...
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "THJ" ; Jiren (Poder Total)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_26_2_THJ" ; What was that odd sensation?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: 91
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_26_3_FUU" ; Mmm, that was excellent! I oughta research what caused this to happen.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: 91
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4303_26_4_FUU" ; Catch ya 'round... Universe 11's hero.
+		i8: 0
+	}
+
+}
+

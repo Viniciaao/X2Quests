@@ -1,0 +1,237 @@
+Script
+{
+	State 0
+	{
+		Event 0
+		{
+			Condition DialogueFinish(Dialogue0); I take it you will be the one assisting me in this mission. Very well then. Your skill and reputation precede you. [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag1, true)
+		}
+
+		Event 1
+		{
+			Condition Health(<=, VegetaEnemy, 50.0); Vegeta - Traje de Batalha 8
+			Condition DialogueFinish(Dialogue1); Hold it, Jiren! [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag2, true)
+		}
+
+		Event 2
+		{
+			Condition Ko(VegetaEnemy, true, -1); Vegeta - Traje de Batalha 8
+			Condition DialogueFinish(Dialogue2); Jiren... Your power should be quite comparable to my own. [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag3, true)
+		}
+
+		Event 3
+		{
+			Condition DialogueFinish(Dialogue3); You seem quite exhausted. Have you already learned how to wield the power you seek? [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag4, true)
+		}
+
+		Event 4
+		{
+			Condition Health(<=, VegetaEnemy, 50.0); Vegeta - Traje de Batalha 8
+			Condition DialogueFinish(Dialogue4); I see your power level has spiked. However, this alone will change nothing.　 [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag6, true)
+		}
+
+		Event 5
+		{
+			Condition DialogueFinish(Dialogue5); H-How's this even possible?! [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag7, true)
+		}
+
+		Event 6
+		{
+			Condition Ko(VegetaSSGSSEnemy, true, -1); Vegeta SSGSS - Traje de Batalha 
+			Condition DialogueFinish(Dialogue6); A waste of energy. That transformation was incomparable to my strength. Or have you forgotten already? [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag10, true)
+		}
+
+		Event 7
+		{
+			Condition DialogueFinish(Dialogue7); Now I see... Of course. [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag11, true)
+		}
+
+		Event 8
+		{
+			Condition Health(<=, VegetaDeusSuperSaiyajinEnemy, 50.0); Vegeta (Deus Super Saiyajin) - Traje de Batalha
+			Condition DialogueFinish(Dialogue8); A more efficient form, from what I can determine... I expect you wish to test it on me? [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag13, true)
+		}
+
+		Event 9
+		{
+			Condition DialogueFinish(Dialogue9); Excellent! The more we trade blows, the more I understand! [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag14, true)
+		}
+
+		Event 10
+		{
+			Condition DialogueFinish(Dialogue10); Have a taste of my power when it's pushed past ALL limits! [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag16, true)
+		}
+
+		Event 11
+		{
+			Condition DialogueFinish(Dialogue11); Are you all right? Just leave the rest to me! [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag18, true)
+		}
+
+		Event 12
+		{
+			Condition Health(<=, CabbaEnemy, 50.0); Cabba - Traje de Batalha 1 (Planeta Sadala)
+
+			Action SetFlag(Flag19, true)
+		}
+
+		Event 13
+		{
+			Condition Ko(CabbaEnemy, true, -1); Cabba - Traje de Batalha 1 (Planeta Sadala)
+			Condition DialogueFinish(Dialogue13); I never hold back when it comes to a fight! [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag20, true)
+			Action SetFlag(Flag25, true)
+		}
+
+		Event 14
+		{
+			Condition Health(<=, CauliflaSuperSaiyajin2Enemy, 50.0); Caulifla (Super Saiyajin 2) - Traje da Caulifla
+
+			Action SetFlag(Flag21, true)
+		}
+
+		Event 15
+		{
+			Condition Ko(CauliflaSuperSaiyajin2Enemy, true, -1); Caulifla (Super Saiyajin 2) - Traje da Caulifla
+			Condition DialogueFinish(Dialogue15); Heh! You're gonna need more than that to beat me! [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag22, true)
+			Action SetFlag(Flag25, true)
+		}
+
+		Event 16
+		{
+			Condition Health(<=, KaleSuperSaiyajin2Enemy, 50.0); Kale (Super Saiyajin 2) - Traje da Kale
+
+			Action SetFlag(Flag23, true)
+		}
+
+		Event 17
+		{
+			Condition Ko(KaleSuperSaiyajin2Enemy, true, -1); Kale (Super Saiyajin 2) - Traje da Kale
+			Condition DialogueFinish(Dialogue17); I'm not going to let you win so easily! [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag24, true)
+			Action SetFlag(Flag25, true)
+		}
+
+		Event 18
+		{
+			Condition DialogueFinish(Dialogue14); I don't think I can ever look Vegeta in the eyes again...
+			Condition DialogueFinish(Dialogue16); No way I'm done. I'm not throwin' in the towel just yet...!
+			Condition DialogueFinish(Dialogue18); If only... if only I had more power...
+
+			Action SetFlag(Flag26, true)
+			Action SetFlag(Flag27, true)
+		}
+
+		Event 19
+		{
+			Condition DialogueFinish(Dialogue19); The threat is quelled at last. Now, only you remain. [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag28, true)
+		}
+
+		Event 20
+		{
+			Condition Health(<=, GokuSSGSSEnemy, 50.0); Goku SSGSS - Gi 1 da Tartaruga
+			Condition DialogueFinish(Dialogue20); Kakarot?! The hell are you doing here? [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag29, true)
+		}
+
+		Event 21
+		{
+			Condition Ko(GokuSSGSSEnemy, false, -1); Goku SSGSS - Gi 1 da Tartaruga
+			Condition TimePassed(<=, 600.0)
+
+			Action SetFlag(Flag63, true)
+		}
+
+		Event 22
+		{
+			Condition Ko(GokuSSGSSEnemy, true, -1); Goku SSGSS - Gi 1 da Tartaruga
+			Condition CheckFlag(Flag63, true)
+
+			Action SetFlag(Flag31, true)
+		}
+
+		Event 23
+		{
+			Condition Ko(GokuSSGSSEnemy, true, -1); Goku SSGSS - Gi 1 da Tartaruga
+			Condition DialogueFinish(Dialogue21); Whew, Jiren's still a tough cookie! I'm gettin' excited all over again! [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag30, true)
+		}
+
+		Event 24
+		{
+			Condition DialogueFinish(Dialogue22); Oww! Man, that hurts! Agghh, I was so close to winning that time too! Wha... huh? Vegeta, are you headin' home already? [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag32, true)
+		}
+
+		Event 25
+		{
+			Condition DialogueFinish(Dialogue23); Guess it's about time for me to head back then, too! Hey, what's the matter? Wh-What's up with you guys?! [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag33, true)
+		}
+
+		Event 26
+		{
+			Condition Health(<=, VegetaDeusSuperSaiyajin2Enemy, 50.0); Vegeta (Deus Super Saiyajin) - Traje de Batalha
+			Condition DialogueFinish(Dialogue24); Graaaaaaaagh! [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag36, true)
+		}
+
+		Event 27
+		{
+			Condition Health(<=, JirenPoderTotalEnemy, 50.0); Jiren (Poder Total) - Uniforme da Tropa do Orgulho
+			Condition DialogueFinish(Dialogue24); Graaaaaaaagh! [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag37, true)
+		}
+
+		Event 28
+		{
+			Condition Ko(JirenPoderTotalEnemy, true, -1); Jiren (Poder Total) - Uniforme da Tropa do Orgulho
+			Condition Ko(VegetaDeusSuperSaiyajin2Enemy, true, -1); Vegeta (Deus Super Saiyajin) - Traje de Batalha
+
+			Action SetFlag(Flag38, true)
+		}
+
+		Event 29
+		{
+			Condition DialogueFinish(Dialogue27); Ugh, what was I...? [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag39, true)
+		}
+	}
+}
+

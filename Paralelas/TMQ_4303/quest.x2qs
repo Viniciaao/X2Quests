@@ -1,0 +1,101 @@
+ItemCollection GiDoGokuMini
+{
+	ItemCollectionEntry { item: 462 type: TOP i6: 1 i8: 1 i10: 0 } ; Gi do Goku (Mini)
+	ItemCollectionEntry { item: 462 type: BOTTOM i6: 1 i8: 1 i10: 0 } ; Gi do Goku (Mini)
+	ItemCollectionEntry { item: 462 type: GLOVES i6: 1 i8: 1 i10: 0 } ; Gi do Goku (Mini)
+	ItemCollectionEntry { item: 462 type: SHOES i6: 1 i8: 1 i10: 0 } ; Gi do Goku (Mini)
+}
+
+Quest TMQ_4303
+{
+	episode: 53 ; Dialogue will be loaded from qe_cep34. Audio will be loaded from TMQ/CAQM_cep34_VOX.
+	sub_type: 0
+	num_players: 3
+
+	title: "TMQ_4303_Title" ; The Tireless Pursuit of Strength
+	success: "TMQ_4303_Success" ; -Defeat all enemies
+	failure: "TMQ_4303_Failure" ; -All team HP depleted\n-Time expires
+	outline: "TMQ_4303_Outline" ; While Jiren is on patrol, Vegeta suddenly appears, ready for battle! Is he really going to take on the mighty Jiren?
+	warning: "TMQ_4303_Warning" ; -Clear in under 10 minutes
+	ex_success: "TMQ_4303_ExSuccess" ; -Defeat Jiren (Full Power, Ultra Supervillain) and the others
+
+	i40: 0
+	parent_quest: "empty_Q0"
+	i44: 0
+	i48: 1
+	i52: -1
+	i56: -1
+	i60: -1
+	unlock_requirement: "TMQ_1400" ; Being a Time Patroller
+	i68: -1
+	i72: -1
+	i76: -1
+	i80: 1
+	i84: 1
+
+	QxdUnk1(3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	QxdUnk2(0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	QxdUnk2(1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+	time_limit: 1200
+	difficulty: 6
+	level: 125
+	i112: 0
+	start_stage: "BFspe" ; Espaço (Terra)
+	start_demo: 0
+
+	xp_reward: 21100
+	ult_xp_reward: 36100
+	fail_xp_reward: 7200
+	zeni_reward: 9500
+	ult_zeni_reward: 17000
+	fail_zeni_reward: 5900
+	tp_medals_once: 5
+	tp_medals: 0
+	tp_medals_special: 0
+	resistance_points: 0
+
+	ItemReward { item: 74 type: MATERIAL condition: 0 i12: 0 flags: 10 i20: 1 chance: 100.0 } ; Supercápsula de Mistura
+	ItemReward { item: 75 type: MATERIAL condition: 0 i12: 0 flags: 10 i20: 1 chance: 50.0 } ; Supercápsula de Mistura Z
+	ItemReward { item: GiDoGokuMini type: COLLECTION condition: 1 i12: 0 flags: NORMAL i20: 1 chance: 90.0 } ; Gi do Goku (Mini)
+	ItemReward { item: 846 type: SUPERSOUL condition: 0 i12: 0 flags: NORMAL i20: 1 chance: 50.0 } ; Enfrentarei todos vocês de uma vez só!
+	ItemReward { item: 606 type: ILLUSTRATION condition: 0 i12: 0 flags: NORMAL i20: 1 chance: 50.0 }
+	ItemReward { item: 624 type: ILLUSTRATION condition: 0 i12: 0 flags: NORMAL i20: 1 chance: 50.0 }
+
+	SkillReward { skill: 7230 condition: 3 i12: 4 chance: 50.0 } ; Explosão Blitz
+
+	; Espaço (Terra)
+	stages: ("BFspe", -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1)
+	i192: 1
+
+	CharPortrait { char: "VGT" costume: 8 trans: -1 } ; Vegeta - Traje de Batalha 8
+	CharPortrait { char: "CAB" costume: 0 trans: -1 } ; Cabba - Traje de Batalha 1 (Planeta Sadala)
+	CharPortrait { char: "THC" costume: 0 trans: -1 } ; Caulifla (Super Saiyajin 2) - Traje da Caulifla
+	CharPortrait { char: "THK" costume: 0 trans: -1 } ; Kale (Super Saiyajin 2) - Traje da Kale
+	CharPortrait { char: "GGK" costume: 2 trans: -1 } ; Goku SSGSS - Gi 1 da Tartaruga
+	CharPortrait { char: -1 costume: 0 trans: -1 }
+
+	i232: 1
+	i234: 3
+	i236: 5
+	i238: 10
+	i240: 12
+	i242: 16
+	i244: 0
+	i246: 0
+	i248: 0
+	i250: 0
+	flags: 0x400000
+
+	update_requirement: DLC18
+	dlc_requirement: DLC18
+
+	i264: 0
+	no_enemy_bgm: 25
+	enemy_near_bgm: 24
+	battle_bgm: 1
+	ultimate_finish_bgm: 40
+	f276: 1.0
+	i280: 0
+}
+

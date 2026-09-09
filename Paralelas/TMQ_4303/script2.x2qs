@@ -1,0 +1,55 @@
+Script
+{
+	State 0
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action HealthCap(true, JirenAlly, 1.0); Jiren - Uniforme da Tropa do Orgulho
+			Action HealthCap(true, VegetaDeusSuperSaiyajinEnemy, 1.0); Vegeta (Deus Super Saiyajin) - Traje de Batalha
+			Action HealthCap(true, VegetaSSGSSEvoludoEnemy, 1.0); Vegeta SSGSS (Evoluído) - Traje de Batalha
+			Action HealthCap(true, GokuSSGSS2Ally, 1.0); Goku SSGSS - Gi 1 da Tartaruga
+			Action DontRemoveOnKo(VegetaEnemy); Vegeta - Traje de Batalha 8
+			Action DontRemoveOnKo(VegetaSSGSSEnemy); Vegeta SSGSS - Traje de Batalha 
+			Action DontRemoveOnKo(JirenPoderTotalEnemy); Jiren (Poder Total) - Uniforme da Tropa do Orgulho
+			Action DontRemoveOnKo(VegetaDeusSuperSaiyajin2Enemy); Vegeta (Deus Super Saiyajin) - Traje de Batalha
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag5, true)
+
+			Action HealthCap(true, VegetaEnemy, 50.0); Vegeta - Traje de Batalha 8
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag6, true)
+
+			Action SetStat(VegetaEnemy, ATK, 1); Vegeta - Traje de Batalha 8
+			Action SetStat(VegetaEnemy, KI_ATK, 1); Vegeta - Traje de Batalha 8
+			Action SetStat(VegetaEnemy, SUPER_ATK, 1); Vegeta - Traje de Batalha 8
+			Action SetStat(VegetaEnemy, SUPER_KI, 1); Vegeta - Traje de Batalha 8
+		}
+
+		Event 3
+		{
+			Condition CheckFlag(Flag7, true)
+
+			Action CopyHealth(VegetaEnemy, VegetaSSGSSEnemy)
+			Action SetFlag(Flag8, true)
+		}
+
+		Event 4
+		{
+			Condition CheckFlag(Flag13, true)
+
+			Action SetStat(VegetaDeusSuperSaiyajinEnemy, ATK, 1); Vegeta (Deus Super Saiyajin) - Traje de Batalha
+			Action SetStat(VegetaDeusSuperSaiyajinEnemy, KI_ATK, 1); Vegeta (Deus Super Saiyajin) - Traje de Batalha
+			Action SetStat(VegetaDeusSuperSaiyajinEnemy, SUPER_ATK, 1); Vegeta (Deus Super Saiyajin) - Traje de Batalha
+			Action SetStat(VegetaDeusSuperSaiyajinEnemy, SUPER_KI, 1); Vegeta (Deus Super Saiyajin) - Traje de Batalha
+		}
+	}
+}
+

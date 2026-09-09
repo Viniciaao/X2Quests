@@ -1,0 +1,394 @@
+Flag Flag1
+Flag Flag2
+Flag Flag3
+Flag Flag4
+Flag Flag5
+Flag Flag6
+Flag Flag7
+Flag Flag8
+Flag Flag9
+Flag Flag10
+Flag Flag11
+Flag Flag12
+Flag Flag13
+Flag Flag14
+Flag Flag15
+Flag Flag16
+Flag Flag17
+Flag Flag18
+Flag Flag19
+Flag Flag20
+Flag Flag21
+Flag Flag22
+Flag Flag23
+Flag Flag24
+Flag Flag25
+Flag Flag26
+Flag Flag27
+Flag Flag28
+Flag Flag29
+Flag Flag30
+Flag Flag31
+Flag Flag32
+Flag Flag33
+Flag Flag34
+Flag Flag35
+Flag Flag36
+Flag Flag37
+Flag Flag38
+Flag Flag39
+Flag Flag63
+
+StringVar String0
+
+Script
+{
+	State 0
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action DisableCommonDialogue(1, Player, Player2, 9999, -1, -1, -1, -1)
+			Action DisableCommonDialogue(1, Player, Player3, 9999, -1, -1, -1, -1)
+			Action DisableCommonDialogue(1, Player2, Player3, 9999, -1, -1, -1, -1)
+			Action Unk61(Player, 10, -1, -1); Player
+			Action Unk61(Player2, 10, -1, -1); Player
+			Action Unk61(Player3, 10, -1, -1); Player
+			Action InitQuest
+		}
+
+		Event 1
+		{
+			Condition TimeWithinState(1.0)
+			Condition Always
+
+			Action Unk20
+			Action BattleModeStart
+			Action GotoState(1)
+		}
+	}
+
+	State 1
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action PlayDialogue(Dialogue0, 1000, "BFspe", -1); Dialogue: I take it you will be the one assisting me in this mission. Very well then. Your skill and reputation precede you. [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag1, true)
+
+			Action CharaSpawn(VegetaEnemy, 10, -1, 20, "BFspe", 0); Char: Vegeta - Traje de Batalha 8 --- Stage: Espaço (Terra)
+			Action PlayDialogue(Dialogue1, 1000, "BFspe", -1); Dialogue: Hold it, Jiren! [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag2, true)
+
+			Action PlayDialogue(Dialogue2, 1000, "BFspe", -1); Dialogue: Jiren... Your power should be quite comparable to my own. [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 3
+		{
+			Condition CheckFlag(Flag3, true)
+
+			Action PlayDialogue(Dialogue3, 1000, "BFspe", -1); Dialogue: You seem quite exhausted. Have you already learned how to wield the power you seek? [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 4
+		{
+			Condition CheckFlag(Flag4, true)
+
+			Action SetStringVar("RBQ_4500_POS_00", String0)
+			Action ReviveEx(VegetaEnemy, -1, 32, String0, 100.0); Vegeta - Traje de Batalha 8
+			Action SetAttackTarget(Player, VegetaEnemy, false)
+			Action SetAttackTarget(Player2, VegetaEnemy, false)
+			Action SetAttackTarget(Player3, VegetaEnemy, false)
+			Action SetFlag(Flag5, true)
+			Action SetStat(VegetaEnemy, ATK, 200); Vegeta - Traje de Batalha 8
+			Action SetStat(VegetaEnemy, KI_ATK, 200); Vegeta - Traje de Batalha 8
+			Action SetStat(VegetaEnemy, SUPER_ATK, 190); Vegeta - Traje de Batalha 8
+			Action SetStat(VegetaEnemy, SUPER_KI, 190); Vegeta - Traje de Batalha 8
+			Action SetStat(VegetaEnemy, MAX_KI, 800); Vegeta - Traje de Batalha 8
+			Action PlayDialogue(Dialogue4, 1000, "BFspe", -1); Dialogue: I see your power level has spiked. However, this alone will change nothing.　 [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 5
+		{
+			Condition CheckFlag(Flag6, true)
+
+			Action PlayDialogue(Dialogue5, 1000, "BFspe", -1); Dialogue: H-How's this even possible?! [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 6
+		{
+			Condition CheckFlag(Flag8, true)
+
+			Action Unk64(VegetaEnemy, 7); Vegeta - Traje de Batalha 8
+			Action ModelChange(VegetaEnemy, VegetaSSGSSEnemy, 8, -1, 25)
+			Action SetAttackTarget(Player, VegetaSSGSSEnemy, false)
+			Action SetAttackTarget(Player2, VegetaSSGSSEnemy, false)
+			Action SetAttackTarget(Player3, VegetaSSGSSEnemy, false)
+			Action PlayDialogue(Dialogue6, 1000, "BFspe", -1); Dialogue: A waste of energy. That transformation was incomparable to my strength. Or have you forgotten already? [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+			Action SetFlag(Flag9, true)
+		}
+
+		Event 7
+		{
+			Condition CheckFlag(Flag10, true)
+
+			Action PlayDialogue(Dialogue7, 1000, "BFspe", -1); Dialogue: Now I see... Of course. [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 8
+		{
+			Condition CheckFlag(Flag11, true)
+
+			Action Unk64(VegetaSSGSSEnemy, 7); Vegeta SSGSS - Traje de Batalha 
+			Action ModelChange(VegetaSSGSSEnemy, VegetaDeusSuperSaiyajinEnemy, 4, -1, 25)
+			Action SetAttackTarget(Player, VegetaDeusSuperSaiyajinEnemy, false)
+			Action SetAttackTarget(Player2, VegetaDeusSuperSaiyajinEnemy, false)
+			Action SetAttackTarget(Player3, VegetaDeusSuperSaiyajinEnemy, false)
+			Action PlayDialogue(Dialogue8, 1000, "BFspe", -1); Dialogue: A more efficient form, from what I can determine... I expect you wish to test it on me? [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+			Action SetFlag(Flag12, true)
+		}
+
+		Event 9
+		{
+			Condition CheckFlag(Flag13, true)
+
+			Action PlayDialogue(Dialogue9, 1000, "BFspe", -1); Dialogue: Excellent! The more we trade blows, the more I understand! [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 10
+		{
+			Condition CheckFlag(Flag14, true)
+
+			Action Unk64(VegetaDeusSuperSaiyajinEnemy, 7); Vegeta (Deus Super Saiyajin) - Traje de Batalha
+			Action ModelChange(VegetaDeusSuperSaiyajinEnemy, VegetaSSGSSEvoludoEnemy, 8, -1, 25)
+			Action SetAttackTarget(Player, VegetaSSGSSEvoludoEnemy, false)
+			Action SetAttackTarget(Player2, VegetaSSGSSEvoludoEnemy, false)
+			Action SetAttackTarget(Player3, VegetaSSGSSEvoludoEnemy, false)
+			Action PlayDialogue(Dialogue10, 1000, "BFspe", -1); Dialogue: Have a taste of my power when it's pushed past ALL limits! [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+			Action SetFlag(Flag15, true)
+			Action GotoState(2)
+		}
+	}
+
+	State 2
+	{
+		Event 0
+		{
+			Condition CheckFlag(Flag16, true)
+
+			Action CharaSpawn(CabbaEnemy, 10, -1, 20, "BFspe", 0); Char: Cabba - Traje de Batalha 1 (Planeta Sadala) --- Stage: Espaço (Terra)
+			Action RemoveChara_(VegetaSSGSSEvoludoEnemy, false); Vegeta SSGSS (Evoluído) - Traje de Batalha
+			Action SetFlag(Flag17, true)
+			Action PlayDialogue(Dialogue11, 1000, "BFspe", -1); Dialogue: Are you all right? Just leave the rest to me! [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag18, true)
+
+			Action CharaSpawn2(KaleSuperSaiyajin2Enemy, CauliflaSuperSaiyajin2Enemy, 10, -1, "BFspe", 0, -1, -1); Espaço (Terra)
+			Action PlayDialogue(Dialogue12, 1000, "BFspe", -1); Dialogue: HRAAGH! [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag19, true)
+
+			Action PlayDialogue(Dialogue13, 1000, "BFspe", -1); Dialogue: I never hold back when it comes to a fight! [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 3
+		{
+			Condition CheckFlag(Flag20, true)
+
+			Action PlayDialogue(Dialogue14, 1000, "BFspe", -1); Dialogue: I don't think I can ever look Vegeta in the eyes again... --- Stage: Espaço (Terra)
+		}
+
+		Event 4
+		{
+			Condition CheckFlag(Flag21, true)
+
+			Action PlayDialogue(Dialogue15, 1000, "BFspe", -1); Dialogue: Heh! You're gonna need more than that to beat me! [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 5
+		{
+			Condition CheckFlag(Flag22, true)
+
+			Action PlayDialogue(Dialogue16, 1000, "BFspe", -1); Dialogue: No way I'm done. I'm not throwin' in the towel just yet...! --- Stage: Espaço (Terra)
+		}
+
+		Event 6
+		{
+			Condition CheckFlag(Flag23, true)
+
+			Action PlayDialogue(Dialogue17, 1000, "BFspe", -1); Dialogue: I'm not going to let you win so easily! [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 7
+		{
+			Condition CheckFlag(Flag24, true)
+
+			Action PlayDialogue(Dialogue18, 1000, "BFspe", -1); Dialogue: If only... if only I had more power... --- Stage: Espaço (Terra)
+		}
+
+		Event 8
+		{
+			Condition CheckFlag(Flag26, true)
+
+			Action PlayDialogue(Dialogue19, 1000, "BFspe", -1); Dialogue: The threat is quelled at last. Now, only you remain. [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 9
+		{
+			Condition CheckFlag(Flag28, true)
+
+			Action CharaSpawn(GokuSSGSSEnemy, 10, -1, 20, "BFspe", 0); Char: Goku SSGSS - Gi 1 da Tartaruga --- Stage: Espaço (Terra)
+			Action PlayDialogue(Dialogue20, 1000, "BFspe", -1); Dialogue: Kakarot?! The hell are you doing here? [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 10
+		{
+			Condition CheckFlag(Flag29, true)
+
+			Action PlayDialogue(Dialogue21, 1000, "BFspe", -1); Dialogue: Whew, Jiren's still a tough cookie! I'm gettin' excited all over again! [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 11
+		{
+			Condition Ko(GokuSSGSSEnemy, false, -1); Goku SSGSS - Gi 1 da Tartaruga
+
+			Action QuestFinishState(COMPLETE)
+		}
+
+		Event 12
+		{
+			Condition CheckFlag(Flag30, true)
+
+			Action PlayDialogue(Dialogue22, 1000, "BFspe", -1); Dialogue: Oww! Man, that hurts! Agghh, I was so close to winning that time too! Wha... huh? Vegeta, are you headin' home already? [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 13
+		{
+			Condition CheckFlag(Flag32, true)
+
+			Action GotoState(3)
+		}
+	}
+
+	State 3
+	{
+		Event 0
+		{
+			Condition CheckFlag(Flag63, true)
+
+			Action GotoState(4)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag63, false)
+
+			Action GotoState(5)
+		}
+	}
+
+	State 4
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action PlayDialogue(Dialogue23, 1000, "BFspe", -1); Dialogue: Guess it's about time for me to head back then, too! Hey, what's the matter? Wh-What's up with you guys?! [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag33, true)
+
+			Action ShowWarning
+			Action ModelChange(JirenAlly, JirenPoderTotalEnemy, 1, -1, 127)
+			Action SetFlag(Flag34, true)
+			Action SetFlag(Flag35, true)
+			Action Unk84("BFspe"); Espaço (Terra)
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag35, true)
+
+			Action ModelChange(VegetaEnemy2, VegetaDeusSuperSaiyajin2Enemy, 5, -1, 127)
+			Action PlayDialogue(Dialogue24, 1000, "BFspe", -1); Dialogue: Graaaaaaaagh! [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 3
+		{
+			Condition Always
+
+			Action SetCharVisible_(GokuSSGSS2Ally, true); Goku SSGSS - Gi 1 da Tartaruga
+		}
+
+		Event 4
+		{
+			Condition CheckFlag(Flag36, true)
+			Condition DialogueFinish(Dialogue24); Graaaaaaaagh! [MORE DIALOGUE PARTS]
+
+			Action PlayDialogue(Dialogue25, 1000, "BFspe", -1); Dialogue: Gaaaaaugh! --- Stage: Espaço (Terra)
+		}
+
+		Event 5
+		{
+			Condition CheckFlag(Flag37, true)
+			Condition DialogueFinish(Dialogue24); Graaaaaaaagh! [MORE DIALOGUE PARTS]
+
+			Action PlayDialogue(Dialogue26, 1000, "BFspe", -1); Dialogue: Strength is justice! Strength is absolute! The weak are without worth! [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 6
+		{
+			Condition Ko(JirenPoderTotalEnemy, false, -1); Jiren (Poder Total) - Uniforme da Tropa do Orgulho
+			Condition Ko(VegetaDeusSuperSaiyajin2Enemy, false, -1); Vegeta (Deus Super Saiyajin) - Traje de Batalha
+
+			Action QuestFinishState(ULTIMATE_FINISH)
+		}
+
+		Event 7
+		{
+			Condition CheckFlag(Flag38, true)
+			Condition DialogueFinish(Dialogue25); Gaaaaaugh!
+			Condition DialogueFinish(Dialogue26); Strength is justice! Strength is absolute! The weak are without worth! [MORE DIALOGUE PARTS]
+
+			Action RemoveChara_(JirenPoderTotalEnemy, true); Jiren (Poder Total) - Uniforme da Tropa do Orgulho
+			Action RemoveChara_(VegetaDeusSuperSaiyajin2Enemy, true); Vegeta (Deus Super Saiyajin) - Traje de Batalha
+			Action PlayDialogue(Dialogue27, 1000, "BFspe", -1); Dialogue: Ugh, what was I...? [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 8
+		{
+			Condition CheckFlag(Flag39, true)
+
+			Action GotoState(5)
+		}
+	}
+
+	State 5
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action QuestClear
+		}
+	}
+}
+
