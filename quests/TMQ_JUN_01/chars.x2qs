@@ -94,7 +94,7 @@ QxdSpecialChar Teacher
 	i126: 0
 }
 
-; O Junin normal: mais tanque (costume 1 do mod [OC] Junin).
+; O Junin normal
 QxdChar JuninBruto
 {
 	char: JuninChar
@@ -103,18 +103,18 @@ QxdChar JuninBruto
 	special_effect: -1
 
 	i12: 0
-	level: 85
-	health: 900.0
+	level: 100
+	health: -1.0
 	f24: -1.0
 	ki: -1.0
 	stamina: -1.0
-	atk: 1.25
+	atk: -1.0
 	ki_atk: -1.0
-	super_atk: 1.25
+	super_atk: -1.0
 	super_ki: -1.0
-	atk_damage: 1.35
+	atk_damage: -1.0
 	ki_damage: -1.0
-	super_atk_damage: 1.35
+	super_atk_damage: -1.0
 	super_ki_damage: -1.0
 	guard_atk: -1.0
 	guard_damage: -1.0
@@ -140,7 +140,7 @@ QxdChar JuninBruto
 	i126: 0
 }
 
-; O Junin EMO: mais fraco e mais rapido (costume 0 do mod [OC] Junin EMO).
+; O Junin EMO: (costume 0 do mod [OC] Junin EMO).
 QxdChar JuninEmoBase
 {
 	char: JuninEmoChar
@@ -149,18 +149,18 @@ QxdChar JuninEmoBase
 	special_effect: -1
 
 	i12: 0
-	level: 85
-	health: 520.0
+	level: 150
+	health: -1.0
 	f24: -1.0
 	ki: -1.0
 	stamina: -1.0
-	atk: 1.05
+	atk: -1.0
 	ki_atk: -1.0
-	super_atk: 1.05
+	super_atk: -1.0
 	super_ki: -1.0
-	atk_damage: 1.05
+	atk_damage: -1.0
 	ki_damage: -1.0
-	super_atk_damage: 1.05
+	super_atk_damage: -1.0
 	super_ki_damage: -1.0
 	guard_atk: -1.0
 	guard_damage: -1.0
@@ -186,7 +186,7 @@ QxdChar JuninEmoBase
 	i126: 0
 }
 
-; Chefe fase 1 - camiseta da Shinya (stats mais leves do mod).
+; Chefe fase 1 - camiseta da Shinya (Bucha).
 QxdChar JuninFuturoFase1
 {
 	char: JuninFuturoChar
@@ -195,7 +195,7 @@ QxdChar JuninFuturoFase1
 	special_effect: -1
 
 	i12: 0
-	level: 88
+	level: 100
 	health: -1.0
 	f24: -1.0
 	ki: -1.0
@@ -232,7 +232,7 @@ QxdChar JuninFuturoFase1
 	i126: 0
 }
 
-; Chefe fase 2 - Agent Coat (stats fortes do mod: HEALTH 2.0, defesas altas).
+; Chefe fase 2 - Agent Coat (Versão Séria).
 QxdChar JuninFuturoFase2
 {
 	char: JuninFuturoChar
@@ -242,24 +242,24 @@ QxdChar JuninFuturoFase2
 
 	i12: 4
 	level: 180
-	health: 2200.0
+	health: 2000.0
 	f24: -1.0
 	ki: -1.0
 	stamina: -1.0
-	atk: 1.70
-	ki_atk: -1.0
-	super_atk: 1.70
-	super_ki: -1.0
-	atk_damage: 1.90
-	ki_damage: -1.0
-	super_atk_damage: 1.90
-	super_ki_damage: -1.0
-	guard_atk: -1.0
+	atk: 3.5
+	ki_atk: 3.5
+	super_atk: 3.0
+	super_ki: 3.0
+	atk_damage: 1.60000002
+	ki_damage: 1.60000002
+	super_atk_damage: 1.60000002
+	super_ki_damage: 1.60000002
+	guard_atk: 0.699999988
 	guard_damage: -1.0
 	move_speed: -1.0
 	boost_speed: -1.0
 	f84: -1.0
-	ait_table_entry: 144
+	ait_table_entry: 270
 
 	super1: 620
 	super2: MuroDeDefesaSkill
