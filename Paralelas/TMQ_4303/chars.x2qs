@@ -1,0 +1,1199 @@
+QxdSpecialChar PlayerBase
+{
+	; Player
+	char: "HUM"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 1
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 138
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdSpecialChar Teacher
+{
+	; Teacher
+	char: "MST"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 1
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 140
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Jiren
+{
+	; Jiren - Uniforme da Tropa do Orgulho
+	char: "JRN"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 100
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 0.5
+	ki_atk: 0.5
+	super_atk: 0.5
+	super_ki: 0.5
+	atk_damage: 0.5
+	ki_damage: 0.5
+	super_atk_damage: 0.5
+	super_ki_damage: 0.5
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 315
+
+	super1: 1490 ; Impacto Poderoso
+	super2: 596 ; Impacto Meteórico
+	super3: 1491 ; Meditação
+	super4: 593 ; Carga Máxima
+
+	ultimate1: 6490 ; Investida de Poder
+	ultimate2: 5013 ; Onda de Energia Máxima
+
+	evasive: 10341 ; Super Pulo para Frente
+	blast: 21080 ; POW
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Vegeta
+{
+	; Vegeta - Traje de Batalha 8
+	char: "VGT"
+	costume: 8
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 120
+	health: 2500.0
+	f24: -1.0
+	ki: 500.0
+	stamina: -1.0
+	atk: 1.79999995
+	ki_atk: 1.79999995
+	super_atk: 1.70000005
+	super_ki: 1.70000005
+	atk_damage: 0.649999976
+	ki_damage: 0.649999976
+	super_atk_damage: 0.699999988
+	super_ki_damage: 0.699999988
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 142
+
+	super1: 160 ; Galick Ho
+	super2: 596 ; Impacto Meteórico
+	super3: 390 ; Ataque Big Bang
+	super4: 592 ; Carga de Poder Total
+
+	ultimate1: 5810 ; Super Galick Ho
+	ultimate2: 5161 ; Lampejo Final
+
+	evasive: 10160 ; Onda Explosiva
+	blast: 21081 ; RSH
+	awaken: 25161 ; Super Vegeta
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar VegetaSSGSS
+{
+	; Vegeta SSGSS - Traje de Batalha 
+	char: "GVG"
+	costume: 1
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 125
+	health: 2500.0
+	f24: -1.0
+	ki: 1000.0
+	stamina: 700.0
+	atk: 2.20000005
+	ki_atk: 2.20000005
+	super_atk: 2.5
+	super_ki: 2.5
+	atk_damage: 0.5
+	ki_damage: 0.5
+	super_atk_damage: 0.5
+	super_ki_damage: 0.5
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 304
+
+	super1: 390 ; Ataque Big Bang
+	super2: 810 ; Golpe Final
+	super3: 811 ; Contra-Ataque Explosivo
+	super4: 593 ; Carga Máxima
+
+	ultimate1: 5810 ; Super Galick Ho
+	ultimate2: 5161 ; Lampejo Final
+
+	evasive: 10160 ; Onda Explosiva
+	blast: 21081 ; RSH
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar VegetaDeusSuperSaiyajin
+{
+	; Vegeta (Deus Super Saiyajin) - Traje de Batalha
+	char: "NI2"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 125
+	health: -1.0
+	f24: -1.0
+	ki: 1200.0
+	stamina: 1000.0
+	atk: 1.70000005
+	ki_atk: 1.70000005
+	super_atk: 2.0
+	super_ki: 2.0
+	atk_damage: 0.449999988
+	ki_damage: 0.449999988
+	super_atk_damage: 0.5
+	super_ki_damage: 0.5
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 334
+
+	super1: 1580 ; Ataque Abrasador
+	super2: 1581 ; Ferrão Explosivo
+	super3: 1582 ; Explosão de Assalto
+	super4: 599 ; Carga Explosiva
+
+	ultimate1: 6580 ; Lampejo de Supremacia
+	ultimate2: 5810 ; Super Galick Ho
+
+	evasive: 10160 ; Onda Explosiva
+	blast: 21081 ; RSH
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar VegetaSSGSSEvoludo
+{
+	; Vegeta SSGSS (Evoluído) - Traje de Batalha
+	char: "NI1"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 125
+	health: -1.0
+	f24: -1.0
+	ki: 800.0
+	stamina: 800.0
+	atk: 2.20000005
+	ki_atk: 2.20000005
+	super_atk: 2.20000005
+	super_ki: 2.20000005
+	atk_damage: 0.600000024
+	ki_damage: 0.600000024
+	super_atk_damage: 0.5
+	super_ki_damage: 0.5
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 145
+
+	super1: 1570 ; Lampejo Final
+	super2: 1571 ; Golpe Final
+	super3: 1572 ; Explosão Atômica
+	super4: 1573 ; Carga Final
+
+	ultimate1: 6570 ; Explosão Final
+	ultimate2: 6572 ; Investida Galick Final
+
+	evasive: 11570 ; Golpe Lampejo
+	blast: 21081 ; RSH
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Cabba
+{
+	; Cabba - Traje de Batalha 1 (Planeta Sadala)
+	char: "CAB"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 90
+	health: 2000.0
+	f24: -1.0
+	ki: 600.0
+	stamina: 500.0
+	atk: 1.39999998
+	ki_atk: 1.39999998
+	super_atk: 1.29999995
+	super_ki: 1.29999995
+	atk_damage: 0.800000012
+	ki_damage: 0.800000012
+	super_atk_damage: 0.800000012
+	super_ki_damage: 0.800000012
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 323
+
+	super1: 1340 ; Canhão Galick
+	super2: 164 ; Martelo
+	super3: 15 ; Detonação de Ki
+	super4: 592 ; Carga de Poder Total
+
+	ultimate1: 6340 ; Corte Impulsivo
+	ultimate2: 5050 ; Explosão de Energia Máxima
+
+	evasive: 10331 ; Subida Instantânea
+	blast: 21081 ; RSH
+	awaken: 25007 ; Super Sayajin
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar CauliflaSuperSaiyajin2
+{
+	; Caulifla (Super Saiyajin 2) - Traje da Caulifla
+	char: "THC"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 90
+	health: 2000.0
+	f24: -1.0
+	ki: 500.0
+	stamina: 600.0
+	atk: 2.0
+	ki_atk: 1.10000002
+	super_atk: 2.0
+	super_ki: 1.10000002
+	atk_damage: 1.10000002
+	ki_damage: 1.10000002
+	super_atk_damage: 1.10000002
+	super_ki_damage: 1.10000002
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 303
+
+	super1: 1170 ; Crush Cannon
+	super2: 1171 ; Duplo Esmagamento
+	super3: 1522 ; Explosão de Raio
+	super4: 593 ; Carga Máxima
+
+	ultimate1: 6170 ; Fluxo Esmagador
+	ultimate2: 6341 ; Corte Impulsivo
+
+	evasive: 10160 ; Onda Explosiva
+	blast: 21081 ; RSH
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar KaleSuperSaiyajin2
+{
+	; Kale (Super Saiyajin 2) - Traje da Kale
+	char: "THK"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 90
+	health: 2000.0
+	f24: -1.0
+	ki: 700.0
+	stamina: 700.0
+	atk: 1.60000002
+	ki_atk: 1.60000002
+	super_atk: 1.79999995
+	super_ki: 1.79999995
+	atk_damage: 0.949999988
+	ki_damage: 0.949999988
+	super_atk_damage: 0.949999988
+	super_ki_damage: 0.75
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 313
+
+	super1: 1180 ; Canhão Explosivo
+	super2: 1181 ; Bomba Explosiva
+	super3: 1554 ; Ira Gigante
+	super4: 593 ; Carga Máxima
+
+	ultimate1: 6180 ; Fluxo Explosivo
+	ultimate2: 5402 ; Meteoro Gigante
+
+	evasive: 11520 ; Detornador Meteórico
+	blast: 21180 ; POW
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar GokuSSGSS
+{
+	; Goku SSGSS - Gi 1 da Tartaruga
+	char: "GGK"
+	costume: 2
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 105
+	health: 3000.0
+	f24: -1.0
+	ki: 1200.0
+	stamina: 700.0
+	atk: 2.0
+	ki_atk: 2.0
+	super_atk: 2.0
+	super_ki: 2.0
+	atk_damage: 0.5
+	ki_damage: 0.5
+	super_atk_damage: 0.550000012
+	super_ki_damage: 0.550000012
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 314
+
+	super1: 801 ; Kamehameha Explosivo
+	super2: 596 ; Impacto Meteórico
+	super3: 32 ; Mortal para Trás
+	super4: 593 ; Carga Máxima
+
+	ultimate1: 5000 ; Super Kamehameha
+	ultimate2: 5800 ; Kamehameha Instantâneo
+
+	evasive: 10101 ; Retirada de Disparo de Dispersão
+	blast: 21081 ; RSH
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar GokuSSGSS2
+{
+	; Goku SSGSS - Gi 1 da Tartaruga
+	char: "GGK"
+	costume: 2
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 100
+	health: -1.0
+	f24: -1.0
+	ki: 1000.0
+	stamina: -1.0
+	atk: 1.54999995
+	ki_atk: 1.54999995
+	super_atk: 1.54999995
+	super_ki: 1.54999995
+	atk_damage: 0.5
+	ki_damage: 0.5
+	super_atk_damage: 0.550000012
+	super_ki_damage: 0.550000012
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 313
+
+	super1: 801 ; Kamehameha Explosivo
+	super2: 596 ; Impacto Meteórico
+	super3: 32 ; Mortal para Trás
+	super4: 593 ; Carga Máxima
+
+	ultimate1: 5000 ; Super Kamehameha
+	ultimate2: 5800 ; Kamehameha Instantâneo
+
+	evasive: 10101 ; Retirada de Disparo de Dispersão
+	blast: 21081 ; RSH
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar VegetaDeusSuperSaiyajin2
+{
+	; Vegeta (Deus Super Saiyajin) - Traje de Batalha
+	char: "EIG"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 32
+	level: 130
+	health: -1.0
+	f24: -1.0
+	ki: 1500.0
+	stamina: 700.0
+	atk: 3.0
+	ki_atk: 3.0
+	super_atk: 4.0
+	super_ki: 4.0
+	atk_damage: 0.349999994
+	ki_damage: 0.349999994
+	super_atk_damage: 0.400000006
+	super_ki_damage: 0.400000006
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 305
+
+	super1: 2170 ; Punho Big Bang
+	super2: 2171 ; Ferrão Selvagem
+	super3: 1582 ; Explosão de Assalto
+	super4: 599 ; Carga Explosiva
+
+	ultimate1: 7170 ; Fúria Final
+	ultimate2: 5810 ; Super Galick Ho
+
+	evasive: 10160 ; Onda Explosiva
+	blast: 21082 ; BOM
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar JirenPoderTotal
+{
+	; Jiren (Poder Total) - Uniforme da Tropa do Orgulho
+	char: "NTJ"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 32
+	level: 130
+	health: -1.0
+	f24: -1.0
+	ki: 1500.0
+	stamina: 1000.0
+	atk: 5.0
+	ki_atk: 5.0
+	super_atk: 4.0
+	super_ki: 4.0
+	atk_damage: 0.349999994
+	ki_damage: 0.349999994
+	super_atk_damage: 0.5
+	super_ki_damage: 0.5
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 315
+
+	super1: 1151 ; Erupção de Impacto
+	super2: 596 ; Impacto Meteórico
+	super3: 166 ; Onda Explosiva Poderosa
+	super4: 593 ; Carga Máxima
+
+	ultimate1: 7220 ; Destruição de Poder Total
+	ultimate2: 6150 ; Muralha de Força
+
+	evasive: 10331 ; Subida Instantânea
+	blast: 21080 ; POW
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QmlChar Player : PlayerBase
+{
+	battle_index: 0
+	i12: 0
+	stage: "BFspe" ; Espaço (Terra)
+	spawn_at_start: true
+
+	ai: HUMAN
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar Player2 : PlayerBase
+{
+	battle_index: 1
+	i12: 0
+	stage: "BFspe" ; Espaço (Terra)
+	spawn_at_start: true
+
+	ai: HUMAN
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar Player3 : PlayerBase
+{
+	battle_index: 2
+	i12: 0
+	stage: "BFspe" ; Espaço (Terra)
+	spawn_at_start: true
+
+	ai: HUMAN
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar JirenAlly : Jiren
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFspe" ; Espaço (Terra)
+	spawn_at_start: true
+
+	ai: NORMAL
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar VegetaEnemy : Vegeta
+{
+	battle_index: 4
+	i12: 8
+	stage: "BFspe" ; Espaço (Terra)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar VegetaSSGSSEnemy : VegetaSSGSS
+{
+	battle_index: 5
+	i12: 1
+	stage: "BFspe" ; Espaço (Terra)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar VegetaDeusSuperSaiyajinEnemy : VegetaDeusSuperSaiyajin
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFspe" ; Espaço (Terra)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar VegetaSSGSSEvoludoEnemy : VegetaSSGSSEvoludo
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFspe" ; Espaço (Terra)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar CabbaEnemy : Cabba
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFspe" ; Espaço (Terra)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar CauliflaSuperSaiyajin2Enemy : CauliflaSuperSaiyajin2
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFspe" ; Espaço (Terra)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar KaleSuperSaiyajin2Enemy : KaleSuperSaiyajin2
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFspe" ; Espaço (Terra)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar GokuSSGSSEnemy : GokuSSGSS
+{
+	battle_index: -1
+	i12: 2
+	stage: "BFspe" ; Espaço (Terra)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar GokuSSGSS2Ally : GokuSSGSS2
+{
+	battle_index: 3
+	i12: 2
+	stage: "BFspe" ; Espaço (Terra)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar JirenPoderTotalEnemy : JirenPoderTotal
+{
+	battle_index: -1
+	i12: 0
+	stage: "BFspe" ; Espaço (Terra)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar VegetaEnemy2 : Vegeta
+{
+	battle_index: -1
+	i12: 8
+	stage: "BFspe" ; Espaço (Terra)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar VegetaDeusSuperSaiyajin2Enemy : VegetaDeusSuperSaiyajin2
+{
+	battle_index: -1
+	i12: 0
+	stage: "BFspe" ; Espaço (Terra)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar TeacherAlly : Teacher
+{
+	battle_index: -1
+	i12: 0
+	stage: "BFrck" ; Montanhas
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
