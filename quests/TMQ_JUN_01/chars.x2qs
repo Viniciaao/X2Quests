@@ -196,7 +196,7 @@ QxdChar JuninFuturoFase1
 
 	i12: 0
 	level: 88
-	health: 1300.0
+	health: -1.0
 	f24: -1.0
 	ki: -1.0
 	stamina: -1.0
@@ -241,7 +241,7 @@ QxdChar JuninFuturoFase2
 	special_effect: -1
 
 	i12: 4
-	level: 92
+	level: 180
 	health: 2200.0
 	f24: -1.0
 	ki: -1.0
