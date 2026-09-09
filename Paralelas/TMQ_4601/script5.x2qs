@@ -1,0 +1,14 @@
+Script
+{
+	State 0
+	{
+		Event 0
+		{
+			Condition CheckFlag(Flag3, true)
+
+			Action PortalControl("BFgen", "BFkoh", true, true); Campo Aberto -> Deserto
+			Action SetThereAreEnemies("BFkoh", true); Deserto
+		}
+	}
+}
+

@@ -1,0 +1,982 @@
+Dialogue Dialogue0
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_00_0_FR4" ; And who might you be exactly? Oh, a new addition to my forces?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_00_1_FR4" ; You've come to give me your greetings? Oh ho ho ho, you certainly know how to show respect.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_00_2_FR4" ; As a reward for your laudable manners, I will do you the honor of testing your skills myself.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_00_3_FR4" ; Don't worry. I won't use my full power on you. Now come, do your worst.
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_01_0_FR4" ; I see you have some potential. If you serve me well, then perhaps, hmm...
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_01_1_FR4" ; Yes, you may even have a chance at becoming my right hand.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_01_2_FR4" ; As a matter of fact, I was just looking for a competent aide.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_01_3_FR4" ; To determine who is worthy of standing by my side, I believe a little test is in order...
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_01_4_FR4" ; As for how... Aha, I have an idea. Consider this a chance to prove yourself.
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue2
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_02_0_FR4" ; I know how strong you are, so I expect much from you. Don't disappoint me.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_02_1_FR4" ; Come along. I have a task for you, and I do not appreciate being made to wait.
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue3
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_03_0_FR4" ; Ahem...
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_03_1_FR4" ; My loyal forces, I have gathered you here today for a singular purpose:
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_03_2_FR4" ; To engage in the sport of combat... so that we may determine who among you is the strongest.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_03_3_FR4" ; You will be part of this too, new recruit. Now then, begin!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue4
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "RSB" ; Razberry
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_04_0_RSB" ; L-Lord Frieza, is there a reason why you've summoned us so suddenly just to fight?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_04_1_FR4" ; I will be selecting a new right hand. This is no ordinary aide, mind you. This is a very important role.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_04_2_FR4" ; Now, I have other business to attend to, so I trust you'll report the results to me later.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_04_3_FR4" ; Do give it your best, everyone.
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue5
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "RSB" ; Razberry
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_04_4_RSB" ; H-He's gone... Lord Frieza sure has some strange ideas sometimes.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "APL" ; Appule - Traje de Batalha
+		costume: 2
+		transformation: -1
+
+		text_audio: "CAQ_4601_04_5_APL" ; Not like us guys on the bottom rung have any hope of being his right hand. We'd have to beat Dodoria, Zarbon, and the Ginyu Force.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "RSB" ; Razberry
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_04_6_RSB" ; Yeah, we don't have a snowball's chance... Not unless you have some kind of hidden superpower you've been keeping from me, Appule.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "APL" ; Appule - Traje de Batalha
+		costume: 2
+		transformation: -1
+
+		text_audio: "CAQ_4601_04_7_APL" ; Heh heh heh... Well, funny you should mention it because...
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "RSB" ; Razberry
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_04_8_RSB" ; Nah, I know you don't. Probably better to give up while we're ahead.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "APL" ; Appule - Traje de Batalha
+		costume: 2
+		transformation: -1
+
+		text_audio: "CAQ_4601_04_9_APL" ; You didn't let me finish my joke! Come on, if we're gonna do this, we can at least take down a few.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "RSB" ; Razberry
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_04_10_RSB" ; Yeah, I guess so. Hey, there's some fresh meat over there, how about we... Huh? They look kinda strong, don't they?
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue6
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "APL" ; Appule - Traje de Batalha
+		costume: 2
+		transformation: -1
+
+		text_audio: "CAQ_4601_05_0_APL" ; What the heck? There's no way you're a newbie!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue7
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "RSB" ; Razberry
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_06_0_RSB" ; Dang it... It's not fair... We're gonna be grunts forever!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue8
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "ZBN" ; Zarbon
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_07_0_ZBN" ; I saw how you fought just now. You have some pretty good instincts.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "DDR" ; Dodoria
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_07_1_DDR" ; But don't get ahead of yourself, recruit! We can easily beat you!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "ZBN" ; Zarbon
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_07_2_ZBN" ; It's only natural that one of Lord Frieza's current aides is worthy of becoming his right hand.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "DDR" ; Dodoria
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_07_3_DDR" ; You've got that right, Zarbon!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "NP2" ; NP2 - 38
+		costume: 38
+		transformation: -1
+
+		text_audio: "CAQ_4601_07_4_DDR_ZBN" ; Lord Frieza's right-hand man is going to be ME!\nLord Frieza's right-hand man's gonna be ME!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "NP2" ; NP2 - 38
+		costume: 38
+		transformation: -1
+
+		text_audio: "CAQ_4601_07_6_DDR_ZBN" ; ...Huh?\n...Huh?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "ZBN" ; Zarbon
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_07_8_ZBN" ; How about we discuss this after I get rid of this newbie? Stand back, or you'll get in the way.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "DDR" ; Dodoria
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_07_9_DDR" ; Ugh, Zarbon, why you...? You dare try to meddle in my fight?!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "ZBN" ; Zarbon
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_07_10_ZBN" ; You're the one meddling! You're always charging in head-first, you dolt!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue9
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "DDR" ; Dodoria
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_08_0_DDR" ; Damn it! How could I lose to a newbie?!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue10
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "ZBN" ; Zarbon
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_09_0_ZBN" ; Curse you... I'll get you for this!　
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue11
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "GNY" ; Capitão Ginyu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_10_0_GNY" ; Are you the new recruit I keep hearing about? I'm impressed you took down Dodoria and Zarbon.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GNY" ; Capitão Ginyu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_10_1_GNY" ; But I'm afraid being Lord Frieza's right hand is more demanding than you imagine.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GNY" ; Capitão Ginyu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_10_2_GNY" ; With that in mind, why not consider joining my elite force instead?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "JES" ; Jess
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_10_3_JES" ; You're offering a chance for the newbie to gain experience, huh?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "RCM" ; Rikum
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_10_4_RCM" ; Whoa, Captain, you're so generous!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GNY" ; Capitão Ginyu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_10_5_GNY" ; Ha ha ha, you heard 'em. So... Eh? What?! You don't want to join?!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GNY" ; Capitão Ginyu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_10_6_GNY" ; You're determined to be Lord Frieza's right hand? Hmmm... Okay, I hear you.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GNY" ; Capitão Ginyu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_10_7_GNY" ; If that's the case, then let us test you to see if you're worthy of the title!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue12
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "GRD" ; Gurdo
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_11_0_GRD" ; W-we lost to someone greener than me...
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "RCM" ; Rikum
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_11_1_RCM" ; D-Damn it!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue13
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "JES" ; Jess
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_12_0_JES" ; We're about to have a bit of a biffo, you and us!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "JES" ; Jess
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_12_1_JES" ; You don't care about our special fighting pose? There's something seriously wrong with you mate!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GRD" ; Gurdo
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_12_2_GRD" ; Captain Ginyu's the strongest fighter around! He should be Lord Frieza's right hand!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GNY" ; Capitão Ginyu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_12_3_GNY" ; Me... his right hand...? Hmm...
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue14
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "GNY" ; Capitão Ginyu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_13_0_GNY" ; Listen, everyone. I think you're misunderstanding something. I don't want to be Lord Frieza's right hand!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "BAT" ; Boter
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_13_1_BAT" ; Wha... Huh?! But why not, Captain?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GNY" ; Capitão Ginyu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_13_2_GNY" ; Heh... Well, if I weren't here... then who would be your captain?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "RCM" ; Rikum
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_13_3_RCM" ; Thank you, Captain! You're the best!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GNY" ; Capitão Ginyu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_13_4_GNY" ; That said, we won't just be handing you a victory! You'll have to fight for it!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue15
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "BAT" ; Boter
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_14_0_BAT" ; No way... I'm the Blue Hurricane... How are you faster than me?!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "JES" ; Jess
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_14_1_JES" ; This is... no ordinary newbie... Captain!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue16
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "GNY" ; Capitão Ginyu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_15_0_GNY" ; You've utterly devastated my Ginyu Force, without so much as breaking a sweat. You are the real deal.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GNY" ; Capitão Ginyu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_15_1_GNY" ; But... I'm still standing! I, Captain Ginyu, am second only to Lord Frieza himself!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GNY" ; Capitão Ginyu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_15_2_GNY" ; A new recruit like you'll never get the better of me!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue17
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "GNY" ; Capitão Ginyu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_16_0_GNY" ; Wh-What?! How?!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_16_1_FR4" ; Oho? I come to check on you only to find this. Haha! Excellent work! You are worthy of being my right hand.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_16_2_FR4" ; For now, that is. Take a look at all those you've beaten today.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_16_3_FR4" ; Such vengeful gazes... I have no doubt you'll have to sleep with one eye open from now on.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_16_4_FR4" ; Of course, the moment you lose to anyone, your position is forfeit. Do try your utmost to keep it up. Oh ho ho ho!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue18
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "GNY" ; Capitão Ginyu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_16_0_GNY" ; Wh-What?! How?!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_17_1_FR4" ; Oooh, very impressive! To think you'd make such quick work of my elite forces!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_17_2_FR4" ; However, you are a tad too strong for my liking. You could end up becoming a threat.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_17_3_FR4" ; Before you even think about turning on us, you will have to be tamed.
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue19
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "GFR" ; Freeza Dourado
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_18_0_GFR" ; Allow me to demonstrate firsthand that I, Frieza, am the strongest being in the universe!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GFR" ; Freeza Dourado
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_18_1_GFR" ; Oh ho ho ho! I'm not angry! This is just part of your initiation into the force.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GFR" ; Freeza Dourado
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_18_2_GFR" ; I'm afraid I won't be going easy on you this time. Prepare yourself!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "CO2" ; Coola (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_18_3_CO2" ; You're starting to panic, Frieza. Does the thought of losing your position frighten you?
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue20
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "GFR" ; Freeza Dourado
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_19_0_GFR" ; What are you doing here, brother?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "CO2" ; Coola (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_19_1_CO2" ; I'd caught wind of a powerful new recruit in your forces and came to observe. Is this the one?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "CO2" ; Coola (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_19_2_CO2" ; Since I'm here, I'll help you with your training. You're welcome.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GFR" ; Freeza Dourado
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_19_3_GFR" ; Grgh! I can do just fine without your unwelcome meddling!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "CO2" ; Coola (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_19_4_CO2" ; Hmph. Why do I even try?
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue21
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "CO2" ; Coola (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_20_0_CO2" ; I never expected such incredible power!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GFR" ; Freeza Dourado
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_20_1_GFR" ; And such rebelliousness... You have forgotten your place...
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GFR" ; Freeza Dourado
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_20_2_GFR" ; I've changed my mind. I don't need miscreants like you in my army. Leave us.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GFR" ; Freeza Dourado
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4601_20_3_GFR" ; If, when next we meet, you haven't reflected on your behavior... you can be assured that I will annihilate you as I would any enemy.
+		i8: 0
+	}
+
+}
+

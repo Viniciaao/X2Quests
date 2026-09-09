@@ -1,0 +1,309 @@
+Script
+{
+	State 0
+	{
+		Event 0
+		{
+			Condition DialogueFinish(Dialogue0); And who might you be exactly? Oh, a new addition to my forces? [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag1, true)
+		}
+
+		Event 1
+		{
+			Condition DialogueFinish(Dialogue1); I see you have some potential. If you serve me well, then perhaps, hmm... [MORE DIALOGUE PARTS]
+			Condition Ko(FreezaFormaFinalEnemy, true, -1); Freeza (Forma Final) - Forma Final 1
+
+			Action SetFlag(Flag2, true)
+		}
+
+		Event 2
+		{
+			Condition DialogueFinish(Dialogue2); I know how strong you are, so I expect much from you. Don't disappoint me. [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag3, true)
+		}
+
+		Event 3
+		{
+			Condition DialogueFinish(Dialogue3); Ahem... [MORE DIALOGUE PARTS]
+
+			Action Unk145
+			Action SetFlag(Flag4, true)
+		}
+
+		Event 4
+		{
+			Condition DialogueFinish(Dialogue4); L-Lord Frieza, is there a reason why you've summoned us so suddenly just to fight? [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag13, true)
+		}
+
+		Event 5
+		{
+			Condition DialogueFinish(Dialogue5); H-He's gone... Lord Frieza sure has some strange ideas sometimes. [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag16, true)
+			Action SetFlag(Flag17, true)
+		}
+
+		Event 6
+		{
+			Condition Ko(RazberryEnemy, true, -1); Razberry - Traje de Batalha
+
+			Action SetFlag(Flag14, true)
+		}
+
+		Event 7
+		{
+			Condition Ko(NabanaEnemy, true, -1); Appule - Traje de Batalha
+
+			Action SetFlag(Flag15, true)
+		}
+
+		Event 8
+		{
+			Condition DialogueFinish(Dialogue6); What the heck? There's no way you're a newbie!
+			Condition DialogueFinish(Dialogue7); Dang it... It's not fair... We're gonna be grunts forever!
+
+			Action Unk145
+			Action SetFlag(Flag5, true)
+		}
+
+		Event 9
+		{
+			Condition DialogueFinish(Dialogue8); I saw how you fought just now. You have some pretty good instincts. [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag21, true)
+			Action SetFlag(Flag22, true)
+		}
+
+		Event 10
+		{
+			Condition Ko(ZarbonEnemy, true, -1); Zarbon - Traje de Batalha 1
+
+			Action SetFlag(Flag23, true)
+		}
+
+		Event 11
+		{
+			Condition Ko(DodoriaEnemy, true, -1); Dodoria - Traje de Batalha 1
+
+			Action SetFlag(Flag24, true)
+		}
+
+		Event 12
+		{
+			Condition DialogueFinish(Dialogue9); Damn it! How could I lose to a newbie?!
+			Condition DialogueFinish(Dialogue10); Curse you... I'll get you for this!　
+
+			Action Unk145
+			Action SetFlag(Flag6, true)
+		}
+
+		Event 13
+		{
+			Condition Ko(GurdoEnemy, true, -1); Gurdo - Traje de Batalha 1
+
+			Action SetFlag(Flag30, true)
+		}
+
+		Event 14
+		{
+			Condition Ko(RikumEnemy, true, -1); Rikum - Traje de Batalha 1
+
+			Action SetFlag(Flag31, true)
+		}
+
+		Event 15
+		{
+			Condition DialogueFinish(Dialogue11); Are you the new recruit I keep hearing about? I'm impressed you took down Dodoria and Zarbon. [MORE DIALOGUE PARTS]
+			Condition Ko(GurdoEnemy, true, -1); Gurdo - Traje de Batalha 1
+			Condition Ko(RikumEnemy, true, -1); Rikum - Traje de Batalha 1
+
+			Action SetFlag(Flag32, true)
+		}
+
+		Event 16
+		{
+			Condition DialogueFinish(Dialogue12); W-we lost to someone greener than me... [MORE DIALOGUE PARTS]
+
+			Action Unk145
+			Action SetFlag(Flag7, true)
+		}
+
+		Event 17
+		{
+			Condition DialogueFinish(Dialogue13); We're about to have a bit of a biffo, you and us! [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag38, true)
+		}
+
+		Event 18
+		{
+			Condition Ko(BoterEnemy, true, -1); Boter - Traje de Batalha 2
+
+			Action SetFlag(Flag39, true)
+		}
+
+		Event 19
+		{
+			Condition Ko(JessEnemy, true, -1); Jess - Traje de Batalha 1
+
+			Action SetFlag(Flag40, true)
+		}
+
+		Event 20
+		{
+			Condition DialogueFinish(Dialogue14); Listen, everyone. I think you're misunderstanding something. I don't want to be Lord Frieza's right hand! [MORE DIALOGUE PARTS]
+			Condition Ko(BoterEnemy, true, -1); Boter - Traje de Batalha 2
+			Condition Ko(JessEnemy, true, -1); Jess - Traje de Batalha 1
+
+			Action SetFlag(Flag41, true)
+		}
+
+		Event 21
+		{
+			Condition DialogueFinish(Dialogue15); No way... I'm the Blue Hurricane... How are you faster than me?! [MORE DIALOGUE PARTS]
+
+			Action Unk145
+			Action SetFlag(Flag8, true)
+		}
+
+		Event 22
+		{
+			Condition DialogueFinish(Dialogue16); You've utterly devastated my Ginyu Force, without so much as breaking a sweat. You are the real deal. [MORE DIALOGUE PARTS]
+			Condition Ko(CapitoGinyuEnemy, true, -1); Capitão Ginyu - Traje de Batalha 1
+
+			Action SetFlag(Flag47, true)
+		}
+
+		Event 23
+		{
+			Condition Ko(CapitoGinyuEnemy, false, -1); Capitão Ginyu - Traje de Batalha 1
+			Condition TimePassed(<=, 840.0)
+
+			Action SetFlag(Flag63, true)
+		}
+
+		Event 24
+		{
+			Condition Ko(CapitoGinyuEnemy, false, -1); Capitão Ginyu - Traje de Batalha 1
+
+			Action SetFlag(Flag62, true)
+		}
+
+		Event 25
+		{
+			Condition DialogueFinish(Dialogue17); Wh-What?! How?! [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag48, true)
+		}
+
+		Event 26
+		{
+			Condition DialogueFinish(Dialogue18); Wh-What?! How?! [MORE DIALOGUE PARTS]
+
+			Action Unk145
+			Action SetFlag(Flag9, true)
+		}
+
+		Event 27
+		{
+			Condition DialogueFinish(Dialogue19); Allow me to demonstrate firsthand that I, Frieza, am the strongest being in the universe! [MORE DIALOGUE PARTS]
+
+			Action Unk145
+			Action SetFlag(Flag19, true)
+		}
+
+		Event 28
+		{
+			Condition DialogueFinish(Dialogue20); What are you doing here, brother? [MORE DIALOGUE PARTS]
+			Condition Ko(FreezaDouradoEnemy, true, -1); Freeza Dourado - Freeza Dourado
+			Condition Ko(CoolaFormaFinalEnemy, true, -1); Coola (Forma Final) - Forma Final 1
+
+			Action SetFlag(Flag56, true)
+		}
+
+		Event 29
+		{
+			Condition Ko(FreezaDouradoEnemy, false, -1); Freeza Dourado - Freeza Dourado
+			Condition Ko(CoolaFormaFinalEnemy, false, -1); Coola (Forma Final) - Forma Final 1
+
+			Action SetFlag(Flag57, true)
+		}
+
+		Event 30
+		{
+			Condition DialogueFinish(Dialogue21); I never expected such incredible power! [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag48, true)
+		}
+
+		Event 31
+		{
+			Condition CheckFlag(Flag55, true)
+
+			Action SetFlag(Flag61, true)
+		}
+
+		Event 32
+		{
+			Condition DialogueFinish(Dialogue5); H-He's gone... Lord Frieza sure has some strange ideas sometimes. [MORE DIALOGUE PARTS]
+			Condition IsAlive(RazberryEnemy); Razberry - Traje de Batalha
+			Condition IsAlive(NabanaEnemy); Appule - Traje de Batalha
+
+			Action SetFlag(Flag58, true)
+		}
+
+		Event 33
+		{
+			Condition CheckFlag(Flag4, true)
+
+			Action SetFlag(Flag11, true)
+		}
+
+		Event 34
+		{
+			Condition CheckFlag(Flag5, true)
+
+			Action SetFlag(Flag18, true)
+		}
+
+		Event 35
+		{
+			Condition CheckFlag(Flag6, true)
+
+			Action SetFlag(Flag25, true)
+		}
+
+		Event 36
+		{
+			Condition CheckFlag(Flag7, true)
+
+			Action SetFlag(Flag33, true)
+		}
+
+		Event 37
+		{
+			Condition CheckFlag(Flag8, true)
+
+			Action SetFlag(Flag42, true)
+		}
+
+		Event 38
+		{
+			Condition CheckFlag(Flag9, true)
+
+			Action SetFlag(Flag52, true)
+		}
+
+		Event 39
+		{
+			Condition CheckFlag(Flag19, true)
+
+			Action SetFlag(Flag54, true)
+		}
+	}
+}
+
