@@ -1,0 +1,30 @@
+CharPosition PlayerPosition
+{
+	char: Player ; Player
+	stage: "BFtol" ; Espaço-tempo Distorcido
+	position: "TRESPASS_3"
+	type: 3
+	i40: 0
+	i50: 0
+}
+
+CharPosition FuAllyPosition
+{
+	char: FuAlly ; Fu - 0
+	stage: "BFtol" ; Espaço-tempo Distorcido
+	position: "CTP_27_03_POS_00"
+	type: 3
+	i40: 0
+	i50: 0
+}
+
+CharPosition PerdioDoFuturoEnemyPosition
+{
+	char: PerdioDoFuturoEnemy ; Perdição do Futuro - 0
+	stage: "BFtol" ; Espaço-tempo Distorcido
+	position: "TRESPASS_1"
+	type: 2
+	i40: 0
+	i50: 0
+}
+

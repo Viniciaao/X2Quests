@@ -1,0 +1,168 @@
+Script
+{
+	State 0
+	{
+		Event 0
+		{
+			Condition CheckFlag(Flag2, true)
+
+			Action GotoState(1)
+		}
+	}
+
+	State 1
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action PlayDialogue(Dialogue0, 1000, "BFtol", -1); Dialogue: You both can use that new power too...? [MORE DIALOGUE PARTS] --- Stage: Espaço-tempo Distorcido
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag21, true)
+
+			Action Wait(3.0)
+			Action PlayDialogue(Dialogue1, 1000, "BFtol", -1); Dialogue: What? We should use this blade? [MORE DIALOGUE PARTS] --- Stage: Espaço-tempo Distorcido
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag23, true)
+
+			Action Wait(2.0)
+			Action PlayDialogue(Dialogue14, 1000, "BFtol", -1); Dialogue: I'm sorry. I think our connection's been cut off. [MORE DIALOGUE PARTS] --- Stage: Espaço-tempo Distorcido
+		}
+
+		Event 3
+		{
+			Condition CheckFlag(Flag5, true)
+
+			Action GotoState(2)
+		}
+	}
+
+	State 2
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action Wait(2.0)
+			Action PlayDialogue(Dialogue2, 1000, "BFtol", -1); Dialogue: Expend... Wreckage... --- Stage: Espaço-tempo Distorcido
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag24, true)
+
+			Action Wait(2.0)
+			Action PlayDialogue(Dialogue3, 1000, "BFtol", -1); Dialogue: RAAAAGH! DEMOOON! DEATH! --- Stage: Espaço-tempo Distorcido
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag25, true)
+
+			Action Wait(3.0)
+			Action PlayDialogue(Dialogue4, 1000, "BFtol", -1); Dialogue: Punishment... Planet... Broken... --- Stage: Espaço-tempo Distorcido
+		}
+
+		Event 3
+		{
+			Condition CheckFlag(Flag6, true)
+
+			Action Wait(7.5)
+			Action PlayDialogue(Dialogue5, 1000, "BFtol", -1); Dialogue: ... --- Stage: Espaço-tempo Distorcido
+		}
+
+		Event 4
+		{
+			Condition CheckFlag(Flag8, true)
+
+			Action GotoState(3)
+		}
+	}
+
+	State 3
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action PlayDialogue(Dialogue6, 1000, "BFtol", -1); Dialogue: Heh heh... Hahahahaha! --- Stage: Espaço-tempo Distorcido
+		}
+
+		Event 1
+		{
+			Condition TimeWithinState(20.0)
+
+			Action PlayDialogue(Dialogue7, 1000, "BFtol", -1); Dialogue: We can't hold a candle to that thing with only the power Goku left us. [MORE DIALOGUE PARTS] --- Stage: Espaço-tempo Distorcido
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag9, true)
+
+			Action GotoState(4)
+		}
+	}
+
+	State 4
+	{
+		Event 0
+		{
+			Condition TimeWithinState(15.0)
+
+			Action PlayDialogue(Dialogue8, 1000, "BFtol", -1); Dialogue: Heh heh... Hahahahahahaha! --- Stage: Espaço-tempo Distorcido
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag12, true)
+
+			Action GotoState(5)
+		}
+	}
+
+	State 5
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action PlayDialogue(Dialogue9, 1000, "BFtol", -1); Dialogue: Nrgh... Raaaaagh! [MORE DIALOGUE PARTS] --- Stage: Espaço-tempo Distorcido
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag13, true)
+
+			Action Wait(2.0)
+			Action PlayDialogue(Dialogue10, 1000, "BFtol", -1); Dialogue: Agh?! W-We're almost out of time. [MORE DIALOGUE PARTS] --- Stage: Espaço-tempo Distorcido
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag14, true)
+
+			Action PlayDialogue(Dialogue11, 1000, "BFtol", -1); Dialogue: Fu... you've changed. You aren't driven by dark ambitions anymore... What motivates you now is a strong conviction to protect! [MORE DIALOGUE PARTS] --- Stage: Espaço-tempo Distorcido
+		}
+
+		Event 3
+		{
+			Condition CheckFlag(Flag29, true)
+
+			Action PlayDialogue(Dialogue12, 1000, "BFtol", -1); Dialogue: Death... Burn! --- Stage: Espaço-tempo Distorcido
+		}
+
+		Event 4
+		{
+			Condition CheckFlag(Flag15, true)
+
+			Action PlayDialogue(Dialogue13, 1000, "BFtol", -1); Dialogue: Grughhh? Cold, cruel, power! --- Stage: Espaço-tempo Distorcido
+		}
+	}
+}
+

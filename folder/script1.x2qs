@@ -1,0 +1,133 @@
+Script
+{
+	State 0
+	{
+		Event 0
+		{
+			Condition DialogueFinish(Dialogue0); You both can use that new power too...? [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag21, true)
+		}
+
+		Event 1
+		{
+			Condition DialogueFinish(Dialogue1); What? We should use this blade? [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag23, true)
+		}
+
+		Event 2
+		{
+			Condition DialogueFinish(Dialogue14); I'm sorry. I think our connection's been cut off. [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag43, true)
+		}
+
+		Event 3
+		{
+			Condition DialogueFinish(Dialogue14); I'm sorry. I think our connection's been cut off. [MORE DIALOGUE PARTS]
+			Condition Ko(PerdioDoFuturoEnemy, true, -1); Perdição do Futuro - 0
+
+			Action SetFlag(Flag3, true)
+		}
+
+		Event 4
+		{
+			Condition DialogueFinish(Dialogue2); Expend... Wreckage...
+
+			Action SetFlag(Flag24, true)
+		}
+
+		Event 5
+		{
+			Condition DialogueFinish(Dialogue3); RAAAAGH! DEMOOON! DEATH!
+
+			Action SetFlag(Flag25, true)
+		}
+
+		Event 6
+		{
+			Condition DialogueFinish(Dialogue4); Punishment... Planet... Broken...
+
+			Action SetFlag(Flag26, true)
+		}
+
+		Event 7
+		{
+			Condition DialogueFinish(Dialogue4); Punishment... Planet... Broken...
+			Condition Ko(PerdioDoFuturoEnemy, true, -1); Perdição do Futuro - 0
+			Condition Ko(PerdioDoFuturo2Enemy, true, -1); Perdição do Futuro - 0
+			Condition Ko(PerdioDoFuturo2Enemy2, true, -1); Perdição do Futuro - 0
+			Condition Ko(PerdioDoFuturo2Enemy3, true, -1); Perdição do Futuro - 0
+			Condition Ko(PerdioDoFuturo2Enemy4, true, -1); Perdição do Futuro - 0
+
+			Action SetFlag(Flag6, true)
+		}
+
+		Event 8
+		{
+			Condition DialogueFinish(Dialogue5); ...
+
+			Action SetFlag(Flag28, true)
+		}
+
+		Event 9
+		{
+			Condition DialogueFinish(Dialogue7); We can't hold a candle to that thing with only the power Goku left us. [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag9, true)
+		}
+
+		Event 10
+		{
+			Condition DialogueFinish(Dialogue8); Heh heh... Hahahahahahaha!
+
+			Action SetFlag(Flag10, true)
+		}
+
+		Event 11
+		{
+			Condition DialogueFinish(Dialogue9); Nrgh... Raaaaagh! [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag13, true)
+		}
+
+		Event 12
+		{
+			Condition DialogueFinish(Dialogue10); Agh?! W-We're almost out of time. [MORE DIALOGUE PARTS]
+
+			Action SetFlag(Flag14, true)
+		}
+
+		Event 13
+		{
+			Condition DialogueFinish(Dialogue11); Fu... you've changed. You aren't driven by dark ambitions anymore... What motivates you now is a strong conviction to protect! [MORE DIALOGUE PARTS]
+			Condition Health(<=, PerdioDoFuturoEnemy, 50.0); Perdição do Futuro - 0
+
+			Action SetFlag(Flag29, true)
+		}
+
+		Event 14
+		{
+			Condition DialogueFinish(Dialogue12); Death... Burn!
+
+			Action SetFlag(Flag42, true)
+		}
+
+		Event 15
+		{
+			Condition CheckFlag(Flag39, true)
+			Condition Ko(PerdioDoFuturoEnemy, true, -1); Perdição do Futuro - 0
+
+			Action SetFlag(Flag15, true)
+		}
+
+		Event 16
+		{
+			Condition DialogueFinish(Dialogue13); Grughhh? Cold, cruel, power!
+
+			Action SetFlag(Flag16, true)
+		}
+	}
+}
+

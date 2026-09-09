@@ -1,0 +1,185 @@
+Script
+{
+	State 0
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action SetCharVisible(PerdioDoFuturo2Enemy, false); Perdição do Futuro - 0
+			Action SetCharVisible(PerdioDoFuturo2Enemy2, false); Perdição do Futuro - 0
+			Action SetCharVisible(PerdioDoFuturo2Enemy3, false); Perdição do Futuro - 0
+			Action SetCharVisible(PerdioDoFuturo2Enemy4, false); Perdição do Futuro - 0
+			Action Unk148(Player, 0); Player
+			Action Unk155(1)
+			Action Unk155(2)
+			Action HealthCap(true, FuAlly, 30.0); Fu - 0
+			Action Unk105("EFCT_BH", 3, 67)
+			Action LockAISkill(FuAlly, SUPER1, true); Fu - 0
+			Action LockAISkill(PerdioDoFuturoEnemy, SUPER2, true); Perdição do Futuro - 0
+			Action SetAITable(PerdioDoFuturo2Enemy2, 271); Perdição do Futuro - 0
+			Action SetAITable(PerdioDoFuturo2Enemy4, 271); Perdição do Futuro - 0
+			Action Unk152(PerdioDoFuturoEnemy, 2500); Perdição do Futuro - 0
+			Action Unk150(758913282, 0x2d0001, 1.5, 0.5, 1.0, 1.0, 1.20000005, 1.5)
+			Action Unk156(PerdioDoFuturoEnemy, 0.5); Perdição do Futuro - 0
+			Action Unk152(PerdioDoFuturo2Enemy, 1300); Perdição do Futuro - 0
+			Action Unk152(PerdioDoFuturo2Enemy2, 1300); Perdição do Futuro - 0
+			Action Unk152(PerdioDoFuturo2Enemy3, 1300); Perdição do Futuro - 0
+			Action Unk152(PerdioDoFuturo2Enemy4, 1300); Perdição do Futuro - 0
+			Action Unk150(842800643, 0x320002, 1.5, 0.5, 1.0, 1.0, 1.20000005, 1.5)
+			Action Unk150(842800644, 0x320002, 1.5, 0.5, 1.0, 1.0, 1.20000005, 1.5)
+			Action Unk150(842800645, 0x320002, 1.5, 0.5, 1.0, 1.0, 1.20000005, 1.5)
+			Action Unk150(842800646, 0x320002, 1.5, 0.5, 1.0, 1.0, 1.20000005, 1.5)
+			Action Unk156(PerdioDoFuturo2Enemy, 0.300000012); Perdição do Futuro - 0
+			Action Unk156(PerdioDoFuturo2Enemy2, 0.300000012); Perdição do Futuro - 0
+			Action Unk156(PerdioDoFuturo2Enemy3, 0.300000012); Perdição do Futuro - 0
+			Action Unk156(PerdioDoFuturo2Enemy4, 0.300000012); Perdição do Futuro - 0
+			Action SetFlag(Flag0, true)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag21, true)
+
+			Action LockAISkill(PerdioDoFuturoEnemy, SUPER2, false); Perdição do Futuro - 0
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag43, true)
+
+			Action LockAISkill(FuAlly, SUPER1, false); Fu - 0
+		}
+
+		Event 3
+		{
+			Condition CheckFlag(Flag3, true)
+
+			Action SetStat(PerdioDoFuturoEnemy, MAX_HEALTH, 2000); Perdição do Futuro - 0
+			Action RecoverHp(PerdioDoFuturoEnemy, 100.0); Perdição do Futuro - 0
+		}
+
+		Event 4
+		{
+			Condition CheckFlag(Flag4, true)
+
+			Action SetAITable(PerdioDoFuturoEnemy, 272); Perdição do Futuro - 0
+			Action SetAITable(FuAlly, 281); Fu - 0
+			Action Unk152(PerdioDoFuturoEnemy, 1300); Perdição do Futuro - 0
+			Action Unk150(842800642, 0x320002, 1.5, 0.5, 1.0, 1.0, 1.20000005, 1.5)
+			Action Unk156(PerdioDoFuturoEnemy, 0.300000012); Perdição do Futuro - 0
+			Action SetStat(PerdioDoFuturoEnemy, ATK_DAMAGE, 160); Perdição do Futuro - 0
+			Action SetStat(PerdioDoFuturoEnemy, KI_DAMAGE, 160); Perdição do Futuro - 0
+			Action SetStat(PerdioDoFuturoEnemy, SUPER_ATK_DAMAGE, 160); Perdição do Futuro - 0
+			Action SetStat(PerdioDoFuturoEnemy, SUPER_KI_DAMAGE, 160); Perdição do Futuro - 0
+		}
+
+		Event 5
+		{
+			Condition CheckFlag(Flag28, true)
+
+			Action FadeOut(30.0, WHITE, true, 0)
+			Action Wait(1.5)
+			Action StopBgm(true, 0, 0)
+			Action SetStat(PerdioDoFuturoEnemy, MAX_HEALTH, 9000); Perdição do Futuro - 0
+			Action RecoverHp(PerdioDoFuturoEnemy, 100.0); Perdição do Futuro - 0
+			Action SetFlag(Flag20, true)
+		}
+
+		Event 6
+		{
+			Condition CheckFlag(Flag27, true)
+
+			Action MoveTo("TRESPASS_1", Player); Player
+			Action MoveTo("CTP_27_02_POS_00", FuAlly); Fu - 0
+			Action ResetCamera
+			Action HealthCap(true, PerdioDoFuturoEnemy, 50.0); Perdição do Futuro - 0
+			Action Unk148(PerdioDoFuturoEnemy, 0); Perdição do Futuro - 0
+			Action RemoveChara_(PerdioDoFuturo2Enemy, false); Perdição do Futuro - 0
+			Action RemoveChara_(PerdioDoFuturo2Enemy2, false); Perdição do Futuro - 0
+			Action RemoveChara_(PerdioDoFuturo2Enemy3, false); Perdição do Futuro - 0
+			Action RemoveChara_(PerdioDoFuturo2Enemy4, false); Perdição do Futuro - 0
+			Action SetStat(PerdioDoFuturoEnemy, LEVEL, 199); Perdição do Futuro - 0
+			Action SetAITable(PerdioDoFuturoEnemy, 273); Perdição do Futuro - 0
+			Action SetAITable(FuAlly, 280); Fu - 0
+			Action LockAISkill(PerdioDoFuturoEnemy, ULTIMATE2, true); Perdição do Futuro - 0
+			Action Unk152(PerdioDoFuturoEnemy, 3000); Perdição do Futuro - 0
+			Action Unk150(16974594, 0x10001, 0.699999988, 0.699999988, 0.5, 0.5, 1.0, 1.0)
+			Action Unk156(PerdioDoFuturoEnemy, 0.300000012); Perdição do Futuro - 0
+			Action SetStat(PerdioDoFuturoEnemy, ATK, 450); Perdição do Futuro - 0
+			Action SetStat(PerdioDoFuturoEnemy, KI_ATK, 450); Perdição do Futuro - 0
+			Action SetStat(PerdioDoFuturoEnemy, SUPER_ATK, 340); Perdição do Futuro - 0
+			Action SetStat(PerdioDoFuturoEnemy, SUPER_KI, 340); Perdição do Futuro - 0
+			Action FadeIn(40.0, WHITE, false, 0)
+			Action SetFlag(Flag7, true)
+		}
+
+		Event 7
+		{
+			Condition CheckFlag(Flag8, true)
+
+			Action SetAttackTarget(Player, PerdioDoFuturoEnemy, false)
+			Action SetAttackTarget(PerdioDoFuturoEnemy, Player, false)
+			Action Wait(3.0)
+			Action LockAISkill(PerdioDoFuturoEnemy, ULTIMATE2, false); Perdição do Futuro - 0
+		}
+
+		Event 8
+		{
+			Condition CheckFlag(Flag31, true)
+
+			Action Unk148(Player, 2); Player
+			Action RecoverHp(PerdioDoFuturoEnemy, 100.0); Perdição do Futuro - 0
+			Action RecoverHp(Player, 100.0); Player
+			Action SetAITable(PerdioDoFuturoEnemy, 274); Perdição do Futuro - 0
+			Action SetAITable(FuAlly, 282); Fu - 0
+			Action HealthCap(true, PerdioDoFuturoEnemy, 1.0); Perdição do Futuro - 0
+			Action LockAISkill(PerdioDoFuturoEnemy, ULTIMATE1, true); Perdição do Futuro - 0
+			Action Unk157(PerdioDoFuturoEnemy); Perdição do Futuro - 0
+			Action Unk152(PerdioDoFuturoEnemy, 2300); Perdição do Futuro - 0
+			Action Unk150(1011880450, 0x3c0001, 1.0, 0.5, 1.0, 1.0, 1.0, 1.0)
+			Action Unk156(PerdioDoFuturoEnemy, 0.200000003); Perdição do Futuro - 0
+			Action SetStat(PerdioDoFuturoEnemy, ATK_DAMAGE, 75); Perdição do Futuro - 0
+			Action SetStat(PerdioDoFuturoEnemy, KI_DAMAGE, 75); Perdição do Futuro - 0
+			Action SetStat(PerdioDoFuturoEnemy, SUPER_ATK_DAMAGE, 75); Perdição do Futuro - 0
+			Action SetStat(PerdioDoFuturoEnemy, SUPER_KI_DAMAGE, 75); Perdição do Futuro - 0
+			Action SetFlag(Flag22, true)
+		}
+
+		Event 9
+		{
+			Condition CheckFlag(Flag12, true)
+
+			Action SetAttackTarget(Player, PerdioDoFuturoEnemy, false)
+			Action SetAttackTarget(PerdioDoFuturoEnemy, Player, false)
+		}
+
+		Event 10
+		{
+			Condition CheckFlag(Flag39, true)
+
+			Action SetAITable(PerdioDoFuturoEnemy, 275); Perdição do Futuro - 0
+			Action HealthCap(false, PerdioDoFuturoEnemy, 30.0); Perdição do Futuro - 0
+			Action RecoverHp(PerdioDoFuturoEnemy, 100.0); Perdição do Futuro - 0
+			Action Unk152(PerdioDoFuturoEnemy, 2300); Perdição do Futuro - 0
+			Action Unk150(1011880450, 0x3c0001, 1.0, 0.5, 1.0, 1.0, 1.0, 1.0)
+			Action Unk156(PerdioDoFuturoEnemy, 0.200000003); Perdição do Futuro - 0
+			Action SetStat(PerdioDoFuturoEnemy, ATK_DAMAGE, 130); Perdição do Futuro - 0
+			Action SetStat(PerdioDoFuturoEnemy, KI_DAMAGE, 130); Perdição do Futuro - 0
+			Action SetStat(PerdioDoFuturoEnemy, SUPER_ATK_DAMAGE, 130); Perdição do Futuro - 0
+			Action SetStat(PerdioDoFuturoEnemy, SUPER_KI_DAMAGE, 130); Perdição do Futuro - 0
+			Action SetFlag(Flag40, true)
+		}
+
+		Event 11
+		{
+			Condition CheckFlag(Flag41, true)
+
+			Action SetAttackTarget(Player, PerdioDoFuturoEnemy, false)
+			Action SetAttackTarget(PerdioDoFuturoEnemy, Player, false)
+			Action Wait(3.0)
+			Action LockAISkill(PerdioDoFuturoEnemy, ULTIMATE1, false); Perdição do Futuro - 0
+		}
+	}
+}
+

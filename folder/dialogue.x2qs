@@ -1,0 +1,500 @@
+Dialogue Dialogue0
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "TOK" ; Kaiohshin do Tempo
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_00_00_TOK" ; You both can use that new power too...?
+		i8: 1
+	}
+
+	DialoguePart
+	{
+		actor: "XBM" ; Fu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_00_01_XBM" ; It's all thanks to Goku. I see now... This power is truly something else.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "XBM" ; Fu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_00_02_XBM" ; Now... it all comes down to how we use it.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "XBM" ; Fu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_00_03_XBM" ; That crystal on its chest is its weakness—we know that for sure. But if we let up for even a moment, the crystal regenerates.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "XBM" ; Fu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_00_04_XBM" ; We need to cut off its flow of energy somehow...
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "XBM" ; Fu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_00_05_XBM" ; What? We should use this blade?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "XBM" ; Fu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_00_06_XBM" ; Oh! Haha, that's a fantastic idea! Impressive as always, partner!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "XBM" ; Fu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_00_07_XBM" ; This weapon was made to redirect energy. If we're smart about how we use it, then maybe—
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "TOK" ; Kaiohshin do Tempo
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_00_08_TOK" ; Yes, with this, we could... Huh?
+		i8: 1
+	}
+
+}
+
+Dialogue Dialogue2
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "XBL" ; Perdição do Futuro
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_02_00_XBL" ; Expend... Wreckage...
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue3
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "XBL" ; Perdição do Futuro
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_02_01_XBL" ; RAAAAGH! DEMOOON! DEATH!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue4
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "XBL" ; Perdição do Futuro
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_02_02_XBL" ; Punishment... Planet... Broken...
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue5
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "XBL" ; Perdição do Futuro
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_03_00_XBL" ; ...
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue6
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "XBL" ; Perdição do Futuro
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_04_00_XBL" ; Heh heh... Hahahahaha!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue7
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "XBM" ; Fu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_01_04_XBM" ; We can't hold a candle to that thing with only the power Goku left us.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "XBM" ; Fu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_01_05_XBM" ; We need to boost this power's potency somehow...
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "TRX" ; Trunks
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_01_06_TRX" ; Boost it? But how?
+		i8: 1
+	}
+
+	DialoguePart
+	{
+		actor: "XBM" ; Fu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_01_07_XBM" ; The answer is Goku... His power runs opposite to that of the creature!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "XBM" ; Fu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_01_08_XBM" ; And the crystals are able to use malicious desires as a medium to boost their power...
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "XBM" ; Fu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_01_09_XBM" ; Assuming Goku works the other way...
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue8
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "XBL" ; Perdição do Futuro
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_05_00_XBL" ; Heh heh... Hahahahahahaha!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue9
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "XBL" ; Perdição do Futuro
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_01_00_XBL" ; Nrgh... Raaaaagh!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "TOK" ; Kaiohshin do Tempo
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_01_01_TOK" ; It's working! It's actually working!
+		i8: 1
+	}
+
+	DialoguePart
+	{
+		actor: "XBM" ; Fu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_01_02_XBM" ; No... not quite yet.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "XBM" ; Fu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_01_03_XBM" ; I'm willing to bet that it still has enough energy to regenerate the crystals.
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue10
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "TOK" ; Kaiohshin do Tempo
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_01_10_TOK" ; Agh?! W-We're almost out of time.
+		i8: 1
+	}
+
+	DialoguePart
+	{
+		actor: "TRX" ; Trunks
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_01_11_TRX" ; Supreme Kai of Time?! Wha...? My legs! They're turning transparent!
+		i8: 1
+	}
+
+	DialoguePart
+	{
+		actor: "TRX" ; Trunks
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_01_12_TRX" ; Everyone... can you hear me? I'm sorry to say... but we're reaching our limits here.
+		i8: 1
+	}
+
+	DialoguePart
+	{
+		actor: "TRX" ; Trunks
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_01_13_TRX" ; We've been protecting the Time Vault from the threat of the black hole, but that won't last much longer.
+		i8: 1
+	}
+
+	DialoguePart
+	{
+		actor: "TRX" ; Trunks
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_01_14_TRX" ; After everything we've been through, our time has come... Pretty soon, we'll be gone...
+		i8: 1
+	}
+
+}
+
+Dialogue Dialogue11
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "TRX" ; Trunks
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_01_17_TRX" ; Fu... you've changed. You aren't driven by dark ambitions anymore... What motivates you now is a strong conviction to protect!
+		i8: 1
+	}
+
+	DialoguePart
+	{
+		actor: "TOK" ; Kaiohshin do Tempo
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_01_18_TOK" ; Remember what everyone said! They—all of us—have entrusted the future to you!
+		i8: 1
+	}
+
+	DialoguePart
+	{
+		actor: "TOK" ; Kaiohshin do Tempo
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_01_19_TOK" ; We believe in you! Now have faith... and show us... just how strong you've become!
+		i8: 1
+	}
+
+	DialoguePart
+	{
+		actor: "TRX" ; Trunks
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_01_20_TRX" ; History...
+		i8: 1
+	}
+
+	DialoguePart
+	{
+		actor: "TRX" ; Trunks
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_01_21_TRX" ; The future... Protect it all!
+		i8: 1
+	}
+
+	DialoguePart
+	{
+		actor: "TRX" ; Trunks
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_01_22_TRX" ; ...
+		i8: 1
+	}
+
+}
+
+Dialogue Dialogue12
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "XBL" ; Perdição do Futuro
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_07_00_XBL" ; Death... Burn!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue13
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "XBL" ; Perdição do Futuro
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_06_00_XBL" ; Grughhh? Cold, cruel, power!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue14
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "TOK" ; Kaiohshin do Tempo
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_00_09_TOK" ; I'm sorry. I think our connection's been cut off.
+		i8: 1
+	}
+
+	DialoguePart
+	{
+		actor: "TOK" ; Kaiohshin do Tempo
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_00_10_TOK" ; Everything around Conton City is starting to fade away.
+		i8: 1
+	}
+
+	DialoguePart
+	{
+		actor: "XBM" ; Fu
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAP_BT37_07_00_11_XBM" ; We don't have much time! We have to hustle!
+		i8: 0
+	}
+
+}
+

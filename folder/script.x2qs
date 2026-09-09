@@ -1,0 +1,254 @@
+Flag Flag0
+Flag Flag2
+Flag Flag3
+Flag Flag4
+Flag Flag5
+Flag Flag6
+Flag Flag7
+Flag Flag8
+Flag Flag9
+Flag Flag10
+Flag Flag12
+Flag Flag13
+Flag Flag14
+Flag Flag15
+Flag Flag16
+Flag Flag20
+Flag Flag21
+Flag Flag22
+Flag Flag23
+Flag Flag24
+Flag Flag25
+Flag Flag26
+Flag Flag27
+Flag Flag28
+Flag Flag29
+Flag Flag30
+Flag Flag31
+Flag Flag33
+Flag Flag34
+Flag Flag36
+Flag Flag38
+Flag Flag39
+Flag Flag40
+Flag Flag41
+Flag Flag42
+Flag Flag43
+
+Script
+{
+	State 0
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action InitQuest
+			Action FadeOut(0.0, WHITE, true, 0)
+			Action GotoState(1)
+		}
+	}
+
+	State 1
+	{
+		Event 0
+		{
+			Condition CheckFlag(Flag0, true)
+
+			Action ResetCamera
+			Action FadeIn(20.0, WHITE, false, 0)
+			Action PlayBgm2(3, 178, 0)
+			Action ShowQuestSummary
+			Action Unk94(1)
+			Action BattleModeStart
+			Action GotoState(2)
+		}
+	}
+
+	State 2
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action Wait(0.0500000007)
+			Action Tutorial(281, -1)
+			Action SetFlag(Flag2, true)
+			Action Unk94(0)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag3, true)
+
+			Action MoveTo("CTP_27_02_POS_00", FuAlly); Fu - 0
+			Action MoveTo("TRESPASS_1", Player); Player
+			Action Unk136(0x30002, 0x50004, 0x70006, 0x80007, 0xba, 0xffffffffffffffff, 0x4)
+			Action SetAttackTarget(Player, PerdioDoFuturo2Enemy, false)
+			Action SetFlag(Flag4, true)
+			Action GotoState(3)
+		}
+	}
+
+	State 3
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action SetFlag(Flag5, true)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag6, true)
+
+			Action StopBgm(false, 0, 3500)
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag20, true)
+
+			Action Unk136(0x30002, 0x50004, 0x70006, 0x80007, 0xbb, 0xffffffffffffffff, 0x4)
+			Action SetFlag(Flag27, true)
+		}
+
+		Event 3
+		{
+			Condition CheckFlag(Flag7, true)
+
+			Action GotoState(4)
+		}
+	}
+
+	State 4
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action SetFlag(Flag8, true)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag10, true)
+
+			Action SetFlag(Flag30, true)
+			Action GotoState(5)
+		}
+	}
+
+	State 5
+	{
+		Event 0
+		{
+			Condition CheckFlag(Flag22, true)
+
+			Action ResetCamera
+			Action FadeIn(40.0, WHITE, false, 0)
+			Action Wait(0.5)
+			Action Unk94(1)
+			Action BattleModeStart
+			Action GotoState(6)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag36, true)
+
+			Action GotoState(10)
+		}
+	}
+
+	State 6
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action Wait(0.400000006)
+			Action Tutorial(282, -1)
+			Action SetFlag(Flag12, true)
+			Action Unk94(0)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag42, true)
+
+			Action SetFlag(Flag38, true)
+			Action GotoState(7)
+		}
+	}
+
+	State 7
+	{
+		Event 0
+		{
+			Condition CheckFlag(Flag40, true)
+
+			Action ResetCamera
+			Action FadeIn(30.0, WHITE, false, 0)
+			Action Wait(0.5)
+			Action BattleModeStart
+			Action GotoState(8)
+		}
+	}
+
+	State 8
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action SetFlag(Flag41, true)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag16, true)
+
+			Action SetFlag(Flag33, true)
+			Action GotoState(9)
+		}
+	}
+
+	State 9
+	{
+		Event 0
+		{
+			Condition CheckFlag(Flag34, true)
+
+			Action QuestClear
+			Action Unk29(false, false)
+		}
+
+		Event 1
+		{
+			Condition ClearScreenClosed
+
+			Action UnlockQuest("CTP_27_08"); Beyond the Future They Sought
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag36, true)
+
+			Action GotoState(10)
+		}
+	}
+
+	State 10
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action DamageHp(Player, 100.0); Player
+			Action FadeIn(20.0, WHITE, false, 0)
+		}
+	}
+}
+
