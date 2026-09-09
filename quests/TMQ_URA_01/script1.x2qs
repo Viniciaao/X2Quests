@@ -1,0 +1,121 @@
+; ===========================================================================
+;  TMQ_URA_01 - script "vigia" (script1.x2qs)
+;
+;  Este script nao faz nada visivel: ele so observa o campo de batalha e
+;  levanta as flags que o script.x2qs consome.
+;
+;    Flag0   os 3 Fiscais de Uranio cairam
+;    Flag1   os 3 Moderadores cairam
+;    Flag3   Grande Moderador chegou a 50% de vida (ele invoca o Villainous Mode)
+;    Flag2   Grande Moderador derrotado
+;    Flag4   fase extra concluida (Grande Moderador Enfurecido derrotado)
+;    Flag63  comeca em true e vira false depois de 5 minutos -> sem ULTIMATE FINISH
+; ===========================================================================
+
+Script
+{
+	State 0
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action GotoState(1)
+		}
+	}
+
+	State 1
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition RandomPercentSmallerThan(100)
+
+			Action SetFlag(Flag63, true)
+		}
+
+		Event 1
+		{
+			Condition Always
+
+			Action GotoState(2)
+		}
+	}
+
+	State 2
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		; --- onda 1 eliminada -------------------------------------------------
+		Event 0
+		{
+			Condition Ko(FiscalVerdeEnemy, false, -1); Saibaman - Saibaman 1
+			Condition Ko(FiscalPalidoEnemy, false, -1); Kaiwareman - Kaiwareman
+			Condition Ko(FiscalListradoEnemy, false, -1); Kyukonman - Kyukonman
+			Condition CheckFlag(Flag0, false)
+
+			Action SetFlag(Flag0, true)
+		}
+
+		; --- onda 2 eliminada -------------------------------------------------
+		Event 1
+		{
+			Condition Ko(ModeradorGupreiEnemy, false, -1); Guprei - Battle Suit
+			Condition Ko(ModeradorOrlenEnemy, false, -1); Orlen - Battle Suit
+			Condition Ko(ModeradorFramboEnemy, false, -1); Raspberry - Battle Suit
+			Condition CheckFlag(Flag1, false)
+
+			Action SetFlag(Flag1, true)
+		}
+
+		; --- chefe pela metade: ele surta -------------------------------------
+		Event 2
+		{
+			Condition CheckFlag(Flag1, true)
+			Condition Health(<=, GrandeModeradorEnemy, 50.0); Hercule - Gi 1
+			Condition CheckFlag(Flag3, false)
+
+			Action SetFlag(Flag3, true)
+		}
+
+		; --- chefe derrotado ---------------------------------------------------
+		Event 3
+		{
+			Condition CheckFlag(Flag1, true)
+			Condition Ko(GrandeModeradorEnemy, false, -1); Hercule - Gi 1
+			Condition CheckFlag(Flag2, false)
+
+			Action SetFlag(Flag2, true)
+		}
+
+		; --- fase extra concluida ---------------------------------------------
+		Event 4
+		{
+			Condition CheckFlag(Flag2, true)
+			Condition Ko(ModeradorEnfurecidoEnemy, false, -1); Hercule - 0
+			Condition CheckFlag(Flag4, false)
+
+			Action SetFlag(Flag4, true)
+		}
+
+		; --- passou de 5 minutos: adeus, final alternativo ---------------------
+		Event 5
+		{
+			Condition TimePassed(>=, 300.0)
+
+			Action SetFlag(Flag63, false)
+		}
+	}
+}

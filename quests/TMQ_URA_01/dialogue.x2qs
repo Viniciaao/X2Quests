@@ -1,0 +1,281 @@
+; ===========================================================================
+;  TMQ_URA_01 - falas dos "fiscais de uranio".
+;  TextAudioEntry com voice: "" = legenda sem audio dublado.
+;  Troque os textos aqui para ajustar as piadas (pt/en/es).
+; ===========================================================================
+
+TextAudioEntry URU_W1_A
+{
+	en: "HEY, YOU! Yeah, you! DO! NOT! EAT! THE! URANIUM!"
+	pt: "EI, VOCÊ AÍ! É, você mesmo! NÃO! COMA! O! URÂNIO!"
+	es: "¡EY, TÚ! ¡Sí, tú! ¡NO! ¡TE! ¡COMAS! ¡EL! URANIO!"
+	voice: ""
+}
+
+TextAudioEntry URU_W1_B
+{
+	en: "I ate a chunk of it back in 762. Look at me: green, glowing and absolutely right!"
+	pt: "Eu comi um pedaço em 762. Olha pra mim: verde, brilhante e cheio de razão!"
+	es: "Me comí un trozo en el 762. Mírame: verde, brillante y con toda la razón."
+	voice: ""
+}
+
+TextAudioEntry URU_W1_C
+{
+	en: "And before you ask... yes, we also noticed the size of your ki cannon."
+	pt: "E antes que você pergunte... sim, a gente também reparou no tamanho do seu canhão de ki."
+	es: "Y antes de que preguntes... sí, también nos fijamos en el tamaño de tu cañón de ki."
+	voice: ""
+}
+
+TextAudioEntry URU_PLR
+{
+	en: "I was just trying to walk down the street in peace..."
+	pt: "Eu só queria atravessar a rua em paz..."
+	es: "Solo quería cruzar la calle en paz..."
+	voice: ""
+}
+
+TextAudioEntry URU_W2_A
+{
+	en: "We measured your power level. And a few other little things. Both readings were pitiful."
+	pt: "A gente mediu o seu poder de luta. E mais umas coisinhas. As duas medidas deram pena."
+	es: "Medimos tu nivel de pelea. Y alguna cosita más. Las dos cifras dan pena."
+	voice: ""
+}
+
+TextAudioEntry URU_W2_B
+{
+	en: "They say size doesn't matter. In your case, it's a medical report."
+	pt: "Dizem que tamanho não é documento. No seu caso, é laudo médico."
+	es: "Dicen que el tamaño no importa. En tu caso, es un parte médico."
+	voice: ""
+}
+
+TextAudioEntry URU_W2_C
+{
+	en: "Uranium isn't a snack, it's an inheritance! And you clearly don't have much to pass on..."
+	pt: "Urânio não é lanche, é herança! E olha que você não tem muito o que herdar..."
+	es: "¡El uranio no es un bocadillo, es una herencia! Y tú tienes poco que heredar..."
+	voice: ""
+}
+
+TextAudioEntry URU_BOSS_A
+{
+	en: "I am the GRAND MODERATOR! And I came to give you one single warning: DON'T EAT THE URANIUM!"
+	pt: "EU sou o GRANDE MODERADOR! E vim te dar um único aviso: NÃO COMA O URÂNIO!"
+	es: "¡YO soy el GRAN MODERADOR! Y vengo a darte un único aviso: ¡NO TE COMAS EL URANIO!"
+	voice: ""
+}
+
+TextAudioEntry URU_BOSS_B
+{
+	en: "And about your 'equipment'... I needed a magnifying glass to find it. A. Magnifying. Glass."
+	pt: "E sobre o seu 'equipamento'... eu precisei de uma lupa para achar. Uma. Lupa."
+	es: "Y sobre tu 'equipo'... necesité una lupa para encontrarlo. Una. Lupa."
+	voice: ""
+}
+
+TextAudioEntry URU_BOSS_MID
+{
+	en: "EXCUSE ME?! Is that how a uranium eater reacts?! VILLAINOUS MODE, NOW!"
+	pt: "COMO É QUE É?! Isso é reação de quem comeu urânio?! MODO VILÃO, AGORA!"
+	es: "¡¿CÓMO TE ATREVES?! ¿Así reacciona un comedor de uranio? ¡MODO VILLANO, YA!"
+	voice: ""
+}
+
+TextAudioEntry URU_END
+{
+	en: "Fine, fine! We'll stop talking about uranium... but the other topic stays."
+	pt: "Tá bom, tá bom! A gente para de falar do urânio... mas do outro assunto a gente continua."
+	es: "¡Vale, vale! Dejamos de hablar del uranio... pero del otro tema seguimos."
+	voice: ""
+}
+
+TextAudioEntry URU_EX_A
+{
+	en: "I GOT CANCELLED?! NOW IT'S PERSONAL! Come here, we'll explain it up close!"
+	pt: "FUI CANCELADO?! AGORA É PESSOAL! VEM CÁ, QUE A GENTE TE EXPLICA DE PERTO!"
+	es: "¡¿ME CANCELARON?! ¡AHORA ES PERSONAL! ¡Ven, que te lo explicamos de cerca!"
+	voice: ""
+}
+
+Dialogue Dialogue0
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "SBM"
+		costume: -1
+		transformation: -1
+
+		text_audio: URU_W1_A
+		i8: 0
+	}
+}
+
+Dialogue Dialogue1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "SBM"
+		costume: -1
+		transformation: -1
+
+		text_audio: URU_W1_B
+		i8: 0
+	}
+}
+
+Dialogue Dialogue2
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "SBM"
+		costume: -1
+		transformation: -1
+
+		text_audio: URU_W1_C
+		i8: 0
+	}
+}
+
+Dialogue Dialogue3
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "HUM"
+		costume: -1
+		transformation: -1
+
+		text_audio: URU_PLR
+		i8: 0
+	}
+}
+
+Dialogue Dialogue4
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "RSB"
+		costume: -1
+		transformation: -1
+
+		text_audio: URU_W2_A
+		i8: 0
+	}
+}
+
+Dialogue Dialogue5
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "APL"
+		costume: -1
+		transformation: -1
+
+		text_audio: URU_W2_B
+		i8: 0
+	}
+}
+
+Dialogue Dialogue6
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "RSB"
+		costume: -1
+		transformation: -1
+
+		text_audio: URU_W2_C
+		i8: 0
+	}
+}
+
+Dialogue Dialogue7
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "STN"
+		costume: -1
+		transformation: -1
+
+		text_audio: URU_BOSS_A
+		i8: 0
+	}
+}
+
+Dialogue Dialogue8
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "STN"
+		costume: -1
+		transformation: -1
+
+		text_audio: URU_BOSS_B
+		i8: 0
+	}
+}
+
+Dialogue Dialogue9
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "STN"
+		costume: -1
+		transformation: -1
+
+		text_audio: URU_BOSS_MID
+		i8: 0
+	}
+}
+
+Dialogue Dialogue10
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "STN"
+		costume: -1
+		transformation: -1
+
+		text_audio: URU_END
+		i8: 0
+	}
+}
+
+Dialogue Dialogue11
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "STD"
+		costume: -1
+		transformation: -1
+
+		text_audio: URU_EX_A
+		i8: 0
+	}
+}

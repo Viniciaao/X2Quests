@@ -1,0 +1,1014 @@
+; ===========================================================================
+;  TMQ_URA_01 - personagens da missao
+;  battle_index: 0-2 = jogadores, 3-6 = inimigos (reaproveitados por onda)
+; ===========================================================================
+
+QxdSpecialChar PlayerBase
+{
+	; Player
+	char: "HUM"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 1
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 138
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdSpecialChar Teacher
+{
+	; Teacher
+	char: "MST"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 1
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 140
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar FiscalVerde
+{
+	; Saibaman - Saibaman 1
+	char: "SBM"
+	costume: 3
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 20
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: 1.5
+	ki_damage: 1.5
+	super_atk_damage: 1.5
+	super_ki_damage: 1.5
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 136
+
+	super1: 142 ; Saibabeam
+	super2: 52 ; Consecutive Energy Blast
+	super3: 115 ; Afterimage
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: 10101 ; Spread Shot Retreat
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar FiscalPalido
+{
+	; Kaiwareman - Kaiwareman
+	char: "SBM"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 21
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: 1.5
+	ki_damage: 1.5
+	super_atk_damage: 1.5
+	super_ki_damage: 1.5
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 136
+
+	super1: 52 ; Consecutive Energy Blast
+	super2: 595 ; Meteor Strike
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: 10101 ; Spread Shot Retreat
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar FiscalListrado
+{
+	; Kyukonman - Kyukonman
+	char: "SBM"
+	costume: 1
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 22
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: 1.5
+	ki_damage: 1.5
+	super_atk_damage: 1.5
+	super_ki_damage: 1.5
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 137
+
+	super1: 16 ; Charged Ki Wave
+	super2: 595 ; Meteor Strike
+	super3: 115 ; Afterimage
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: 10101 ; Spread Shot Retreat
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar ModeradorGuprei
+{
+	; Guprei - Battle Suit
+	char: "RSB"
+	costume: 3
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 24
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: 1.8
+	ki_damage: 1.8
+	super_atk_damage: 1.8
+	super_ki_damage: 1.8
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 137
+
+	super1: 600 ; Beam Rifle
+	super2: 595 ; Meteor Strike
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: 10340 ; Super Back Jump
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar ModeradorOrlen
+{
+	; Orlen - Battle Suit
+	char: "APL"
+	costume: 4
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 25
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: 1.8
+	ki_damage: 1.8
+	super_atk_damage: 1.8
+	super_ki_damage: 1.8
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 137
+
+	super1: 52 ; Consecutive Energy Blast
+	super2: 596 ; Meteor Crash
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: 10160 ; Explosive Wave
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar ModeradorFrambo
+{
+	; Raspberry - Battle Suit
+	char: "RSB"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 25
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: 1.8
+	ki_damage: 1.8
+	super_atk_damage: 1.8
+	super_ki_damage: 1.8
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 137
+
+	super1: 600 ; Beam Rifle
+	super2: 595 ; Meteor Strike
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: 10340 ; Super Back Jump
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar GrandeModerador
+{
+	; Hercule - Gi 1
+	char: "STN"
+	costume: 1
+	transformation: 300
+	special_effect: -1
+
+	i12: 4
+	level: 30
+	health: 900.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 1.5
+	ki_atk: 1.5
+	super_atk: 1.5
+	super_ki: 1.5
+	atk_damage: 2.0
+	ki_damage: 2.0
+	super_atk_damage: 2.0
+	super_ki_damage: 2.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 144
+
+	super1: 520 ; Dynamite Kick
+	super2: 521 ; Rolling Hercule Punch
+	super3: 522 ; Present For You
+	super4: 330 ; Taunt
+
+	ultimate1: 5520 ; The Savior Has Come
+	ultimate2: 5530 ; Villainous Mode
+
+	evasive: 10181 ; Miracle Kneel
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar ModeradorEnfurecido
+{
+	; Hercule - 0
+	char: "STD"
+	costume: 0
+	transformation: 300
+	special_effect: -1
+
+	i12: 36
+	level: 35
+	health: 1500.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 2.0
+	ki_atk: 2.0
+	super_atk: 2.0
+	super_ki: 2.0
+	atk_damage: 2.5
+	ki_damage: 2.5
+	super_atk_damage: 2.5
+	super_ki_damage: 2.5
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 144
+
+	super1: 534 ; Rage Saucer
+	super2: 521 ; Rolling Hercule Punch
+	super3: 533 ; Bloody Sauce
+	super4: -1
+
+	ultimate1: 5531 ; Baked Sphere
+	ultimate2: 5530 ; Villainous Mode
+
+	evasive: 10000 ; Spirit Explosion
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar FiscalRadioativo
+{
+	; Tennenman - Tennenman
+	char: "SBM"
+	costume: 2
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 28
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: 1.8
+	ki_damage: 1.8
+	super_atk_damage: 1.8
+	super_ki_damage: 1.8
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 137
+
+	super1: 142 ; Saibabeam
+	super2: 52 ; Consecutive Energy Blast
+	super3: 115 ; Afterimage
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: 10101 ; Spread Shot Retreat
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar FiscalToxico
+{
+	; Copyman - Copyman
+	char: "SBM"
+	costume: 5
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 28
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: 1.8
+	ki_damage: 1.8
+	super_atk_damage: 1.8
+	super_ki_damage: 1.8
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 137
+
+	super1: 16 ; Charged Ki Wave
+	super2: 595 ; Meteor Strike
+	super3: 115 ; Afterimage
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: 10101 ; Spread Shot Retreat
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QmlChar Player : PlayerBase
+{
+	battle_index: 0
+	i12: 0
+	stage: "BFrrg" ; Red Ribbon Army (Yard)
+	spawn_at_start: true
+
+	ai: HUMAN
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar Player2 : PlayerBase
+{
+	battle_index: 1
+	i12: 0
+	stage: "BFrrg" ; Red Ribbon Army (Yard)
+	spawn_at_start: true
+
+	ai: HUMAN
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar Player3 : PlayerBase
+{
+	battle_index: 2
+	i12: 0
+	stage: "BFrrg" ; Red Ribbon Army (Yard)
+	spawn_at_start: true
+
+	ai: HUMAN
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar FiscalVerdeEnemy : FiscalVerde
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFrrg" ; Red Ribbon Army (Yard)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar FiscalPalidoEnemy : FiscalPalido
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFrrg" ; Red Ribbon Army (Yard)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar FiscalListradoEnemy : FiscalListrado
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFrrg" ; Red Ribbon Army (Yard)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar ModeradorGupreiEnemy : ModeradorGuprei
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFrrg" ; Red Ribbon Army (Yard)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar ModeradorOrlenEnemy : ModeradorOrlen
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFrrg" ; Red Ribbon Army (Yard)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar ModeradorFramboEnemy : ModeradorFrambo
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFrrg" ; Red Ribbon Army (Yard)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar GrandeModeradorEnemy : GrandeModerador
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFrrg" ; Red Ribbon Army (Yard)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar ModeradorEnfurecidoEnemy : ModeradorEnfurecido
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFrrg" ; Red Ribbon Army (Yard)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar FiscalRadioativoEnemy : FiscalRadioativo
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFrrg" ; Red Ribbon Army (Yard)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar FiscalToxicoEnemy : FiscalToxico
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFrrg" ; Red Ribbon Army (Yard)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar TeacherAlly : Teacher
+{
+	battle_index: -1
+	i12: 0
+	stage: "BFrrg" ; Red Ribbon Army (Yard)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}

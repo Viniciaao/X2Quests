@@ -1,0 +1,29 @@
+CharPosition PlayerPosition
+{
+	char: Player
+	stage: "BFtol" ; Twisted Timespace
+	position: "TRESPASS_3"
+	type: 3
+	i40: 0
+	i50: 0
+}
+
+CharPosition Player2Position
+{
+	char: Player2
+	stage: "BFtol" ; Twisted Timespace
+	position: "CTP_27_03_POS_00"
+	type: 3
+	i40: 0
+	i50: 0
+}
+
+CharPosition Player3Position
+{
+	char: Player3
+	stage: "BFtol" ; Twisted Timespace
+	position: "CTP_27_06_POS_00"
+	type: 3
+	i40: 0
+	i50: 0
+}
