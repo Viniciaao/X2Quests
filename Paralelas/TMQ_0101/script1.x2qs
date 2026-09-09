@@ -1,0 +1,97 @@
+Script
+{
+	State 0
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action GotoState(1)
+		}
+	}
+
+	State 1
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition RandomPercentSmallerThan(100)
+
+			Action SetFlag(Flag63, true)
+		}
+
+		Event 1
+		{
+			Condition Always
+
+			Action GotoState(2)
+		}
+	}
+
+	State 2
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 1
+		{
+			Condition Ko(YamchaEnemy, false, 0); Yamcha - Gi 1 da Tartaruga Eremita
+			Condition Ko(TenshinhanEnemy, false, 0); Tenshinhan - Uniforme 1
+			Condition Ko(KuririnEnemy, false, 0); Kuririn - Gi 1 da Tartaruga Eremita
+
+			Action SetFlag(Flag1, true)
+			Action GotoState(3)
+		}
+
+		Event 2
+		{
+			Condition NumCharsDefeated(1, ENEMY_TEAM, -1)
+			Condition CheckFlag(Flag63, true)
+
+			Action Wait(5.0)
+			Action SetFlag(Flag2, true)
+		}
+
+		Event 3
+		{
+			Condition TimePassed(>=, 300.0)
+
+			Action SetFlag(Flag63, false)
+		}
+	}
+
+	State 3
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Ko(PiccoloEnemy, false, 0); Piccolo - Traje Demoníaco 1
+			Condition Ko(GohanCrianaEnemy, false, -1); Gohan (Criança) - Traje Demoníaco 2
+
+			Action SetFlag(Flag10, true)
+		}
+
+		Event 65
+		{
+			Condition EventDone(0, 3, 0)
+
+			Action SetFlag(Flag49, true)
+		}
+	}
+}
+

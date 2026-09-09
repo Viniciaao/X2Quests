@@ -1,0 +1,143 @@
+Flag Flag1
+Flag Flag2
+Flag Flag10
+Flag Flag49
+Flag Flag63
+
+Script
+{
+	State 0
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action DisableCommonDialogue(3, TenshinhanEnemy, YamchaEnemy, KuririnEnemy, 0, 0, 0, 0); Kuririn - Gi 1 da Tartaruga Eremita
+			Action DisableCommonDialogue(2, TenshinhanEnemy, YamchaEnemy, 11, 0, 0, 0, 0)
+			Action DisableCommonDialogue(2, TenshinhanEnemy, KuririnEnemy, 11, 0, 0, 0, 0)
+			Action DisableCommonDialogue(2, KuririnEnemy, YamchaEnemy, 11, 0, 0, 0, 0)
+			Action LoadChara(PiccoloEnemy); Piccolo - Traje Demoníaco 1
+			Action InitQuest
+		}
+
+		Event 1
+		{
+			Condition TimeWithinState(1.0)
+
+			Action Unk20
+			Action BattleModeStart
+			Action GotoState(1)
+		}
+	}
+
+	State 1
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action PlayDialogue(Dialogue0, 100, "BFten", -1); Dialogue: All right then, I'm not going to be holding back! [MORE DIALOGUE PARTS] --- Stage: Área do Torneio Mundial
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag1, true)
+
+			Action GotoState(2)
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag2, true)
+
+			Action LoadChara(GohanCrianaEnemy); Gohan (Criança) - Traje Demoníaco 2
+		}
+	}
+
+	State 2
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action QuestFinishState(COMPLETE)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag63, false)
+
+			Action QuestClear
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag63, true)
+
+			Action ShowWarning
+			Action GotoState(3)
+		}
+	}
+
+	State 3
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action Unk64(PiccoloEnemy, 21); Piccolo - Traje Demoníaco 1
+			Action CharaSpawn2(GohanCrianaEnemy, PiccoloEnemy, 4, Dialogue1, "BFten", 1, -1, -1); Dialogue: Hmph... Not bad. But, not for much longer! --- Stage: Área do Torneio Mundial
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(Flag10, true)
+
+			Action GotoState(5)
+		}
+
+		Event 65
+		{
+			Condition CheckFlag(Flag49, true)
+
+			Action Unk84("BFten"); Área do Torneio Mundial
+		}
+	}
+
+	State 5
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action QuestFinishState(ULTIMATE_FINISH)
+			Action QuestClear
+		}
+	}
+}
+
