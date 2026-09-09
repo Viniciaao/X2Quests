@@ -40,6 +40,7 @@ STAGE = "BFtol"          # Twisted Timespace
 STAGE_COMMENT = "Twisted Timespace"
 SPAWN_POINTS = [0, 1, 2]  # TRESPASS disponiveis no BFtol
 TIME_LIMIT = 1800        # 30 minutos
+EX_TIME_LIMIT = 900.0    # 15 minutos: janela do Ultimate Finish (ex_success)
 LEVEL = 85
 DIFFICULTY = 5
 QUEST_ID = "TMQ_JUN_01"
@@ -101,6 +102,9 @@ TEXTS = {
     "warning": ("-Defeat the Junin of the Future",
                 "-Derrote o Junin do Futuro",
                 "-Derrota al Junin del Futuro"),
+    "ex_success": ("-Clear in under 15 minutes",
+                   "-Zere em menos de 15 minutos",
+                   "-Termínala en menos de 15 minutos"),
 }
 
 
@@ -140,6 +144,8 @@ def qxd_char(ident: str, char_ref: str, costume: int, skills: list, *,
 
 def qml_char(ident: str, base: str, index: int, *, ai: str, team: str,
              spawn_at_start: str) -> str:
+    # o compilador exige o bloco de skills no QmlChar (super1..awaken);
+    # -1 = nao sobrescreve, herda os valores do QxdChar base (vanilla).
     return "\n".join([
         f"QmlChar {ident} : {base}", "{",
         f"\tbattle_index: {index}", "\ti12: 0",
@@ -147,7 +153,10 @@ def qml_char(ident: str, base: str, index: int, *, ai: str, team: str,
         f"\tspawn_at_start: {spawn_at_start}", "",
         f"\tai: {ai}", f"\tteam: {team}", "",
         "\ti36: 9999", "\ti40: 5", "\ti44: 0", "\ti48: -1",
-        "\ti50: -1", "\ti52: 0", "\ti56: 0", "}",
+        "\ti50: -1", "\ti52: 0", "\ti56: 0", "",
+        "\tsuper1: -1", "\tsuper2: -1", "\tsuper3: -1", "\tsuper4: -1", "",
+        "\tultimate1: -1", "\tultimate2: -1", "",
+        "\tevasive: -1", "\tblast: -1", "\tawaken: -1", "}",
     ])
 
 
@@ -167,7 +176,7 @@ def build_quest() -> str:
         mods.append(f"X2mMod {ident}\n{{\n\tname: \"{name}\"\n\tguid: \"{guid}\"\n}}\n")
 
     texts = []
-    for i, key in enumerate(("title", "success", "failure", "outline", "warning")):
+    for i, key in enumerate(("title", "success", "failure", "outline", "warning", "ex_success")):
         en, pt, es = TEXTS[key]
         texts.append(
             f"TextEntry {QUEST_ID}_{i}\n{{\n\ten: \"{en}\"\n\tpt: \"{pt}\"\n\tes: \"{es}\"\n}}\n")
@@ -183,6 +192,7 @@ def build_quest() -> str:
 \tfailure: {QUEST_ID}_2 ; -All team HP depleted / time expires
 \toutline: {QUEST_ID}_3 ; Seventy-six Junins are flooding the Twisted Timespace.
 \twarning: {QUEST_ID}_4 ; -Defeat the Junin of the Future
+\tex_success: {QUEST_ID}_5 ; -Clear in under 15 minutes
 
 \ti40: 1
 \tparent_quest: "TMQ_1400" ; Being a Time Patroller
@@ -209,16 +219,55 @@ def build_quest() -> str:
 \tstart_stage: "{STAGE}" ; {STAGE_COMMENT}
 \tstart_demo: 0
 
-\tCharPortrait {{ char: "HUM" costume: 0 i40: 0 i44: 0 }}
-\tCharPortrait {{ char: JuninChar costume: 1 i40: 0 i44: 0 }}
-\tCharPortrait {{ char: JuninEmoChar costume: 0 i40: 0 i44: 0 }}
-\tCharPortrait {{ char: JuninFuturoChar costume: 1 i40: 0 i44: 0 }}
+\txp_reward: 26000
+\tult_xp_reward: 45000
+\tfail_xp_reward: 8000
+\tzeni_reward: 14000
+\tult_zeni_reward: 22000
+\tfail_zeni_reward: 7500
+\ttp_medals_once: 5
+\ttp_medals: 0
+\ttp_medals_special: 0
+\tresistance_points: 0
 
 \tItemReward {{ item: Collection60 type: COLLECTION condition: 1 chance: 100 flags: 0 i12: 0 i20: 0 }}
 \tItemReward {{ item: Collection70 type: COLLECTION condition: 0 chance: 100 flags: 0 i12: 0 i20: 0 }}
 \tItemReward {{ item: Collection80 type: COLLECTION condition: 0 chance: 100 flags: 0 i12: 0 i20: 0 }}
 \tItemReward {{ item: 12 type: BATTLE condition: 0 chance: 100 flags: 0 i12: 0 i20: 0 }} ; Senzu Bean
 \tSkillReward {{ skill: 330 condition: 1 chance: 100 i12: 0 }} ; Taunt
+
+\tstages: ("{STAGE}", -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1) ; {STAGE_COMMENT}
+\ti192: 1
+
+\tCharPortrait {{ char: "HUM" costume: 0 trans: -1 }}
+\tCharPortrait {{ char: JuninChar costume: 1 trans: -1 }}
+\tCharPortrait {{ char: JuninEmoChar costume: 0 trans: -1 }}
+\tCharPortrait {{ char: JuninFuturoChar costume: 1 trans: -1 }}
+\tCharPortrait {{ char: -1 costume: 0 trans: -1 }}
+\tCharPortrait {{ char: -1 costume: 0 trans: -1 }}
+
+\ti232: 0
+\ti234: 2
+\ti236: 3
+\ti238: 4
+\ti240: 5
+\ti242: 7
+\ti244: 0
+\ti246: 0
+\ti248: 0
+\ti250: 0
+\tflags: 0x400000
+
+\tupdate_requirement: ANY
+\tdlc_requirement: NONE
+
+\ti264: 0
+\tno_enemy_bgm: 9
+\tenemy_near_bgm: 24
+\tbattle_bgm: 16
+\tultimate_finish_bgm: 14
+\tf276: 1.0
+\ti280: 0
 }}
 """
     # o compilador le quest.x2qs de cima para baixo: o que o Quest referencia
@@ -228,10 +277,32 @@ def build_quest() -> str:
 
 
 # ------------------------------------------------------------------ chars ---
+def qxd_special_char(ident: str, char_code: str, ait: int, comment: str = "") -> str:
+    """QxdSpecialChar completo (PlayerBase/Teacher), como nos quests vanilla:
+    o compilador exige 'costume' e o bloco inteiro, nao so 'char'."""
+    lines = [f"QxdSpecialChar {ident}", "{", f"\tchar: {char_code}",
+             "\tcostume: 0", "\ttransformation: -1", "\tspecial_effect: -1", "",
+             "\ti12: 0", "\tlevel: 1", "\thealth: -1.0", "\tf24: -1.0",
+             "\tki: -1.0", "\tstamina: -1.0", "\tatk: -1.0", "\tki_atk: -1.0",
+             "\tsuper_atk: -1.0", "\tsuper_ki: -1.0", "\tatk_damage: -1.0",
+             "\tki_damage: -1.0", "\tsuper_atk_damage: -1.0",
+             "\tsuper_ki_damage: -1.0", "\tguard_atk: -1.0",
+             "\tguard_damage: -1.0", "\tmove_speed: -1.0", "\tboost_speed: -1.0",
+             "\tf84: -1.0", f"\tait_table_entry: {ait}", "",
+             "\tsuper1: -1", "\tsuper2: -1", "\tsuper3: -1", "\tsuper4: -1", "",
+             "\tultimate1: -1", "\tultimate2: -1", "",
+             "\tevasive: -1", "\tblast: -1", "\tawaken: -1", "",
+             "\ti106: 0", "\ti108: 0", "\ti112: 0", "\ti124: -1", "\ti126: 0", "}"]
+    body = "\n".join(lines)
+    return f"; {comment}\n{body}" if comment else body
+
+
 def build_chars() -> str:
     out = [
-        "QxdSpecialChar PlayerBase", "{", '\tchar: "HUM"', "}", "",
-        "QxdSpecialChar Teacher", "{", '\tchar: "MST"', "}", "",
+        qxd_special_char("PlayerBase", '"HUM"', 138, "Player"),
+        "",
+        qxd_special_char("Teacher", '"MST"', 140, "Teacher"),
+        "",
         "; O Junin normal: mais tanque (costume 1 do mod [OC] Junin).",
         qxd_char("JuninBruto", "JuninChar", 1, JUNIN_TANK_SKILLS,
                  level=LEVEL, health=900.0, atk=1.25, atk_dmg=1.35), "",
@@ -289,11 +360,11 @@ def build_positions() -> str:
 # ----------------------------------------------------------------- script ---
 def build_script() -> str:
     n_pairs = N_JUNINS // 2
-    out = ["Flag FlagFase2", "", "Script", "{"]
+    out = ["Flag FlagFase2", "Flag FlagExOpen ; janela do Ultimate Finish (15 min)", "", "Script", "{"]
 
     # State 0 - inicializacao
     out += ["\tState 0", "\t{", "\t\tEvent 0", "\t\t{", "\t\t\tCondition Always", ""]
-    for a in ("InitQuest", "Unk20", "BattleModeStart",
+    for a in ("InitQuest", "SetFlag(FlagExOpen, true)", "Unk20", "BattleModeStart",
               f"ShowEnemyKoCounter(true, {N_JUNINS})",
               "DontRemoveOnKo(JuninFuturoEnemy)",
               f'SetThereAreEnemies("{STAGE}", true)',
@@ -334,6 +405,7 @@ def build_script() -> str:
     # State 2 - entrada do chefe
     out += ["\tState 2", "\t{", "\t\tEvent 0", "\t\t{", "\t\t\tCondition Always", "",
             f'\t\t\tAction CharaSpawn(JuninFuturoEnemy, {SPAWN_POINTS[2]}, -1, 20, "{STAGE}", 0)',
+            "\t\t\tAction ShowWarning ; -Defeat the Junin of the Future",
             "\t\t\tAction GotoState(3)", "\t\t}", "\t}", ""]
 
     # State 3 - chefe em duas fases
@@ -348,11 +420,38 @@ def build_script() -> str:
             "\t\t\tCondition CheckFlag(FlagFase2, true)", "",
             "\t\t\tAction GotoState(4)", "\t\t}", "\t}", ""]
 
-    # State 4 - conclusao
+    # State 4 - conclusao: se ainda dentro da janela (FlagExOpen true),
+    # vai pro State 5 (ULTIMATE_FINISH); senao, encerra normal.
     out += ["\tState 4", "\t{", "\t\tEvent 0", "\t\t{", "\t\t\tCondition Always", "",
-            "\t\t\tAction QuestFinishState(COMPLETE)",
+            "\t\t\tAction QuestFinishState(COMPLETE)", "\t\t}", "",
+            "\t\tEvent 1", "\t\t{", "\t\t\tCondition CheckFlag(FlagExOpen, false)", "",
+            "\t\t\tAction QuestClear", "\t\t}", "",
+            "\t\tEvent 2", "\t\t{", "\t\t\tCondition CheckFlag(FlagExOpen, true)", "",
+            "\t\t\tAction GotoState(5)", "\t\t}", "\t}", "",
+            "\tState 5", "\t{", "\t\tEvent 0", "\t\t{", "\t\t\tCondition Always", "",
+            "\t\t\tAction QuestFinishState(ULTIMATE_FINISH)",
             "\t\t\tAction QuestClear", "\t\t}", "\t}", "}"]
     return "\n".join(out) + "\n"
+
+
+def build_script1() -> str:
+    """script1.x2qs roda em paralelo ao fluxo principal (estado vigia):
+    inicia a FlagExOpen em true e, depois de 15 min (900s), fecha a janela
+    do Ultimate Finish (SetFlag false) - mesmo padrao do TMQ_URA_01."""
+    return "\n".join([
+        "; script vigia: controla a janela de 15 min do Ultimate Finish.",
+        "Script", "{",
+        "\tState 0", "\t{",
+        "\t\tEvent -1", "\t\t{", "\t\t\tCondition Never", "\t\t}", "",
+        "\t\tEvent 0", "\t\t{", "\t\t\tCondition Always", "",
+        "\t\t\tAction GotoState(1)", "\t\t}", "\t}", "",
+        "\tState 1", "\t{",
+        "\t\tEvent -1", "\t\t{", "\t\t\tCondition Never", "\t\t}", "",
+        "\t\tEvent 0", "\t\t{",
+        f"\t\t\tCondition TimePassed(>=, {EX_TIME_LIMIT:.1f}) ; {EX_TIME_LIMIT / 60:.0f} min", "",
+        "\t\t\tAction SetFlag(FlagExOpen, false)",
+        "\t\t}", "\t}", "}", "",
+    ])
 
 
 def main() -> None:
@@ -363,6 +462,7 @@ def main() -> None:
         "dialogue.x2qs": "",          # sem dialogo: os Junins so apanham em silencio
         "positions.x2qs": build_positions(),
         "script.x2qs": build_script(),
+        "script1.x2qs": build_script1(),  # vigia: janela de 15 min do Ultimate Finish
     }
     for name, body in files.items():
         with open(os.path.join(OUT, name), "w", encoding="utf-8") as fh:

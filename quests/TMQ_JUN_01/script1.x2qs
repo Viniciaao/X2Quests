@@ -1,0 +1,33 @@
+; script vigia: controla a janela de 15 min do Ultimate Finish.
+Script
+{
+	State 0
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action GotoState(1)
+		}
+	}
+
+	State 1
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition TimePassed(>=, 900.0) ; 15 min
+
+			Action SetFlag(FlagExOpen, false)
+		}
+	}
+}

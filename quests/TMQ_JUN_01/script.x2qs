@@ -1,4 +1,5 @@
 Flag FlagFase2
+Flag FlagExOpen ; janela do Ultimate Finish (15 min)
 
 Script
 {
@@ -9,13 +10,18 @@ Script
 			Condition Always
 
 			Action InitQuest
+			Action SetFlag(FlagExOpen, true)
 			Action Unk20
 			Action BattleModeStart
-			Action ShowEnemyKoCounter(true, 76)
-			Action DontRemoveOnKo(JuninFuturoEnemy)
-			Action SetThereAreEnemies("BFtol", true)
-			Action CharaSpawn2(Junin01, Junin02, 0, -1, "BFtol", 0, -1, -1)
-			Action CharaSpawn2(Junin03, Junin04, 1, -1, "BFtol", 0, -1, -1)
+			Action ShowEnemyKoCounter(true, 76) ; Contador
+			Action DontRemoveOnKo(JuninFuturoEnemy) ; Não Remover Boss
+			Action DontRemoveOnKo(Junin33)
+			Action DontRemoveOnKo(Junin34)
+			Action SetThereAreEnemies("BFtol", true) ; Afima que tem inimigos no stage?
+			Action CharaSpawn(Junin01, 0, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin02, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin03, 2, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin04, 0, -1, -1, "BFtol", -1)
 			Action GotoState(1)
 		}
 	}
@@ -26,136 +32,53 @@ Script
 		{
 			Condition Ko(Junin01, false, -1)
 			Condition Ko(Junin02, false, -1)
+			Condition Ko(Junin03, false, -1)
+			Condition Ko(Junin04, false, -1)
 
-			Action CharaSpawn2(Junin05, Junin06, 0, -1, "BFtol", 0, -1, -1) ; dupla 3 -> slots (3, 4)
+			Action CharaSpawn(Junin05, 0, -1, -1, "BFtol", -1) ; Uso de CharaSpawn pra não ter Cena, mais rapido
+			Action CharaSpawn(Junin06, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin07, 2, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin08, 0, -1, -1, "BFtol", -1)			
+			Action CharaSpawn(Junin09, 0, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin10, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin11, 2, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin12, 0, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin13, 0, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin14, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin15, 2, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin16, 0, -1, -1, "BFtol", -1)			
+			Action CharaSpawn(Junin17, 0, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin18, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin19, 2, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin20, 0, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin21, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin22, 2, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin23, 0, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin24, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin25, 2, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin26, 0, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin27, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin28, 2, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin29, 0, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin30, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin31, 2, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin32, 0, -1, -1, "BFtol", -1)
+			Action Wait(5)
+			Action CharaSpawn(Junin33, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin34, 2, -1, -1, "BFtol", -1)
 		}
 
 		Event 2
 		{
-			Condition Ko(Junin03, false, -1)
-			Condition Ko(Junin04, false, -1)
-
-			Action CharaSpawn2(Junin07, Junin08, 1, -1, "BFtol", 0, -1, -1) ; dupla 4 -> slots (5, 6)
-		}
-
-		Event 3
-		{
-			Condition Ko(Junin05, false, -1)
-			Condition Ko(Junin06, false, -1)
-
-			Action CharaSpawn2(Junin09, Junin10, 2, -1, "BFtol", 0, -1, -1) ; dupla 5 -> slots (3, 4)
-		}
-
-		Event 4
-		{
-			Condition Ko(Junin07, false, -1)
-			Condition Ko(Junin08, false, -1)
-
-			Action CharaSpawn2(Junin11, Junin12, 0, -1, "BFtol", 0, -1, -1) ; dupla 6 -> slots (5, 6)
-		}
-
-		Event 5
-		{
-			Condition Ko(Junin09, false, -1)
-			Condition Ko(Junin10, false, -1)
-
-			Action CharaSpawn2(Junin13, Junin14, 1, -1, "BFtol", 0, -1, -1) ; dupla 7 -> slots (3, 4)
-		}
-
-		Event 6
-		{
-			Condition Ko(Junin11, false, -1)
-			Condition Ko(Junin12, false, -1)
-
-			Action CharaSpawn2(Junin15, Junin16, 2, -1, "BFtol", 0, -1, -1) ; dupla 8 -> slots (5, 6)
-		}
-
-		Event 7
-		{
-			Condition Ko(Junin13, false, -1)
-			Condition Ko(Junin14, false, -1)
-
-			Action CharaSpawn2(Junin17, Junin18, 0, -1, "BFtol", 0, -1, -1) ; dupla 9 -> slots (3, 4)
-		}
-
-		Event 8
-		{
-			Condition Ko(Junin15, false, -1)
-			Condition Ko(Junin16, false, -1)
-
-			Action CharaSpawn2(Junin19, Junin20, 1, -1, "BFtol", 0, -1, -1) ; dupla 10 -> slots (5, 6)
-		}
-
-		Event 9
-		{
-			Condition Ko(Junin17, false, -1)
-			Condition Ko(Junin18, false, -1)
-
-			Action CharaSpawn2(Junin21, Junin22, 2, -1, "BFtol", 0, -1, -1) ; dupla 11 -> slots (3, 4)
-		}
-
-		Event 10
-		{
-			Condition Ko(Junin19, false, -1)
-			Condition Ko(Junin20, false, -1)
-
-			Action CharaSpawn2(Junin23, Junin24, 0, -1, "BFtol", 0, -1, -1) ; dupla 12 -> slots (5, 6)
-		}
-
-		Event 11
-		{
-			Condition Ko(Junin21, false, -1)
-			Condition Ko(Junin22, false, -1)
-
-			Action CharaSpawn2(Junin25, Junin26, 1, -1, "BFtol", 0, -1, -1) ; dupla 13 -> slots (3, 4)
-		}
-
-		Event 12
-		{
-			Condition Ko(Junin23, false, -1)
-			Condition Ko(Junin24, false, -1)
-
-			Action CharaSpawn2(Junin27, Junin28, 2, -1, "BFtol", 0, -1, -1) ; dupla 14 -> slots (5, 6)
-		}
-
-		Event 13
-		{
-			Condition Ko(Junin25, false, -1)
-			Condition Ko(Junin26, false, -1)
-
-			Action CharaSpawn2(Junin29, Junin30, 0, -1, "BFtol", 0, -1, -1) ; dupla 15 -> slots (3, 4)
-		}
-
-		Event 14
-		{
-			Condition Ko(Junin27, false, -1)
-			Condition Ko(Junin28, false, -1)
-
-			Action CharaSpawn2(Junin31, Junin32, 1, -1, "BFtol", 0, -1, -1) ; dupla 16 -> slots (5, 6)
-		}
-
-		Event 15
-		{
-			Condition Ko(Junin29, false, -1)
-			Condition Ko(Junin30, false, -1)
-
-			Action CharaSpawn2(Junin33, Junin34, 2, -1, "BFtol", 0, -1, -1) ; dupla 17 -> slots (3, 4)
-		}
-
-		Event 16
-		{
-			Condition Ko(Junin31, false, -1)
-			Condition Ko(Junin32, false, -1)
-
-			Action CharaSpawn2(Junin35, Junin36, 0, -1, "BFtol", 0, -1, -1) ; dupla 18 -> slots (5, 6)
-		}
-
-		Event 17
-		{
 			Condition Ko(Junin33, false, -1)
 			Condition Ko(Junin34, false, -1)
-
-			Action CharaSpawn2(Junin37, Junin38, 1, -1, "BFtol", 0, -1, -1) ; dupla 19 -> slots (3, 4)
+ 
+            Action RemoveChara(Junin34, false)
+			Action RemoveChara(Junin33, false)
+			Action CharaSpawn(Junin37, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin38, 2, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin35, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin36, 2, -1, -1, "BFtol", -1)
 		}
 
 		Event 18
@@ -163,7 +86,8 @@ Script
 			Condition Ko(Junin35, false, -1)
 			Condition Ko(Junin36, false, -1)
 
-			Action CharaSpawn2(Junin39, Junin40, 2, -1, "BFtol", 0, -1, -1) ; dupla 20 -> slots (5, 6)
+            Action CharaSpawn(Junin39, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin40, 2, -1, -1, "BFtol", -1)
 		}
 
 		Event 19
@@ -171,7 +95,8 @@ Script
 			Condition Ko(Junin37, false, -1)
 			Condition Ko(Junin38, false, -1)
 
-			Action CharaSpawn2(Junin41, Junin42, 0, -1, "BFtol", 0, -1, -1) ; dupla 21 -> slots (3, 4)
+            Action CharaSpawn(Junin41, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin42, 2, -1, -1, "BFtol", -1)
 		}
 
 		Event 20
@@ -179,111 +104,31 @@ Script
 			Condition Ko(Junin39, false, -1)
 			Condition Ko(Junin40, false, -1)
 
-			Action CharaSpawn2(Junin43, Junin44, 1, -1, "BFtol", 0, -1, -1) ; dupla 22 -> slots (5, 6)
-		}
+			Action CharaSpawn(Junin43, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin44, 2, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin47, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin48, 2, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin49, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin50, 2, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin51, 2, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin52, 2, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin53, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin54, 2, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin55, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin56, 2, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin57, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin58, 2, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin59, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin60, 2, -1, -1, "BFtol", -1)
 
-		Event 21
-		{
-			Condition Ko(Junin41, false, -1)
-			Condition Ko(Junin42, false, -1)
-
-			Action CharaSpawn2(Junin45, Junin46, 2, -1, "BFtol", 0, -1, -1) ; dupla 23 -> slots (3, 4)
-		}
-
-		Event 22
-		{
-			Condition Ko(Junin43, false, -1)
-			Condition Ko(Junin44, false, -1)
-
-			Action CharaSpawn2(Junin47, Junin48, 0, -1, "BFtol", 0, -1, -1) ; dupla 24 -> slots (5, 6)
-		}
-
-		Event 23
-		{
-			Condition Ko(Junin45, false, -1)
-			Condition Ko(Junin46, false, -1)
-
-			Action CharaSpawn2(Junin49, Junin50, 1, -1, "BFtol", 0, -1, -1) ; dupla 25 -> slots (3, 4)
-		}
-
-		Event 24
-		{
-			Condition Ko(Junin47, false, -1)
-			Condition Ko(Junin48, false, -1)
-
-			Action CharaSpawn2(Junin51, Junin52, 2, -1, "BFtol", 0, -1, -1) ; dupla 26 -> slots (5, 6)
-		}
-
-		Event 25
-		{
-			Condition Ko(Junin49, false, -1)
-			Condition Ko(Junin50, false, -1)
-
-			Action CharaSpawn2(Junin53, Junin54, 0, -1, "BFtol", 0, -1, -1) ; dupla 27 -> slots (3, 4)
-		}
-
-		Event 26
-		{
-			Condition Ko(Junin51, false, -1)
-			Condition Ko(Junin52, false, -1)
-
-			Action CharaSpawn2(Junin55, Junin56, 1, -1, "BFtol", 0, -1, -1) ; dupla 28 -> slots (5, 6)
-		}
-
-		Event 27
-		{
-			Condition Ko(Junin53, false, -1)
-			Condition Ko(Junin54, false, -1)
-
-			Action CharaSpawn2(Junin57, Junin58, 2, -1, "BFtol", 0, -1, -1) ; dupla 29 -> slots (3, 4)
-		}
-
-		Event 28
-		{
-			Condition Ko(Junin55, false, -1)
-			Condition Ko(Junin56, false, -1)
-
-			Action CharaSpawn2(Junin59, Junin60, 0, -1, "BFtol", 0, -1, -1) ; dupla 30 -> slots (5, 6)
-		}
-
-		Event 29
-		{
-			Condition Ko(Junin57, false, -1)
-			Condition Ko(Junin58, false, -1)
-
-			Action CharaSpawn2(Junin61, Junin62, 1, -1, "BFtol", 0, -1, -1) ; dupla 31 -> slots (3, 4)
-		}
-
-		Event 30
-		{
-			Condition Ko(Junin59, false, -1)
-			Condition Ko(Junin60, false, -1)
-
-			Action CharaSpawn2(Junin63, Junin64, 2, -1, "BFtol", 0, -1, -1) ; dupla 32 -> slots (5, 6)
-		}
-
-		Event 31
-		{
-			Condition Ko(Junin61, false, -1)
-			Condition Ko(Junin62, false, -1)
-
-			Action CharaSpawn2(Junin65, Junin66, 0, -1, "BFtol", 0, -1, -1) ; dupla 33 -> slots (3, 4)
-		}
-
-		Event 32
-		{
-			Condition Ko(Junin63, false, -1)
-			Condition Ko(Junin64, false, -1)
-
-			Action CharaSpawn2(Junin67, Junin68, 1, -1, "BFtol", 0, -1, -1) ; dupla 34 -> slots (5, 6)
-		}
-
-		Event 33
-		{
-			Condition Ko(Junin65, false, -1)
-			Condition Ko(Junin66, false, -1)
-
-			Action CharaSpawn2(Junin69, Junin70, 2, -1, "BFtol", 0, -1, -1) ; dupla 35 -> slots (3, 4)
+			Action CharaSpawn(Junin61, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin62, 2, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin63, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin64, 2, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin65, 1, -1, -1, "BFtol", -1)
+			Action CharaSpawn(Junin66, 2, -1, -1, "BFtol", -1)	
+            Action CharaSpawn2(Junin67, Junin68, 1, -1, "BFtol", 0, -1, -1) ; dupla 34 -> slots (5, 6)
+            Action CharaSpawn2(Junin69, Junin70, 2, -1, "BFtol", 0, -1, -1) ; dupla 35 -> slots (3, 4)
 		}
 
 		Event 34
@@ -353,6 +198,7 @@ Script
 			Condition Always
 
 			Action CharaSpawn(JuninFuturoEnemy, 2, -1, 20, "BFtol", 0)
+			Action ShowWarning ; -Defeat the Junin of the Future
 			Action GotoState(3)
 		}
 	}
@@ -385,6 +231,30 @@ Script
 			Condition Always
 
 			Action QuestFinishState(COMPLETE)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(FlagExOpen, false)
+
+			Action QuestClear
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(FlagExOpen, true)
+
+			Action GotoState(5)
+		}
+	}
+
+	State 5
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action QuestFinishState(ULTIMATE_FINISH)
 			Action QuestClear
 		}
 	}

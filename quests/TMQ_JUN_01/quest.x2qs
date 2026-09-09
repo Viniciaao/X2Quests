@@ -119,7 +119,7 @@ X2mMod JufSkillGunKiBlast
 TextEntry TMQ_JUN_01_0
 {
 	en: "ONE BILLION JUNINS"
-	pt: "1 BILHÃO DE JUNINS"
+	pt: "1 Bilião de Junins"
 	es: "¡MIL MILLONES DE JUNINS!"
 }
 
@@ -140,7 +140,7 @@ TextEntry TMQ_JUN_01_2
 TextEntry TMQ_JUN_01_3
 {
 	en: "Seventy-six Junins are flooding the Twisted Timespace. They keep coming. Just keep swinging."
-	pt: "Setenta e seis Junins estão invadindo o Espaço-tempo Distorcido. Eles não param de aparecer. Continua batendo."
+	pt: "Setenta e seis Junins estão invadindo o Espaço-tempo Distorcido. Eles não param de aparecer. Continue batendo."
 	es: "Setenta y seis Junins están invadiendo el Espacio-tiempo Distorsionado. No paran de aparecer. Sigue golpeando."
 }
 
@@ -149,6 +149,13 @@ TextEntry TMQ_JUN_01_4
 	en: "-Defeat the Junin of the Future"
 	pt: "-Derrote o Junin do Futuro"
 	es: "-Derrota al Junin del Futuro"
+}
+
+TextEntry TMQ_JUN_01_5
+{
+	en: "-Clear in under 15 minutes"
+	pt: "-Zere em menos de 15 minutos"
+	es: "-Termínala en menos de 15 minutos"
 }
 
 ItemCollection Collection60
@@ -240,7 +247,7 @@ ItemCollection Collection80
 
 Quest TMQ_JUN_01
 {
-	episode: 3 ; textos proprios via TextEntry (nao usa .msg vanilla).
+	episode: 56 ; textos proprios via TextEntry (nao usa .msg vanilla).
 	sub_type: 0
 	num_players: 3
 
@@ -249,6 +256,7 @@ Quest TMQ_JUN_01
 	failure: TMQ_JUN_01_2 ; -All team HP depleted / time expires
 	outline: TMQ_JUN_01_3 ; Seventy-six Junins are flooding the Twisted Timespace.
 	warning: TMQ_JUN_01_4 ; -Defeat the Junin of the Future
+	ex_success: TMQ_JUN_01_5 ; -Clear in under 15 minutes
 
 	i40: 1
 	parent_quest: "TMQ_1400" ; Being a Time Patroller
@@ -270,19 +278,58 @@ Quest TMQ_JUN_01
 
 	time_limit: 1800
 	difficulty: 5
-	level: 85
+	level: 130
 	i112: 0
 	start_stage: "BFtol" ; Twisted Timespace
 	start_demo: 0
 
-	CharPortrait { char: "HUM" costume: 0 i40: 0 i44: 0 }
-	CharPortrait { char: JuninChar costume: 1 i40: 0 i44: 0 }
-	CharPortrait { char: JuninEmoChar costume: 0 i40: 0 i44: 0 }
-	CharPortrait { char: JuninFuturoChar costume: 1 i40: 0 i44: 0 }
+	xp_reward: 26000
+	ult_xp_reward: 45000
+	fail_xp_reward: 8000
+	zeni_reward: 14000
+	ult_zeni_reward: 22000
+	fail_zeni_reward: 7500
+	tp_medals_once: 5
+	tp_medals: 0
+	tp_medals_special: 0
+	resistance_points: 0
 
 	ItemReward { item: Collection60 type: COLLECTION condition: 1 chance: 100 flags: 0 i12: 0 i20: 0 }
 	ItemReward { item: Collection70 type: COLLECTION condition: 0 chance: 100 flags: 0 i12: 0 i20: 0 }
 	ItemReward { item: Collection80 type: COLLECTION condition: 0 chance: 100 flags: 0 i12: 0 i20: 0 }
 	ItemReward { item: 12 type: BATTLE condition: 0 chance: 100 flags: 0 i12: 0 i20: 0 } ; Senzu Bean
 	SkillReward { skill: 330 condition: 1 chance: 100 i12: 0 } ; Taunt
+
+	stages: ("BFtol", -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1) ; Twisted Timespace
+	i192: 1
+
+	CharPortrait { char: "HUM" costume: 0 trans: -1 }
+	CharPortrait { char: JuninChar costume: 1 trans: -1 }
+	CharPortrait { char: JuninEmoChar costume: 0 trans: -1 }
+	CharPortrait { char: JuninFuturoChar costume: 1 trans: -1 }
+	CharPortrait { char: -1 costume: 0 trans: -1 }
+	CharPortrait { char: -1 costume: 0 trans: -1 }
+
+	i232: 0
+	i234: 2
+	i236: 3
+	i238: 4
+	i240: 5
+	i242: 7
+	i244: 0
+	i246: 0
+	i248: 0
+	i250: 0
+	flags: 0x400000
+
+	update_requirement: ANY
+	dlc_requirement: NONE
+
+	i264: 0
+	no_enemy_bgm: 9
+	enemy_near_bgm: 24
+	battle_bgm: 16
+	ultimate_finish_bgm: 14
+	f276: 1.0
+	i280: 0
 }
