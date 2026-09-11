@@ -29,6 +29,11 @@
 ;  a derrota do Juse tem prioridade sobre qualquer outra coisa acontecendo.
 ;
 ;  Outras observacoes:
+;   - Cada conversa inteira e UM bloco Dialogue com varios DialoguePart (como no
+;     vanilla TMQ_4601, que tem blocos de ate 9 partes). PlayDialogue dispara a
+;     cadeia toda e DialogueFinish so vale depois da ultima parte - por isso nao
+;     ha mais events encadeados de DialogueFinish entre as falas.
+;   - O jogador nunca fala: nao existe Dialogue com actor "HUM".
 ;   - CharaSpawn2 usa o retrato do SEGUNDO char na fala, por isso o personagem
 ;     que fala vem sempre em segundo lugar na chamada.
 ;   - SetThereAreEnemies(stage, false) so libera o portal depois que nao ha
@@ -103,31 +108,11 @@ Script
 		{
 			Condition Always
 
-			Action PlayDialogue(DlgJuninEmo1, 1000, "BFkoh", -1); Bro... a gente so pegou emprestado.
+			; Junin nega -> Junin Emo so faz os sons do Saibamen -> Juse "....."
+			Action PlayDialogue(DlgJuninEmoeJunin, 1000, "BFkoh", -1)
 		}
 
 		Event 2
-		{
-			Condition DialogueFinish(DlgJuninEmo1)
-
-			Action PlayDialogue(DlgJunin1, 1000, "BFkoh", -1); Era a ultima gelada da galaxia...
-		}
-
-		Event 3
-		{
-			Condition DialogueFinish(DlgJunin1)
-
-			Action PlayDialogue(DlgPlayer1, 1000, "BFkoh", -1); Voces roubaram a beer do Juse?
-		}
-
-		Event 4
-		{
-			Condition DialogueFinish(DlgPlayer1)
-
-			Action PlayDialogue(DlgJuse1, 1000, "BFkoh", -1); .....
-		}
-
-		Event 5
 		{
 			Condition Ko(JuninEmoEnemy, false, -1); Junin Emo derrotado
 			Condition Ko(JuninEnemy, false, -1); Junin derrotado
@@ -135,17 +120,10 @@ Script
 
 			Action SetFlag(FlagOnda1S1, true)
 			; o Yone vem em 2o porque a fala usa o retrato do segundo char
-			Action CharaSpawn2(YashaEnemy, YoneEnemy, 3, DlgYone1, "BFkoh", 0, -1, -1); Yone + Yasha --- Capsule Corporation
+			Action CharaSpawn2(YashaEnemy, YoneEnemy, 3, DlgYoneYasha, "BFkoh", 0, -1, -1); Yone + Yasha --- Capsule Corporation
 		}
 
-		Event 6
-		{
-			Condition DialogueFinish(DlgYone1)
-
-			Action PlayDialogue(DlgYasha1, 1000, "BFkoh", -1); Relaxa. A beer ja era.
-		}
-
-		Event 7
+		Event 3
 		{
 			Condition Ko(YoneEnemy, false, -1); Yone derrotado
 			Condition Ko(YashaEnemy, false, -1); Yasha derrotado
@@ -153,10 +131,9 @@ Script
 
 			; sem inimigos no stage o portal acende e o jogador vai para BFsky
 			Action SetThereAreEnemies("BFkoh", false); Capsule Corporation
-			Action PlayDialogue(DlgPortal1, 1000, "BFkoh", -1); Eles abriram um portal...
 		}
 
-		Event 8
+		Event 4
 		{
 			Condition InStage(Player, "BFsky", true); West City (Industrial Sector)
 
@@ -182,7 +159,8 @@ Script
 		{
 			Condition Always
 
-			Action PlayDialogue(DlgEzra1, 1000, "BFsky", -1); Voce ta correndo atras da cerveja errada...
+			; o Ezra so grita
+			Action PlayDialogue(DlgEzra1, 1000, "BFsky", -1); AAAAAAAAAAAAAH!
 		}
 
 		Event 2
@@ -192,24 +170,10 @@ Script
 
 			Action SetFlag(FlagOnda2S2, true)
 			; o Ray vem em 2o porque a fala usa o retrato do segundo char
-			Action CharaSpawn2(JuninFuturoEnemy, RayEnemy, 3, DlgRay1, "BFsky", 0, -1, -1); Ray + Junin do Futuro --- West City (Industrial Sector)
+			Action CharaSpawn2(JuninFuturoEnemy, RayEnemy, 3, DlgRayJuf, "BFsky", 0, -1, -1); Ray + Junin do Futuro --- West City (Industrial Sector)
 		}
 
 		Event 3
-		{
-			Condition DialogueFinish(DlgRay1)
-
-			Action PlayDialogue(DlgJuf1, 1000, "BFsky", -1); No meu futuro a beer nunca foi devolvida.
-		}
-
-		Event 4
-		{
-			Condition DialogueFinish(DlgJuf1)
-
-			Action PlayDialogue(DlgJuse2, 1000, "BFsky", -1); .....
-		}
-
-		Event 5
 		{
 			Condition Ko(RayEnemy, false, -1); Ray derrotado
 			Condition Ko(JuninFuturoEnemy, false, -1); Junin do Futuro derrotado
@@ -218,7 +182,7 @@ Script
 			Action SetThereAreEnemies("BFsky", false); West City (Industrial Sector)
 		}
 
-		Event 6
+		Event 4
 		{
 			Condition InStage(Player, "BFspe", true); West City (Suburbs)
 
@@ -254,24 +218,11 @@ Script
 
 			Action SetFlag(FlagOnda2S3, true)
 			; o Dimitztri vem em 2o porque a fala usa o retrato do segundo char
+			; a conversa inteira (Dimitztri -> Juse "....." -> Ze do Morro) esta no bloco
 			Action CharaSpawn2(ZeMorroEnemy, DimitztriEnemy, 3, DlgBctIntro, "BFspe", 0, -1, -1); Ze do Morro + Dimitztri (lv 150) --- West City (Suburbs)
 		}
 
 		Event 3
-		{
-			Condition DialogueFinish(DlgBctIntro); Juse, se acalme! Ninguem sabe onde esta isso ai
-
-			Action PlayDialogue(DlgJuse3, 1000, "BFspe", -1); .....
-		}
-
-		Event 4
-		{
-			Condition DialogueFinish(DlgJuse3)
-
-			Action PlayDialogue(DlgZem1, 1000, "BFspe", -1); Esquece, ele nao da ouvidos
-		}
-
-		Event 5
 		{
 			Condition Ko(ZeMorroEnemy, false, -1); Ze do Morro derrotado
 			Condition Ko(DimitztriEnemy, false, -1); Dimitztri derrotado
@@ -282,7 +233,7 @@ Script
 			Action PlayDialogue(DlgJuseFim, 1000, "BFspe", -1); .....
 		}
 
-		Event 6
+		Event 4
 		{
 			Condition DialogueFinish(DlgJuseFim)
 
@@ -369,33 +320,12 @@ Script
 			; o Vini Pai vem em 2o porque a fala usa o retrato do segundo char
 			Action CharaSpawn2(ViniJrAlly, ViniAlly, 4, DlgVini1, "BFspe", 0, -1, -1); Vini Pai + Vini Jr --- West City (Suburbs)
 			; o Juse chefe passa a olhar so pro Vini Jr (a piada do "olhos profundos")
-			; se o alvo nao pegar, mova esta linha pro Event 1 (depois que eles ja
-			; estiverem em campo)
+			; se o alvo nao pegar, mova esta linha para um event novo logo depois
+			; deste (quando os dois ja estiverem em campo)
 			Action SetAttackTarget(JuseEnemy, ViniJrAlly, true)
 		}
 
 		Event 1
-		{
-			Condition DialogueFinish(DlgVini1); Parece que voce esta em problemas...
-
-			Action PlayDialogue(DlgVjr1, 1000, "BFspe", -1); Pra tras, meu pai e eu vamos cuidar disso
-		}
-
-		Event 2
-		{
-			Condition DialogueFinish(DlgVjr1)
-
-			Action PlayDialogue(DlgJuse4, 1000, "BFspe", -1); ....
-		}
-
-		Event 3
-		{
-			Condition DialogueFinish(DlgJuse4)
-
-			Action PlayDialogue(DlgVjr2, 1000, "BFspe", -1); Pai, ele ta me olhando com aqueles olhos profundos...
-		}
-
-		Event 4
 		{
 			; os dois cairam: chegam o Luis (Rykan) e a Shinya
 			Condition CheckFlag(FlagVini, true)
@@ -405,24 +335,11 @@ Script
 
 			Action SetFlag(FlagLui, true)
 			; o Luis vem em 2o porque a fala usa o retrato do segundo char
+			; a conversa inteira (Luis -> Shinya -> Juse ".....") esta no bloco
 			Action CharaSpawn2(ShinyaAlly, LuiAlly, 5, DlgLui1, "BFspe", 0, -1, -1); Luis + Shinya --- West City (Suburbs)
 		}
 
-		Event 5
-		{
-			Condition DialogueFinish(DlgLui1); Vini!, n-nao!
-
-			Action PlayDialogue(DlgShinya1, 1000, "BFspe", -1); Sem drama idiota!, eles estao vivos. eu acho...
-		}
-
-		Event 6
-		{
-			Condition DialogueFinish(DlgShinya1)
-
-			Action PlayDialogue(DlgJuse5, 1000, "BFspe", -1); .....
-		}
-
-		Event 7
+		Event 2
 		{
 			Condition Ko(JuseEnemy, false, -1); Juse derrotado
 
@@ -459,32 +376,19 @@ Script
 		{
 			Condition CheckFlag(FlagJuseTaunts, true) ; Dimitztri vivo: deixa ele falar
 
-			Action PlayDialogue(DlgBctTaunt1, 1000, "BFspe", -1); Eu disse Juse, voce deveria ter me escutado..
+			; as tres provocacoes estao num unico bloco de 3 partes
+			Action PlayDialogue(DlgBctTaunts, 1000, "BFspe", -1)
 		}
 
 		Event 1
 		{
-			Condition DialogueFinish(DlgBctTaunt1)
-
-			Action PlayDialogue(DlgBctTaunt2, 1000, "BFspe", -1); Agora olha pro 'ce... que humilhante.
-		}
-
-		Event 2
-		{
-			Condition DialogueFinish(DlgBctTaunt2)
-
-			Action PlayDialogue(DlgBctTaunt3, 1000, "BFspe", -1); Mas voce vem trabalhar amanha, ne?
-		}
-
-		Event 3
-		{
-			Condition DialogueFinish(DlgBctTaunt3) ; so agora vem a tela de resultados
+			Condition DialogueFinish(DlgBctTaunts) ; so agora vem a tela de resultados
 
 			Action QuestFinishState(FAIL)
 			Action QuestClear
 		}
 
-		Event 4
+		Event 2
 		{
 			Condition CheckFlag(FlagJuseTaunts, false) ; sem Dimitztri: resultado direto
 

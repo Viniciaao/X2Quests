@@ -79,11 +79,12 @@ State 0  init: 6 PortalControl (2 por par), SetThereAreEnemies nos 3 stages,
                SetFlag(FlagFast, true), InitQuest → BattleModeStart → State 1
 
 State 1  BFkoh   onda 1 (nascem com o stage): Junin Emo + Junin
+                 fala: Junin nega → Junin Emo só faz sons de Saibamen → Juse "....."
                  os dois caem → CharaSpawn2 Yasha + Yone
                  os dois caem → SetThereAreEnemies(BFkoh, false)  ← portal acende
                  InStage(Player, "BFsky") → State 2
 
-State 2  BFsky   Ezra (nasce com o stage)
+State 2  BFsky   Ezra (nasce com o stage) - só grita "AAAAAAAAAAAAAH!"
                  Ezra cai → CharaSpawn2 JuninFuturo + Ray
                  os dois caem → SetThereAreEnemies(BFsky, false)
                  InStage(Player, "BFspe") → State 3
@@ -113,8 +114,9 @@ State 6  PlayerHealth(<=, 20.0) → CharaSpawn2 ViniJr + Vini Pai
 State 7  QuestFinishState(ULTIMATE_FINISH) → QuestClear
 
 State 8  FALHA - o Juse aliado caiu ( States 1..4 mandam pra cá )
-         FlagJuseTaunts true  → as 3 falas do Dimitztri, uma por DialogueFinish,
-                                e só no fim QuestFinishState(FAIL) + QuestClear
+         FlagJuseTaunts true  → DlgBctTaunts (as 3 provocações num bloco só) e
+                                só no DialogueFinish dele QuestFinishState(FAIL)
+                                + QuestClear
          FlagJuseTaunts false → QuestFinishState(FAIL) + QuestClear na hora
 
 script1  vigia: TimePassed(>=, 600.0)                  → SetFlag(FlagFast, false)
@@ -207,32 +209,52 @@ O `QxdChar` do X2QS **não tem multiplicador de dano recebido** — os campos
 
 ## 5. As falas
 
-27 falas em `pt` / `en` / `es`, todas com `voice: ""` (legenda sem dublagem).
-Os textos ficam em `dialogue.x2qs` — é só editar lá.
+**25 falas em 11 blocos `Dialogue`**, em `pt` / `en` / `es`, todas com
+`voice: ""` (legenda sem dublagem). Os textos ficam em `dialogue.x2qs` — é só
+editar lá.
 
-**Regra dura: o Juse nunca fala.** As 7 falas dele são só reticências —
-`"...."`, `"....."` e `"......."` — e nada mais. Todos os outros personagens
-falam: Junin Emo, Junin, o jogador, Yone, Yasha, Ezra, Ray, Junin do Futuro,
-Dan, Zé do Morro, Dimitztri, Vini Pai, Vini Jr, Luis e Shinya.
+**Cada conversa inteira é UM bloco `Dialogue` com vários `DialoguePart`**, como
+faz o vanilla (o `TMQ_4601` tem blocos de até 9 partes). `PlayDialogue` dispara
+a cadeia toda e `DialogueFinish` só vale depois da **última** parte — por isso o
+script não tem mais aquele encadeamento de events
+`DialogueFinish(A) → PlayDialogue(B)`.
+
+Três regras de roteiro:
+
+* **O Juse nunca fala.** As 7 falas dele são só reticências (`"...."`,
+  `"....."`, `"......."`) — e nada mais.
+* **O jogador nunca fala.** Não existe nenhuma `DialoguePart` com o actor do
+  player (as duas falas que existiam, `DlgPlayer1` e `DlgPortal1`, foram
+  apagadas).
+* **O Junin Emo não fala**: ele faz os **sons do Saibamen**. E o **Ezra só
+  grita** — `"AAAAAAAAAAAAAH!"`, nenhuma fala a mais.
 
 Quem mais fala é o **Dimitztri** (4): a chegada dele no stage 3 e as três
 provocações da falha.
 
-| Momento | Falas |
-| --- | --- |
-| Dimitztri entra (stage 3) | `BCT` "Juse, se acalme! Ninguém sabe onde está isso aí." → `JUS` `"....."` → `ZEM` "Esquece, ele não dá ouvidos." |
-| Juse cai com o Dimitztri vivo | `BCT` "Eu disse Juse, você deveria ter me escutado.." → "Agora olha pro 'cê... que humilhante." → "Mas você vem trabalhar amanhã, né?" → **só então** a tela de resultados |
-| Vini Pai e Vini Jr entram | `VIP` "Parece que você está em problemas..." → `VJR` "Pra trás, meu pai e eu vamos cuidar disso" → `JUS` `"...."` → `VJR` "Pai, ele ta me olhando com aqueles olhos profundos... me da arrepios" |
-| Luis e Shinya entram | `LUI` "Vini!, n-não!" → `NFT` "Sem drama idiota!, eles estão vivos. eu acho..." → `JUS` `"....."` |
+| Onde | Bloco | Partes | Falas |
+| --- | --- | --- | --- |
+| 1 · onda 1 | `DlgJuninEmoeJunin` | 3 | `JUN` "Não fui em cara, te juro." → `JUE` "**Sons de Saibamen**" → `JUS` "....." |
+| 1 · onda 2 | `DlgYoneYasha` | 2 | `S4P` "A gente não roubou. Foi uma transferência de patrimônio etílico." → `YAS` "Relaxa. A beer já era. O que sobrou foi o cheiro." |
+| 2 · solo | `DlgEzra1` | 1 | `CU1` "AAAAAAAAAAAAAH!" |
+| 2 · onda 2 | `DlgRayJuf` | 3 | `RAY` "A linha do tempo inteira bebeu dessa garrafa. Não sobrou gole pra ninguém." → `JUF` "No meu futuro a beer nunca foi devolvida. E eu vim garantir que continue assim." → `JUS` "....." |
+| 3 · solo | `DlgDan1` | 1 | `PU2` "Majin Mau bebeu. Majin Mau gostou. Majin Mau NÃO devolve." |
+| 3 · onda 2 | `DlgBctIntro` | 3 | `BCT` "Juse, se acalme! Ninguém sabe onde está isso aí." → `JUS` "....." → `ZEM` "Esquece, ele não dá ouvidos." |
+| 3 · fim | `DlgJuseFim` | 1 | `JUS` "....." |
+| bônus · Juse volta | `DlgJuseBonus` | 1 | `JUS` "......." |
+| bônus · reforço 1 | `DlgVini1` | 4 | `VIP` "Parece que você está em problemas..." → `VJR` "Pra trás, meu pai e eu vamos cuidar disso" → `JUS` "...." → `VJR` "Pai, ele ta me olhando com aqueles olhos profundos... me da arrepios" |
+| bônus · reforço 2 | `DlgLui1` | 3 | `LUI` "Vini!, n-não!" → `NFT` "Sem drama idiota!, eles estão vivos. eu acho..." → `JUS` "....." |
+| falha | `DlgBctTaunts` | 3 | `BCT` "Eu disse Juse, você deveria ter me escutado.." → `BCT` "Agora olha pro 'cê... que humilhante." → `BCT` "Mas você vem trabalhar amanhã, né?" |
 
 A última provocação do Dimitztri é de propósito: a Super Soul do Juse é
 *"[JUS SS]Tenho que trabaia amanhã!"*. E o "olhos profundos" do Vini Jr não é
 só texto — quando os dois entram, `SetAttackTarget(JuseEnemy, ViniJrAlly, true)`
 joga o alvo do Juse chefe pra ele.
 
-O `actor:` de cada fala usa o ENTRY_NAME do mod (ex.: `actor: "JUS"`). O
+O `actor:` de cada parte usa o ENTRY_NAME do mod (ex.: `actor: "JUS"`). O
 retrato só aparece se o mod daquele personagem estiver instalado — que é
-exatamente o que a dependência `X2mMod` garante.
+exatamente o que a dependência `X2mMod` garante. Dentro de um bloco cada
+`DialoguePart` leva o próprio actor, então o retrato troca a cada fala.
 
 ## 6. Como instalar
 
@@ -340,6 +362,17 @@ Aqui só roda o linter — nada foi testado dentro do DBXV2.
     `QxdChar`. Ficam de fora por falta de slot: `JUF`, `PU2`, `ZEM`, `BCT` e o
     `JUS` chefe. *Onde o jogo desenha esses retratos eu não testei — a regra vem
     do corpus.*
+12. **Bloco de várias partes dentro do `CharaSpawn2`.** `PlayDialogue` com um
+    `Dialogue` de várias partes é vanilla puro (o `TMQ_4601` dispara o
+    `Dialogue5`, de 7 partes, assim). Mas passar um bloco multi-partes no 4º
+    parâmetro do `CharaSpawn2` **não tem precedente no corpus**: as 5 outras
+    chamadas vanilla usam `-1` e a única que passa um `Dialogue` passa um de 1
+    parte (`TMQ_0101`). Se alguma fala de entrada não aparecer, é só trocar o 4º
+    parâmetro por `-1` e acrescentar um `PlayDialogue(Dlg…, 1000, "stage", -1)`
+    num event logo depois do spawn.
+13. **`"**Sons de Saibamen**"` foi gravado com os asteriscos.** Foi pedido assim,
+    então ficou literal — se os `**` aparecerem na legenda do jogo, é trocar por
+    `(sons de Saibamen)` ou por um `"Gyaaah!"`.
 
 **Decisões já confirmadas pelo autor**
 

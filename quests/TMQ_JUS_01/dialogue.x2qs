@@ -2,32 +2,29 @@
 ;  TMQ_JUS_01 - falas.
 ;
 ;  REGRA: o Juse NUNCA fala. As unicas falas dele sao "....." e ".......".
+;  REGRA: o jogador NUNCA fala. Nao existe DialoguePart com o actor do player.
 ;  voice: "" = legenda sem audio dublado.
 ;  actor: usa o ENTRY_NAME do mod (JUS/JUE/...) garantido pelos X2mMod do
 ;  quest.x2qs - o retrato so aparece com o mod do personagem instalado.
+;
+;  Cada conversa inteira fica em UM bloco Dialogue com varios DialoguePart,
+;  como faz o vanilla (TMQ_4601 tem blocos de ate 9 partes). PlayDialogue
+;  dispara a cadeia toda e DialogueFinish so vale depois da ultima parte.
 ; ===========================================================================
-
-TextAudioEntry TxtDlgJuninEmo1
-{
-	en: "Bro... we only borrowed it. Forever."
-	pt: "Bro... a gente só pegou emprestado. Pra sempre."
-	es: "Hermano... solo la tomamos prestada. Para siempre."
-	voice: ""
-}
 
 TextAudioEntry TxtDlgJunin1
 {
-	en: "It was the last cold one in the galaxy and Juse wasn't looking. His own fault."
-	pt: "Era a última gelada da galáxia e o Juse não tava olhando. A culpa é dele."
-	es: "Era la última fría de la galaxia y Juse no estaba mirando. La culpa es suya."
+	en: "It wasn't me, man, I swear."
+	pt: "Não fui em cara, te juro."
+	es: "No fui yo, te lo juro."
 	voice: ""
 }
 
-TextAudioEntry TxtDlgPlayer1
+TextAudioEntry TxtDlgJuninEmo1
 {
-	en: "You stole Juse's beer? He won't say a word, but you can feel the rage from here."
-	pt: "Vocês roubaram a beer do Juse? Ele não fala nada, mas dá pra sentir a raiva daqui."
-	es: "¿Se robaron la cerveza de Juse? Él no dice nada, pero se siente la rabia desde acá."
+	en: "**Saibaman sounds**"
+	pt: "**Sons de Saibamen**"
+	es: "**Sonidos de Saibaman**"
 	voice: ""
 }
 
@@ -55,19 +52,11 @@ TextAudioEntry TxtDlgYasha1
 	voice: ""
 }
 
-TextAudioEntry TxtDlgPortal1
-{
-	en: "They opened a portal to the Industrial Sector. After them!"
-	pt: "Eles abriram um portal pro Setor Industrial. Atrás deles!"
-	es: "Abrieron un portal al Sector Industrial. ¡Tras ellos!"
-	voice: ""
-}
-
 TextAudioEntry TxtDlgEzra1
 {
-	en: "You're chasing the wrong beer, kid. This one has been mine from the start."
-	pt: "Você tá correndo atrás da cerveja errada, garoto. Essa aqui é minha desde o começo."
-	es: "Estás persiguiendo la cerveza equivocada, chico. Esta es mía desde el principio."
+	en: "AAAAAAAAAAAAAH!"
+	pt: "AAAAAAAAAAAAAH!"
+	es: "AAAAAAAAAAAAAH!"
 	voice: ""
 }
 
@@ -103,14 +92,6 @@ TextAudioEntry TxtDlgDan1
 	voice: ""
 }
 
-TextAudioEntry TxtDlgZem1
-{
-	en: "Forget it, he won't listen."
-	pt: "Esquece, ele não dá ouvidos."
-	es: "Olvídalo, no escucha a nadie."
-	voice: ""
-}
-
 TextAudioEntry TxtDlgBctIntro
 {
 	en: "Juse, calm down! Nobody knows where that thing is."
@@ -127,27 +108,11 @@ TextAudioEntry TxtDlgJuse3
 	voice: ""
 }
 
-TextAudioEntry TxtDlgBctTaunt1
+TextAudioEntry TxtDlgZem1
 {
-	en: "I told you, Juse. You should have listened to me.."
-	pt: "Eu disse Juse, você deveria ter me escutado.."
-	es: "Te lo dije, Juse. Deberías haberme escuchado.."
-	voice: ""
-}
-
-TextAudioEntry TxtDlgBctTaunt2
-{
-	en: "Now look at you... how humiliating."
-	pt: "Agora olha pro 'cê... que humilhante."
-	es: "Ahora mírate... qué humillante."
-	voice: ""
-}
-
-TextAudioEntry TxtDlgBctTaunt3
-{
-	en: "But you're still coming in to work tomorrow, right?"
-	pt: "Mas você vem trabalhar amanhã, né?"
-	es: "Pero mañana vienes a trabajar, ¿no?"
+	en: "Forget it, he won't listen."
+	pt: "Esquece, ele não dá ouvidos."
+	es: "Olvídalo, no escucha a nadie."
 	voice: ""
 }
 
@@ -183,22 +148,6 @@ TextAudioEntry TxtDlgVjr1
 	voice: ""
 }
 
-TextAudioEntry TxtDlgLui1
-{
-	en: "Vini! N-no!"
-	pt: "Vini!, n-não!"
-	es: "¡Vini!, ¡n-no!"
-	voice: ""
-}
-
-TextAudioEntry TxtDlgShinya1
-{
-	en: "Cut the drama, idiot! They're alive. I think..."
-	pt: "Sem drama idiota!, eles estão vivos. eu acho..."
-	es: "¡Sin drama, idiota!, están vivos. Eso creo..."
-	voice: ""
-}
-
 TextAudioEntry TxtDlgJuse4
 {
 	en: "...."
@@ -215,6 +164,22 @@ TextAudioEntry TxtDlgVjr2
 	voice: ""
 }
 
+TextAudioEntry TxtDlgLui1
+{
+	en: "Vini! N-no!"
+	pt: "Vini!, n-não!"
+	es: "¡Vini!, ¡n-no!"
+	voice: ""
+}
+
+TextAudioEntry TxtDlgShinya1
+{
+	en: "Cut the drama, idiot! They're alive. I think..."
+	pt: "Sem drama idiota!, eles estão vivos. eu acho..."
+	es: "¡Sin drama, idiota!, están vivos. Eso creo..."
+	voice: ""
+}
+
 TextAudioEntry TxtDlgJuse5
 {
 	en: "....."
@@ -223,9 +188,48 @@ TextAudioEntry TxtDlgJuse5
 	voice: ""
 }
 
-Dialogue DlgJuninEmo1
+TextAudioEntry TxtDlgBctTaunt1
+{
+	en: "I told you, Juse. You should have listened to me.."
+	pt: "Eu disse Juse, você deveria ter me escutado.."
+	es: "Te lo dije, Juse. Deberías haberme escuchado.."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgBctTaunt2
+{
+	en: "Now look at you... how humiliating."
+	pt: "Agora olha pro 'cê... que humilhante."
+	es: "Ahora mírate... qué humillante."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgBctTaunt3
+{
+	en: "But you're still coming in to work tomorrow, right?"
+	pt: "Mas você vem trabalhar amanhã, né?"
+	es: "Pero mañana vienes a trabajar, ¿no?"
+	voice: ""
+}
+
+; ---------------------------------------------------------------------------
+;  Stage 1 - BFkoh (Capsule Corporation)
+; ---------------------------------------------------------------------------
+
+Dialogue DlgJuninEmoeJunin
 {
 	i28: 0
+
+	; o Junin jura que nao foi, o Junin Emo so faz os sons do Saibamen
+	DialoguePart
+	{
+		actor: "JUN"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgJunin1
+		i8: 0
+	}
 
 	DialoguePart
 	{
@@ -236,41 +240,6 @@ Dialogue DlgJuninEmo1
 		text_audio: TxtDlgJuninEmo1
 		i8: 0
 	}
-}
-
-Dialogue DlgJunin1
-{
-	i28: 0
-
-	DialoguePart
-	{
-		actor: "JUN"
-		costume: -1
-		transformation: -1
-
-		text_audio: TxtDlgJunin1
-		i8: 0
-	}
-}
-
-Dialogue DlgPlayer1
-{
-	i28: 0
-
-	DialoguePart
-	{
-		actor: "HUM"
-		costume: -1
-		transformation: -1
-
-		text_audio: TxtDlgPlayer1
-		i8: 0
-	}
-}
-
-Dialogue DlgJuse1
-{
-	i28: 0
 
 	DialoguePart
 	{
@@ -283,7 +252,7 @@ Dialogue DlgJuse1
 	}
 }
 
-Dialogue DlgYone1
+Dialogue DlgYoneYasha
 {
 	i28: 0
 
@@ -296,11 +265,6 @@ Dialogue DlgYone1
 		text_audio: TxtDlgYone1
 		i8: 0
 	}
-}
-
-Dialogue DlgYasha1
-{
-	i28: 0
 
 	DialoguePart
 	{
@@ -313,25 +277,15 @@ Dialogue DlgYasha1
 	}
 }
 
-Dialogue DlgPortal1
-{
-	i28: 0
-
-	DialoguePart
-	{
-		actor: "HUM"
-		costume: -1
-		transformation: -1
-
-		text_audio: TxtDlgPortal1
-		i8: 0
-	}
-}
+; ---------------------------------------------------------------------------
+;  Stage 2 - BFsky (West City / Industrial Sector)
+; ---------------------------------------------------------------------------
 
 Dialogue DlgEzra1
 {
 	i28: 0
 
+	; o Ezra so grita, nao fala mais nada
 	DialoguePart
 	{
 		actor: "CU1"
@@ -343,7 +297,7 @@ Dialogue DlgEzra1
 	}
 }
 
-Dialogue DlgRay1
+Dialogue DlgRayJuf
 {
 	i28: 0
 
@@ -356,11 +310,6 @@ Dialogue DlgRay1
 		text_audio: TxtDlgRay1
 		i8: 0
 	}
-}
-
-Dialogue DlgJuf1
-{
-	i28: 0
 
 	DialoguePart
 	{
@@ -371,11 +320,6 @@ Dialogue DlgJuf1
 		text_audio: TxtDlgJuf1
 		i8: 0
 	}
-}
-
-Dialogue DlgJuse2
-{
-	i28: 0
 
 	DialoguePart
 	{
@@ -388,6 +332,10 @@ Dialogue DlgJuse2
 	}
 }
 
+; ---------------------------------------------------------------------------
+;  Stage 3 - BFspe (West City / Suburbs)
+; ---------------------------------------------------------------------------
+
 Dialogue DlgDan1
 {
 	i28: 0
@@ -399,21 +347,6 @@ Dialogue DlgDan1
 		transformation: -1
 
 		text_audio: TxtDlgDan1
-		i8: 0
-	}
-}
-
-Dialogue DlgZem1
-{
-	i28: 0
-
-	DialoguePart
-	{
-		actor: "ZEM"
-		costume: -1
-		transformation: -1
-
-		text_audio: TxtDlgZem1
 		i8: 0
 	}
 }
@@ -431,11 +364,6 @@ Dialogue DlgBctIntro
 		text_audio: TxtDlgBctIntro
 		i8: 0
 	}
-}
-
-Dialogue DlgJuse3
-{
-	i28: 0
 
 	DialoguePart
 	{
@@ -446,49 +374,14 @@ Dialogue DlgJuse3
 		text_audio: TxtDlgJuse3
 		i8: 0
 	}
-}
-
-Dialogue DlgBctTaunt1
-{
-	i28: 0
 
 	DialoguePart
 	{
-		actor: "BCT"
+		actor: "ZEM"
 		costume: -1
 		transformation: -1
 
-		text_audio: TxtDlgBctTaunt1
-		i8: 0
-	}
-}
-
-Dialogue DlgBctTaunt2
-{
-	i28: 0
-
-	DialoguePart
-	{
-		actor: "BCT"
-		costume: -1
-		transformation: -1
-
-		text_audio: TxtDlgBctTaunt2
-		i8: 0
-	}
-}
-
-Dialogue DlgBctTaunt3
-{
-	i28: 0
-
-	DialoguePart
-	{
-		actor: "BCT"
-		costume: -1
-		transformation: -1
-
-		text_audio: TxtDlgBctTaunt3
+		text_audio: TxtDlgZem1
 		i8: 0
 	}
 }
@@ -497,6 +390,7 @@ Dialogue DlgJuseFim
 {
 	i28: 0
 
+	; a missao termina na "fala" do Juse
 	DialoguePart
 	{
 		actor: "JUS"
@@ -512,6 +406,7 @@ Dialogue DlgJuseBonus
 {
 	i28: 0
 
+	; o Juse volta como inimigo
 	DialoguePart
 	{
 		actor: "JUS"
@@ -522,6 +417,10 @@ Dialogue DlgJuseBonus
 		i8: 0
 	}
 }
+
+; ---------------------------------------------------------------------------
+;  Bonus - reforcos
+; ---------------------------------------------------------------------------
 
 Dialogue DlgVini1
 {
@@ -536,11 +435,6 @@ Dialogue DlgVini1
 		text_audio: TxtDlgVini1
 		i8: 0
 	}
-}
-
-Dialogue DlgVjr1
-{
-	i28: 0
 
 	DialoguePart
 	{
@@ -549,6 +443,26 @@ Dialogue DlgVjr1
 		transformation: -1
 
 		text_audio: TxtDlgVjr1
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "JUS"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgJuse4
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "VJR"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgVjr2
 		i8: 0
 	}
 }
@@ -566,11 +480,6 @@ Dialogue DlgLui1
 		text_audio: TxtDlgLui1
 		i8: 0
 	}
-}
-
-Dialogue DlgShinya1
-{
-	i28: 0
 
 	DialoguePart
 	{
@@ -581,41 +490,6 @@ Dialogue DlgShinya1
 		text_audio: TxtDlgShinya1
 		i8: 0
 	}
-}
-
-Dialogue DlgJuse4
-{
-	i28: 0
-
-	DialoguePart
-	{
-		actor: "JUS"
-		costume: -1
-		transformation: -1
-
-		text_audio: TxtDlgJuse4
-		i8: 0
-	}
-}
-
-Dialogue DlgVjr2
-{
-	i28: 0
-
-	DialoguePart
-	{
-		actor: "VJR"
-		costume: -1
-		transformation: -1
-
-		text_audio: TxtDlgVjr2
-		i8: 0
-	}
-}
-
-Dialogue DlgJuse5
-{
-	i28: 0
 
 	DialoguePart
 	{
@@ -624,6 +498,45 @@ Dialogue DlgJuse5
 		transformation: -1
 
 		text_audio: TxtDlgJuse5
+		i8: 0
+	}
+}
+
+; ---------------------------------------------------------------------------
+;  Falha - as provocacoes do Dimitztri antes da tela de resultados
+; ---------------------------------------------------------------------------
+
+Dialogue DlgBctTaunts
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "BCT"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgBctTaunt1
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "BCT"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgBctTaunt2
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "BCT"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgBctTaunt3
 		i8: 0
 	}
 }
