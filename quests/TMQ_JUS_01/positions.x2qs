@@ -1,0 +1,104 @@
+; ===========================================================================
+;  TMQ_JUS_01 - posicoes iniciais (so para quem nasce com spawn_at_start).
+;  Quem entra por CharaSpawn/CharaSpawn2 usa o TRESPASS_N passado na acao.
+; ===========================================================================
+
+CharPosition PlayerPosition
+{
+	char: Player
+	stage: "BFkoh" ; Capsule Corporation
+	position: "QUEST_0304_POS_00"
+	type: 3
+	i40: 0
+	i50: 0
+}
+
+CharPosition Player2Position
+{
+	char: Player2
+	stage: "BFkoh" ; Capsule Corporation
+	position: "QUEST_0304_POS_01"
+	type: 3
+	i40: 0
+	i50: 0
+}
+
+CharPosition Player3Position
+{
+	char: Player3
+	stage: "BFkoh" ; Capsule Corporation
+	position: "QUEST_0304_POS_02"
+	type: 3
+	i40: 0
+	i50: 0
+}
+
+CharPosition JuseAllyS1Position
+{
+	char: JuseAllyS1
+	stage: "BFkoh" ; Capsule Corporation
+	position: "MSTSPASS_0"
+	type: 3
+	i40: 0
+	i50: 0
+}
+
+CharPosition JuninEmoEnemyPosition
+{
+	char: JuninEmoEnemy
+	stage: "BFkoh" ; Capsule Corporation
+	position: "QUEST_0304_POS_00"
+	type: 2
+	i40: 0
+	i50: 0
+}
+
+CharPosition JuninEnemyPosition
+{
+	char: JuninEnemy
+	stage: "BFkoh" ; Capsule Corporation
+	position: "QUEST_0304_POS_01"
+	type: 2
+	i40: 0
+	i50: 0
+}
+
+CharPosition JuseAllyS2Position
+{
+	char: JuseAllyS2
+	stage: "BFsky" ; West City (Industrial Sector)
+	position: "MSTSPASS_0"
+	type: 3
+	i40: 0
+	i50: 0
+}
+
+CharPosition EzraEnemyPosition
+{
+	char: EzraEnemy
+	stage: "BFsky" ; West City (Industrial Sector)
+	position: "QUEST_0304_POS_00"
+	type: 2
+	i40: 0
+	i50: 0
+}
+
+CharPosition JuseAllyS3Position
+{
+	char: JuseAllyS3
+	stage: "BFspe" ; West City (Suburbs)
+	position: "MSTSPASS_0"
+	type: 3
+	i40: 0
+	i50: 0
+}
+
+CharPosition DanEnemyPosition
+{
+	char: DanEnemy
+	stage: "BFspe" ; West City (Suburbs)
+	position: "QUEST_0304_POS_00"
+	type: 2
+	i40: 0
+	i50: 0
+}

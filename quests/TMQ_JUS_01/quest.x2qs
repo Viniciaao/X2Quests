@@ -1,0 +1,778 @@
+; ===========================================================================
+;  TMQ_JUS_01 - DEVOLVA MINHA BEER!   (Parallel Quest, 3 stages + bonus)
+;
+;  Stage 1  BFkoh  Junin Emo + Junin      -> Yone + Yasha     -> portal
+;  Stage 2  BFsky  Ezra                   -> Ray + Junin Fut. -> portal
+;  Stage 3  BFspe  Dan Majin Mau          -> Ze do Morro + Dimitztri -> fim
+;  Bonus    BFspe  (terminar em < 10 min) Juse sai do time, 5s de silencio,
+;                   aviso na tela e o Juse volta COMO INIMIGO (lv 180).
+;                   Vida <= 20%  -> Vini Pai + Vini Jr entram no time.
+;                   Os dois caem -> Luis (Rykan) + Shinya entram no time.
+; ===========================================================================
+
+ItemCollection Collection60
+{
+	ItemCollectionEntry { item: 0 type: MATERIAL i6: 1 i8: 2 i10: 0 } ; Small Mix Capsule
+	ItemCollectionEntry { item: 1 type: MATERIAL i6: 1 i8: 1 i10: 0 } ; Med. Mix Capsule
+	ItemCollectionEntry { item: 2 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; High Mix Capsule
+	ItemCollectionEntry { item: 3 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Ultimate Mix Capsule
+	ItemCollectionEntry { item: 4 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Energy Shard
+	ItemCollectionEntry { item: 5 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Energy Crystal
+	ItemCollectionEntry { item: 6 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Energy Shard
+	ItemCollectionEntry { item: 7 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Energy Crystal
+	ItemCollectionEntry { item: 8 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Shard
+	ItemCollectionEntry { item: 9 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Crystal
+	ItemCollectionEntry { item: 10 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Shard
+	ItemCollectionEntry { item: 11 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Crystal
+	ItemCollectionEntry { item: 12 type: MATERIAL i6: 1 i8: 5 i10: 0 } ; Aura Shard
+	ItemCollectionEntry { item: 13 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Aura Crystal
+	ItemCollectionEntry { item: 14 type: MATERIAL i6: 1 i8: 2 i10: 0 } ; All-Aura Shard
+	ItemCollectionEntry { item: 15 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Aura Crystal
+	ItemCollectionEntry { item: 16 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Guard Shard
+	ItemCollectionEntry { item: 17 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Guard Crystal
+	ItemCollectionEntry { item: 18 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Guard Shard
+	ItemCollectionEntry { item: 19 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Guard Crystal
+	ItemCollectionEntry { item: 20 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Drop
+	ItemCollectionEntry { item: 21 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Essence
+	ItemCollectionEntry { item: 22 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Drop
+	ItemCollectionEntry { item: 23 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Essence
+	ItemCollectionEntry { item: 24 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Senzu Beansprout
+}
+
+ItemCollection Collection70
+{
+	ItemCollectionEntry { item: 0 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Small Mix Capsule
+	ItemCollectionEntry { item: 1 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Med. Mix Capsule
+	ItemCollectionEntry { item: 2 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; High Mix Capsule
+	ItemCollectionEntry { item: 3 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Ultimate Mix Capsule
+	ItemCollectionEntry { item: 4 type: MATERIAL i6: 1 i8: 5 i10: 0 } ; Energy Shard
+	ItemCollectionEntry { item: 5 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Energy Crystal
+	ItemCollectionEntry { item: 6 type: MATERIAL i6: 1 i8: 2 i10: 0 } ; All-Energy Shard
+	ItemCollectionEntry { item: 7 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Energy Crystal
+	ItemCollectionEntry { item: 8 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Shard
+	ItemCollectionEntry { item: 9 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Crystal
+	ItemCollectionEntry { item: 10 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Shard
+	ItemCollectionEntry { item: 11 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Crystal
+	ItemCollectionEntry { item: 12 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Aura Shard
+	ItemCollectionEntry { item: 13 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Aura Crystal
+	ItemCollectionEntry { item: 14 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Aura Shard
+	ItemCollectionEntry { item: 15 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Aura Crystal
+	ItemCollectionEntry { item: 16 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Guard Shard
+	ItemCollectionEntry { item: 17 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Guard Crystal
+	ItemCollectionEntry { item: 18 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Guard Shard
+	ItemCollectionEntry { item: 19 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Guard Crystal
+	ItemCollectionEntry { item: 20 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Drop
+	ItemCollectionEntry { item: 21 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Essence
+	ItemCollectionEntry { item: 22 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Drop
+	ItemCollectionEntry { item: 23 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Essence
+	ItemCollectionEntry { item: 24 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Senzu Beansprout
+}
+
+ItemCollection Collection80
+{
+	ItemCollectionEntry { item: 0 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Small Mix Capsule
+	ItemCollectionEntry { item: 1 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Med. Mix Capsule
+	ItemCollectionEntry { item: 2 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; High Mix Capsule
+	ItemCollectionEntry { item: 3 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Ultimate Mix Capsule
+	ItemCollectionEntry { item: 4 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Energy Shard
+	ItemCollectionEntry { item: 5 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Energy Crystal
+	ItemCollectionEntry { item: 6 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Energy Shard
+	ItemCollectionEntry { item: 7 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Energy Crystal
+	ItemCollectionEntry { item: 8 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Shard
+	ItemCollectionEntry { item: 9 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Regen Crystal
+	ItemCollectionEntry { item: 10 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Shard
+	ItemCollectionEntry { item: 11 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Regen Crystal
+	ItemCollectionEntry { item: 12 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Aura Shard
+	ItemCollectionEntry { item: 13 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Aura Crystal
+	ItemCollectionEntry { item: 14 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Aura Shard
+	ItemCollectionEntry { item: 15 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Aura Crystal
+	ItemCollectionEntry { item: 16 type: MATERIAL i6: 1 i8: 5 i10: 0 } ; Guard Shard
+	ItemCollectionEntry { item: 17 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Guard Crystal
+	ItemCollectionEntry { item: 18 type: MATERIAL i6: 1 i8: 2 i10: 0 } ; All-Guard Shard
+	ItemCollectionEntry { item: 19 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; All-Guard Crystal
+	ItemCollectionEntry { item: 20 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Drop
+	ItemCollectionEntry { item: 21 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Antidote Essence
+	ItemCollectionEntry { item: 22 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Drop
+	ItemCollectionEntry { item: 23 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Shape Up Essence
+	ItemCollectionEntry { item: 24 type: MATERIAL i6: 1 i8: 0 i10: 0 } ; Senzu Beansprout
+}
+
+TextEntry TMQ_JUS_01_0
+{
+	en: "GIVE BACK MY BEER!"
+	pt: "DEVOLVA MINHA BEER!"
+	es: "!DEVUELVE MI CERVEZA!"
+}
+
+TextEntry TMQ_JUS_01_1
+{
+	en: "-Defeat every beer thief"
+	pt: "-Derrote todos os ladroes de beer"
+	es: "-Derrota a todos los ladrones de cerveza"
+}
+
+TextEntry TMQ_JUS_01_2
+{
+	en: "-All team HP depleted\n-Time expires"
+	pt: "-A vida do time acabou\n-O tempo acabou"
+	es: "-Se agoto la vida del equipo\n-Se acabo el tiempo"
+}
+
+TextEntry TMQ_JUS_01_3
+{
+	en: "Someone stole Juse's last beer. He won't say a single word, he just stares. Chase the thieves across three districts, get the bottle back and pray nobody sees Juse angry."
+	pt: "Roubaram a ultima beer do Juse. Ele nao diz uma palavra, so olha. Persiga os ladroes por tres distritos, recupere a garrafa e reze pra ninguem ver o Juse com raiva."
+	es: "Alguien robo la ultima cerveza de Juse. El no dice una palabra, solo mira. Persigue a los ladrones por tres distritos, recupera la botella y reza para que nadie vea a Juse enojado."
+}
+
+TextEntry TMQ_JUS_01_4
+{
+	en: "-Clear in under 10 minutes"
+	pt: "-Termine em menos de 10 minutos"
+	es: "-Terminalo en menos de 10 minutos"
+}
+
+TextEntry TMQ_JUS_01_5
+{
+	en: "-Survive Juse's revenge"
+	pt: "-Sobreviva a vinganca do Juse"
+	es: "-Sobrevive a la venganza de Juse"
+}
+
+; ------------------------- mods de personagem ------------------------------
+; O identificador do X2mMod e o proprio ENTRY_NAME do mod: assim o mesmo nome
+; serve de char: nos QxdChar e de actor: "..." nas falas.
+X2mMod JUS
+{
+	name: "[OC] Juse"
+	guid: "3c62b8cb-ff09-38e8-0c36-dc03378f16af"
+}
+
+X2mMod JUE
+{
+	name: "[OC] Junin EMO"
+	guid: "65cbcff2-b81b-ce77-f4e6-6d1220c2e330"
+}
+
+X2mMod JUN
+{
+	name: "[OC] Junin"
+	guid: "5f6e184a-a144-e8bc-b8e8-27c0be55388d"
+}
+
+X2mMod JUF
+{
+	name: "[OC] Junin do Futuro"
+	guid: "1e471bf4-cf30-6d50-7d1f-4fcb705e0a27"
+}
+
+X2mMod S4P
+{
+	name: "[OC]Yone"
+	guid: "d53bd018-e2c5-7bcc-6962-4174b9c9e6b9"
+}
+
+
+; !!! ATENCAO: o XML do Yasha nao foi enviado. O GUID abaixo e um PLACEHOLDER.
+; !!! Troque pelo GUID real do mod [OC] Yasha antes de instalar, senao o
+; !!! instalador nao vai achar o mod e a missao nao entra no jogo.
+X2mMod YSH
+{
+	name: "[OC] Yasha"
+	guid: "00000000-0000-0000-0000-000000000000"
+}
+
+X2mMod CU1
+{
+	name: "[OC] Ezra Dito"
+	guid: "3d3d4ba3-d88e-0a35-9245-75e1ba6fa819"
+}
+
+X2mMod RAY
+{
+	name: "[OC]Ray"
+	guid: "eabe7d8d-ba8b-c7c2-a88b-8702440bfa89"
+}
+
+X2mMod PU2
+{
+	name: "[OC]Dan"
+	guid: "e47a346b-fb75-25bd-ddee-d8f75584b84b"
+}
+
+X2mMod ZEM
+{
+	name: "[OC] Ze do Morro"
+	guid: "c8727a36-592e-57fa-d614-838670dbbb94"
+}
+
+X2mMod BCT
+{
+	name: "[OC] Dimitztri Arobia"
+	guid: "184aa8d5-c331-804b-ef15-389c3809436b"
+}
+
+X2mMod VIP
+{
+	name: "[OC] Vini Pai"
+	guid: "2e5a92a7-8f5f-2276-8ac9-18495c34c8ba"
+}
+
+X2mMod VJR
+{
+	name: "[OC] ViniJR"
+	guid: "b5452163-07f2-026f-fb2d-469d897707ca"
+}
+
+X2mMod LUI
+{
+	name: "[OC] Luis"
+	guid: "325c4276-c166-425e-a1f6-1fa350f81dee"
+}
+
+X2mMod NFT
+{
+	name: "[OC] Shinya"
+	guid: "cbd78f44-b834-fd87-e756-b1983fc61b1e"
+}
+
+; ------------------------- mods de skill ----------------------------------
+; 49152 + n do SkillSet do XML == X2mDepends 0xC000 + n. SkillSet 1 de cada OC.
+X2mMod JusPlanetImpact
+{
+	name: "[JUS Skill]Planet Impact"
+	guid: "67ee73d0-05e6-696b-b91a-9b341c2a5fdd"
+}
+
+X2mMod JusLegendaryStrikes
+{
+	name: "[JUS Skill] Legendary Strikes"
+	guid: "a4938607-67b4-dcb4-7083-952b63657e1e"
+}
+
+X2mMod JusAgarao
+{
+	name: "[JUS Skill]Agarao de Juse(Legendary Powered Wave)"
+	guid: "bc63fd30-723b-be2b-2420-9156bf7d2fbc"
+}
+
+X2mMod JusMeteoricBurst
+{
+	name: "[JUS Skill]Meteoric Burst"
+	guid: "21a94ae6-1009-4849-4e73-9b3798558edb"
+}
+
+X2mMod JusHeadingPlanet
+{
+	name: "[JUS Skill]Heading to another planet?"
+	guid: "ccc61cbc-5ec0-873c-b8e8-840bdcd17525"
+}
+
+X2mMod JusSoquinhoRude
+{
+	name: "[JUS Skill]Soquinho Rude"
+	guid: "185b954e-2518-1117-19ec-97f2ea22e7b1"
+}
+
+X2mMod JueJibaku
+{
+	name: "[JUE Skill]Jibaku"
+	guid: "2f407646-50c4-eaf8-5a07-580b136adbac"
+}
+
+X2mMod JuePiin
+{
+	name: "[JUE Skill]Piin"
+	guid: "318e9d53-6d53-f4e6-86c4-2e2881ed0a6d"
+}
+
+X2mMod JueBurningSwan
+{
+	name: "[JUE Skill]Burning Swan"
+	guid: "c29942cc-3d1f-0cad-1533-e94eff0aa327"
+}
+
+X2mMod JuePowerTrip
+{
+	name: "[JUE Skill]Power Trip"
+	guid: "32e9e79a-d7b8-999d-4d2a-7ebecd65e959"
+}
+
+X2mMod JueMuroDeDefesa
+{
+	name: "[JUE Skill] Muro de Defesa"
+	guid: "a46e6d7f-d13a-2ce9-adf7-6a167916ee78"
+}
+
+X2mMod JunTektekTchuruq
+{
+	name: "[JUN Skill]Tektek Tchuruq"
+	guid: "0a06569e-7cc6-1965-5e50-237f6d2f05f1"
+}
+
+X2mMod JunFacaMaluca
+{
+	name: "[JUNSkill]Faca Maluca"
+	guid: "e60c9833-3a8a-2f40-a65f-879d79c75073"
+}
+
+X2mMod S4pBestialAssault
+{
+	name: "[S4P Skill]Bestial Assault"
+	guid: "d8a53ce0-3362-25e0-cef9-2a0fd848b854"
+}
+
+X2mMod S4pMeteorFists
+{
+	name: "[S4P Skill]Meteor Fists"
+	guid: "ce40e8d7-7a71-435f-9810-53fde3ed4461"
+}
+
+X2mMod S4pSSBUltraEgo
+{
+	name: "[S4P Skill]Super Saiyan Blue/Ultra Ego (PartSet 2/3)"
+	guid: "100b7d29-d87f-f6f4-5448-d1815ca54bca"
+}
+
+X2mMod S4pBurstEruption
+{
+	name: "[S4P Skill]Burst Eruption"
+	guid: "1da61840-496a-4153-ae74-a1ae1f2939e2"
+}
+
+X2mMod S4pSuperExplosiveWave
+{
+	name: "[S4P Skill]Super Explosive Wave - Destructive Wrath"
+	guid: "ebfdf076-b04d-02a9-8d3f-6580908e47b7"
+}
+
+X2mMod S4pDragonGodFist
+{
+	name: "[S4P Skill]Dragon God Fist"
+	guid: "4437e076-4b87-ce7d-5fd4-bc0e802296fc"
+}
+
+X2mMod S4pFullPowerBurst
+{
+	name: "[S4P Skill]Full Power Energy Burst"
+	guid: "fd29313a-b521-9854-e264-122366b6702d"
+}
+
+X2mMod Cu1OmegaWave
+{
+	name: "[CU1 Skill]Omega Wave"
+	guid: "0a086c4a-d5ab-5fdc-e03c-abad9302957b"
+}
+
+X2mMod Cu1RoyalSpear
+{
+	name: "[CU1 Skill]Royal Spear"
+	guid: "8284fdbf-ba13-8664-0dc3-1dfd37c2bddc"
+}
+
+X2mMod Cu1OUltimoSoco
+{
+	name: "[CU1 Skill]O Ultimo Soco"
+	guid: "e55ab6ca-939b-f750-b516-0af3ae118761"
+}
+
+X2mMod Cu1FullGiganticWave
+{
+	name: "[CU1 Skill]Full Gigantic Wave (ULTIMATE)"
+	guid: "7dc30be6-2f7b-1c30-49d0-01741ab52e49"
+}
+
+X2mMod Cu1SuperSaiyan5
+{
+	name: "[CU1 Skill] Super Saiyan 5"
+	guid: "d0d120ee-ce7f-77d9-d508-a10a50923014"
+}
+
+X2mMod Cu1PoweredBurst
+{
+	name: "[CU1 Skill]Powered Burst"
+	guid: "d56f0240-70e0-1f60-28d3-f873f25f0f39"
+}
+
+X2mMod Cu1GiganticStream
+{
+	name: "[CU1 Skill]Gigantic Stream"
+	guid: "f59456e1-42e3-6596-1671-72230b575806"
+}
+
+X2mMod Cu1PlanetBlasterGreen
+{
+	name: "[CU1 Skill] Planet Blaster Green - Ki Blast"
+	guid: "d03afb2c-d22f-897c-1529-a233ff0aaf00"
+}
+
+X2mMod RayAllInOne
+{
+	name: "[RAY Skill]Super Saiyan All In One"
+	guid: "58e28a2d-550d-dd3c-0e99-13b1ca3c135f"
+}
+
+X2mMod RayGodCounter
+{
+	name: "[RAY Skill]God Counter (DBL)"
+	guid: "31fc34ee-9cda-f01d-fbf5-91f08b79caf7"
+}
+
+X2mMod RayPurificacaoCosmica
+{
+	name: "[RAY Skill]Purificacao Cosmica"
+	guid: "8d7526fd-7ddc-32cd-80f1-ba3297c957f2"
+}
+
+X2mMod RaySpiritSwordRush
+{
+	name: "[RAY Skill]Spirit Sword Rush"
+	guid: "a3e7d281-a592-ec53-8547-75bdb9920b21"
+}
+
+X2mMod RayRagingDragon
+{
+	name: "[RAY Skill]Raging Dragon"
+	guid: "d043cf8b-fc23-41b0-3b79-fbf5a37e8b96"
+}
+
+X2mMod RayGodHeatFlash
+{
+	name: "[RAY Skill]God Heat Flash"
+	guid: "8cb6c828-1b09-227e-9155-c5d48c2e71ce"
+}
+
+X2mMod RayGranRayCero
+{
+	name: "[RAY Skill]Gran Ray Cero (Super) (Ki Blade)"
+	guid: "38ab0acd-ef63-f1fc-9dc1-7fe6d78baecb"
+}
+
+X2mMod JufSurgeMode
+{
+	name: "[JUF Skill]Surge Mode"
+	guid: "c8ca0cf7-40d5-0319-c972-5de6e792b3e9"
+}
+
+X2mMod JufTheJackal
+{
+	name: "[JUF Skill]The Jackal"
+	guid: "805e330f-0f4b-848d-39b4-da6bcd163a35"
+}
+
+X2mMod JufExplosiveBullet
+{
+	name: "[JUF Skill]Explosive bullet"
+	guid: "e0f49bb6-9802-38fe-0f9a-56f5d1919e0e"
+}
+
+X2mMod JufDualGunShot
+{
+	name: "[JUF Skill]Dual gun shot"
+	guid: "c6ad9982-18b1-cc5e-d326-4ace42e6ef49"
+}
+
+X2mMod JufGunKiBlast
+{
+	name: "[JUF Skill]Gun Ki Blast"
+	guid: "5f9f8dac-4e2d-2ddf-64fe-cdb91614f344"
+}
+
+X2mMod Pu2DeathBallPierce
+{
+	name: "[PU2 Skill]Death Ball Pierce"
+	guid: "a7b71541-40db-df6e-4e51-9455c728c83f"
+}
+
+X2mMod ZemBloodyBigBang
+{
+	name: "[ZEM Skill]Bloody Big Bang"
+	guid: "d49a47e2-c18b-e542-b42a-9e346b5e2338"
+}
+
+X2mMod ZemOpMeteorCrash
+{
+	name: "[ZEM Skill]OP Meteor Crash"
+	guid: "dcf15006-96f3-5bf9-a4e1-d178b4eb66ce"
+}
+
+X2mMod ZemClashAnytime
+{
+	name: "[ZEM Skill]Clash anytime Revamped (Punch)"
+	guid: "09f0bdd1-28fc-8916-3894-d7de59c7f3b2"
+}
+
+X2mMod ZemBloodySpiritBomb
+{
+	name: "[ZEM Skill]Bloody Spirit Bomb"
+	guid: "32b31d94-b747-10b5-1d9b-12e1ccc27e70"
+}
+
+X2mMod ZemUltraBlazingWave
+{
+	name: "[ZEM Skill]Ultra Blazing Wave"
+	guid: "41095c0a-65a9-7ea1-e15e-1d48ece1b830"
+}
+
+X2mMod ZemOverheatMagnetron
+{
+	name: "[ZEM Skill]Overheat Magnetron"
+	guid: "52be106d-a730-d19d-398c-1c8579d297eb"
+}
+
+X2mMod BctSquareDance
+{
+	name: "[BCT Skill]Square Dance (Taunt)"
+	guid: "33f3e3cf-a68c-a32c-e35b-6396796568af"
+}
+
+X2mMod BctGravityBash
+{
+	name: "[BCT Skill]Gravity Bash"
+	guid: "9922605b-3ec3-8e13-e59d-1776ae7d578d"
+}
+
+X2mMod BctSuperGalacticDonut
+{
+	name: "[BCT Skill]Super Galactic Donut"
+	guid: "d6915da9-69c8-300a-c08d-0e59555b7131"
+}
+
+X2mMod BctDemonStoneRend
+{
+	name: "[BCT Skill]Demon Stone Rend"
+	guid: "531763d2-ee15-10d4-cd85-6b128695e0db"
+}
+
+X2mMod BctTheAdvance
+{
+	name: "[BCT Skill]The Advance"
+	guid: "decfaca8-d9c0-96f4-4fc6-ae4d6af2eea9"
+}
+
+X2mMod BctMeteorCombination
+{
+	name: "[BCT Skill]Meteor Combination"
+	guid: "a88e88f8-ee74-7873-570b-ef517f6ea05c"
+}
+
+X2mMod VipFinalFlashCannon
+{
+	name: "[VIP Skill]Final Flash Cannon"
+	guid: "d1545758-0f71-ba1c-8997-c425f8b6e820"
+}
+
+X2mMod VipMortalParaTras
+{
+	name: "[VIP Skill]Mortal para Tras - Evasive"
+	guid: "98df247d-02c1-d287-fce0-e6a220d1305c"
+}
+
+X2mMod VipSuperKamehamehaDA
+{
+	name: "[VIP Skill]Super Kamehameha Dragon Assault"
+	guid: "1392059b-47e3-6bb9-7f3a-6c278a0d4a5c"
+}
+
+X2mMod VipSS3Evolved
+{
+	name: "[VIP Skill]Super Saiyan 3 Evolved"
+	guid: "5ec10b58-20af-cad1-049e-3ece23a3f85f"
+}
+
+X2mMod VjrInstantRasengan
+{
+	name: "[VJR Skill]Instant Rasengan"
+	guid: "d9552bd6-93b1-1d82-f0dc-543eca233cc1"
+}
+
+X2mMod Vjr20xKaiokenGodKmh
+{
+	name: "[VJR Skill]20x Kaioken God KMH"
+	guid: "927c1296-aaeb-7d41-c2ba-86408d0a01c5"
+}
+
+X2mMod LuiBigBangComboSuper
+{
+	name: "[LUI Skill]Big Bang Combo - Super"
+	guid: "ee107222-f21e-ac72-d0fc-39703a534476"
+}
+
+X2mMod LuiSSBlueCasaco
+{
+	name: "[LUI Skill]Super Saiyan Blue[Slot Casaco, Behaviour 13/66]"
+	guid: "e41defd4-c37c-52bd-81be-5b51877ceed2"
+}
+
+X2mMod LuiGodFinalFlash
+{
+	name: "[LUI Skill]God Final Flash - nao CAC"
+	guid: "66521f84-b20b-bf09-9c1d-9fb85b6b7f02"
+}
+
+X2mMod LuiLegPoweredWaveBlue
+{
+	name: "[LUI Skill]Legendary Powered Wave (Blue)"
+	guid: "50ed176f-3f62-bcfd-5c87-ff942805079b"
+}
+
+X2mMod LuiBodyGrowsFamiliar
+{
+	name: "[LUI Skill]Body Grows Familiar"
+	guid: "84b86aed-7439-0919-070e-6c3ee0b318a7"
+}
+
+X2mMod LuiFinalImpactRushSup
+{
+	name: "[LUI Skill]Final Impact Rush - Super"
+	guid: "ee5036a5-6f41-0d9c-167b-f00719b6d11a"
+}
+
+X2mMod LuiGodMeteorStrike
+{
+	name: "[LUI Skill]God Meteor Strike"
+	guid: "e49b05cf-cf6b-6fef-80a5-f85c65db686e"
+}
+
+X2mMod LuiDemonFlashStrike
+{
+	name: "[LUI Skill]Demon Flash Strike(Evasiva)"
+	guid: "058a351f-2837-5d16-3767-fbaedac26b44"
+}
+
+X2mMod NftFirestormPunisher
+{
+	name: "[NFT Skill]Firestorm Punisher"
+	guid: "56b440bf-b3a9-31d7-e109-15cf660bc390"
+}
+
+X2mMod NftPowerDunk
+{
+	name: "[NFT Skill]Power Dunk"
+	guid: "663da29f-e117-99be-6e58-074ce50a8112"
+}
+
+X2mMod NftGravityBash
+{
+	name: "[NFT Skill]Gravity Bash"
+	guid: "e89f5c63-994f-462f-022e-f5b45399d434"
+}
+
+X2mMod NftSaiyanGrit
+{
+	name: "[NFT Skill]Saiyan Grit"
+	guid: "5fcbe1f4-94f8-8180-ee21-5e400b892308"
+}
+
+X2mMod NftOverwhelmingBlaze
+{
+	name: "[NFT Skill]Overwhelming Blaze"
+	guid: "f1128a99-886b-a0fe-afd0-f250d4b71e94"
+}
+
+X2mMod NftSSB14GodBlue
+{
+	name: "[NFT Skill]Super Saiyan 1,4,GOD,BLUE(BCS10)"
+	guid: "62f5b74f-b972-47d3-3a73-158987070d6c"
+}
+
+X2mMod NftMaximumImpactRush
+{
+	name: "[NFT Skill]Maximum Impact Rush"
+	guid: "e32e1b59-1bb8-c599-2a03-e9f391e8b782"
+}
+
+Quest TMQ_JUS_01
+{
+	episode: 3 ; textos proprios via TextEntry/TextAudioEntry (nao usa .msg vanilla).
+	sub_type: 0
+	num_players: 3
+
+	title: TMQ_JUS_01_0 ; DEVOLVA MINHA BEER!
+	success: TMQ_JUS_01_1 ; -Derrote todos os ladroes de beer
+	failure: TMQ_JUS_01_2 ; -A vida do time acabou / o tempo acabou
+	outline: TMQ_JUS_01_3 ; Roubaram a ultima beer do Juse...
+	warning: TMQ_JUS_01_4 ; -Termine em menos de 10 minutos
+	ex_success: TMQ_JUS_01_5 ; -Sobreviva a vinganca do Juse
+
+	i40: 1
+	parent_quest: "TMQ_1400" ; Being a Time Patroller
+	i44: 0
+	i48: 1
+	i52: -1
+	i56: -1
+	i60: -1
+	unlock_requirement: "TMQ_1400" ; Being a Time Patroller
+	i68: -1
+	i72: -1
+	i76: -1
+	i80: 1
+	i84: 1
+
+	QxdUnk1(3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	QxdUnk2(0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	QxdUnk2(1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+	time_limit: 1200 ; 20 min (o bonus pede terminar em < 10 min)
+	difficulty: 5
+	level: 140
+	i112: 0
+	start_stage: "BFkoh" ; Capsule Corporation
+	start_demo: 0
+
+	xp_reward: 28000
+	ult_xp_reward: 48000
+	fail_xp_reward: 8500
+	zeni_reward: 15000
+	ult_zeni_reward: 24000
+	fail_zeni_reward: 8000
+	tp_medals_once: 5
+	tp_medals: 3
+	tp_medals_special: 0
+	resistance_points: 0
+
+	; --- tabelas de material (1a vez / repeticao / repeticao) ----------------
+	ItemReward { item: Collection60 type: COLLECTION condition: 1 i12: 0 flags: NORMAL i20: 1 chance: 100.0 }
+	ItemReward { item: Collection70 type: COLLECTION condition: 0 i12: 0 flags: NORMAL i20: 1 chance: 100.0 }
+	ItemReward { item: Collection80 type: COLLECTION condition: 0 i12: 0 flags: NORMAL i20: 1 chance: 100.0 }
+
+	; o "antidoto" pra quem bebeu demais: a piada interna da missao
+	ItemReward { item: 20 type: BATTLE condition: 0 i12: 0 flags: NORMAL i20: 1 chance: 100.0 } ; Mr. Antidote S
+	ItemReward { item: 12 type: BATTLE condition: 0 i12: 0 flags: NORMAL i20: 1 chance: 60.0 } ; Senzu Bean
+
+	SkillReward { skill: 593 condition: 1 i12: 0 chance: 100.0 } ; Maximum Charge
+
+	; Capsule Corporation -> West City (Industrial Sector) -> West City (Suburbs)
+	stages: ("BFkoh", "BFsky", "BFspe", -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1)
+	i192: 1
+
+	CharPortrait { char: "HUM" costume: 0 trans: -1 } ; Player
+	CharPortrait { char: JUS costume: 0 trans: -1 } ; Juse
+	CharPortrait { char: JUE costume: 0 trans: -1 } ; Junin Emo
+	CharPortrait { char: JUN costume: 0 trans: -1 } ; Junin
+	CharPortrait { char: -1 costume: 0 trans: -1 }
+	CharPortrait { char: -1 costume: 0 trans: -1 }
+
+	i232: 0
+	i234: 2
+	i236: 3
+	i238: 4
+	i240: 5
+	i242: 7
+	i244: 0
+	i246: 0
+	i248: 0
+	i250: 0
+	flags: 0x400000
+
+	update_requirement: ANY
+	dlc_requirement: NONE
+
+	i264: 0
+	no_enemy_bgm: 9
+	enemy_near_bgm: 24
+	battle_bgm: 16
+	ultimate_finish_bgm: 14
+	f276: 1.0
+	i280: 0
+}

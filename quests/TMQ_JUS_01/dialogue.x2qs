@@ -1,0 +1,468 @@
+; ===========================================================================
+;  TMQ_JUS_01 - falas.
+;
+;  REGRA: o Juse NUNCA fala. As unicas falas dele sao "....." e ".......".
+;  voice: "" = legenda sem audio dublado.
+;  actor: usa o ENTRY_NAME do mod (JUS/JUE/...) garantido pelos X2mMod do
+;  quest.x2qs - o retrato so aparece com o mod do personagem instalado.
+; ===========================================================================
+
+TextAudioEntry TxtDlgJuninEmo1
+{
+	en: "Bro... we only borrowed it. Forever."
+	pt: "Bro... a gente só pegou emprestado. Pra sempre."
+	es: "Hermano... solo la tomamos prestada. Para siempre."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgJunin1
+{
+	en: "It was the last cold one in the galaxy and Juse wasn't looking. His own fault."
+	pt: "Era a última gelada da galáxia e o Juse não tava olhando. A culpa é dele."
+	es: "Era la última fría de la galaxia y Juse no estaba mirando. La culpa es suya."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgPlayer1
+{
+	en: "You stole Juse's beer? He won't say a word, but you can feel the rage from here."
+	pt: "Vocês roubaram a beer do Juse? Ele não fala nada, mas dá pra sentir a raiva daqui."
+	es: "¿Se robaron la cerveza de Juse? Él no dice nada, pero se siente la rabia desde acá."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgJuse1
+{
+	en: "....."
+	pt: "....."
+	es: "....."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgYone1
+{
+	en: "We didn't steal it. It was a transfer of alcoholic assets."
+	pt: "A gente não roubou. Foi uma transferência de patrimônio etílico."
+	es: "No la robamos. Fue una transferencia de patrimonio etílico."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgYasha1
+{
+	en: "Relax. The beer is long gone. All that's left is the smell."
+	pt: "Relaxa. A beer já era. O que sobrou foi o cheiro."
+	es: "Tranquilo. La cerveza ya fue. Lo que quedó es el olor."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgPortal1
+{
+	en: "They opened a portal to the Industrial Sector. After them!"
+	pt: "Eles abriram um portal pro Setor Industrial. Atrás deles!"
+	es: "Abrieron un portal al Sector Industrial. ¡Tras ellos!"
+	voice: ""
+}
+
+TextAudioEntry TxtDlgEzra1
+{
+	en: "You're chasing the wrong beer, kid. This one has been mine from the start."
+	pt: "Você tá correndo atrás da cerveja errada, garoto. Essa aqui é minha desde o começo."
+	es: "Estás persiguiendo la cerveza equivocada, chico. Esta es mía desde el principio."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgRay1
+{
+	en: "The whole timeline drank from that bottle. There's not a sip left for anyone."
+	pt: "A linha do tempo inteira bebeu dessa garrafa. Não sobrou gole pra ninguém."
+	es: "Toda la línea temporal bebió de esa botella. No quedó ni un trago para nadie."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgJuf1
+{
+	en: "In my future that beer was never returned. And I came to make sure it stays that way."
+	pt: "No meu futuro a beer nunca foi devolvida. E eu vim garantir que continue assim."
+	es: "En mi futuro esa cerveza nunca fue devuelta. Y vine a asegurar que siga así."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgJuse2
+{
+	en: "....."
+	pt: "....."
+	es: "....."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgDan1
+{
+	en: "Evil Majin drank it. Evil Majin liked it. Evil Majin is NOT giving it back."
+	pt: "Majin Mau bebeu. Majin Mau gostou. Majin Mau NÃO devolve."
+	es: "Majin Malvado la bebió. Majin Malvado le gustó. Majin Malvado NO la devuelve."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgZem1
+{
+	en: "Up on the hill we share everything. Except Juse's beer."
+	pt: "Aqui no morro a gente divide tudo. Menos a beer do Juse."
+	es: "Acá en el cerro compartimos todo. Menos la cerveza de Juse."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgBct1
+{
+	en: "I only came for the sip. But since I'm here... let's dance."
+	pt: "Eu só vim pelo gole. Mas já que tô aqui... bora dançar."
+	es: "Yo solo vine por el trago. Pero ya que estoy acá... bailemos."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgJuseFim
+{
+	en: "....."
+	pt: "....."
+	es: "....."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgJuseBonus
+{
+	en: "......."
+	pt: "......."
+	es: "......."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgVini1
+{
+	en: "Easy there, champ. Dad's here. And he brought the kid."
+	pt: "Calma aí, campeão. O pai chegou. E trouxe o moleque."
+	es: "Tranquilo, campeón. Llegó papá. Y trajo al chico."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgVjr1
+{
+	en: "Let's go, dad! I'll grab the bottle, you hold off Juse."
+	pt: "Bora, pai! Eu pego a garrafa, você segura o Juse."
+	es: "¡Vamos, papá! Yo agarro la botella, tú detén a Juse."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgLui1
+{
+	en: "Enough talking. Shinya is with me and we're not leaving without that beer."
+	pt: "Chega de conversa. A Shinya tá comigo e a gente não sai daqui sem aquela cerveja."
+	es: "Basta de charla. Shinya está conmigo y no nos vamos sin esa cerveza."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgShinya1
+{
+	en: "I brought the bottle cap. You brought the mess."
+	pt: "Eu trouxe a tampa. Vocês trouxeram a confusão."
+	es: "Yo traje la tapa. Ustedes trajeron el desastre."
+	voice: ""
+}
+
+Dialogue DlgJuninEmo1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "JUE"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgJuninEmo1
+		i8: 0
+	}
+}
+
+Dialogue DlgJunin1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "JUN"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgJunin1
+		i8: 0
+	}
+}
+
+Dialogue DlgPlayer1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "HUM"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgPlayer1
+		i8: 0
+	}
+}
+
+Dialogue DlgJuse1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "JUS"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgJuse1
+		i8: 0
+	}
+}
+
+Dialogue DlgYone1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "S4P"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgYone1
+		i8: 0
+	}
+}
+
+Dialogue DlgYasha1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "YSH"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgYasha1
+		i8: 0
+	}
+}
+
+Dialogue DlgPortal1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "HUM"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgPortal1
+		i8: 0
+	}
+}
+
+Dialogue DlgEzra1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "CU1"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgEzra1
+		i8: 0
+	}
+}
+
+Dialogue DlgRay1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "RAY"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgRay1
+		i8: 0
+	}
+}
+
+Dialogue DlgJuf1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "JUF"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgJuf1
+		i8: 0
+	}
+}
+
+Dialogue DlgJuse2
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "JUS"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgJuse2
+		i8: 0
+	}
+}
+
+Dialogue DlgDan1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "PU2"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgDan1
+		i8: 0
+	}
+}
+
+Dialogue DlgZem1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "ZEM"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgZem1
+		i8: 0
+	}
+}
+
+Dialogue DlgBct1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "BCT"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgBct1
+		i8: 0
+	}
+}
+
+Dialogue DlgJuseFim
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "JUS"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgJuseFim
+		i8: 0
+	}
+}
+
+Dialogue DlgJuseBonus
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "JUS"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgJuseBonus
+		i8: 0
+	}
+}
+
+Dialogue DlgVini1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "VIP"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgVini1
+		i8: 0
+	}
+}
+
+Dialogue DlgVjr1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "VJR"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgVjr1
+		i8: 0
+	}
+}
+
+Dialogue DlgLui1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "LUI"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgLui1
+		i8: 0
+	}
+}
+
+Dialogue DlgShinya1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "NFT"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgShinya1
+		i8: 0
+	}
+}

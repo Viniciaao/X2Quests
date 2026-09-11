@@ -1,0 +1,369 @@
+; ===========================================================================
+;  TMQ_JUS_01 - DEVOLVA MINHA BEER!  (script principal)
+;
+;  State 0  init: portais, avisos de inimigo por stage, InitQuest
+;  State 1  STAGE 1 - BFkoh (Capsule Corporation)
+;             onda 1  Junin Emo + Junin            (nascem com o stage)
+;             onda 2  Yone + Yasha                 (ao cair a onda 1)
+;             portal liberado -> o jogador anda ate BFsky
+;  State 2  STAGE 2 - BFsky (West City / Industrial Sector)
+;             Ezra solo -> Ray + Junin do Futuro   -> portal para BFspe
+;  State 3  STAGE 3 - BFspe (West City / Suburbs)
+;             Dan Majin Mau -> Ze do Morro + Dimitztri (lv 150) -> fim
+;  State 4  QuestFinishState(COMPLETE) e decide se abre o bonus
+;  State 5  BONUS intro: Juse sai do time, 5s de silencio, aviso, Juse inimigo
+;  State 6  BONUS luta: reforcos por vida baixa e pela queda dos reforcos
+;  State 7  ULTIMATE FINISH
+;
+;  A janela dos 10 minutos vem do script1.x2qs (script "vigia").
+;  Observacoes:
+;   - CharaSpawn2 usa o retrato do SEGUNDO char na fala, por isso o personagem
+;     que fala vem sempre em segundo lugar na chamada.
+;   - SetThereAreEnemies(stage, false) so libera o portal depois que nao ha
+;     mais nenhum inimigo carregado naquele stage.
+; ===========================================================================
+
+Flag FlagOnda1S1 ; Yone + Yasha ja entraram (stage 1)
+Flag FlagOnda2S2 ; Ray + Junin do Futuro ja entraram (stage 2)
+Flag FlagOnda2S3 ; Ze do Morro + Dimitztri ja entraram (stage 3)
+Flag FlagFast    ; ainda da tempo do bonus (terminar em < 10 min)
+Flag FlagVini    ; Vini Pai + Vini Jr ja entraram
+Flag FlagLui     ; Luis + Shinya ja entraram
+
+Script
+{
+	State 0
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			; as duas direcoes de cada par de stages (o jogo exige uma chamada por sentido)
+			Action PortalControl("BFkoh", "BFsky", true, false); Capsule Corporation -> West City (Industrial Sector)
+			Action PortalControl("BFsky", "BFkoh", true, false); West City (Industrial Sector) -> Capsule Corporation
+			Action PortalControl("BFsky", "BFspe", true, false); West City (Industrial Sector) -> West City (Suburbs)
+			Action PortalControl("BFspe", "BFsky", true, false); West City (Suburbs) -> West City (Industrial Sector)
+			Action PortalControl("BFkoh", "BFspe", true, false); Capsule Corporation -> West City (Suburbs)
+			Action PortalControl("BFspe", "BFkoh", true, false); West City (Suburbs) -> Capsule Corporation
+
+			Action SetThereAreEnemies("BFkoh", true); Capsule Corporation
+			Action SetThereAreEnemies("BFsky", true); West City (Industrial Sector)
+			Action SetThereAreEnemies("BFspe", true); West City (Suburbs)
+
+			Action SetFlag(FlagFast, true) ; janela do bonus aberta (o script1 fecha em 600s)
+			Action InitQuest
+		}
+
+		Event 1
+		{
+			Condition TimeWithinState(1.0)
+
+			Action Unk20
+			Action BattleModeStart
+			Action GotoState(1)
+		}
+	}
+
+	State 1
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action PlayDialogue(DlgJuninEmo1, 1000, "BFkoh", -1); Bro... a gente so pegou emprestado.
+		}
+
+		Event 1
+		{
+			Condition DialogueFinish(DlgJuninEmo1)
+
+			Action PlayDialogue(DlgJunin1, 1000, "BFkoh", -1); Era a ultima gelada da galaxia...
+		}
+
+		Event 2
+		{
+			Condition DialogueFinish(DlgJunin1)
+
+			Action PlayDialogue(DlgPlayer1, 1000, "BFkoh", -1); Voces roubaram a beer do Juse?
+		}
+
+		Event 3
+		{
+			Condition DialogueFinish(DlgPlayer1)
+
+			Action PlayDialogue(DlgJuse1, 1000, "BFkoh", -1); .....
+		}
+
+		Event 4
+		{
+			Condition Ko(JuninEmoEnemy, false, -1); Junin Emo derrotado
+			Condition Ko(JuninEnemy, false, -1); Junin derrotado
+			Condition CheckFlag(FlagOnda1S1, false)
+
+			Action SetFlag(FlagOnda1S1, true)
+			; o Yone vem em 2o porque a fala usa o retrato do segundo char
+			Action CharaSpawn2(YashaEnemy, YoneEnemy, 3, DlgYone1, "BFkoh", 0, -1, -1); Yone + Yasha --- Capsule Corporation
+		}
+
+		Event 5
+		{
+			Condition DialogueFinish(DlgYone1)
+
+			Action PlayDialogue(DlgYasha1, 1000, "BFkoh", -1); Relaxa. A beer ja era.
+		}
+
+		Event 6
+		{
+			Condition Ko(YoneEnemy, false, -1); Yone derrotado
+			Condition Ko(YashaEnemy, false, -1); Yasha derrotado
+			Condition CheckFlag(FlagOnda1S1, true)
+
+			; sem inimigos no stage o portal acende e o jogador vai para BFsky
+			Action SetThereAreEnemies("BFkoh", false); Capsule Corporation
+			Action PlayDialogue(DlgPortal1, 1000, "BFkoh", -1); Eles abriram um portal...
+		}
+
+		Event 7
+		{
+			Condition InStage(Player, "BFsky", true); West City (Industrial Sector)
+
+			Action GotoState(2)
+		}
+	}
+
+	State 2
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action PlayDialogue(DlgEzra1, 1000, "BFsky", -1); Voce ta correndo atras da cerveja errada...
+		}
+
+		Event 1
+		{
+			Condition Ko(EzraEnemy, false, -1); Ezra derrotado
+			Condition CheckFlag(FlagOnda2S2, false)
+
+			Action SetFlag(FlagOnda2S2, true)
+			; o Ray vem em 2o porque a fala usa o retrato do segundo char
+			Action CharaSpawn2(JuninFuturoEnemy, RayEnemy, 3, DlgRay1, "BFsky", 0, -1, -1); Ray + Junin do Futuro --- West City (Industrial Sector)
+		}
+
+		Event 2
+		{
+			Condition DialogueFinish(DlgRay1)
+
+			Action PlayDialogue(DlgJuf1, 1000, "BFsky", -1); No meu futuro a beer nunca foi devolvida.
+		}
+
+		Event 3
+		{
+			Condition DialogueFinish(DlgJuf1)
+
+			Action PlayDialogue(DlgJuse2, 1000, "BFsky", -1); .....
+		}
+
+		Event 4
+		{
+			Condition Ko(RayEnemy, false, -1); Ray derrotado
+			Condition Ko(JuninFuturoEnemy, false, -1); Junin do Futuro derrotado
+			Condition CheckFlag(FlagOnda2S2, true)
+
+			Action SetThereAreEnemies("BFsky", false); West City (Industrial Sector)
+		}
+
+		Event 5
+		{
+			Condition InStage(Player, "BFspe", true); West City (Suburbs)
+
+			Action GotoState(3)
+		}
+	}
+
+	State 3
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action PlayDialogue(DlgDan1, 1000, "BFspe", -1); Majin Mau bebeu. Majin Mau gostou.
+		}
+
+		Event 1
+		{
+			Condition Ko(DanEnemy, false, -1); Dan Majin Mau derrotado
+			Condition CheckFlag(FlagOnda2S3, false)
+
+			Action SetFlag(FlagOnda2S3, true)
+			; o Ze do Morro vem em 2o porque a fala usa o retrato do segundo char
+			Action CharaSpawn2(DimitztriEnemy, ZeMorroEnemy, 3, DlgZem1, "BFspe", 0, -1, -1); Ze do Morro + Dimitztri (lv 150) --- West City (Suburbs)
+		}
+
+		Event 2
+		{
+			Condition DialogueFinish(DlgZem1)
+
+			Action PlayDialogue(DlgBct1, 1000, "BFspe", -1); Eu so vim pelo gole...
+		}
+
+		Event 3
+		{
+			Condition Ko(ZeMorroEnemy, false, -1); Ze do Morro derrotado
+			Condition Ko(DimitztriEnemy, false, -1); Dimitztri derrotado
+			Condition CheckFlag(FlagOnda2S3, true)
+
+			Action SetThereAreEnemies("BFspe", false); West City (Suburbs)
+			; a missao acaba com a "fala" do Juse
+			Action PlayDialogue(DlgJuseFim, 1000, "BFspe", -1); .....
+		}
+
+		Event 4
+		{
+			Condition DialogueFinish(DlgJuseFim)
+
+			Action GotoState(4)
+		}
+	}
+
+	State 4
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action QuestFinishState(COMPLETE)
+		}
+
+		Event 1
+		{
+			Condition CheckFlag(FlagFast, false) ; passou dos 10 minutos: fim normal
+
+			Action QuestClear
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(FlagFast, true) ; dentro dos 10 minutos: abre o bonus
+
+			Action GotoState(5)
+		}
+	}
+
+	State 5
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			; o Juse sai do time sem dizer nada
+			Action CharaLeave(JuseAllyS3, 0, -1, 26, true, -1); Juse --- Dialogue: (nenhum)
+			; 5 segundos de silencio absoluto
+			Action Wait(5.0)
+			; o aviso vermelho na tela
+			Action ShowWarning
+			; e o Juse volta como inimigo, com a "fala" dele
+			Action CharaSpawn(JuseEnemy, 1, DlgJuseBonus, 20, "BFspe", 0); Juse lv 180 --- West City (Suburbs)
+			Action GotoState(6)
+		}
+	}
+
+	State 6
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			; vida do jogador em 20% ou menos: chegam o Vini Pai e o Vini Jr
+			Condition PlayerHealth(<=, 20.0)
+			Condition CheckFlag(FlagVini, false)
+
+			Action SetFlag(FlagVini, true)
+			; o Vini Pai vem em 2o porque a fala usa o retrato do segundo char
+			Action CharaSpawn2(ViniJrAlly, ViniAlly, 4, DlgVini1, "BFspe", 0, -1, -1); Vini Pai + Vini Jr --- West City (Suburbs)
+		}
+
+		Event 1
+		{
+			Condition DialogueFinish(DlgVini1)
+
+			Action PlayDialogue(DlgVjr1, 1000, "BFspe", -1); Bora, pai! Eu pego a garrafa...
+		}
+
+		Event 2
+		{
+			; os dois cairam: chegam o Luis (Rykan) e a Shinya
+			Condition CheckFlag(FlagVini, true)
+			Condition Ko(ViniAlly, false, -1); Vini Pai derrotado
+			Condition Ko(ViniJrAlly, false, -1); Vini Jr derrotado
+			Condition CheckFlag(FlagLui, false)
+
+			Action SetFlag(FlagLui, true)
+			; o Luis vem em 2o porque a fala usa o retrato do segundo char
+			Action CharaSpawn2(ShinyaAlly, LuiAlly, 5, DlgLui1, "BFspe", 0, -1, -1); Luis + Shinya --- West City (Suburbs)
+		}
+
+		Event 3
+		{
+			Condition DialogueFinish(DlgLui1)
+
+			Action PlayDialogue(DlgShinya1, 1000, "BFspe", -1); Eu trouxe a tampa...
+		}
+
+		Event 4
+		{
+			Condition Ko(JuseEnemy, false, -1); Juse derrotado
+
+			Action GotoState(7)
+		}
+	}
+
+	State 7
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action QuestFinishState(ULTIMATE_FINISH)
+			Action QuestClear
+		}
+	}
+}

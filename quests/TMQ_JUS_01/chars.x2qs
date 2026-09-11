@@ -1,0 +1,1526 @@
+; ===========================================================================
+;  TMQ_JUS_01 - personagens de "DEVOLVA MINHA BEER!"
+;
+;  QxdChar  = stats (level/health/atk/skills).  QmlChar = instancia no stage.
+;  O Juse aliado tem uma QmlChar por stage: o jogo trata cada stage como um
+;  cenario proprio (mesmo truque que o vanilla usa com o Goku do TMQ_3102).
+; ===========================================================================
+
+; Player
+QxdSpecialChar PlayerBase
+{
+	char: "HUM"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 1
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 138
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+; Teacher
+QxdSpecialChar Teacher
+{
+	char: "MST"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 1
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 140
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+; --------------------------- QxdChar (stats) -------------------------------
+
+QxdChar JuseAlly
+{
+	; Juse aliado - lv 180, ataque baixo, muita vida
+	char: JUS
+	costume: 0
+	transformation: 0
+	special_effect: -1
+
+	i12: 0
+	level: 180
+	health: 3000.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 0.35
+	ki_atk: 0.35
+	super_atk: 0.35
+	super_ki: 0.35
+	atk_damage: 0.25
+	ki_damage: 0.25
+	super_atk_damage: 0.25
+	super_ki_damage: 0.25
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 137
+
+	super1: JusHeadingPlanet
+	super2: JusLegendaryStrikes
+	super3: JusPlanetImpact
+	super4: JusAgarao
+
+	ultimate1: JusSoquinhoRude
+	ultimate2: JusMeteoricBurst
+
+	evasive: 10341
+	blast: 21081
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar JuninEmo
+{
+	; Junin Emo - lv 100, stats padrao
+	char: JUE
+	costume: 0
+	transformation: 0
+	special_effect: -1
+
+	i12: 0
+	level: 100
+	health: 900.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 144
+
+	super1: JuePowerTrip
+	super2: JuePiin
+	super3: JueBurningSwan
+	super4: 1
+
+	ultimate1: JueJibaku
+	ultimate2: JueJibaku
+
+	evasive: 10341
+	blast: 21081
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Junin
+{
+	; Junin - lv 100, stats padrao
+	char: JUN
+	costume: 0
+	transformation: 0
+	special_effect: -1
+
+	i12: 0
+	level: 100
+	health: 900.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 144
+
+	super1: 1
+	super2: 51
+	super3: JunFacaMaluca
+	super4: 593
+
+	ultimate1: 5340
+	ultimate2: JunTektekTchuruq
+
+	evasive: 10200
+	blast: 20520
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Yone
+{
+	; Yone - segunda onda do stage 1
+	char: S4P
+	costume: 0
+	transformation: 0
+	special_effect: -1
+
+	i12: 0
+	level: 120
+	health: 1400.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 1.2
+	ki_atk: 1.2
+	super_atk: 1.2
+	super_ki: 1.2
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 144
+
+	super1: S4pBestialAssault
+	super2: S4pBurstEruption
+	super3: S4pMeteorFists
+	super4: 0
+
+	ultimate1: S4pFullPowerBurst
+	ultimate2: S4pDragonGodFist
+
+	evasive: S4pSuperExplosiveWave
+	blast: 21081
+	awaken: S4pSSBUltraEgo
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Yasha
+{
+	; Yasha - segunda onda do stage 1 (XML pendente: skills vanilla provisórias)
+	char: YSH
+	costume: 0
+	transformation: 0
+	special_effect: -1
+
+	i12: 0
+	level: 120
+	health: 1400.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 1.2
+	ki_atk: 1.2
+	super_atk: 1.2
+	super_ki: 1.2
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 144
+
+	super1: 1
+	super2: 51
+	super3: 40
+	super4: 593
+
+	ultimate1: 5340
+	ultimate2: 5050
+
+	evasive: 10331
+	blast: 21081
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Ezra
+{
+	; Ezra Dito - solo no stage 2
+	char: CU1
+	costume: 0
+	transformation: 0
+	special_effect: -1
+
+	i12: 0
+	level: 140
+	health: 2500.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 1.5
+	ki_atk: 1.5
+	super_atk: 1.5
+	super_ki: 1.5
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 144
+
+	super1: Cu1GiganticStream
+	super2: 1553
+	super3: Cu1OUltimoSoco
+	super4: Cu1PoweredBurst
+
+	ultimate1: Cu1RoyalSpear
+	ultimate2: Cu1FullGiganticWave
+
+	evasive: Cu1OmegaWave
+	blast: Cu1PlanetBlasterGreen
+	awaken: Cu1SuperSaiyan5
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Ray
+{
+	; Ray - segunda onda do stage 2
+	char: RAY
+	costume: 0
+	transformation: 0
+	special_effect: -1
+
+	i12: 0
+	level: 150
+	health: 2200.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 1.6
+	ki_atk: 1.6
+	super_atk: 1.6
+	super_ki: 1.6
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 144
+
+	super1: RaySpiritSwordRush
+	super2: RayGranRayCero
+	super3: RayRagingDragon
+	super4: RayGodCounter
+
+	ultimate1: RayPurificacaoCosmica
+	ultimate2: RayGodHeatFlash
+
+	evasive: 12010
+	blast: 21080
+	awaken: RayAllInOne
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar JuninFuturo
+{
+	; Junin do Futuro (Costume 1) - segunda onda do stage 2
+	char: JUF
+	costume: 1
+	transformation: 0
+	special_effect: -1
+
+	i12: 0
+	level: 150
+	health: 2200.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 1.6
+	ki_atk: 1.6
+	super_atk: 1.6
+	super_ki: 1.6
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 144
+
+	super1: 620
+	super2: JueMuroDeDefesa
+	super3: JufExplosiveBullet
+	super4: JufDualGunShot
+
+	ultimate1: JufTheJackal
+	ultimate2: 5800
+
+	evasive: 10310
+	blast: JufGunKiBlast
+	awaken: JufSurgeMode
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Dan
+{
+	; Dan Majin Mau - solo no stage 3
+	char: PU2
+	costume: 0
+	transformation: 0
+	special_effect: -1
+
+	i12: 0
+	level: 150
+	health: 3200.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 1.5
+	ki_atk: 1.5
+	super_atk: 1.5
+	super_ki: 1.5
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 144
+
+	super1: 93
+	super2: 596
+	super3: 8
+	super4: 522
+
+	ultimate1: 5820
+	ultimate2: Pu2DeathBallPierce
+
+	evasive: 10341
+	blast: 21081
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar ZeMorro
+{
+	; Zé do Morro - lv 150
+	char: ZEM
+	costume: 0
+	transformation: 0
+	special_effect: -1
+
+	i12: 0
+	level: 150
+	health: 2600.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 1.7
+	ki_atk: 1.7
+	super_atk: 1.7
+	super_ki: 1.7
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 144
+
+	super1: ZemOpMeteorCrash
+	super2: ZemBloodyBigBang
+	super3: ZemClashAnytime
+	super4: ZemUltraBlazingWave
+
+	ultimate1: ZemOverheatMagnetron
+	ultimate2: ZemBloodySpiritBomb
+
+	evasive: 10091
+	blast: 21081
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Dimitztri
+{
+	; Dimitztri - lv 150
+	char: BCT
+	costume: 0
+	transformation: 0
+	special_effect: -1
+
+	i12: 0
+	level: 150
+	health: 2600.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 1.7
+	ki_atk: 1.7
+	super_atk: 1.7
+	super_ki: 1.7
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 144
+
+	super1: BctDemonStoneRend
+	super2: BctGravityBash
+	super3: 40
+	super4: BctSquareDance
+
+	ultimate1: BctMeteorCombination
+	ultimate2: BctSuperGalacticDonut
+
+	evasive: 11350
+	blast: 21081
+	awaken: BctTheAdvance
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar JuseBoss
+{
+	; Juse lv 180, stats padrao, VIDA E DEFESA altissimas
+	char: JUS
+	costume: 0
+	transformation: 0
+	special_effect: -1
+
+	i12: 32
+	level: 180
+	health: 15000.0
+	f24: -1.0
+	ki: 1500.0
+	stamina: 1000.0
+	atk: 2.0
+	ki_atk: 2.0
+	super_atk: 2.0
+	super_ki: 2.0
+	atk_damage: 1.2
+	ki_damage: 1.2
+	super_atk_damage: 1.2
+	super_ki_damage: 1.2
+	guard_atk: -1.0
+	guard_damage: 1.5
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 144
+
+	super1: JusHeadingPlanet
+	super2: JusLegendaryStrikes
+	super3: JusPlanetImpact
+	super4: JusAgarao
+
+	ultimate1: JusSoquinhoRude
+	ultimate2: JusMeteoricBurst
+
+	evasive: 10341
+	blast: 21081
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar ViniPai
+{
+	; Vini Pai - aliado do bonus
+	char: VIP
+	costume: 0
+	transformation: 0
+	special_effect: -1
+
+	i12: 0
+	level: 160
+	health: 2600.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 2.0
+	ki_atk: 2.0
+	super_atk: 2.0
+	super_ki: 2.0
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 137
+
+	super1: 62
+	super2: 0
+	super3: 261
+	super4: 593
+
+	ultimate1: VipFinalFlashCannon
+	ultimate2: VipSuperKamehamehaDA
+
+	evasive: VipMortalParaTras
+	blast: 21080
+	awaken: VipSS3Evolved
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar ViniJr
+{
+	; Vini Jr - aliado do bonus
+	char: VJR
+	costume: 0
+	transformation: 0
+	special_effect: -1
+
+	i12: 0
+	level: 155
+	health: 2400.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 1.8
+	ki_atk: 1.8
+	super_atk: 1.8
+	super_ki: 1.8
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 137
+
+	super1: 52
+	super2: 596
+	super3: 115
+	super4: 0
+
+	ultimate1: Vjr20xKaiokenGodKmh
+	ultimate2: VjrInstantRasengan
+
+	evasive: 10331
+	blast: 21081
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Lui
+{
+	; Luis (Rykan) - ultimo reforco do bonus
+	char: LUI
+	costume: 0
+	transformation: 0
+	special_effect: -1
+
+	i12: 0
+	level: 175
+	health: 3200.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 2.2
+	ki_atk: 2.2
+	super_atk: 2.2
+	super_ki: 2.2
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 137
+
+	super1: LuiFinalImpactRushSup
+	super2: LuiBigBangComboSuper
+	super3: LuiLegPoweredWaveBlue
+	super4: LuiBodyGrowsFamiliar
+
+	ultimate1: LuiGodMeteorStrike
+	ultimate2: LuiGodFinalFlash
+
+	evasive: LuiDemonFlashStrike
+	blast: 21081
+	awaken: LuiSSBlueCasaco
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Shinya
+{
+	; Shinya - esposa do Luis
+	char: NFT
+	costume: 0
+	transformation: 0
+	special_effect: -1
+
+	i12: 0
+	level: 170
+	health: 3000.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 2.0
+	ki_atk: 2.0
+	super_atk: 2.0
+	super_ki: 2.0
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 137
+
+	super1: 861
+	super2: NftPowerDunk
+	super3: NftSaiyanGrit
+	super4: NftGravityBash
+
+	ultimate1: NftFirestormPunisher
+	ultimate2: NftMaximumImpactRush
+
+	evasive: NftOverwhelmingBlaze
+	blast: 21081
+	awaken: NftSSB14GodBlue
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+; --------------------------- QmlChar (instancias) --------------------------
+
+QmlChar Player : PlayerBase
+{
+	battle_index: 0
+	i12: 0
+	stage: "BFkoh" ; Capsule Corporation
+	spawn_at_start: true
+
+	ai: HUMAN
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar Player2 : PlayerBase
+{
+	battle_index: 1
+	i12: 0
+	stage: "BFkoh" ; Capsule Corporation
+	spawn_at_start: true
+
+	ai: HUMAN
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar Player3 : PlayerBase
+{
+	battle_index: 2
+	i12: 0
+	stage: "BFkoh" ; Capsule Corporation
+	spawn_at_start: true
+
+	ai: HUMAN
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar JuseAllyS1 : JuseAlly
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFkoh" ; Capsule Corporation
+	spawn_at_start: true
+
+	ai: NORMAL
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar JuseAllyS2 : JuseAlly
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFsky" ; West City (Industrial Sector)
+	spawn_at_start: true
+
+	ai: NORMAL
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar JuseAllyS3 : JuseAlly
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFspe" ; West City (Suburbs)
+	spawn_at_start: true
+
+	ai: NORMAL
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar JuninEmoEnemy : JuninEmo
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFkoh" ; Capsule Corporation
+	spawn_at_start: true
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar JuninEnemy : Junin
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFkoh" ; Capsule Corporation
+	spawn_at_start: true
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar YoneEnemy : Yone
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFkoh" ; Capsule Corporation
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar YashaEnemy : Yasha
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFkoh" ; Capsule Corporation
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar EzraEnemy : Ezra
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFsky" ; West City (Industrial Sector)
+	spawn_at_start: true
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar RayEnemy : Ray
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFsky" ; West City (Industrial Sector)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar JuninFuturoEnemy : JuninFuturo
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFsky" ; West City (Industrial Sector)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar DanEnemy : Dan
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFspe" ; West City (Suburbs)
+	spawn_at_start: true
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar ZeMorroEnemy : ZeMorro
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFspe" ; West City (Suburbs)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar DimitztriEnemy : Dimitztri
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFspe" ; West City (Suburbs)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar JuseEnemy : JuseBoss
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFspe" ; West City (Suburbs)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar ViniAlly : ViniPai
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFspe" ; West City (Suburbs)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar ViniJrAlly : ViniJr
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFspe" ; West City (Suburbs)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar LuiAlly : Lui
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFspe" ; West City (Suburbs)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar ShinyaAlly : Shinya
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFspe" ; West City (Suburbs)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 0
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
