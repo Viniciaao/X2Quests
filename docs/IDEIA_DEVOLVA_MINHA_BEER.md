@@ -6,8 +6,8 @@ Missão paralela para **Dragon Ball Xenoverse 2** (formato X2QS / `.x2m`, para o
 Fontes em [`quests/TMQ_JUS_01/`](../quests/TMQ_JUS_01) · pacote em
 [`dist/Devolva Minha Beer.x2m`](../dist/).
 
-> ⚠️ **Antes de instalar, leia a seção 7** — falta o GUID real do mod do
-> **Yasha** (o XML nunca foi enviado) e há um placeholder no lugar dele.
+> Os 15 personagens são mods `[OC]` — instale todos (e as skills deles) antes
+> da missão. O que ainda não foi testado em jogo está listado na seção 7.
 
 ---
 
@@ -130,7 +130,7 @@ serve de `char:` nos `QxdChar` e de `actor:` nas falas.
 | 1 · onda 1 | Junin Emo | `JUE` | 100 | stats padrão |
 | 1 · onda 1 | Junin | `JUN` | 100 | stats padrão |
 | 1 · onda 2 | Yone | `S4P` | 120 | costume 0 |
-| 1 · onda 2 | **Yasha** | `YSH` | 120 | **GUID placeholder — ver seção 7** |
+| 1 · onda 2 | Yasha | `YAS` | 120 | **costume 2** (Coat), SkillSet 3 |
 | 2 · solo | Ezra Dito | `CU1` | 140 | costume 0 |
 | 2 · onda 2 | Ray | `RAY` | 150 | costume 0 |
 | 2 · onda 2 | Junin do Futuro | `JUF` | 150 | **costume 1** (Agent Coat) |
@@ -145,11 +145,24 @@ serve de `char:` nos `QxdChar` e de `actor:` nas falas.
 
 ### Skills
 
-Cada OC usa o **SkillSet 1** do próprio XML, com os ids traduzidos:
-`49152 + n` no SkillSet é o `X2mDepends` **`0xC000 + n`** do mesmo XML. Por
-exemplo, o `[OC] Juse` tem `49160` no super1 → `0xC008` → `[JUS Skill]Heading to
-another planet?`. São **74 mods de skill** declarados como dependência; o
-instalador precisa encontrar todos, então instale os OCs antes da missão.
+Cada OC usa o SkillSet do próprio XML que corresponde ao costume pedido, com os
+ids traduzidos: `49152 + n` no SkillSet é o `X2mDepends` **`0xC000 + n`** do
+mesmo XML. Por exemplo, o `[OC] Juse` tem `49160` no super1 → `0xC008` →
+`[JUS Skill]Heading to another planet?`.
+
+Todo mundo usa o **SkillSet 1**, menos os dois que têm costume específico:
+
+* **Junin do Futuro** (costume 1 = Agent Coat) → **SkillSet 2**;
+* **Yasha** (costume 2 = Coat) → **SkillSet 3**.
+
+Os `SkillSet` vêm com `CHAR_ID`/`COSTUME_ID` fixos (`0xbacabaca`, `0xbacaca`…),
+então a associação é **posicional**: o N-ésimo `SkillSet` do XML é o N-ésimo
+`SlotEntry`/costume declarado. Na Yasha os costumes são `0, 1, 2, 4, 5`, logo o
+3º SkillSet é o do costume 2. É a mesma regra que faz o costume 1 do Junin do
+Futuro bater com a fase Agent Coat do `TMQ_JUN_01`.
+
+São **84 mods de skill** declarados como dependência; o instalador precisa
+encontrar todos, então instale os OCs antes da missão.
 
 ### Sobre "vida e defesa fortes"
 
@@ -178,8 +191,7 @@ exatamente o que a dependência `X2mMod` garante.
 
 ### Caminho A — pacote pronto
 
-`dist/Devolva Minha Beer.x2m` no **XV2 Mods Installer**. Antes disso, corrija o
-GUID do Yasha (seção 7) e reempacote:
+`dist/Devolva Minha Beer.x2m` no **XV2 Mods Installer**. Para reempacotar:
 
 ```bash
 python3 tools/build_x2m.py quests/TMQ_JUS_01 \
@@ -199,7 +211,7 @@ depois a missão.
 
 ```bash
 python3 tools/x2qs_lint.py quests/TMQ_JUS_01
-# [lint] TMQ_JUS_01: OK - 6 arquivos, 194 identificadores,
+# [lint] TMQ_JUS_01: OK - 6 arquivos, 204 identificadores,
 #         114 Action/Condition validados, 9 aviso(s)
 ```
 
@@ -213,46 +225,41 @@ Os 9 avisos são esperados:
 * 1× skill `1553` (super2 do Ezra, vem do XML dele) não aparece no corpus
   vanilla escaneado — fica entre `1552` e `1554`, que existem.
 
-## 7. O que falta / o que não foi verificado
+## 7. O que não foi verificado em jogo
 
-**Bloqueante**
+Aqui só roda o linter — nada foi testado dentro do DBXV2.
 
-1. **Yasha não tem GUID.** O XML nunca foi enviado, então o `X2mMod YSH` em
-   `quest.x2qs` está com `guid: "00000000-0000-0000-0000-000000000000"` e o
-   `QxdChar Yasha` usa skills vanilla provisórias. **Do jeito que está o
-   instalador não vai achar o mod e a missão não entra no jogo.** Manda o XML
-   que eu troco o GUID e o SkillSet na hora.
-
-**Não verificado em jogo (só validado pelo linter)**
-
-2. **`PlayerHealth(<=, 20.0)`** — assume "vida do jogador em % ". Está no
+1. **`PlayerHealth(<=, 20.0)`** — assume "vida do jogador em % ". Está no
    `x2qs_reference.json` com aridade 2, mas nenhuma quest do corpus usa, então
    a semântica não foi confirmada. Se no jogo não disparar, o substituto é
    `Condition Health(<=, Player, 20.0)` (mesmo formato usado nos inimigos).
-3. **`actor: "JUS"` com mod** — retrato de personagem de mod na legenda. A ação
+2. **`actor: "JUS"` com mod** — retrato de personagem de mod na legenda. A ação
    `PlayDialogue` é das mais usadas do corpus (66 ocorrências), mas nenhuma
    quest vanilla referencia um char de mod no `actor`. Se o retrato não
    aparecer, há dois fallbacks: `PlayDialogue2(dlg, 1000, stage, -1, QmlChar)`
    (força o retrato por `QmlChar`; documentada, mas não aparece no corpus) ou
    passar a fala pelo parâmetro `dialogue` do `CharaSpawn`/`CharaSpawn2`, que é
    o que a missão já faz nas entradas de onda.
-4. **`CharaLeave` num aliado** seguido de `Wait(5.0)` no mesmo Event — o
+3. **`CharaLeave` num aliado** seguido de `Wait(5.0)` no mesmo Event — o
    tutorial avisa que o jogo pode ignorar um segundo `Wait` por Event; aqui é
    só um, mas a cena do `CharaLeave` + `Wait` na sequência não foi testada.
    Se cortar o silêncio, separe em dois Events.
-5. **`Ko(char, false, -1)`** — é o idioma vanilla pra "caiu, avança a missão"
+4. **`Ko(char, false, -1)`** — é o idioma vanilla pra "caiu, avança a missão"
    (`Ko(GokuSSGSSEnemy, false, -1)` → `QuestFinishState(COMPLETE)` no
    `TMQ_4303`, e as duas outras missões deste repositório usam igual). O corpus
    também tem `Ko(char, true, -1)` pro **mesmo** personagem no mesmo script, e
    o segundo parâmetro não é documentado em lugar nenhum — se uma onda não
    avançar, é o primeiro lugar pra olhar.
+5. **SkillSet ↔ costume** — a associação posicional da seção 4 é inferência.
+   Se no jogo a Yasha de Coat vier com as skills erradas, troque o bloco de
+   skills do `QxdChar Yasha` pelo SkillSet 1 (`49156, 49153, 49154, 49159,
+   49155, 49160, 10130, 21081, 65535`).
 6. **Recompensas** — valores chutados pro nível 140; nada de `CharReward` do
    Juse porque recompensar personagem de mod não foi testado.
 
 **Decisões já confirmadas pelo autor**
 
-7. Os três maps (`BFkoh` → `BFsky` → `BFspe`), o gatilho dos reforços
-   (`PlayerHealth(<=, 20.0)` = vida do jogador em 20% ou menos) e as
-   recompensas da ficha foram confirmados como estão. O que segue aberto é só
-   o **GUID do Yasha** — o resto (nível 140, `health: 15000.0` do chefe, texto
-   das falas) continua livre pra ajustar.
+Os três maps (`BFkoh` → `BFsky` → `BFspe`), o gatilho dos reforços
+(`PlayerHealth(<=, 20.0)` = vida do jogador em 20% ou menos) e as recompensas
+da ficha foram confirmados como estão. Nível 140, `health: 15000.0` do chefe e
+o texto das falas continuam livres pra ajustar.

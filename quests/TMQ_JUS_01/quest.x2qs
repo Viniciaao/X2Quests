@@ -173,13 +173,10 @@ X2mMod S4P
 }
 
 
-; !!! ATENCAO: o XML do Yasha nao foi enviado. O GUID abaixo e um PLACEHOLDER.
-; !!! Troque pelo GUID real do mod [OC] Yasha antes de instalar, senao o
-; !!! instalador nao vai achar o mod e a missao nao entra no jogo.
-X2mMod YSH
+X2mMod YAS
 {
 	name: "[OC] Yasha"
-	guid: "00000000-0000-0000-0000-000000000000"
+	guid: "ab0edaae-3091-03ff-2522-45e2225c19cc"
 }
 
 X2mMod CU1
@@ -680,6 +677,67 @@ X2mMod NftMaximumImpactRush
 {
 	name: "[NFT Skill]Maximum Impact Rush"
 	guid: "e32e1b59-1bb8-c599-2a03-e9f391e8b782"
+}
+
+; Yasha - o XML nao tem 0xc006, entao o intervalo 49152..49163 pula o 49158.
+X2mMod YasAtomicKamehameha
+{
+	name: "[YAS Skill]Atomic Kamehameha"
+	guid: "6f54a58d-4412-d2ab-acd4-cd16ace59bbd"
+}
+
+X2mMod YasDevilKickRush
+{
+	name: "[YAS Skill]Devil Kick Rush"
+	guid: "ddfebc27-869e-f018-90f5-7bec5891690e"
+}
+
+X2mMod YasCataclysmicComet
+{
+	name: "[YAS Skill]Cataclysmic Comet Strike"
+	guid: "74cb4f15-0587-9e48-27e0-e63d42c0069f"
+}
+
+X2mMod YasCataclysmicCrusher
+{
+	name: "[YAS Skill]Cataclysmic Crusher Stream"
+	guid: "f4a792c5-a04a-e7be-cceb-5e2c62381554"
+}
+
+X2mMod YasCataclysmicFlare
+{
+	name: "[YAS Skill]Cataclysmic Impact Flare"
+	guid: "46021132-3d8b-f963-7782-e3b528944c6b"
+}
+
+X2mMod YasSuperSaiyan4
+{
+	name: "[YAS Skill]Super Saiyan 4"
+	guid: "3727e3a0-4a99-9c54-9cbd-56873dfa80c3"
+}
+
+X2mMod YasHangingCombo
+{
+	name: "Hanging Combo"
+	guid: "65801080-383e-67c1-0865-8453e6a4aa16"
+}
+
+X2mMod YasFinalBurstCannon
+{
+	name: "Final Burst Cannon"
+	guid: "7e1f410a-e4c2-52c4-c72e-0fbb0c5f1bf0"
+}
+
+X2mMod YasBurstBigBang
+{
+	name: "[YAS Skill]Burst Big Bang"
+	guid: "7d5fca3a-673f-f3e9-557c-1489cd93446c"
+}
+
+X2mMod YasLightningBlast
+{
+	name: "[YAS Skill]Lightning Blast"
+	guid: "4b03592e-e00e-6b4c-ff74-a1dcefc4bec0"
 }
 
 Quest TMQ_JUS_01

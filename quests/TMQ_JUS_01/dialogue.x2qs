@@ -248,7 +248,7 @@ Dialogue DlgYasha1
 
 	DialoguePart
 	{
-		actor: "YSH"
+		actor: "YAS"
 		costume: -1
 		transformation: -1
 

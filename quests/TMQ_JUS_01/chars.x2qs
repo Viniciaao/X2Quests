@@ -298,9 +298,9 @@ QxdChar Yone
 
 QxdChar Yasha
 {
-	; Yasha - segunda onda do stage 1 (XML pendente: skills vanilla provisórias)
-	char: YSH
-	costume: 0
+	; Yasha - Costume 2 (Coat), SkillSet 3 do XML (49154,49153,49156,49159,49163,49160,10130,21081,49157)
+	char: YAS
+	costume: 2
 	transformation: 0
 	special_effect: -1
 
@@ -325,17 +325,17 @@ QxdChar Yasha
 	f84: -1.0
 	ait_table_entry: 144
 
-	super1: 1
-	super2: 51
-	super3: 40
-	super4: 593
+	super1: YasCataclysmicComet
+	super2: YasDevilKickRush
+	super3: YasCataclysmicFlare
+	super4: YasHangingCombo
 
-	ultimate1: 5340
-	ultimate2: 5050
+	ultimate1: YasLightningBlast
+	ultimate2: YasFinalBurstCannon
 
-	evasive: 10331
+	evasive: 10130
 	blast: 21081
-	awaken: -1
+	awaken: YasSuperSaiyan4
 
 	i106: 0
 	i108: 0
