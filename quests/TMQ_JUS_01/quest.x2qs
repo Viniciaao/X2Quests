@@ -804,12 +804,12 @@ Quest TMQ_JUS_01
 	stages: ("BFkoh", "BFsky", "BFspe", -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1)
 	i192: 1
 
-	CharPortrait { char: "HUM" costume: 0 trans: -1 } ; Player
-	CharPortrait { char: JUS costume: 0 trans: -1 } ; Juse
 	CharPortrait { char: JUE costume: 0 trans: -1 } ; Junin Emo
 	CharPortrait { char: JUN costume: 0 trans: -1 } ; Junin
-	CharPortrait { char: -1 costume: 0 trans: -1 }
-	CharPortrait { char: -1 costume: 0 trans: -1 }
+	CharPortrait { char: S4P costume: 0 trans: -1 }
+	CharPortrait { char: YAS costume: 2 trans: -1 }
+	CharPortrait { char: CU1 costume: 0 trans: -1 }
+	CharPortrait { char: RAY costume: 0 trans: -1 }
 
 	i232: 0
 	i234: 2

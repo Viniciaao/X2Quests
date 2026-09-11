@@ -330,6 +330,16 @@ Aqui só roda o linter — nada foi testado dentro do DBXV2.
     precedente no corpus. Se o Juse não fixar no Vini Jr, mova a chamada do
     Event 0 pro Event 1 do State 6 (quando os dois já estão garantidamente em
     campo).
+11. **`CharPortrait` são os inimigos, não o elenco todo.** O `Quest` tem
+    exatamente **6 slots** fixos — as 6 quests de referência do repositório
+    (`TMQ_0101`, `TMQ_4303`, `TMQ_4601`, `TMQ_4200`, `folder/`, ginyu) têm 6
+    linhas cada uma. Somam 25 entradas preenchidas e **todas** são inimigos:
+    nenhum `Player`/`HUM` e nenhum aliado (o Jiren é aliado no `TMQ_4303` e não
+    aparece; o `TMQ_0101` não lista o player). Escolhidos aqui: `JUE`, `JUN`,
+    `S4P`, `YAS` (costume 2), `CU1`, `RAY`, todos com o mesmo costume do
+    `QxdChar`. Ficam de fora por falta de slot: `JUF`, `PU2`, `ZEM`, `BCT` e o
+    `JUS` chefe. *Onde o jogo desenha esses retratos eu não testei — a regra vem
+    do corpus.*
 
 **Decisões já confirmadas pelo autor**
 
