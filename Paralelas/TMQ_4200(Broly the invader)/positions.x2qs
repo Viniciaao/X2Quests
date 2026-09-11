@@ -1,0 +1,40 @@
+CharPosition PlayerPosition
+{
+	char: Player ; Player
+	stage: "BFtfl" ; Planeta Tuffle
+	position: "BAQ_STH_05_POS_01"
+	type: 3
+	i40: 0
+	i50: 0
+}
+
+CharPosition Player2Position
+{
+	char: Player2 ; Player
+	stage: "BFtfl" ; Planeta Tuffle
+	position: "BAQ_STH_05_POS_00"
+	type: 3
+	i40: 0
+	i50: 0
+}
+
+CharPosition Player3Position
+{
+	char: Player3 ; Player
+	stage: "BFtfl" ; Planeta Tuffle
+	position: "BAQ_STH_05_POS_02"
+	type: 3
+	i40: 0
+	i50: 0
+}
+
+CharPosition BrolyContidoAllyPosition
+{
+	char: BrolyContidoAlly ; Broly (Contido) - Gi
+	stage: "BFtfl" ; Planeta Tuffle
+	position: "TRESPASS_4"
+	type: 3
+	i40: 0
+	i50: 0
+}
+

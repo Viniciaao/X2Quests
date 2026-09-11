@@ -1,0 +1,63 @@
+Script
+{
+	State 0
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action LoadChara(BabyMacacoGiganteEnemy); Baby (Macaco Gigante) - 0
+			Action LoadChara(DodoriaEnemy); Dodoria - Traje de Batalha 1
+		}
+
+		Event 1
+		{
+			Condition Ko(SuperBaby2Enemy, true, -1); Super Baby 2 - Trajes do Super Baby 2
+
+			Action LoadChara(FreezaFormaN1Enemy); Freeza (Forma Nº1) - Traje de Batalha 1
+		}
+
+		Event 2
+		{
+			Condition Ko(BabyMacacoGiganteEnemy, true, -1); Baby (Macaco Gigante) - 0
+
+			Action LoadChara(ZarbonEnemy); Zarbon - Traje de Batalha 1
+		}
+
+		Event 3
+		{
+			Condition Ko(ZarbonEnemy, true, -1); Zarbon - Traje de Batalha 1
+
+			Action LoadChara(FreezaFormaFinalEnemy); Freeza (Forma Final) - Forma Final 1
+		}
+
+		Event 4
+		{
+			Condition Ko(DodoriaEnemy, true, -1); Dodoria - Traje de Batalha 1
+
+			Action LoadChara(HitEnemy); Hit - Traje 1
+		}
+
+		Event 5
+		{
+			Condition Ko(FreezaFormaN1Enemy, true, -1); Freeza (Forma Nº1) - Traje de Batalha 1
+
+			Action LoadChara(GokuEnemy); Goku - Gi 1 da Tartaruga Eremita
+		}
+
+		Event 6
+		{
+			Condition Ko(FreezaFormaFinalEnemy, true, -1); Freeza (Forma Final) - Forma Final 1
+
+			Action LoadChara(BrolyAlly); Broly - Gi 1
+		}
+
+		Event 7
+		{
+			Condition Ko(HitEnemy, true, -1); Hit - Traje 1
+
+			Action LoadChara(BrolyContidoAlly2); Broly (Contido) - Gi
+		}
+	}
+}
+

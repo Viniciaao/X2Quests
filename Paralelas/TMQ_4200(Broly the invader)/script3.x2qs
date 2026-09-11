@@ -1,0 +1,32 @@
+Script
+{
+	State 0
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action PortalControl("BFtfl", "BFspe", false, false); Planeta Tuffle -> Espaço (Terra)
+			Action PortalControl("BFspe", "BFtfl", false, false); Espaço (Terra) -> Planeta Tuffle
+			Action PortalControl("BFspe", "BFtwc", false, false); Espaço (Terra) -> Corporação Cápsula
+			Action PortalControl("BFtwc", "BFspe", false, false); Corporação Cápsula -> Espaço (Terra)
+			Action PortalControl("BFtfl", "FLBY02", false, false)
+			Action PortalControl("BFtwc", "BFtfl", false, false); Corporação Cápsula -> Planeta Tuffle
+		}
+
+		Event 1
+		{
+			Condition EventDone(0, 2, 10)
+
+			Action PortalControl("BFtfl", "BFspe", true, true); Planeta Tuffle -> Espaço (Terra)
+		}
+
+		Event 2
+		{
+			Condition EventDone(0, 3, 10)
+
+			Action PortalControl("BFspe", "BFtwc", true, true); Espaço (Terra) -> Corporação Cápsula
+		}
+	}
+}
+

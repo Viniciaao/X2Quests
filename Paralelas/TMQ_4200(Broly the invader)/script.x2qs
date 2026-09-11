@@ -1,0 +1,369 @@
+Flag Flag62
+Flag Flag63
+
+Script
+{
+	State 0
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action DisableCommonDialogue(1, Player, Player2, 9999, -1, -1, -1, -1)
+			Action DisableCommonDialogue(1, Player, Player3, 9999, -1, -1, -1, -1)
+			Action DisableCommonDialogue(1, Player2, Player3, 9999, -1, -1, -1, -1)
+			Action Unk61(Player, 10, -1, -1); Player
+			Action Unk61(Player2, 10, -1, -1); Player
+			Action Unk61(Player3, 10, -1, -1); Player
+			Action InitQuest
+			Action GotoState(1)
+		}
+	}
+
+	State 1
+	{
+		Event 0
+		{
+			Condition TimeWithinState(1.0)
+			Condition Always
+
+			Action Unk20
+			Action BattleModeStart
+			Action GotoState(2)
+		}
+	}
+
+	State 2
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action PlayDialogue(Dialogue0, 1000, "BFtfl", -1); Dialogue: Take over every planet and control the universe... That was my father's command.　 [MORE DIALOGUE PARTS] --- Stage: Planeta Tuffle
+		}
+
+		Event 1
+		{
+			Condition DialogueFinish(Dialogue0); Take over every planet and control the universe... That was my father's command.　 [MORE DIALOGUE PARTS]
+
+			Action CharaSpawn(SuperBaby2Enemy, 1, -1, 20, "BFtfl", 0); Char: Super Baby 2 - Trajes do Super Baby 2 --- Stage: Planeta Tuffle
+		}
+
+		Event 2
+		{
+			Condition EventDone(0, 2, 1)
+
+			Action PlayDialogue(Dialogue1, 1000, "BFtfl", -1); Dialogue: This energy... It's Saiyan energy. You there! What do you want? [MORE DIALOGUE PARTS] --- Stage: Planeta Tuffle
+		}
+
+		Event 3
+		{
+			Condition DialogueFinish(Dialogue1); This energy... It's Saiyan energy. You there! What do you want? [MORE DIALOGUE PARTS]
+			Condition Health(<=, SuperBaby2Enemy, 50.0); Super Baby 2 - Trajes do Super Baby 2
+
+			Action PlayDialogue(Dialogue3, 1000, "BFtfl", -1); Dialogue: Ngh... This power is unbelievable... [MORE DIALOGUE PARTS] --- Stage: Planeta Tuffle
+		}
+
+		Event 4
+		{
+			Condition DialogueFinish(Dialogue3); Ngh... This power is unbelievable... [MORE DIALOGUE PARTS]
+			Condition Ko(SuperBaby2Enemy, true, -1); Super Baby 2 - Trajes do Super Baby 2
+
+			Action PlayDialogue(Dialogue4, 1000, "BFtfl", -1); Dialogue: GAAAAAGH! [MORE DIALOGUE PARTS] --- Stage: Planeta Tuffle
+		}
+
+		Event 5
+		{
+			Condition DialogueFinish(Dialogue4); GAAAAAGH! [MORE DIALOGUE PARTS]
+
+			Action ModelChange(SuperBaby2Enemy, BabyMacacoGiganteEnemy, 0, -1, 129)
+		}
+
+		Event 6
+		{
+			Condition EventDone(0, 2, 5)
+
+			Action PlayDialogue(Dialogue5, 1000, "BFtfl", -1); Dialogue: Prepare yourself, puny monkey! [MORE DIALOGUE PARTS] --- Stage: Planeta Tuffle
+			Action RemoveChara_(SuperBaby2Enemy, false); Super Baby 2 - Trajes do Super Baby 2
+		}
+
+		Event 7
+		{
+			Condition DialogueFinish(Dialogue5); Prepare yourself, puny monkey! [MORE DIALOGUE PARTS]
+			Condition Health(<=, BabyMacacoGiganteEnemy, 50.0); Baby (Macaco Gigante) - 0
+
+			Action PlayDialogue(Dialogue6, 1000, "BFtfl", -1); Dialogue: C-Curse you, Saiyan...! [MORE DIALOGUE PARTS] --- Stage: Planeta Tuffle
+		}
+
+		Event 8
+		{
+			Condition DialogueFinish(Dialogue6); C-Curse you, Saiyan...! [MORE DIALOGUE PARTS]
+			Condition Ko(BabyMacacoGiganteEnemy, false, -1); Baby (Macaco Gigante) - 0
+
+			Action CharaLeave(BabyMacacoGiganteEnemy, 0, -1, 28, true, "BFtfl"); Char: Baby (Macaco Gigante) - 0 --- Stage: Planeta Tuffle
+		}
+
+		Event 9
+		{
+			Condition EventDone(0, 2, 8)
+
+			Action PlayDialogue(Dialogue7, 1000, "BFtfl", -1); Dialogue: H-How?! You're not even a Super Saiyan! You filthy monkey! Damn you! Damn you! [MORE DIALOGUE PARTS] --- Stage: Planeta Tuffle
+		}
+
+		Event 10
+		{
+			Condition DialogueFinish(Dialogue7); H-How?! You're not even a Super Saiyan! You filthy monkey! Damn you! Damn you! [MORE DIALOGUE PARTS]
+
+			Action GotoState(3)
+		}
+	}
+
+	State 3
+	{
+		Event 0
+		{
+			Condition InStage(Player, "BFspe", true); Char: Player --- Stage: Espaço (Terra)
+
+			Action CharaSpawn3(ZarbonEnemy, DodoriaEnemy, FreezaFormaN1Enemy, 0, -1, "BFspe", 0, -1); Char: Freeza (Forma Nº1) - Traje de Batalha 1 --- Stage: Espaço (Terra)
+		}
+
+		Event 1
+		{
+			Condition EventDone(0, 3, 0)
+
+			Action PlayDialogue(Dialogue8, 1000, "BFspe", -1); Dialogue: So that's Earth, then? [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 3
+		{
+			Condition DialogueFinish(Dialogue8); So that's Earth, then? [MORE DIALOGUE PARTS]
+			Condition Health(<=, FreezaFormaN1Enemy, 80.0); Freeza (Forma Nº1) - Traje de Batalha 1
+			Condition Health(<=, ZarbonEnemy, 80.0); Zarbon - Traje de Batalha 1
+			Condition Health(<=, DodoriaEnemy, 80.0); Dodoria - Traje de Batalha 1
+
+			Action PlayDialogue(Dialogue9, 1000, "BFspe", -1); Dialogue: You... are a Saiyan, aren't you? So there are still more of you, then... [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 4
+		{
+			Condition DialogueFinish(Dialogue9); You... are a Saiyan, aren't you? So there are still more of you, then... [MORE DIALOGUE PARTS]
+			Condition Ko(FreezaFormaN1Enemy, true, -1); Freeza (Forma Nº1) - Traje de Batalha 1
+			Condition Ko(ZarbonEnemy, true, -1); Zarbon - Traje de Batalha 1
+			Condition Ko(DodoriaEnemy, true, -1); Dodoria - Traje de Batalha 1
+
+			Action PlayDialogue(Dialogue10, 1000, "BFspe", -1); Dialogue: Heh heh heh... I'm starting to get angry. [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 5
+		{
+			Condition DialogueFinish(Dialogue10); Heh heh heh... I'm starting to get angry. [MORE DIALOGUE PARTS]
+
+			Action PlayDialogue(Dialogue11, 1000, "BFspe", -1); Dialogue: HAAAAAA! --- Stage: Espaço (Terra)
+		}
+
+		Event 6
+		{
+			Condition DialogueFinish(Dialogue11); HAAAAAA!
+
+			Action ModelChange(FreezaFormaN1Enemy, FreezaFormaFinalEnemy, 0, -1, 25)
+		}
+
+		Event 7
+		{
+			Condition EventDone(0, 3, 6)
+
+			Action PlayDialogue(Dialogue12, 1000, "BFspe", -1); Dialogue: Heh heh heh. You're going to regret forcing my hand like this. Don't bother begging for mercy. [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+			Action RemoveChara_(FreezaFormaN1Enemy, false); Freeza (Forma Nº1) - Traje de Batalha 1
+		}
+
+		Event 8
+		{
+			Condition DialogueFinish(Dialogue12); Heh heh heh. You're going to regret forcing my hand like this. Don't bother begging for mercy. [MORE DIALOGUE PARTS]
+			Condition Health(<=, FreezaFormaFinalEnemy, 50.0); Freeza (Forma Final) - Forma Final 1
+
+			Action PlayDialogue(Dialogue13, 1000, "BFspe", -1); Dialogue: I will not allow a single Saiyan to survive. I will leave no trace of you behind! [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 9
+		{
+			Condition DialogueFinish(Dialogue13); I will not allow a single Saiyan to survive. I will leave no trace of you behind! [MORE DIALOGUE PARTS]
+			Condition Ko(FreezaFormaFinalEnemy, true, -1); Freeza (Forma Final) - Forma Final 1
+
+			Action PlayDialogue(Dialogue14, 1000, "BFspe", -1); Dialogue: *gasp*... *wheeze*... H-How could a Saiyan... best... ME?! [MORE DIALOGUE PARTS] --- Stage: Espaço (Terra)
+		}
+
+		Event 10
+		{
+			Condition DialogueFinish(Dialogue14); *gasp*... *wheeze*... H-How could a Saiyan... best... ME?! [MORE DIALOGUE PARTS]
+
+			Action GotoState(4)
+		}
+	}
+
+	State 4
+	{
+		Event 0
+		{
+			Condition InStage(Player, "BFtwc", true); Char: Player --- Stage: Corporação Cápsula
+
+			Action CharaSpawn(HitEnemy, 6, -1, 20, "BFtwc", 0); Char: Hit - Traje 1 --- Stage: Corporação Cápsula
+		}
+
+		Event 1
+		{
+			Condition EventDone(0, 4, 0)
+
+			Action PlayDialogue(Dialogue15, 1000, "BFtwc", -1); Dialogue: You're Broly, aren't you? [MORE DIALOGUE PARTS] --- Stage: Corporação Cápsula
+		}
+
+		Event 2
+		{
+			Condition DialogueFinish(Dialogue15); You're Broly, aren't you? [MORE DIALOGUE PARTS]
+			Condition Health(<=, HitEnemy, 50.0); Hit - Traje 1
+
+			Action PlayDialogue(Dialogue16, 1000, "BFtwc", -1); Dialogue: You're better than I expected. So this is the legendary... [MORE DIALOGUE PARTS] --- Stage: Corporação Cápsula
+		}
+
+		Event 3
+		{
+			Condition DialogueFinish(Dialogue16); You're better than I expected. So this is the legendary... [MORE DIALOGUE PARTS]
+			Condition Ko(HitEnemy, true, -1); Hit - Traje 1
+
+			Action QuestFinishState(COMPLETE)
+			Action PlayDialogue(Dialogue17, 1000, "BFtwc", -1); Dialogue: Impossible... How can... this... be...? [MORE DIALOGUE PARTS] --- Stage: Corporação Cápsula
+		}
+
+		Event 4
+		{
+			Condition Ko(HitEnemy, false, -1); Hit - Traje 1
+			Condition TimePassed(<=, 600.0)
+
+			Action SetFlag(Flag63, true)
+		}
+
+		Event 6
+		{
+			Condition DialogueFinish(Dialogue17); Impossible... How can... this... be...? [MORE DIALOGUE PARTS]
+
+			Action GotoState(5)
+		}
+	}
+
+	State 5
+	{
+		Event 1
+		{
+			Condition CheckFlag(Flag63, true)
+
+			Action GotoState(6)
+		}
+
+		Event 2
+		{
+			Condition CheckFlag(Flag63, false)
+
+			Action GotoState(7)
+		}
+	}
+
+	State 6
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action ShowWarning
+			Action CharaSpawn(GokuEnemy, 0, -1, 20, "BFtwc", 1); Char: Goku - Gi 1 da Tartaruga Eremita --- Stage: Corporação Cápsula
+		}
+
+		Event 1
+		{
+			Condition EventDone(0, 6, 0)
+
+			Action PlayDialogue(Dialogue18, 1000, "BFtwc", -1); Dialogue: The energy you guys have is out of this world! Wanna go a few rounds with me? [MORE DIALOGUE PARTS] --- Stage: Corporação Cápsula
+		}
+
+		Event 2
+		{
+			Condition DialogueFinish(Dialogue18); The energy you guys have is out of this world! Wanna go a few rounds with me? [MORE DIALOGUE PARTS]
+
+			Action RemoveChara(BrolyContidoAlly, false); Broly (Contido) - Gi
+			Action SetCharVisible_(BrolyContidoAlly2, true); Broly (Contido) - Gi
+			Action ModelChange(BrolyContidoAlly2, BrolyAlly, 3, -1, 25)
+		}
+
+		Event 3
+		{
+			Condition EventDone(0, 6, 2)
+
+			Action PlayDialogue(Dialogue19, 1000, "BFtwc", -1); Dialogue: KAKAROOOOT! [MORE DIALOGUE PARTS] --- Stage: Corporação Cápsula
+			Action RemoveChara(BrolyContidoAlly2, false); Broly (Contido) - Gi
+		}
+
+		Event 4
+		{
+			Condition DialogueFinish(Dialogue19); KAKAROOOOT! [MORE DIALOGUE PARTS]
+			Condition Health(<=, GokuEnemy, 50.0); Goku - Gi 1 da Tartaruga Eremita
+
+			Action SetStat(GokuEnemy, ATK, 1); Goku - Gi 1 da Tartaruga Eremita
+			Action SetStat(GokuEnemy, KI_ATK, 1); Goku - Gi 1 da Tartaruga Eremita
+			Action SetStat(GokuEnemy, SUPER_ATK, 1); Goku - Gi 1 da Tartaruga Eremita
+			Action SetStat(GokuEnemy, SUPER_KI, 1); Goku - Gi 1 da Tartaruga Eremita
+			Action PlayDialogue(Dialogue20, 1000, "BFtwc", -1); Dialogue: Oww... You're crazy strong, you know that?! You're not like a normal Super Saiyan. What's going on? [MORE DIALOGUE PARTS] --- Stage: Corporação Cápsula
+		}
+
+		Event 5
+		{
+			Condition DialogueFinish(Dialogue20); Oww... You're crazy strong, you know that?! You're not like a normal Super Saiyan. What's going on? [MORE DIALOGUE PARTS]
+
+			Action PowerUp(GokuEnemy, -1, 44); Goku - Gi 1 da Tartaruga Eremita
+			Action QuickPowerup(GokuEnemy, 102); Goku - Gi 1 da Tartaruga Eremita
+			Action SetStat(GokuEnemy, ATK, 235); Goku - Gi 1 da Tartaruga Eremita
+			Action SetStat(GokuEnemy, KI_ATK, 235); Goku - Gi 1 da Tartaruga Eremita
+			Action SetStat(GokuEnemy, SUPER_ATK, 245); Goku - Gi 1 da Tartaruga Eremita
+			Action SetStat(GokuEnemy, SUPER_KI, 245); Goku - Gi 1 da Tartaruga Eremita
+		}
+
+		Event 6
+		{
+			Condition EventDone(0, 6, 5)
+
+			Action PlayDialogue(Dialogue21, 1000, "BFtwc", -1); Dialogue: Is that all you got, Kakarot? I'll squash you like a bug. [MORE DIALOGUE PARTS] --- Stage: Corporação Cápsula
+			Action HealthCap(false, GokuEnemy, 1.0); Goku - Gi 1 da Tartaruga Eremita
+		}
+
+		Event 7
+		{
+			Condition DialogueFinish(Dialogue21); Is that all you got, Kakarot? I'll squash you like a bug. [MORE DIALOGUE PARTS]
+			Condition Ko(GokuEnemy, true, -1); Goku - Gi 1 da Tartaruga Eremita
+
+			Action QuestFinishState(ULTIMATE_FINISH)
+			Action PlayDialogue(Dialogue22, 1000, "BFtwc", -1); Dialogue: Urgh! What the...? He's a monster... [MORE DIALOGUE PARTS] --- Stage: Corporação Cápsula
+		}
+
+		Event 8
+		{
+			Condition DialogueFinish(Dialogue22); Urgh! What the...? He's a monster... [MORE DIALOGUE PARTS]
+
+			Action GotoState(7)
+		}
+
+		Event 9
+		{
+			Condition CheckFlag(Flag62, true)
+
+			Action Unk84("BFtwc"); Corporação Cápsula
+		}
+	}
+
+	State 7
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action QuestClear
+		}
+	}
+}
+
