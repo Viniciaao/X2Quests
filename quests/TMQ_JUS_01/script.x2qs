@@ -1,6 +1,9 @@
 ; ===========================================================================
 ;  TMQ_JUS_01 - DEVOLVA MINHA BEER!  (script principal)
 ;
+;  O roteiro gira em torno do Juse procurando quem roubou a beer dele. Ele nao
+;  fala nada: so aponta, so olha, so diz ".....".
+;
 ;  State 0  init: portais, avisos de inimigo por stage, InitQuest
 ;  State 1  STAGE 1 - BFkoh (Capsule Corporation)
 ;             onda 1  Junin Emo + Junin            (nascem com o stage)
@@ -14,13 +17,21 @@
 ;  State 5  BONUS intro: Juse sai do time, 5s de silencio, aviso, Juse inimigo
 ;  State 6  BONUS luta: reforcos por vida baixa e pela queda dos reforcos
 ;  State 7  ULTIMATE FINISH
+;  State 8  FALHA: o Juse aliado caiu. Se o Dimitztri ainda estiver vivo ele
+;           provoca primeiro (3 falas) e so depois vem a tela de resultados.
 ;
-;  A janela dos 10 minutos vem do script1.x2qs (script "vigia").
-;  Observacoes:
+;  REGRA: se o Juse aliado morrer em qualquer momento, a missao falha. Quem
+;  detecta a queda e levanta FlagJuseMorreu e o script1.x2qs (script "vigia");
+;  aqui a gente so reage e leva pro State 8. Os events de CheckFlag vem sempre
+;  ANTES dos outros em cada state: sao avaliados em ordem de declaracao, entao
+;  a derrota do Juse tem prioridade sobre qualquer outra coisa acontecendo.
+;
+;  Outras observacoes:
 ;   - CharaSpawn2 usa o retrato do SEGUNDO char na fala, por isso o personagem
 ;     que fala vem sempre em segundo lugar na chamada.
 ;   - SetThereAreEnemies(stage, false) so libera o portal depois que nao ha
 ;     mais nenhum inimigo carregado naquele stage.
+;   - A janela dos 10 minutos tambem vem do script1.x2qs.
 ; ===========================================================================
 
 Flag FlagOnda1S1 ; Yone + Yasha ja entraram (stage 1)
@@ -29,6 +40,9 @@ Flag FlagOnda2S3 ; Ze do Morro + Dimitztri ja entraram (stage 3)
 Flag FlagFast    ; ainda da tempo do bonus (terminar em < 10 min)
 Flag FlagVini    ; Vini Pai + Vini Jr ja entraram
 Flag FlagLui     ; Luis + Shinya ja entraram
+Flag FlagJuseMorreu ; o Juse aliado caiu -> a missao falha (levantada pelo script1)
+Flag FlagJuseTaunts ; o Juse caiu com o Dimitztri vivo -> ele provoca antes do resultado
+Flag FlagJuseSaiu   ; o Juse ja saiu do time (bonus) - a partir dai ele nao conta mais
 
 Script
 {
@@ -78,33 +92,40 @@ Script
 
 		Event 0
 		{
+			Condition CheckFlag(FlagJuseMorreu, true) ; o Juse caiu: a missao acabou
+
+			Action GotoState(8)
+		}
+
+		Event 1
+		{
 			Condition Always
 
 			Action PlayDialogue(DlgJuninEmo1, 1000, "BFkoh", -1); Bro... a gente so pegou emprestado.
 		}
 
-		Event 1
+		Event 2
 		{
 			Condition DialogueFinish(DlgJuninEmo1)
 
 			Action PlayDialogue(DlgJunin1, 1000, "BFkoh", -1); Era a ultima gelada da galaxia...
 		}
 
-		Event 2
+		Event 3
 		{
 			Condition DialogueFinish(DlgJunin1)
 
 			Action PlayDialogue(DlgPlayer1, 1000, "BFkoh", -1); Voces roubaram a beer do Juse?
 		}
 
-		Event 3
+		Event 4
 		{
 			Condition DialogueFinish(DlgPlayer1)
 
 			Action PlayDialogue(DlgJuse1, 1000, "BFkoh", -1); .....
 		}
 
-		Event 4
+		Event 5
 		{
 			Condition Ko(JuninEmoEnemy, false, -1); Junin Emo derrotado
 			Condition Ko(JuninEnemy, false, -1); Junin derrotado
@@ -115,14 +136,14 @@ Script
 			Action CharaSpawn2(YashaEnemy, YoneEnemy, 3, DlgYone1, "BFkoh", 0, -1, -1); Yone + Yasha --- Capsule Corporation
 		}
 
-		Event 5
+		Event 6
 		{
 			Condition DialogueFinish(DlgYone1)
 
 			Action PlayDialogue(DlgYasha1, 1000, "BFkoh", -1); Relaxa. A beer ja era.
 		}
 
-		Event 6
+		Event 7
 		{
 			Condition Ko(YoneEnemy, false, -1); Yone derrotado
 			Condition Ko(YashaEnemy, false, -1); Yasha derrotado
@@ -133,7 +154,7 @@ Script
 			Action PlayDialogue(DlgPortal1, 1000, "BFkoh", -1); Eles abriram um portal...
 		}
 
-		Event 7
+		Event 8
 		{
 			Condition InStage(Player, "BFsky", true); West City (Industrial Sector)
 
@@ -150,12 +171,19 @@ Script
 
 		Event 0
 		{
+			Condition CheckFlag(FlagJuseMorreu, true) ; o Juse caiu: a missao acabou
+
+			Action GotoState(8)
+		}
+
+		Event 1
+		{
 			Condition Always
 
 			Action PlayDialogue(DlgEzra1, 1000, "BFsky", -1); Voce ta correndo atras da cerveja errada...
 		}
 
-		Event 1
+		Event 2
 		{
 			Condition Ko(EzraEnemy, false, -1); Ezra derrotado
 			Condition CheckFlag(FlagOnda2S2, false)
@@ -165,21 +193,21 @@ Script
 			Action CharaSpawn2(JuninFuturoEnemy, RayEnemy, 3, DlgRay1, "BFsky", 0, -1, -1); Ray + Junin do Futuro --- West City (Industrial Sector)
 		}
 
-		Event 2
+		Event 3
 		{
 			Condition DialogueFinish(DlgRay1)
 
 			Action PlayDialogue(DlgJuf1, 1000, "BFsky", -1); No meu futuro a beer nunca foi devolvida.
 		}
 
-		Event 3
+		Event 4
 		{
 			Condition DialogueFinish(DlgJuf1)
 
 			Action PlayDialogue(DlgJuse2, 1000, "BFsky", -1); .....
 		}
 
-		Event 4
+		Event 5
 		{
 			Condition Ko(RayEnemy, false, -1); Ray derrotado
 			Condition Ko(JuninFuturoEnemy, false, -1); Junin do Futuro derrotado
@@ -188,7 +216,7 @@ Script
 			Action SetThereAreEnemies("BFsky", false); West City (Industrial Sector)
 		}
 
-		Event 5
+		Event 6
 		{
 			Condition InStage(Player, "BFspe", true); West City (Suburbs)
 
@@ -205,29 +233,43 @@ Script
 
 		Event 0
 		{
+			Condition CheckFlag(FlagJuseMorreu, true) ; o Juse caiu: a missao acabou
+
+			Action GotoState(8)
+		}
+
+		Event 1
+		{
 			Condition Always
 
 			Action PlayDialogue(DlgDan1, 1000, "BFspe", -1); Majin Mau bebeu. Majin Mau gostou.
 		}
 
-		Event 1
+		Event 2
 		{
 			Condition Ko(DanEnemy, false, -1); Dan Majin Mau derrotado
 			Condition CheckFlag(FlagOnda2S3, false)
 
 			Action SetFlag(FlagOnda2S3, true)
-			; o Ze do Morro vem em 2o porque a fala usa o retrato do segundo char
-			Action CharaSpawn2(DimitztriEnemy, ZeMorroEnemy, 3, DlgZem1, "BFspe", 0, -1, -1); Ze do Morro + Dimitztri (lv 150) --- West City (Suburbs)
-		}
-
-		Event 2
-		{
-			Condition DialogueFinish(DlgZem1)
-
-			Action PlayDialogue(DlgBct1, 1000, "BFspe", -1); Eu so vim pelo gole...
+			; o Dimitztri vem em 2o porque a fala usa o retrato do segundo char
+			Action CharaSpawn2(ZeMorroEnemy, DimitztriEnemy, 3, DlgBctIntro, "BFspe", 0, -1, -1); Ze do Morro + Dimitztri (lv 150) --- West City (Suburbs)
 		}
 
 		Event 3
+		{
+			Condition DialogueFinish(DlgBctIntro); Juse, se acalme! Ninguem sabe onde esta isso ai
+
+			Action PlayDialogue(DlgJuse3, 1000, "BFspe", -1); .....
+		}
+
+		Event 4
+		{
+			Condition DialogueFinish(DlgJuse3)
+
+			Action PlayDialogue(DlgZem1, 1000, "BFspe", -1); Esquece, ele nao da ouvidos
+		}
+
+		Event 5
 		{
 			Condition Ko(ZeMorroEnemy, false, -1); Ze do Morro derrotado
 			Condition Ko(DimitztriEnemy, false, -1); Dimitztri derrotado
@@ -238,7 +280,7 @@ Script
 			Action PlayDialogue(DlgJuseFim, 1000, "BFspe", -1); .....
 		}
 
-		Event 4
+		Event 6
 		{
 			Condition DialogueFinish(DlgJuseFim)
 
@@ -255,22 +297,32 @@ Script
 
 		Event 0
 		{
+			Condition CheckFlag(FlagJuseMorreu, true) ; o Juse caiu: a missao acabou
+
+			Action GotoState(8)
+		}
+
+		Event 1
+		{
 			Condition Always
 
 			Action QuestFinishState(COMPLETE)
 		}
 
-		Event 1
+		Event 2
 		{
 			Condition CheckFlag(FlagFast, false) ; passou dos 10 minutos: fim normal
 
 			Action QuestClear
 		}
 
-		Event 2
+		Event 3
 		{
 			Condition CheckFlag(FlagFast, true) ; dentro dos 10 minutos: abre o bonus
 
+			; daqui pra frente o Juse nao faz mais parte do time, entao a regra
+			; "se o Juse morrer a missao falha" deixa de valer
+			Action SetFlag(FlagJuseSaiu, true)
 			Action GotoState(5)
 		}
 	}
@@ -363,6 +415,53 @@ Script
 			Condition Always
 
 			Action QuestFinishState(ULTIMATE_FINISH)
+			Action QuestClear
+		}
+	}
+
+	State 8
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		; o Juse aliado caiu. A missao falha - mas se o Dimitztri ainda estiver
+		; de pe, ele tem as tres falas dele antes da tela de resultados.
+		Event 0
+		{
+			Condition CheckFlag(FlagJuseTaunts, true) ; Dimitztri vivo: deixa ele falar
+
+			Action PlayDialogue(DlgBctTaunt1, 1000, "BFspe", -1); Eu disse Juse, voce deveria ter me escutado..
+		}
+
+		Event 1
+		{
+			Condition DialogueFinish(DlgBctTaunt1)
+
+			Action PlayDialogue(DlgBctTaunt2, 1000, "BFspe", -1); Agora olha pro 'ce... que humilhante.
+		}
+
+		Event 2
+		{
+			Condition DialogueFinish(DlgBctTaunt2)
+
+			Action PlayDialogue(DlgBctTaunt3, 1000, "BFspe", -1); Mas voce vem trabalhar amanha, ne?
+		}
+
+		Event 3
+		{
+			Condition DialogueFinish(DlgBctTaunt3) ; so agora vem a tela de resultados
+
+			Action QuestFinishState(FAIL)
+			Action QuestClear
+		}
+
+		Event 4
+		{
+			Condition CheckFlag(FlagJuseTaunts, false) ; sem Dimitztri: resultado direto
+
+			Action QuestFinishState(FAIL)
 			Action QuestClear
 		}
 	}

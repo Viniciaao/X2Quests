@@ -105,17 +105,49 @@ TextAudioEntry TxtDlgDan1
 
 TextAudioEntry TxtDlgZem1
 {
-	en: "Up on the hill we share everything. Except Juse's beer."
-	pt: "Aqui no morro a gente divide tudo. Menos a beer do Juse."
-	es: "Acá en el cerro compartimos todo. Menos la cerveza de Juse."
+	en: "Forget it, he won't listen."
+	pt: "Esquece, ele não dá ouvidos."
+	es: "Olvídalo, no escucha a nadie."
 	voice: ""
 }
 
-TextAudioEntry TxtDlgBct1
+TextAudioEntry TxtDlgBctIntro
 {
-	en: "I only came for the sip. But since I'm here... let's dance."
-	pt: "Eu só vim pelo gole. Mas já que tô aqui... bora dançar."
-	es: "Yo solo vine por el trago. Pero ya que estoy acá... bailemos."
+	en: "Juse, calm down! Nobody knows where that thing is."
+	pt: "Juse, se acalme! Ninguém sabe onde está isso aí."
+	es: "¡Juse, cálmate! Nadie sabe dónde está eso."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgJuse3
+{
+	en: "....."
+	pt: "....."
+	es: "....."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgBctTaunt1
+{
+	en: "I told you, Juse. You should have listened to me.."
+	pt: "Eu disse Juse, você deveria ter me escutado.."
+	es: "Te lo dije, Juse. Deberías haberme escuchado.."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgBctTaunt2
+{
+	en: "Now look at you... how humiliating."
+	pt: "Agora olha pro 'cê... que humilhante."
+	es: "Ahora mírate... qué humillante."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgBctTaunt3
+{
+	en: "But you're still coming in to work tomorrow, right?"
+	pt: "Mas você vem trabalhar amanhã, né?"
+	es: "Pero mañana vienes a trabajar, ¿no?"
 	voice: ""
 }
 
@@ -362,7 +394,7 @@ Dialogue DlgZem1
 	}
 }
 
-Dialogue DlgBct1
+Dialogue DlgBctIntro
 {
 	i28: 0
 
@@ -372,7 +404,67 @@ Dialogue DlgBct1
 		costume: -1
 		transformation: -1
 
-		text_audio: TxtDlgBct1
+		text_audio: TxtDlgBctIntro
+		i8: 0
+	}
+}
+
+Dialogue DlgJuse3
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "JUS"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgJuse3
+		i8: 0
+	}
+}
+
+Dialogue DlgBctTaunt1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "BCT"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgBctTaunt1
+		i8: 0
+	}
+}
+
+Dialogue DlgBctTaunt2
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "BCT"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgBctTaunt2
+		i8: 0
+	}
+}
+
+Dialogue DlgBctTaunt3
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "BCT"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgBctTaunt3
 		i8: 0
 	}
 }

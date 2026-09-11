@@ -113,16 +113,16 @@ TextEntry TMQ_JUS_01_1
 
 TextEntry TMQ_JUS_01_2
 {
-	en: "-All team HP depleted\n-Time expires"
-	pt: "-A vida do time acabou\n-O tempo acabou"
-	es: "-Se agoto la vida del equipo\n-Se acabo el tiempo"
+	en: "-All team HP depleted\n-Juse is taken down\n-Time expires"
+	pt: "-A vida do time acabou\n-O Juse foi derrubado\n-O tempo acabou"
+	es: "-Se agoto la vida del equipo\n-Derrotan a Juse\n-Se acabo el tiempo"
 }
 
 TextEntry TMQ_JUS_01_3
 {
-	en: "Someone stole Juse's last beer. He won't say a single word, he just stares. Chase the thieves across three districts, get the bottle back and pray nobody sees Juse angry."
-	pt: "Roubaram a ultima beer do Juse. Ele nao diz uma palavra, so olha. Persiga os ladroes por tres distritos, recupere a garrafa e reze pra ninguem ver o Juse com raiva."
-	es: "Alguien robo la ultima cerveza de Juse. El no dice una palabra, solo mira. Persigue a los ladrones por tres distritos, recupera la botella y reza para que nadie vea a Juse enojado."
+	en: "Someone stole Juse's beer and he went out hunting for whoever did it. He will not say a single word, he just points and walks. Follow him across three districts: every thief swears it was not him and always calls two more. If Juse goes down on the way, it is over."
+	pt: "Roubaram a beer do Juse e ele saiu cacando quem foi. Ele nao diz uma palavra, so aponta e vai atras. Siga ele por tres distritos: cada ladrao jura que nao foi ele e sempre chama mais dois. Se o Juse cair no caminho, acabou."
+	es: "Alguien robo la cerveza de Juse y el salio a cazar al culpable. No dice una palabra, solo senala y va detras. Síguelo por tres distritos: cada ladron jura que no fue el y siempre llama a dos mas. Si Juse cae en el camino, se acabo."
 }
 
 TextEntry TMQ_JUS_01_4

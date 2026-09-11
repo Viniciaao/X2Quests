@@ -13,13 +13,18 @@ Fontes em [`quests/TMQ_JUS_01/`](../quests/TMQ_JUS_01) · pacote em
 
 ## 1. A ideia
 
-Roubaram a última **beer** do **Juse**. Ele é um CAC sério, lv 180, e **não diz
-uma palavra** — as únicas "falas" dele na missão inteira são `"....."` e
-`"......."`. Mesmo assim ele acompanha o time do começo ao fim.
+Roubaram a **beer** do **Juse** e ele saiu caçando quem foi. Ele é um CAC
+sério, lv 180, e **não diz uma palavra** — as únicas "falas" dele na missão
+inteira são `"....."` e `"......."`. Ele só aponta e vai atrás, e o time vai
+junto.
 
 A perseguição atravessa **três stages** ligados por portais. Em cada um, um
-ladrão sozinho espera; quando cai, chegam mais dois. No terceiro stage a missão
-termina com o Juse olhando e dizendo `"....."`.
+ladrão sozinho espera; quando cai, chegam mais dois — e cada um jura que não
+foi ele. No terceiro stage a missão termina com o Juse olhando e dizendo
+`"....."`.
+
+**Regra dura: se o Juse aliado cair em qualquer momento, a missão falha.** Ele
+é o dono da beer; sem ele não tem missão.
 
 O truque está no **bônus**: se você fechar a missão em **menos de 10 minutos**,
 a missão **não** acaba. O Juse sai do time sem falar nada, o jogo fica
@@ -42,6 +47,7 @@ absurdas. Durante essa luta:
 | Tempo | 1200 s (20 min) |
 | Nível / dificuldade | 140 / 5 |
 | Unlock | junto com `TMQ_1400` (Being a Time Patroller) |
+| Derrota | o time todo cai, o tempo acaba, **ou o Juse aliado cai** |
 | Bônus | terminar em **menos de 10 min** |
 
 ### Stages
@@ -83,13 +89,16 @@ State 2  BFsky   Ezra (nasce com o stage)
                  InStage(Player, "BFspe") → State 3
 
 State 3  BFspe   Dan Majin Mau (nasce com o stage)
-                 Dan cai → CharaSpawn2 Dimitztri + Zé do Morro (lv 150)
+                 Dan cai → CharaSpawn2 Zé do Morro + Dimitztri (lv 150)
+                           Dimitztri: "Juse, se acalme! Ninguém sabe onde está isso aí"
+                           Juse:      "....."
+                           Zé do Morro: "Esquece, ele não dá ouvidos"
                  os dois caem → SetThereAreEnemies(BFspe, false)
                                 + fala "....."  → State 4
 
 State 4  QuestFinishState(COMPLETE)
                  FlagFast false → QuestClear (fim normal)
-                 FlagFast true  → State 5
+                 FlagFast true  → SetFlag(FlagJuseSaiu) → State 5
 
 State 5  CharaLeave(JuseAllyS3) → Wait(5.0) → ShowWarning
          → CharaSpawn(JuseEnemy, fala ".......") → State 6
@@ -100,7 +109,14 @@ State 6  PlayerHealth(<=, 20.0) → CharaSpawn2 ViniJr + Vini Pai
 
 State 7  QuestFinishState(ULTIMATE_FINISH) → QuestClear
 
-script1  vigia: TimePassed(>=, 600.0) → SetFlag(FlagFast, false)
+State 8  FALHA - o Juse aliado caiu ( States 1..4 mandam pra cá )
+         FlagJuseTaunts true  → as 3 falas do Dimitztri, uma por DialogueFinish,
+                                e só no fim QuestFinishState(FAIL) + QuestClear
+         FlagJuseTaunts false → QuestFinishState(FAIL) + QuestClear na hora
+
+script1  vigia: TimePassed(>=, 600.0)                  → SetFlag(FlagFast, false)
+                Ko(JuseAllyS3) + IsAlive(Dimitztri)    → FlagJuseTaunts + FlagJuseMorreu
+                Ko(JuseAllyS1/S2/S3)                   → FlagJuseMorreu
 ```
 
 Detalhes que valem a pena saber:
@@ -117,6 +133,16 @@ Detalhes que valem a pena saber:
   por stage, porque o jogo trata cada stage como cenário próprio — é o mesmo
   truque que o vanilla usa no Goku do `TMQ_3102` (lá com `CopyHealth` pra
   disfarçar; aqui cada instância entra com a vida cheia).
+* **A falha é scriptada.** O jogo só falha sozinho quando o time inteiro cai ou
+  o tempo acaba; o tutorial diz explicitamente que condição especial ("*such as
+  a quest ally killed*") é responsabilidade da quest, com `QuestFinishState(FAIL)`.
+  Como são três instâncias do Juse, o `script1.x2qs` vigia as três e levanta
+  `FlagJuseMorreu`; os States 1 a 4 checam a flag no **primeiro** Event (a ordem
+  de declaração é a ordem de avaliação, então a derrota do Juse ganha de
+  qualquer outra coisa que esteja acontecendo no mesmo frame).
+* **`FlagJuseSaiu`** é levantada no State 4 antes de entrar no bônus: dali em
+  diante o Juse não é mais aliado, então a regra de falha deixa de valer — sem
+  isso o `CharaLeave`/chefe poderia ser lido como morte do aliado.
 
 ## 4. Elenco
 
@@ -175,13 +201,24 @@ O `QxdChar` do X2QS **não tem multiplicador de dano recebido** — os campos
 
 ## 5. As falas
 
-20 falas em `pt` / `en` / `es`, todas com `voice: ""` (legenda sem dublagem).
+24 falas em `pt` / `en` / `es`, todas com `voice: ""` (legenda sem dublagem).
 Os textos ficam em `dialogue.x2qs` — é só editar lá.
 
-**Regra dura: o Juse nunca fala.** As três falas dele são `"....."`,
-`"....."` e `"......."` (a do bônus). Todos os outros personagens falam:
+**Regra dura: o Juse nunca fala.** As 5 falas dele são `"....."` (×4) e
+`"......."` (a do bônus) — e nada mais. Todos os outros personagens falam:
 Junin Emo, Junin, o jogador, Yone, Yasha, Ezra, Ray, Junin do Futuro, Dan,
 Zé do Morro, Dimitztri, Vini Pai, Vini Jr, Luis e Shinya.
+
+O **Dimitztri** é quem mais fala (4): a chegada dele no stage 3 e as três
+provocações da falha.
+
+| Momento | Falas |
+| --- | --- |
+| Dimitztri entra (stage 3) | `BCT` "Juse, se acalme! Ninguém sabe onde está isso aí." → `JUS` `"....."` → `ZEM` "Esquece, ele não dá ouvidos." |
+| Juse cai com o Dimitztri vivo | `BCT` "Eu disse Juse, você deveria ter me escutado.." → "Agora olha pro 'cê... que humilhante." → "Mas você vem trabalhar amanhã, né?" → **só então** a tela de resultados |
+
+A última provocação é de propósito: a Super Soul do Juse é
+*"[JUS SS]Tenho que trabaia amanhã!"*.
 
 O `actor:` de cada fala usa o ENTRY_NAME do mod (ex.: `actor: "JUS"`). O
 retrato só aparece se o mod daquele personagem estiver instalado — que é
@@ -211,9 +248,14 @@ depois a missão.
 
 ```bash
 python3 tools/x2qs_lint.py quests/TMQ_JUS_01
-# [lint] TMQ_JUS_01: OK - 6 arquivos, 204 identificadores,
-#         114 Action/Condition validados, 9 aviso(s)
+# [lint] TMQ_JUS_01: OK - 6 arquivos, 215 identificadores,
+#         154 Action/Condition validados, 9 aviso(s)
 ```
+
+Além do linter, uma checagem estrutural do fluxo: os 9 `State` declarados
+cobrem todos os 8 alvos de `GotoState`, nenhuma `Flag`/`Dialogue` é usada sem
+ser declarada, nenhuma fica declarada sem uso, e o `script1.x2qs` não
+redeclara flag nenhuma.
 
 Os 9 avisos são esperados:
 
@@ -250,16 +292,33 @@ Aqui só roda o linter — nada foi testado dentro do DBXV2.
    também tem `Ko(char, true, -1)` pro **mesmo** personagem no mesmo script, e
    o segundo parâmetro não é documentado em lugar nenhum — se uma onda não
    avançar, é o primeiro lugar pra olhar.
-5. **SkillSet ↔ costume** — a associação posicional da seção 4 é inferência.
+5. **`QuestFinishState(FAIL)`** — o tutorial prescreve exatamente este caso
+   ("*if you need special failure conditions (such as a quest ally killed, etc),
+   you will have to code the logic yourself and eventually call
+   QuestFinishState(FAIL)*"), mas **nenhuma** das 1160 quests do corpus chama
+   isso — só `COMPLETE` e `ULTIMATE_FINISH`. Se a tela sair como "concluída" em
+   vez de "falhou", é aqui.
+6. **`IsAlive(char)`** — tem 2 usos vanilla (`TMQ_4601`, junto com
+   `DialogueFinish`), então a condição existe; o que não foi testado é combinar
+   `Ko(aliado)` + `IsAlive(inimigo)` no mesmo Event pra escolher entre "falha com
+   provocação" e "falha seca".
+7. **Ordem de avaliação dos Events** — toda a prioridade da falha depende de os
+   Events serem avaliados **na ordem em que aparecem no arquivo** (é o que
+   `TMQ_URA_01` e o mod *ginyu* assumem). Se o jogo avaliar em outra ordem, o
+   Event de `CheckFlag(FlagJuseMorreu, true)` pode perder para o de avanço de
+   onda no mesmo frame — nesse caso o State 8 precisa virar checagem dentro de
+   cada Event, não um Event próprio.
+8. **SkillSet ↔ costume** — a associação posicional da seção 4 é inferência.
    Se no jogo a Yasha de Coat vier com as skills erradas, troque o bloco de
    skills do `QxdChar Yasha` pelo SkillSet 1 (`49156, 49153, 49154, 49159,
    49155, 49160, 10130, 21081, 65535`).
-6. **Recompensas** — valores chutados pro nível 140; nada de `CharReward` do
+9. **Recompensas** — valores chutados pro nível 140; nada de `CharReward` do
    Juse porque recompensar personagem de mod não foi testado.
 
 **Decisões já confirmadas pelo autor**
 
 Os três maps (`BFkoh` → `BFsky` → `BFspe`), o gatilho dos reforços
-(`PlayerHealth(<=, 20.0)` = vida do jogador em 20% ou menos) e as recompensas
-da ficha foram confirmados como estão. Nível 140, `health: 15000.0` do chefe e
-o texto das falas continuam livres pra ajustar.
+(`PlayerHealth(<=, 20.0)` = vida do jogador em 20% ou menos), as recompensas da
+ficha, a falha quando o Juse cai e as falas do Dimitztri foram pedidos
+explicitamente. Nível 140 e `health: 15000.0` do chefe continuam livres pra
+ajustar.
