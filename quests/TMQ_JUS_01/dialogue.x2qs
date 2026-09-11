@@ -169,33 +169,57 @@ TextAudioEntry TxtDlgJuseBonus
 
 TextAudioEntry TxtDlgVini1
 {
-	en: "Easy there, champ. Dad's here. And he brought the kid."
-	pt: "Calma aí, campeão. O pai chegou. E trouxe o moleque."
-	es: "Tranquilo, campeón. Llegó papá. Y trajo al chico."
+	en: "Looks like you're in trouble..."
+	pt: "Parece que você está em problemas..."
+	es: "Parece que estás en problemas..."
 	voice: ""
 }
 
 TextAudioEntry TxtDlgVjr1
 {
-	en: "Let's go, dad! I'll grab the bottle, you hold off Juse."
-	pt: "Bora, pai! Eu pego a garrafa, você segura o Juse."
-	es: "¡Vamos, papá! Yo agarro la botella, tú detén a Juse."
+	en: "Stand back, my dad and I will handle this"
+	pt: "Pra trás, meu pai e eu vamos cuidar disso"
+	es: "Atrás, mi papá y yo nos encargamos de esto"
 	voice: ""
 }
 
 TextAudioEntry TxtDlgLui1
 {
-	en: "Enough talking. Shinya is with me and we're not leaving without that beer."
-	pt: "Chega de conversa. A Shinya tá comigo e a gente não sai daqui sem aquela cerveja."
-	es: "Basta de charla. Shinya está conmigo y no nos vamos sin esa cerveza."
+	en: "Vini! N-no!"
+	pt: "Vini!, n-não!"
+	es: "¡Vini!, ¡n-no!"
 	voice: ""
 }
 
 TextAudioEntry TxtDlgShinya1
 {
-	en: "I brought the bottle cap. You brought the mess."
-	pt: "Eu trouxe a tampa. Vocês trouxeram a confusão."
-	es: "Yo traje la tapa. Ustedes trajeron el desastre."
+	en: "Cut the drama, idiot! They're alive. I think..."
+	pt: "Sem drama idiota!, eles estão vivos. eu acho..."
+	es: "¡Sin drama, idiota!, están vivos. Eso creo..."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgJuse4
+{
+	en: "...."
+	pt: "...."
+	es: "...."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgVjr2
+{
+	en: "Dad, he keeps staring at me with those deep eyes... it gives me chills"
+	pt: "Pai, ele ta me olhando com aqueles olhos profundos... me da arrepios"
+	es: "Papá, me está mirando con esos ojos profundos... me da escalofríos"
+	voice: ""
+}
+
+TextAudioEntry TxtDlgJuse5
+{
+	en: "....."
+	pt: "....."
+	es: "....."
 	voice: ""
 }
 
@@ -555,6 +579,51 @@ Dialogue DlgShinya1
 		transformation: -1
 
 		text_audio: TxtDlgShinya1
+		i8: 0
+	}
+}
+
+Dialogue DlgJuse4
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "JUS"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgJuse4
+		i8: 0
+	}
+}
+
+Dialogue DlgVjr2
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "VJR"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgVjr2
+		i8: 0
+	}
+}
+
+Dialogue DlgJuse5
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "JUS"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgJuse5
 		i8: 0
 	}
 }

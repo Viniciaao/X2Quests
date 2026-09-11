@@ -118,10 +118,10 @@ QxdChar JuseAlly
 	f24: -1.0
 	ki: -1.0
 	stamina: -1.0
-	atk: 0.35
-	ki_atk: 0.35
-	super_atk: 0.35
-	super_ki: 0.35
+	atk: -5.35
+	ki_atk: -5.35
+	super_atk: -5.35
+	super_ki: -5.35
 	atk_damage: 0.25
 	ki_damage: 0.25
 	super_atk_damage: 0.25
@@ -131,7 +131,7 @@ QxdChar JuseAlly
 	move_speed: -1.0
 	boost_speed: -1.0
 	f84: -1.0
-	ait_table_entry: 137
+	ait_table_entry: 140
 
 	super1: JusHeadingPlanet
 	super2: JusLegendaryStrikes
@@ -162,7 +162,7 @@ QxdChar JuninEmo
 
 	i12: 0
 	level: 100
-	health: 900.0
+	health: 1500.0
 	f24: -1.0
 	ki: -1.0
 	stamina: -1.0
@@ -210,7 +210,7 @@ QxdChar Junin
 
 	i12: 0
 	level: 100
-	health: 900.0
+	health: -1.0
 	f24: -1.0
 	ki: -1.0
 	stamina: -1.0
@@ -258,7 +258,7 @@ QxdChar Yone
 
 	i12: 0
 	level: 120
-	health: 1400.0
+	health: -1.0
 	f24: -1.0
 	ki: -1.0
 	stamina: -1.0
@@ -306,7 +306,7 @@ QxdChar Yasha
 
 	i12: 0
 	level: 120
-	health: 1400.0
+	health: -1.0
 	f24: -1.0
 	ki: -1.0
 	stamina: -1.0
@@ -371,7 +371,7 @@ QxdChar Ezra
 	move_speed: -1.0
 	boost_speed: -1.0
 	f84: -1.0
-	ait_table_entry: 144
+	ait_table_entry: 142
 
 	super1: Cu1GiganticStream
 	super2: 1553
@@ -611,7 +611,7 @@ QxdChar Dimitztri
 	move_speed: -1.0
 	boost_speed: -1.0
 	f84: -1.0
-	ait_table_entry: 144
+	ait_table_entry: 322
 
 	super1: BctDemonStoneRend
 	super2: BctGravityBash
@@ -659,7 +659,7 @@ QxdChar JuseBoss
 	move_speed: -1.0
 	boost_speed: -1.0
 	f84: -1.0
-	ait_table_entry: 144
+	ait_table_entry: 611
 
 	super1: JusHeadingPlanet
 	super2: JusLegendaryStrikes
@@ -690,7 +690,7 @@ QxdChar ViniPai
 
 	i12: 0
 	level: 160
-	health: 2600.0
+	health: -1.0
 	f24: -1.0
 	ki: -1.0
 	stamina: -1.0
@@ -707,7 +707,7 @@ QxdChar ViniPai
 	move_speed: -1.0
 	boost_speed: -1.0
 	f84: -1.0
-	ait_table_entry: 137
+	ait_table_entry: 606
 
 	super1: 62
 	super2: 0
@@ -738,7 +738,7 @@ QxdChar ViniJr
 
 	i12: 0
 	level: 155
-	health: 2400.0
+	health: -1.0
 	f24: -1.0
 	ki: -1.0
 	stamina: -1.0
@@ -755,7 +755,7 @@ QxdChar ViniJr
 	move_speed: -1.0
 	boost_speed: -1.0
 	f84: -1.0
-	ait_table_entry: 137
+	ait_table_entry: 315
 
 	super1: 52
 	super2: 596
@@ -786,7 +786,7 @@ QxdChar Lui
 
 	i12: 0
 	level: 175
-	health: 3200.0
+	health: -1.0
 	f24: -1.0
 	ki: -1.0
 	stamina: -1.0
@@ -803,7 +803,7 @@ QxdChar Lui
 	move_speed: -1.0
 	boost_speed: -1.0
 	f84: -1.0
-	ait_table_entry: 137
+	ait_table_entry: 606
 
 	super1: LuiFinalImpactRushSup
 	super2: LuiBigBangComboSuper
@@ -851,7 +851,7 @@ QxdChar Shinya
 	move_speed: -1.0
 	boost_speed: -1.0
 	f84: -1.0
-	ait_table_entry: 137
+	ait_table_entry: 611
 
 	super1: 861
 	super2: NftPowerDunk

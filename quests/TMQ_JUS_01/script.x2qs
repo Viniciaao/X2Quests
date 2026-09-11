@@ -15,7 +15,9 @@
 ;             Dan Majin Mau -> Ze do Morro + Dimitztri (lv 150) -> fim
 ;  State 4  QuestFinishState(COMPLETE) e decide se abre o bonus
 ;  State 5  BONUS intro: Juse sai do time, 5s de silencio, aviso, Juse inimigo
-;  State 6  BONUS luta: reforcos por vida baixa e pela queda dos reforcos
+;  State 6  BONUS luta: reforcos por vida baixa e pela queda dos reforcos.
+;           Quando o Vini Pai e o Vini Jr entram, SetAttackTarget joga o foco do
+;           Juse chefe pro Vini Jr (a piada dos "olhos profundos").
 ;  State 7  ULTIMATE FINISH
 ;  State 8  FALHA: o Juse aliado caiu. Se o Dimitztri ainda estiver vivo ele
 ;           provoca primeiro (3 falas) e so depois vem a tela de resultados.
@@ -366,16 +368,34 @@ Script
 			Action SetFlag(FlagVini, true)
 			; o Vini Pai vem em 2o porque a fala usa o retrato do segundo char
 			Action CharaSpawn2(ViniJrAlly, ViniAlly, 4, DlgVini1, "BFspe", 0, -1, -1); Vini Pai + Vini Jr --- West City (Suburbs)
+			; o Juse chefe passa a olhar so pro Vini Jr (a piada do "olhos profundos")
+			; se o alvo nao pegar, mova esta linha pro Event 1 (depois que eles ja
+			; estiverem em campo)
+			Action SetAttackTarget(JuseEnemy, ViniJrAlly, true)
 		}
 
 		Event 1
 		{
-			Condition DialogueFinish(DlgVini1)
+			Condition DialogueFinish(DlgVini1); Parece que voce esta em problemas...
 
-			Action PlayDialogue(DlgVjr1, 1000, "BFspe", -1); Bora, pai! Eu pego a garrafa...
+			Action PlayDialogue(DlgVjr1, 1000, "BFspe", -1); Pra tras, meu pai e eu vamos cuidar disso
 		}
 
 		Event 2
+		{
+			Condition DialogueFinish(DlgVjr1)
+
+			Action PlayDialogue(DlgJuse4, 1000, "BFspe", -1); ....
+		}
+
+		Event 3
+		{
+			Condition DialogueFinish(DlgJuse4)
+
+			Action PlayDialogue(DlgVjr2, 1000, "BFspe", -1); Pai, ele ta me olhando com aqueles olhos profundos...
+		}
+
+		Event 4
 		{
 			; os dois cairam: chegam o Luis (Rykan) e a Shinya
 			Condition CheckFlag(FlagVini, true)
@@ -388,14 +408,21 @@ Script
 			Action CharaSpawn2(ShinyaAlly, LuiAlly, 5, DlgLui1, "BFspe", 0, -1, -1); Luis + Shinya --- West City (Suburbs)
 		}
 
-		Event 3
+		Event 5
 		{
-			Condition DialogueFinish(DlgLui1)
+			Condition DialogueFinish(DlgLui1); Vini!, n-nao!
 
-			Action PlayDialogue(DlgShinya1, 1000, "BFspe", -1); Eu trouxe a tampa...
+			Action PlayDialogue(DlgShinya1, 1000, "BFspe", -1); Sem drama idiota!, eles estao vivos. eu acho...
 		}
 
-		Event 4
+		Event 6
+		{
+			Condition DialogueFinish(DlgShinya1)
+
+			Action PlayDialogue(DlgJuse5, 1000, "BFspe", -1); .....
+		}
+
+		Event 7
 		{
 			Condition Ko(JuseEnemy, false, -1); Juse derrotado
 

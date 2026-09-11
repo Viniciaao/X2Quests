@@ -104,7 +104,10 @@ State 5  CharaLeave(JuseAllyS3) → Wait(5.0) → ShowWarning
          → CharaSpawn(JuseEnemy, fala ".......") → State 6
 
 State 6  PlayerHealth(<=, 20.0) → CharaSpawn2 ViniJr + Vini Pai
+                                + SetAttackTarget(JuseEnemy, ViniJrAlly, true)
+           falas: Vini → Vini Jr → Juse "...." → Vini Jr ("olhos profundos")
          os dois caem          → CharaSpawn2 Shinya + Luis
+           falas: Rykan → Shinya → Juse "....."
          JuseEnemy cai         → State 7
 
 State 7  QuestFinishState(ULTIMATE_FINISH) → QuestClear
@@ -150,24 +153,27 @@ Todos são mods `[OC]`, referenciados por `X2mMod` no `quest.x2qs`. O
 identificador do `X2mMod` é o próprio **ENTRY_NAME** do mod, então o mesmo nome
 serve de `char:` nos `QxdChar` e de `actor:` nas falas.
 
-| Papel | Nome | Código | Lv | Observação |
-| --- | --- | --- | --- | --- |
-| Aliado fixo | Juse | `JUS` | 180 | ataque baixo de propósito (atk 0.35, dano 0.25), vida 3000 |
-| 1 · onda 1 | Junin Emo | `JUE` | 100 | stats padrão |
-| 1 · onda 1 | Junin | `JUN` | 100 | stats padrão |
-| 1 · onda 2 | Yone | `S4P` | 120 | costume 0 |
-| 1 · onda 2 | Yasha | `YAS` | 120 | **costume 2** (Coat), SkillSet 3 |
-| 2 · solo | Ezra Dito | `CU1` | 140 | costume 0 |
-| 2 · onda 2 | Ray | `RAY` | 150 | costume 0 |
-| 2 · onda 2 | Junin do Futuro | `JUF` | 150 | **costume 1** (Agent Coat) |
-| 3 · solo | Dan Majin Mau | `PU2` | 150 | costume 0 (Majin, BODY_SHAPE 2) |
-| 3 · onda 2 | Zé do Morro | `ZEM` | 150 | costume 0 |
-| 3 · onda 2 | Dimitztri | `BCT` | 150 | costume 0 |
-| bônus · chefe | Juse | `JUS` | 180 | `QxdChar JuseBoss`: vida **15000**, dano 1.2, `guard_damage` 1.5 |
-| bônus · reforço | Vini Pai | `VIP` | 160 | time A |
-| bônus · reforço | Vini Jr | `VJR` | 155 | time A |
-| bônus · reforço | Luis (Rykan) | `LUI` | 175 | time A |
-| bônus · reforço | Shinya | `NFT` | 170 | time A, esposa do Luis |
+| Papel | Nome | Código | Lv | Vida | AI | Observação |
+| --- | --- | --- | --- | --- | --- | --- |
+| Aliado fixo | Juse | `JUS` | 180 | 3000 | 140 | ataque baixíssimo de propósito: `atk`/`ki_atk`/`super_atk`/`super_ki` = **-5.35** |
+| 1 · onda 1 | Junin Emo | `JUE` | 100 | 1500 | 144 | — |
+| 1 · onda 1 | Junin | `JUN` | 100 | padrão | 144 | `health: -1.0` = stats padrão do mod |
+| 1 · onda 2 | Yone | `S4P` | 120 | padrão | 144 | costume 0 |
+| 1 · onda 2 | Yasha | `YAS` | 120 | padrão | 144 | **costume 2** (Coat), SkillSet 3 |
+| 2 · solo | Ezra Dito | `CU1` | 140 | 2500 | **142** | costume 0 |
+| 2 · onda 2 | Ray | `RAY` | 150 | 2200 | 144 | costume 0 |
+| 2 · onda 2 | Junin do Futuro | `JUF` | 150 | 2200 | 144 | **costume 1** (Agent Coat) |
+| 3 · solo | Dan Majin Mau | `PU2` | 150 | 3200 | 144 | costume 0 (Majin, BODY_SHAPE 2) |
+| 3 · onda 2 | Zé do Morro | `ZEM` | 150 | 2600 | 144 | costume 0 |
+| 3 · onda 2 | Dimitztri | `BCT` | 150 | 2600 | **322** | costume 0 |
+| bônus · chefe | Juse | `JUS` | 180 | **15000** | **611** | dano 1.2, `guard_damage` 1.5 |
+| bônus · reforço | Vini Pai | `VIP` | 160 | padrão | **606** | time A |
+| bônus · reforço | Vini Jr | `VJR` | 155 | padrão | **315** | time A; vira o alvo do Juse chefe |
+| bônus · reforço | Luis (Rykan) | `LUI` | 175 | padrão | **606** | time A |
+| bônus · reforço | Shinya | `NFT` | 170 | 3000 | **611** | time A, esposa do Luis |
+
+`Vida: padrão` = `health: -1.0`, ou seja, vale o `PscSpecEntry` do próprio mod.
+A coluna **AI** é o `ait_table_entry` do `QxdChar`. Player = 138, Teacher = 140.
 
 ### Skills
 
@@ -201,24 +207,28 @@ O `QxdChar` do X2QS **não tem multiplicador de dano recebido** — os campos
 
 ## 5. As falas
 
-24 falas em `pt` / `en` / `es`, todas com `voice: ""` (legenda sem dublagem).
+27 falas em `pt` / `en` / `es`, todas com `voice: ""` (legenda sem dublagem).
 Os textos ficam em `dialogue.x2qs` — é só editar lá.
 
-**Regra dura: o Juse nunca fala.** As 5 falas dele são `"....."` (×4) e
-`"......."` (a do bônus) — e nada mais. Todos os outros personagens falam:
-Junin Emo, Junin, o jogador, Yone, Yasha, Ezra, Ray, Junin do Futuro, Dan,
-Zé do Morro, Dimitztri, Vini Pai, Vini Jr, Luis e Shinya.
+**Regra dura: o Juse nunca fala.** As 7 falas dele são só reticências —
+`"...."`, `"....."` e `"......."` — e nada mais. Todos os outros personagens
+falam: Junin Emo, Junin, o jogador, Yone, Yasha, Ezra, Ray, Junin do Futuro,
+Dan, Zé do Morro, Dimitztri, Vini Pai, Vini Jr, Luis e Shinya.
 
-O **Dimitztri** é quem mais fala (4): a chegada dele no stage 3 e as três
+Quem mais fala é o **Dimitztri** (4): a chegada dele no stage 3 e as três
 provocações da falha.
 
 | Momento | Falas |
 | --- | --- |
 | Dimitztri entra (stage 3) | `BCT` "Juse, se acalme! Ninguém sabe onde está isso aí." → `JUS` `"....."` → `ZEM` "Esquece, ele não dá ouvidos." |
 | Juse cai com o Dimitztri vivo | `BCT` "Eu disse Juse, você deveria ter me escutado.." → "Agora olha pro 'cê... que humilhante." → "Mas você vem trabalhar amanhã, né?" → **só então** a tela de resultados |
+| Vini Pai e Vini Jr entram | `VIP` "Parece que você está em problemas..." → `VJR` "Pra trás, meu pai e eu vamos cuidar disso" → `JUS` `"...."` → `VJR` "Pai, ele ta me olhando com aqueles olhos profundos... me da arrepios" |
+| Luis e Shinya entram | `LUI` "Vini!, n-não!" → `NFT` "Sem drama idiota!, eles estão vivos. eu acho..." → `JUS` `"....."` |
 
-A última provocação é de propósito: a Super Soul do Juse é
-*"[JUS SS]Tenho que trabaia amanhã!"*.
+A última provocação do Dimitztri é de propósito: a Super Soul do Juse é
+*"[JUS SS]Tenho que trabaia amanhã!"*. E o "olhos profundos" do Vini Jr não é
+só texto — quando os dois entram, `SetAttackTarget(JuseEnemy, ViniJrAlly, true)`
+joga o alvo do Juse chefe pra ele.
 
 O `actor:` de cada fala usa o ENTRY_NAME do mod (ex.: `actor: "JUS"`). O
 retrato só aparece se o mod daquele personagem estiver instalado — que é
@@ -248,8 +258,8 @@ depois a missão.
 
 ```bash
 python3 tools/x2qs_lint.py quests/TMQ_JUS_01
-# [lint] TMQ_JUS_01: OK - 6 arquivos, 215 identificadores,
-#         154 Action/Condition validados, 9 aviso(s)
+# [lint] TMQ_JUS_01: OK - 6 arquivos, 221 identificadores,
+#         161 Action/Condition validados, 9 aviso(s)
 ```
 
 Além do linter, uma checagem estrutural do fluxo: os 9 `State` declarados
@@ -314,6 +324,12 @@ Aqui só roda o linter — nada foi testado dentro do DBXV2.
    49155, 49160, 10130, 21081, 65535`).
 9. **Recompensas** — valores chutados pro nível 140; nada de `CharReward` do
    Juse porque recompensar personagem de mod não foi testado.
+10. **`SetAttackTarget(JuseEnemy, ViniJrAlly, true)`** — a ação tem 19 usos
+    vanilla (todos no `TMQ_4303`), mas **todos com `false`**, ou seja, tirando o
+    alvo do jogador; usar com `true` pra *dar* um alvo a um inimigo não tem
+    precedente no corpus. Se o Juse não fixar no Vini Jr, mova a chamada do
+    Event 0 pro Event 1 do State 6 (quando os dois já estão garantidamente em
+    campo).
 
 **Decisões já confirmadas pelo autor**
 
