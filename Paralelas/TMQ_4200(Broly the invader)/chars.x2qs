@@ -1,0 +1,1041 @@
+QxdSpecialChar PlayerBase
+{
+	; Player
+	char: "HUM"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 1
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 156
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdSpecialChar Teacher
+{
+	; Teacher
+	char: "MST"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 1
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: -1.0
+	ki_atk: -1.0
+	super_atk: -1.0
+	super_ki: -1.0
+	atk_damage: -1.0
+	ki_damage: -1.0
+	super_atk_damage: -1.0
+	super_ki_damage: -1.0
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 140
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar BrolyContido
+{
+	; Broly (Contido) - Gi
+	char: "EIB"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 99
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 0.550000012
+	ki_atk: 0.550000012
+	super_atk: 0.550000012
+	super_ki: 0.550000012
+	atk_damage: 0.5
+	ki_damage: 0.5
+	super_atk_damage: 0.5
+	super_ki_damage: 0.5
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 142
+
+	super1: 2160 ; Energia Gigante
+	super2: 2161 ; Bomba Eliminadora
+	super3: 1555 ; Investida Gigante
+	super4: 2162 ; Fúria Crescente
+
+	ultimate1: 7160 ; Explosão Gigante
+	ultimate2: 5400 ; Meteoro Gigante
+
+	evasive: 10400 ; Meteoro Destruidor
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar SuperBaby2
+{
+	; Super Baby 2 - Trajes do Super Baby 2
+	char: "SB2"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 99
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 1.75
+	ki_atk: 1.79999995
+	super_atk: 1.75
+	super_ki: 1.79999995
+	atk_damage: 0.899999976
+	ki_damage: 0.899999976
+	super_atk_damage: 0.800000012
+	super_ki_damage: 0.800000012
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 302
+
+	super1: 1530 ; Disparo Reverso
+	super2: 1531 ; Variação de Investida
+	super3: 1532 ; Lampejo Final Vingativo
+	super4: -1
+
+	ultimate1: 6530 ; Grande Bola de Rancor
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar BabyMacacoGigante
+{
+	; Baby (Macaco Gigante) - 0
+	char: "OBB"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 100
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 2.3499999
+	ki_atk: 2.25
+	super_atk: 2.25
+	super_ki: 2.3499999
+	atk_damage: 1.0
+	ki_damage: 0.800000012
+	super_atk_damage: 1.0
+	super_ki_damage: 0.800000012
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 402
+
+	super1: 440 ; Raio Macaco Gigante
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: 5440 ; Super Raio Macaco Gigante
+	ultimate2: -1
+
+	evasive: 10440 ; Uivo
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Zarbon
+{
+	; Zarbon - Traje de Batalha 1
+	char: "ZBN"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 85
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 1.70000005
+	ki_atk: 1.70000005
+	super_atk: 1.70000005
+	super_ki: 1.70000005
+	atk_damage: 0.949999988
+	ki_damage: 0.850000024
+	super_atk_damage: 0.949999988
+	super_ki_damage: 0.850000024
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 322
+
+	super1: 597 ; Combo da Onda de Energia
+	super2: 1220 ; Belo Disparo
+	super3: 1221 ; Risada Audaciosa
+	super4: 591 ; Carga de Energia
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: 11220 ; Revide Sanguinário
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Dodoria
+{
+	; Dodoria - Traje de Batalha 1
+	char: "DDR"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 85
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 1.60000002
+	ki_atk: 1.60000002
+	super_atk: 1.60000002
+	super_ki: 1.60000002
+	atk_damage: 0.949999988
+	ki_damage: 0.850000024
+	super_atk_damage: 0.949999988
+	super_ki_damage: 0.850000024
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 302
+
+	super1: 1231 ; Raio Dodoria
+	super2: 1230 ; Cabeçada Dodoria
+	super3: 1232 ; Cruzado Crítico
+	super4: 591 ; Carga de Energia
+
+	ultimate1: 6230 ; Lançador Dodoria
+	ultimate2: -1
+
+	evasive: 10130 ; Golpe Destruidor
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar FreezaFormaN1
+{
+	; Freeza (Forma Nº1) - Traje de Batalha 1
+	char: "FRZ"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 102
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 1.95000005
+	ki_atk: 1.95000005
+	super_atk: 1.95000005
+	super_ki: 1.95000005
+	atk_damage: 0.899999976
+	ki_damage: 0.800000012
+	super_atk_damage: 0.899999976
+	super_ki_damage: 0.800000012
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 312
+
+	super1: 240 ; Raio da Morte
+	super2: 596 ; Impacto Meteórico
+	super3: 31 ; Onda de Choque
+	super4: 230 ; Sinal do Imperador
+
+	ultimate1: 5230 ; Supernova
+	ultimate2: -1
+
+	evasive: 10240 ; Movimento Psíquico
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Hit
+{
+	; Hit - Traje 1
+	char: "HIT"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 103
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 2.3499999
+	ki_atk: 2.25
+	super_atk: 2.3499999
+	super_ki: 2.25
+	atk_damage: 0.75
+	ki_damage: 0.649999976
+	super_atk_damage: 0.75
+	super_ki_damage: 0.649999976
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 314
+
+	super1: 1260 ; Punho Relâmpago
+	super2: 164 ; Martelo
+	super3: 623 ; Punho Fantasma
+	super4: 593 ; Carga Máxima
+
+	ultimate1: 6260 ; Pulo Temporal/Molotov
+	ultimate2: -1
+
+	evasive: 10331 ; Subida Instantânea
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Goku
+{
+	; Goku - Gi 1 da Tartaruga Eremita
+	char: "GOK"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 32
+	level: 110
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 2.3499999
+	ki_atk: 2.3499999
+	super_atk: 2.45000005
+	super_ki: 2.45000005
+	atk_damage: 0.600000024
+	ki_damage: 0.550000012
+	super_atk_damage: 0.600000024
+	super_ki_damage: 0.550000012
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 315
+
+	super1: 0 ; Kamehameha
+	super2: 596 ; Impacto Meteórico
+	super3: 115 ; Imagem Remanescente
+	super4: 593 ; Carga Máxima
+
+	ultimate1: 5000 ; Super Kamehameha
+	ultimate2: 5004 ; Punho do Dragão
+
+	evasive: 10000 ; Explosão de Energia
+	blast: -1
+	awaken: 25009 ; Super Sayajin
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar FreezaFormaFinal
+{
+	; Freeza (Forma Final) - Forma Final 1
+	char: "FR4"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 103
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 2.0999999
+	ki_atk: 2.25
+	super_atk: 2.0999999
+	super_ki: 2.25
+	atk_damage: 0.850000024
+	ki_damage: 0.75
+	super_atk_damage: 0.850000024
+	super_ki_damage: 0.75
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 303
+
+	super1: 240 ; Raio da Morte
+	super2: 246 ; Onda da Morte
+	super3: 241 ; Psicobomba Mortal
+	super4: 593 ; Carga Máxima
+
+	ultimate1: 5240 ; Bola Mortal
+	ultimate2: 5241 ; Meteoro Mortal
+
+	evasive: 10240 ; Movimento Psíquico
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QxdChar Broly
+{
+	; Broly - Gi 1
+	char: "BRL"
+	costume: 0
+	transformation: -1
+	special_effect: -1
+
+	i12: 0
+	level: 100
+	health: -1.0
+	f24: -1.0
+	ki: -1.0
+	stamina: -1.0
+	atk: 0.600000024
+	ki_atk: 0.600000024
+	super_atk: 0.600000024
+	super_ki: 0.600000024
+	atk_damage: 0.449999988
+	ki_damage: 0.449999988
+	super_atk_damage: 0.449999988
+	super_ki_damage: 0.449999988
+	guard_atk: -1.0
+	guard_damage: -1.0
+	move_speed: -1.0
+	boost_speed: -1.0
+	f84: -1.0
+	ait_table_entry: 142
+
+	super1: 400 ; Concha Explosiva
+	super2: 401 ; Ômega Gigante
+	super3: 402 ; Golpe Gigante
+	super4: 592 ; Carga de Poder Total
+
+	ultimate1: 5400 ; Meteoro Gigante
+	ultimate2: -1
+
+	evasive: 10400 ; Meteoro Destruidor
+	blast: -1
+	awaken: -1
+
+	i106: 0
+	i108: 0
+	i112: 0
+	i124: -1
+	i126: 0
+}
+
+QmlChar Player : PlayerBase
+{
+	battle_index: 0
+	i12: 0
+	stage: "BFtfl" ; Planeta Tuffle
+	spawn_at_start: true
+
+	ai: HUMAN
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar Player2 : PlayerBase
+{
+	battle_index: 1
+	i12: 0
+	stage: "BFtfl" ; Planeta Tuffle
+	spawn_at_start: true
+
+	ai: HUMAN
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar Player3 : PlayerBase
+{
+	battle_index: 2
+	i12: 0
+	stage: "BFtfl" ; Planeta Tuffle
+	spawn_at_start: true
+
+	ai: HUMAN
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar BrolyContidoAlly : BrolyContido
+{
+	battle_index: 3
+	i12: 0
+	stage: "BFtfl" ; Planeta Tuffle
+	spawn_at_start: true
+
+	ai: TYPE5
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar SuperBaby2Enemy : SuperBaby2
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFtfl" ; Planeta Tuffle
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar BabyMacacoGiganteEnemy : BabyMacacoGigante
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtfl" ; Planeta Tuffle
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar FreezaFormaN1Enemy : FreezaFormaN1
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFspe" ; Espaço (Terra)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar ZarbonEnemy : Zarbon
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFspe" ; Espaço (Terra)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar DodoriaEnemy : Dodoria
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFspe" ; Espaço (Terra)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar FreezaFormaFinalEnemy : FreezaFormaFinal
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFspe" ; Espaço (Terra)
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar HitEnemy : Hit
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtwc" ; Corporação Cápsula
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar GokuEnemy : Goku
+{
+	battle_index: 4
+	i12: 0
+	stage: "BFtwc" ; Corporação Cápsula
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: B
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar BrolyAlly : Broly
+{
+	battle_index: 5
+	i12: 0
+	stage: "BFtwc" ; Corporação Cápsula
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar TeacherAlly : Teacher
+{
+	battle_index: -1
+	i12: 0
+	stage: "BFtwc" ; Corporação Cápsula
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
+QmlChar BrolyContidoAlly2 : BrolyContido
+{
+	battle_index: 6
+	i12: 0
+	stage: "BFtwc" ; Corporação Cápsula
+	spawn_at_start: false
+
+	ai: NORMAL
+	team: A
+
+	i36: 9999
+	i40: 5
+	i44: 0
+	i48: -1
+	i50: -1
+	i52: 1088
+	i56: 0
+
+	super1: -1
+	super2: -1
+	super3: -1
+	super4: -1
+
+	ultimate1: -1
+	ultimate2: -1
+
+	evasive: -1
+	blast: -1
+	awaken: -1
+}
+
