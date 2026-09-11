@@ -249,7 +249,10 @@ Os 9 avisos são esperados:
 6. **Recompensas** — valores chutados pro nível 140; nada de `CharReward` do
    Juse porque recompensar personagem de mod não foi testado.
 
-**Decisões que podem mudar**
+**Decisões já confirmadas pelo autor**
 
-7. Os três maps (ver seção 2), o nível 140, o `health: 15000.0` do chefe e os
-   textos das falas são todos meus — é só pedir a troca.
+7. Os três maps (`BFkoh` → `BFsky` → `BFspe`), o gatilho dos reforços
+   (`PlayerHealth(<=, 20.0)` = vida do jogador em 20% ou menos) e as
+   recompensas da ficha foram confirmados como estão. O que segue aberto é só
+   o **GUID do Yasha** — o resto (nível 140, `health: 15000.0` do chefe, texto
+   das falas) continua livre pra ajustar.
