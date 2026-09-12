@@ -169,8 +169,22 @@ Script
 			Condition CheckFlag(FlagOnda2S2, false)
 
 			Action SetFlag(FlagOnda2S2, true)
-			; o Ray vem em 2o porque a fala usa o retrato do segundo char
-			Action CharaSpawn2(JuninFuturoEnemy, RayEnemy, 3, DlgRayJuf, "BFsky", 0, -1, -1); Ray + Junin do Futuro --- West City (Industrial Sector)
+			; sem fala no spawn: a conversa vem depois dos ultimates
+			Action CharaSpawn2(JuninFuturoEnemy, RayEnemy, 3, -1, "BFsky", 0, -1, -1); Ray + Junin do Futuro --- West City (Industrial Sector)
+
+			; a entrada ja vem com os alvos trocados:
+			;   Ray -> Juse | Junin do Futuro -> Player | Player -> Junin do Futuro | Juse -> Ray
+			Action SetAttackTarget(RayEnemy, JuseAllyS2, true)
+			Action SetAttackTarget(JuninFuturoEnemy, Player, true)
+			Action SetAttackTarget(Player, JuninFuturoEnemy, true)
+			Action SetAttackTarget(JuseAllyS2, RayEnemy, true)
+
+			; e os dois ja entram soltando o ultimate (UseSkill so vale pra char de IA)
+			Action UseSkill(RayEnemy, ULTIMATE2, true); Ultra Final Flash
+			Action UseSkill(JuninFuturoEnemy, ULTIMATE1, true); The Jackal
+
+			; so entao vem a conversa
+			Action PlayDialogue(DlgRayJuf, 1000, "BFsky", -1)
 		}
 
 		Event 3

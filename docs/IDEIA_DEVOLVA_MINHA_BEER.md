@@ -85,7 +85,11 @@ State 1  BFkoh   onda 1 (nascem com o stage): Junin Emo + Junin
                  InStage(Player, "BFsky") → State 2
 
 State 2  BFsky   Ezra (nasce com o stage) - só grita "AAAAAAAAAAAAAH!"
-                 Ezra cai → CharaSpawn2 JuninFuturo + Ray
+                 Ezra cai → CharaSpawn2 JuninFuturo + Ray (sem fala no spawn)
+                           alvos: Ray→Juse, JuninFut→Player, Player→JuninFut,
+                                  Juse→Ray          (4x SetAttackTarget)
+                           UseSkill(Ray, ULTIMATE2) + UseSkill(JuninFut, ULTIMATE1)
+                           e só então PlayDialogue(DlgRayJuf)
                  os dois caem → SetThereAreEnemies(BFsky, false)
                  InStage(Player, "BFspe") → State 3
 
@@ -209,7 +213,7 @@ O `QxdChar` do X2QS **não tem multiplicador de dano recebido** — os campos
 
 ## 5. As falas
 
-**25 falas em 11 blocos `Dialogue`**, em `pt` / `en` / `es`, todas com
+**28 falas em 11 blocos `Dialogue`**, em `pt` / `en` / `es`, todas com
 `voice: ""` (legenda sem dublagem). Os textos ficam em `dialogue.x2qs` — é só
 editar lá.
 
@@ -237,7 +241,7 @@ provocações da falha.
 | 1 · onda 1 | `DlgJuninEmoeJunin` | 3 | `JUN` "Não fui em cara, te juro." → `JUE` "**Sons de Saibamen**" → `JUS` "....." |
 | 1 · onda 2 | `DlgYoneYasha` | 2 | `S4P` "A gente não roubou. Foi uma transferência de patrimônio etílico." → `YAS` "Relaxa. A beer já era. O que sobrou foi o cheiro." |
 | 2 · solo | `DlgEzra1` | 1 | `CU1` "AAAAAAAAAAAAAH!" |
-| 2 · onda 2 | `DlgRayJuf` | 3 | `RAY` "A linha do tempo inteira bebeu dessa garrafa. Não sobrou gole pra ninguém." → `JUF` "No meu futuro a beer nunca foi devolvida. E eu vim garantir que continue assim." → `JUS` "....." |
+| 2 · onda 2 | `DlgRayJuf` | 4 | `JUF` "No meu futuro a beer nunca foi devolvida. E eu vim garantir que continue assim." → `RAY` "Maldição!, não tenho nada haver com isso!.  Me deixa em paz Juse!" → `JUF` "Uau!, Nunca tinha te visto tão pálido antes, Ray." → `JUS` "....." |
 | 3 · solo | `DlgDan1` | 1 | `PU2` "Majin Mau bebeu. Majin Mau gostou. Majin Mau NÃO devolve." |
 | 3 · onda 2 | `DlgBctIntro` | 3 | `BCT` "Juse, se acalme! Ninguém sabe onde está isso aí." → `JUS` "....." → `ZEM` "Esquece, ele não dá ouvidos." |
 | 3 · fim | `DlgJuseFim` | 1 | `JUS` "....." |
@@ -369,8 +373,27 @@ Aqui só roda o linter — nada foi testado dentro do DBXV2.
     chamadas vanilla usam `-1` e a única que passa um `Dialogue` passa um de 1
     parte (`TMQ_0101`). Se alguma fala de entrada não aparecer, é só trocar o 4º
     parâmetro por `-1` e acrescentar um `PlayDialogue(Dlg…, 1000, "stage", -1)`
-    num event logo depois do spawn.
-13. **`"**Sons de Saibamen**"` foi gravado com os asteriscos.** Foi pedido assim,
+    num event logo depois do spawn. **O State 2 já usa essa forma de propósito**
+    (o `CharaSpawn2` do Ray vem com `-1`), porque ali a fala tem que esperar os
+    quatro `SetAttackTarget` e os dois `UseSkill`.
+13. **`UseSkill` tem zero usos no corpus.** A ação existe (opcode 41,
+    `UseSkill(char, SLOT, bool)`, "só funciona em chars de IA") e as constantes
+    `ULTIMATE1`/`ULTIMATE2` são as mesmas de `LockAISkill` e `EquipSkills`, mas
+    nenhuma quest vanilla chama `UseSkill` — o 3º parâmetro é descrito como
+    "booleano de propósito desconhecido" e foi deixado em `true`. Se o ultimate
+    não sair, é a primeira coisa a testar (trocar pra `false`).
+14. **`SetAttackTarget(Player, …, true)` também não tem precedente.** Os 19 usos
+    vanilla têm o `Player` no parâmetro 1 sempre com `false` (tirando o alvo).
+    Aqui o pedido foi o contrário: travar o lock-on do jogador no Junin do
+    Futuro. Se não fizer efeito, as outras três chamadas continuam valendo.
+15. **`X2mMod RayUltraFinalFlash` / `name: "Ultra Final Flash"`.** O GUID
+    (`d2cb2f09-7299-2b93-1460-09ad0d03de79`) veio do autor, mas o **nome da
+    entrada do mod eu não tenho como conferir** — não existe "Ultra Final Flash"
+    nem esse GUID em nenhum arquivo do repositório, e a skill não está na tabela
+    de 776 skills do jogo base. Se o instalador reclamar, o `name:` tem que ser
+    igual ao ENTRY_NAME exato da skill no `.x2m` de origem (foi o que quebrou a
+    Yasha uma vez: `YSH` vs `YAS`).
+16. **`"**Sons de Saibamen**"` foi gravado com os asteriscos.** Foi pedido assim,
     então ficou literal — se os `**` aparecerem na legenda do jogo, é trocar por
     `(sons de Saibamen)` ou por um `"Gyaaah!"`.
 

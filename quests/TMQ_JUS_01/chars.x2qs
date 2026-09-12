@@ -427,7 +427,7 @@ QxdChar Ray
 	super4: RayGodCounter
 
 	ultimate1: RayPurificacaoCosmica
-	ultimate2: RayGodHeatFlash
+	ultimate2: RayUltraFinalFlash
 
 	evasive: 12010
 	blast: 21080

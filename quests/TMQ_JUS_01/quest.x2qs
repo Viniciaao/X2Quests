@@ -433,10 +433,13 @@ X2mMod RayRagingDragon
 	guid: "d043cf8b-fc23-41b0-3b79-fbf5a37e8b96"
 }
 
-X2mMod RayGodHeatFlash
+X2mMod RayUltraFinalFlash
 {
-	name: "[RAY Skill]God Heat Flash"
-	guid: "8cb6c828-1b09-227e-9155-c5d48c2e71ce"
+	; ultimate2 do Ray (pedido do autor pelo GUID). O name: precisa ser igual ao
+	; ENTRY_NAME da skill no .x2m de origem - conferir se "Ultra Final Flash" e
+	; exatamente o nome da entrada.
+	name: "Ultra Final Flash"
+	guid: "d2cb2f09-7299-2b93-1460-09ad0d03de79"
 }
 
 X2mMod RayGranRayCero

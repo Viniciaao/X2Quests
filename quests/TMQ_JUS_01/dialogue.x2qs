@@ -62,9 +62,9 @@ TextAudioEntry TxtDlgEzra1
 
 TextAudioEntry TxtDlgRay1
 {
-	en: "The whole timeline drank from that bottle. There's not a sip left for anyone."
-	pt: "A linha do tempo inteira bebeu dessa garrafa. Não sobrou gole pra ninguém."
-	es: "Toda la línea temporal bebió de esa botella. No quedó ni un trago para nadie."
+	en: "Dammit!, I have nothing to do with this!. Leave me alone Juse!"
+	pt: "Maldição!, não tenho nada haver com isso!.  Me deixa em paz Juse!"
+	es: "¡Maldición!, no tengo nada que ver con esto!. ¡Déjame en paz Juse!"
 	voice: ""
 }
 
@@ -73,6 +73,14 @@ TextAudioEntry TxtDlgJuf1
 	en: "In my future that beer was never returned. And I came to make sure it stays that way."
 	pt: "No meu futuro a beer nunca foi devolvida. E eu vim garantir que continue assim."
 	es: "En mi futuro esa cerveza nunca fue devuelta. Y vine a asegurar que siga así."
+	voice: ""
+}
+
+TextAudioEntry TxtDlgJuf2
+{
+	en: "Wow!, I had never seen you this pale before, Ray."
+	pt: "Uau!, Nunca tinha te visto tão pálido antes, Ray."
+	es: "¡Guau!, Nunca te había visto tan pálido antes, Ray."
 	voice: ""
 }
 
@@ -301,6 +309,17 @@ Dialogue DlgRayJuf
 {
 	i28: 0
 
+	; o Junin do Futuro provoca, o Ray entra em panico, o Junin zoa e o Juse so olha
+	DialoguePart
+	{
+		actor: "JUF"
+		costume: -1
+		transformation: -1
+
+		text_audio: TxtDlgJuf1
+		i8: 0
+	}
+
 	DialoguePart
 	{
 		actor: "RAY"
@@ -317,7 +336,7 @@ Dialogue DlgRayJuf
 		costume: -1
 		transformation: -1
 
-		text_audio: TxtDlgJuf1
+		text_audio: TxtDlgJuf2
 		i8: 0
 	}
 
