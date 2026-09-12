@@ -3,8 +3,8 @@
 Missão paralela para **Dragon Ball Xenoverse 2** (formato X2QS / `.x2m`, para o
 **XV2 Quest Creator** + **XV2 Mods Installer** do Eternity Tools).
 
-Fontes em [`quests/TMQ_JUS_01/`](../quests/TMQ_JUS_01) · pacote em
-[`dist/Devolva Minha Beer.x2m`](../dist/).
+Fontes em [`quests/Devolva Minha Beer(TMQ_JUS_01)/`](../quests/) · pacote em
+[`dist/DEVOLVA MINHA BEER!.x2m`](../dist/).
 
 > Os 15 personagens são mods `[OC]` — instale todos (e as skills deles) antes
 > da missão. O que ainda não foi testado em jogo está listado na seção 7.
@@ -224,7 +224,7 @@ O `QxdChar` do X2QS **não tem multiplicador de dano recebido** — os campos
 ## 5. As falas
 
 **28 falas em 11 blocos `Dialogue`**, em `pt` / `en` / `es`, todas com
-`voice: ""` (legenda sem dublagem). Os textos ficam em `dialogue.x2qs` — é só
+`voice: ""` (legenda sem dublagem, até o momento). Os textos ficam em `dialogue.x2qs` — é só
 editar lá.
 
 **Cada conversa inteira é UM bloco `Dialogue` com vários `DialoguePart`**, como
@@ -412,7 +412,7 @@ Aqui só roda o linter — nada foi testado dentro do DBXV2.
     então ficou literal — se os `**` aparecerem na legenda do jogo, é trocar por
     `(sons de Saibamen)` ou por um `"Gyaaah!"`.
 17. **O compilador X2QS NÃO diferencia maiúscula de minúscula.** Erro real de
-    compilação: `"Ray" had already been defined. At line 395. (File
+    compilação(que ocorreu em uma tentativa de compilar no passado): `"Ray" had already been defined. At line 395. (File
     "chars.x2qs")` — o `QxdChar Ray` colidia com o `X2mMod RAY` (o código do
     personagem) declarado no `quest.x2qs`. O `QxdChar Lui` tinha o mesmo
     problema com o `X2mMod LUI` e seria o erro seguinte. Corrigido renomeando
