@@ -161,8 +161,8 @@ serve de `char:` nos `QxdChar` e de `actor:` nas falas.
 
 | Papel | Nome | Código | Lv | Vida | AI | Observação |
 | --- | --- | --- | --- | --- | --- | --- |
-| Aliado fixo | Juse | `JUS` | 180 | 3000 | 140 | ataque baixíssimo de propósito: `atk`/`ki_atk`/`super_atk`/`super_ki` = **-5.35** |
-| 1 · onda 1 | Junin Emo | `JUE` | 100 | 1500 | 144 | — |
+| Aliado fixo | Juse | `JUS` | 180 | 1000 | 140 | ataque baixíssimo de propósito: `atk`/`ki_atk`/`super_atk`/`super_ki` = **-5.35** |
+| 1 · onda 1 | Junin Emo | `JUE` | 100 | 2500 | 144 | não fala: só faz sons de Saibamen |
 | 1 · onda 1 | Junin | `JUN` | 100 | padrão | 144 | `health: -1.0` = stats padrão do mod |
 | 1 · onda 2 | Yone | `S4P` | 120 | padrão | 144 | costume 0 |
 | 1 · onda 2 | Yasha | `YAS` | 120 | padrão | 144 | **costume 2** (Coat), SkillSet 3 |
@@ -172,7 +172,7 @@ serve de `char:` nos `QxdChar` e de `actor:` nas falas.
 | 3 · solo | Dan Majin Mau | `PU2` | 150 | 3200 | 144 | costume 0 (Majin, BODY_SHAPE 2) |
 | 3 · onda 2 | Zé do Morro | `ZEM` | 150 | 2600 | 144 | costume 0 |
 | 3 · onda 2 | Dimitztri | `BCT` | 150 | 2600 | **322** | costume 0 |
-| bônus · chefe | Juse | `JUS` | 180 | **15000** | **611** | dano 1.2, `guard_damage` 1.5 |
+| bônus · chefe | Juse | `JUS` | 180 | **15000** | **611** | `atk` 4.59999, `super_atk`/`super_ki` 3.5, `atk_damage`/`ki_damage` 5.299995, `guard_atk` 7.6969, `super_atk_damage`/`super_ki_damage` **-1.2**, `guard_damage` **-1.5002** |
 | bônus · reforço | Vini Pai | `VIP` | 160 | padrão | **606** | time A |
 | bônus · reforço | Vini Jr | `VJR` | 155 | padrão | **315** | time A; vira o alvo do Juse chefe |
 | bônus · reforço | Luis (Rykan) | `LUI` | 175 | padrão | **606** | time A |
@@ -180,6 +180,16 @@ serve de `char:` nos `QxdChar` e de `actor:` nas falas.
 
 `Vida: padrão` = `health: -1.0`, ou seja, vale o `PscSpecEntry` do próprio mod.
 A coluna **AI** é o `ait_table_entry` do `QxdChar`. Player = 138, Teacher = 140.
+
+**Posições de spawn.** Só quem nasce com `spawn_at_start` precisa de
+`CharPosition`; o resto entra por `CharaSpawn`/`CharaSpawn2` com o índice
+numérico do stage. Em `BFkoh` os três jogadores ficam em `QUEST_0304_POS_00/01/02`
+(herdado do mod ginyu) e o Juse em `MSTSPASS_0`. O Junin Emo e o Junin estavam
+em `QUEST_0304_POS_00/01` — **os mesmos pontos do jogador**, por isso nasciam em
+cima dele; foram para `QUEST_1301_POS_00/01`, que também existem em `BFkoh`
+(a lista do stage tem 210 posições nomeadas). Se a distância não agradar, as
+outras opções válidas em `BFkoh` incluem `GBB_ENEMY_00`, `VS_INIT_POS_B_0`,
+`HLQ_0100_POS_00..06` e `CHQ_1600_POS_00..02`.
 
 ### Skills
 
@@ -376,12 +386,17 @@ Aqui só roda o linter — nada foi testado dentro do DBXV2.
     num event logo depois do spawn. **O State 2 já usa essa forma de propósito**
     (o `CharaSpawn2` do Ray vem com `-1`), porque ali a fala tem que esperar os
     quatro `SetAttackTarget` e os dois `UseSkill`.
-13. **`UseSkill` tem zero usos no corpus.** A ação existe (opcode 41,
-    `UseSkill(char, SLOT, bool)`, "só funciona em chars de IA") e as constantes
-    `ULTIMATE1`/`ULTIMATE2` são as mesmas de `LockAISkill` e `EquipSkills`, mas
-    nenhuma quest vanilla chama `UseSkill` — o 3º parâmetro é descrito como
-    "booleano de propósito desconhecido" e foi deixado em `true`. Se o ultimate
-    não sair, é a primeira coisa a testar (trocar pra `false`).
+13. **`UseSkill` tem zero usos no corpus — e no primeiro teste não funcionou.**
+    A ação existe (opcode 41, `UseSkill(char, SLOT, bool)`, "só funciona em chars
+    de IA") e as constantes `ULTIMATE1`/`ULTIMATE2` são as mesmas de
+    `LockAISkill` e `EquipSkills`. **Testado em jogo: os `SetAttackTarget` do
+    mesmo event funcionaram, os `UseSkill` não.** A hipótese é timing: chamado no
+    mesmo instante do `CharaSpawn2`, o char ainda não está ativo para agir (o
+    `SetAttackTarget` funciona porque só grava um dado). Corrigido com
+    `Wait(3.0)` antes dos dois `UseSkill` — o padrão `Wait(N) → PlayDialogue` no
+    mesmo event é vanilla (`TMQ_4601/script2.x2qs:26`). Se ainda não sair, o
+    próximo passo é trocar o 3º parâmetro (`true` → `false`), que a documentação
+    chama de "booleano de propósito desconhecido".
 14. **`SetAttackTarget(Player, …, true)` também não tem precedente.** Os 19 usos
     vanilla têm o `Player` no parâmetro 1 sempre com `false` (tirando o alvo).
     Aqui o pedido foi o contrário: travar o lock-on do jogador no Junin do

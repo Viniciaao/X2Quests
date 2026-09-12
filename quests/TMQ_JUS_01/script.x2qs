@@ -179,7 +179,14 @@ Script
 			Action SetAttackTarget(Player, JuninFuturoEnemy, true)
 			Action SetAttackTarget(JuseAllyS2, RayEnemy, true)
 
-			; e os dois ja entram soltando o ultimate (UseSkill so vale pra char de IA)
+			; os dois ja entram soltando o ultimate (UseSkill so vale pra char de IA).
+			; O Wait(3.0) e o que faz funcionar: chamado no mesmo instante do
+			; CharaSpawn2 o UseSkill nao faz nada, porque o char ainda nao esta
+			; ativo pra agir (o SetAttackTarget funciona na hora porque so grava
+			; um dado). Se mesmo com a espera nao sair, a proxima coisa a testar
+			; e o 3o parametro, que a documentacao chama de "booleano de proposito
+			; desconhecido": troque os dois true por false.
+			Action Wait(3.0)
 			Action UseSkill(RayEnemy, ULTIMATE2, true); Ultra Final Flash
 			Action UseSkill(JuninFuturoEnemy, ULTIMATE1, true); The Jackal
 

@@ -114,7 +114,7 @@ QxdChar JuseAlly
 
 	i12: 0
 	level: 180
-	health: 3000.0
+	health: 1000.0
 	f24: -1.0
 	ki: -1.0
 	stamina: -1.0
@@ -162,7 +162,7 @@ QxdChar JuninEmo
 
 	i12: 0
 	level: 100
-	health: 1500.0
+	health: 2500.0
 	f24: -1.0
 	ki: -1.0
 	stamina: -1.0
@@ -648,16 +648,16 @@ QxdChar JuseBoss
 	f24: -1.0
 	ki: 1500.0
 	stamina: 1000.0
-	atk: 2.0
+	atk: 4.59999
 	ki_atk: 2.0
-	super_atk: 2.0
-	super_ki: 2.0
-	atk_damage: 1.2
-	ki_damage: 1.2
-	super_atk_damage: 1.2
-	super_ki_damage: 1.2
-	guard_atk: -1.0
-	guard_damage: 1.5
+	super_atk: 3.5
+	super_ki: 3.5
+	atk_damage: 5.299995
+	ki_damage: 5.299995
+	super_atk_damage: -1.2
+	super_ki_damage: -1.2
+	guard_atk: 7.6969
+	guard_damage: -1.5002
 	move_speed: -1.0
 	boost_speed: -1.0
 	f84: -1.0

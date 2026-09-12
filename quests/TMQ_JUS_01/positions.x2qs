@@ -45,9 +45,12 @@ CharPosition JuseAllyS1Position
 
 CharPosition JuninEmoEnemyPosition
 {
+	; nao pode ser QUEST_0304_POS_00: e o mesmo ponto do Player, e os dois
+	; nasciam um em cima do outro. QUEST_1301_POS_00/01 tambem existem em BFkoh
+	; e ficam em outro canto do mapa.
 	char: JuninEmoEnemy
 	stage: "BFkoh" ; Capsule Corporation
-	position: "QUEST_0304_POS_00"
+	position: "QUEST_1301_POS_00"
 	type: 2
 	i40: 0
 	i50: 0
@@ -55,9 +58,10 @@ CharPosition JuninEmoEnemyPosition
 
 CharPosition JuninEnemyPosition
 {
+	; idem: QUEST_0304_POS_01 e o ponto do Player2
 	char: JuninEnemy
 	stage: "BFkoh" ; Capsule Corporation
-	position: "QUEST_0304_POS_01"
+	position: "QUEST_1301_POS_01"
 	type: 2
 	i40: 0
 	i50: 0
