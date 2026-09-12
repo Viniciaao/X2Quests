@@ -396,6 +396,16 @@ Aqui só roda o linter — nada foi testado dentro do DBXV2.
 16. **`"**Sons de Saibamen**"` foi gravado com os asteriscos.** Foi pedido assim,
     então ficou literal — se os `**` aparecerem na legenda do jogo, é trocar por
     `(sons de Saibamen)` ou por um `"Gyaaah!"`.
+17. **O compilador X2QS NÃO diferencia maiúscula de minúscula.** Erro real de
+    compilação: `"Ray" had already been defined. At line 395. (File
+    "chars.x2qs")` — o `QxdChar Ray` colidia com o `X2mMod RAY` (o código do
+    personagem) declarado no `quest.x2qs`. O `QxdChar Lui` tinha o mesmo
+    problema com o `X2mMod LUI` e seria o erro seguinte. Corrigido renomeando
+    para **`RayOc`** e **`LuiOc`** (e os pais `QmlChar RayEnemy : RayOc` /
+    `QmlChar LuiAlly : LuiOc`); os scripts não mudam, porque eles só referenciam
+    os `QmlChar`. Regra prática: **nome de `QxdChar` nunca pode ser igual ao
+    código do personagem ignorando caixa.** O `x2qs_lint.py` agora compara
+    identificadores sem diferenciar caixa e aponta os dois nomes em conflito.
 
 **Decisões já confirmadas pelo autor**
 

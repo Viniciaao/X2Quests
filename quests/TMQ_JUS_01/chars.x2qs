@@ -392,9 +392,11 @@ QxdChar Ezra
 	i126: 0
 }
 
-QxdChar Ray
+QxdChar RayOc
 {
-	; Ray - segunda onda do stage 2
+	; Ray (RayOc) - segunda onda do stage 2. O nome nao pode ser
+	; "Ray": o compilador nao diferencia maiuscula/minuscula e ja existe o
+	; X2mMod RAY (o codigo do personagem) no quest.x2qs.
 	char: RAY
 	costume: 0
 	transformation: 0
@@ -776,9 +778,9 @@ QxdChar ViniJr
 	i126: 0
 }
 
-QxdChar Lui
+QxdChar LuiOc
 {
-	; Luis (Rykan) - ultimo reforco do bonus
+	; Luis (Rykan) - LuiOc pelo mesmo motivo do Ray: ja existe o X2mMod LUI - ultimo reforco do bonus
 	char: LUI
 	costume: 0
 	transformation: 0
@@ -1215,7 +1217,7 @@ QmlChar EzraEnemy : Ezra
 	awaken: -1
 }
 
-QmlChar RayEnemy : Ray
+QmlChar RayEnemy : RayOc
 {
 	battle_index: 4
 	i12: 0
@@ -1463,7 +1465,7 @@ QmlChar ViniJrAlly : ViniJr
 	awaken: -1
 }
 
-QmlChar LuiAlly : Lui
+QmlChar LuiAlly : LuiOc
 {
 	battle_index: 5
 	i12: 0
