@@ -540,7 +540,7 @@ QxdChar Dan
 
 QxdChar ZeMorro
 {
-	; Zé do Morro - lv 150
+	; Zé do Morro - lv 180
 	char: ZEM
 	costume: 0
 	transformation: 0
@@ -556,10 +556,10 @@ QxdChar ZeMorro
 	ki_atk: 1.7
 	super_atk: 1.7
 	super_ki: 1.7
-	atk_damage: -11.0
-	ki_damage: -11.0
-	super_atk_damage: -11.0
-	super_ki_damage: -11.0
+	atk_damage: -50.0
+	ki_damage: -50.0
+	super_atk_damage: -50.0
+	super_ki_damage: -50.0
 	guard_atk: -1.0
 	guard_damage: -11.0
 	move_speed: -1.0
@@ -588,14 +588,14 @@ QxdChar ZeMorro
 
 QxdChar Dimitztri
 {
-	; Dimitztri - lv 150
+	; Dimitztri - lv 180
 	char: BCT
 	costume: 0
 	transformation: 0
 	special_effect: -1
 
 	i12: 0
-	level: 150
+	level: 180
 	health: 2600.0
 	f24: -1.0
 	ki: -1.0
@@ -604,12 +604,12 @@ QxdChar Dimitztri
 	ki_atk: 1.7
 	super_atk: 1.7
 	super_ki: 1.7
-	atk_damage: -1.0
-	ki_damage: -1.0
-	super_atk_damage: -1.0
-	super_ki_damage: -1.0
+	atk_damage: -45.5
+	ki_damage: -45.5
+	super_atk_damage: -45.5
+	super_ki_damage: -45.5
 	guard_atk: -1.0
-	guard_damage: -1.0
+	guard_damage: -45.5
 	move_speed: -1.0
 	boost_speed: -1.0
 	f84: -1.0
@@ -636,11 +636,11 @@ QxdChar Dimitztri
 
 QxdChar JuseBoss
 {
-	; Juse lv 180, stats padrao, VIDA E DEFESA altissimas
+	; Juse lv 180, com Raid Broly Super Armor (special_effect 176)
 	char: JUS
 	costume: 0
 	transformation: 0
-	special_effect: -1
+	special_effect: 176
 
 	i12: 32
 	level: 180
@@ -648,15 +648,15 @@ QxdChar JuseBoss
 	f24: -1.0
 	ki: 1500.0
 	stamina: 1000.0
-	atk: 4.59999
-	ki_atk: 2.0
-	super_atk: 3.5
-	super_ki: 3.5
-	atk_damage: 5.299995
-	ki_damage: 5.299995
+	atk: 25.59999
+	ki_atk: 30.0
+	super_atk: 15.5
+	super_ki: 15.5
+	atk_damage: -35.299995
+	ki_damage: -35.299995
 	super_atk_damage: -1.2
 	super_ki_damage: -1.2
-	guard_atk: 7.6969
+	guard_atk: 15.6969
 	guard_damage: -1.5002
 	move_speed: -1.0
 	boost_speed: -1.0

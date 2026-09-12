@@ -170,9 +170,9 @@ serve de `char:` nos `QxdChar` e de `actor:` nas falas.
 | 2 · onda 2 | Ray | `RAY` | 150 | 2900 | **256** | `*_damage`, `guard_atk` e `guard_damage` = **-10.0** |
 | 2 · onda 2 | Junin do Futuro | `JUF` | 150 | 2200 | 144 | **costume 1** (Agent Coat) |
 | 3 · solo | Dan Majin Mau | `PU2` | 150 | 3200 | 144 | costume 0 (Majin, BODY_SHAPE 2) |
-| 3 · onda 2 | Zé do Morro | `ZEM` | 180 | 2600 | **254** | `*_damage` e `guard_damage` = **-11.0** |
-| 3 · onda 2 | Dimitztri | `BCT` | 150 | 2600 | **322** | costume 0 |
-| bônus · chefe | Juse | `JUS` | 180 | **15000** | **611** | `atk` 4.59999, `super_atk`/`super_ki` 3.5, `atk_damage`/`ki_damage` 5.299995, `guard_atk` 7.6969, `super_atk_damage`/`super_ki_damage` **-1.2**, `guard_damage` **-1.5002** |
+| 3 · onda 2 | Zé do Morro | `ZEM` | 180 | 2600 | **254** | `*_damage` = **-50.0**, `guard_damage` = **-11.0** |
+| 3 · onda 2 | Dimitztri | `BCT` | 180 | 2600 | **322** | `*_damage` e `guard_damage` = **-45.5** |
+| bônus · chefe | Juse | `JUS` | 180 | **15000** | **611** | `special_effect` **176** (Raid Broly Super Armor), `atk` 25.59999, `ki_atk` 30.0, `super_atk`/`super_ki` 15.5, `atk_damage`/`ki_damage` **-35.299995**, `guard_atk` 15.6969, `super_atk_damage`/`super_ki_damage` **-1.2**, `guard_damage` **-1.5002** |
 | bônus · reforço | Vini Pai | `VIP` | 160 | padrão | **606** | time A |
 | bônus · reforço | Vini Jr | `VJR` | 155 | padrão | **315** | time A; vira o alvo do Juse chefe |
 | bônus · reforço | Luis (Rykan) | `LUI` | 175 | padrão | **606** | time A |
