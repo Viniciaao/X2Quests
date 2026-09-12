@@ -172,6 +172,12 @@ Script
 			; sem fala no spawn: a conversa vem depois dos ultimates
 			Action CharaSpawn2(JuninFuturoEnemy, RayEnemy, 3, -1, "BFsky", 0, -1, -1); Ray + Junin do Futuro --- West City (Industrial Sector)
 
+			; a espera vem antes de tudo: recem-spawnado o char ainda nao esta
+			; ativo, e UseSkill nao faz nada (SetAttackTarget faz, porque so
+			; grava um dado). Se o ultimate continuar nao saindo, o proximo
+			; teste e o 3o parametro do UseSkill: trocar os true por false.
+			Action Wait(3.0)
+
 			; a entrada ja vem com os alvos trocados:
 			;   Ray -> Juse | Junin do Futuro -> Player | Player -> Junin do Futuro | Juse -> Ray
 			Action SetAttackTarget(RayEnemy, JuseAllyS2, true)
@@ -179,14 +185,6 @@ Script
 			Action SetAttackTarget(Player, JuninFuturoEnemy, true)
 			Action SetAttackTarget(JuseAllyS2, RayEnemy, true)
 
-			; os dois ja entram soltando o ultimate (UseSkill so vale pra char de IA).
-			; O Wait(3.0) e o que faz funcionar: chamado no mesmo instante do
-			; CharaSpawn2 o UseSkill nao faz nada, porque o char ainda nao esta
-			; ativo pra agir (o SetAttackTarget funciona na hora porque so grava
-			; um dado). Se mesmo com a espera nao sair, a proxima coisa a testar
-			; e o 3o parametro, que a documentacao chama de "booleano de proposito
-			; desconhecido": troque os dois true por false.
-			Action Wait(3.0)
 			Action UseSkill(RayEnemy, ULTIMATE2, true); Ultra Final Flash
 			Action UseSkill(JuninFuturoEnemy, ULTIMATE1, true); The Jackal
 
@@ -333,8 +331,8 @@ Script
 
 		Event 0
 		{
-			; vida do jogador em 20% ou menos: chegam o Vini Pai e o Vini Jr
-			Condition PlayerHealth(<=, 20.0)
+			; vida do jogador em 40% ou menos: chegam o Vini Pai e o Vini Jr
+			Condition PlayerHealth(<=, 40.0)
 			Condition CheckFlag(FlagVini, false)
 
 			Action SetFlag(FlagVini, true)

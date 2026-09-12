@@ -32,7 +32,7 @@ a missão **não** acaba. O Juse sai do time sem falar nada, o jogo fica
 `"......."` — e o **Juse volta como inimigo**, lv 180, com vida e defesa
 absurdas. Durante essa luta:
 
-* se a vida do jogador cair para **20% ou menos**, entram **Vini Pai** e
+* se a vida do jogador cair para **40% ou menos**, entram **Vini Pai** e
   **Vini Jr** como aliados;
 * se os dois caírem, entram **Luis (Rykan)** e a **Shinya**.
 
@@ -108,7 +108,7 @@ State 4  QuestFinishState(COMPLETE)
 State 5  CharaLeave(JuseAllyS3) → Wait(5.0) → ShowWarning
          → CharaSpawn(JuseEnemy, fala ".......") → State 6
 
-State 6  PlayerHealth(<=, 20.0) → CharaSpawn2 ViniJr + Vini Pai
+State 6  PlayerHealth(<=, 40.0) → CharaSpawn2 ViniJr + Vini Pai
                                 + SetAttackTarget(JuseEnemy, ViniJrAlly, true)
            falas: Vini → Vini Jr → Juse "...." → Vini Jr ("olhos profundos")
          os dois caem          → CharaSpawn2 Shinya + Luis
@@ -164,13 +164,13 @@ serve de `char:` nos `QxdChar` e de `actor:` nas falas.
 | Aliado fixo | Juse | `JUS` | 180 | 1000 | 140 | ataque baixíssimo de propósito: `atk`/`ki_atk`/`super_atk`/`super_ki` = **-5.35** |
 | 1 · onda 1 | Junin Emo | `JUE` | 100 | 2500 | 144 | não fala: só faz sons de Saibamen |
 | 1 · onda 1 | Junin | `JUN` | 100 | padrão | 144 | `health: -1.0` = stats padrão do mod |
-| 1 · onda 2 | Yone | `S4P` | 120 | padrão | 144 | costume 0 |
-| 1 · onda 2 | Yasha | `YAS` | 120 | padrão | 144 | **costume 2** (Coat), SkillSet 3 |
-| 2 · solo | Ezra Dito | `CU1` | 140 | 2500 | **142** | costume 0 |
-| 2 · onda 2 | Ray | `RAY` | 150 | 2200 | 144 | costume 0 |
+| 1 · onda 2 | Yone | `S4P` | 120 | 2500 | 144 | costume 0 |
+| 1 · onda 2 | Yasha | `YAS` | 120 | 2500 | 144 | **costume 2** (Coat), SkillSet 3 |
+| 2 · solo | Ezra Dito | `CU1` | 175 | 2500 | **142** | `*_damage` e `guard_damage` = **-10.0** |
+| 2 · onda 2 | Ray | `RAY` | 150 | 2900 | **256** | `*_damage`, `guard_atk` e `guard_damage` = **-10.0** |
 | 2 · onda 2 | Junin do Futuro | `JUF` | 150 | 2200 | 144 | **costume 1** (Agent Coat) |
 | 3 · solo | Dan Majin Mau | `PU2` | 150 | 3200 | 144 | costume 0 (Majin, BODY_SHAPE 2) |
-| 3 · onda 2 | Zé do Morro | `ZEM` | 150 | 2600 | 144 | costume 0 |
+| 3 · onda 2 | Zé do Morro | `ZEM` | 180 | 2600 | **254** | `*_damage` e `guard_damage` = **-11.0** |
 | 3 · onda 2 | Dimitztri | `BCT` | 150 | 2600 | **322** | costume 0 |
 | bônus · chefe | Juse | `JUS` | 180 | **15000** | **611** | `atk` 4.59999, `super_atk`/`super_ki` 3.5, `atk_damage`/`ki_damage` 5.299995, `guard_atk` 7.6969, `super_atk_damage`/`super_ki_damage` **-1.2**, `guard_damage` **-1.5002** |
 | bônus · reforço | Vini Pai | `VIP` | 160 | padrão | **606** | time A |
@@ -317,10 +317,10 @@ Os 9 avisos são esperados:
 
 Aqui só roda o linter — nada foi testado dentro do DBXV2.
 
-1. **`PlayerHealth(<=, 20.0)`** — assume "vida do jogador em % ". Está no
+1. **`PlayerHealth(<=, 40.0)`** — assume "vida do jogador em % ". Está no
    `x2qs_reference.json` com aridade 2, mas nenhuma quest do corpus usa, então
    a semântica não foi confirmada. Se no jogo não disparar, o substituto é
-   `Condition Health(<=, Player, 20.0)` (mesmo formato usado nos inimigos).
+   `Condition Health(<=, Player, 40.0)` (mesmo formato usado nos inimigos).
 2. **`actor: "JUS"` com mod** — retrato de personagem de mod na legenda. A ação
    `PlayDialogue` é das mais usadas do corpus (66 ocorrências), mas nenhuma
    quest vanilla referencia um char de mod no `actor`. Se o retrato não
@@ -425,7 +425,7 @@ Aqui só roda o linter — nada foi testado dentro do DBXV2.
 **Decisões já confirmadas pelo autor**
 
 Os três maps (`BFkoh` → `BFsky` → `BFspe`), o gatilho dos reforços
-(`PlayerHealth(<=, 20.0)` = vida do jogador em 20% ou menos), as recompensas da
+(`PlayerHealth(<=, 40.0)` = vida do jogador em 40% ou menos), as recompensas da
 ficha, a falha quando o Juse cai e as falas do Dimitztri foram pedidos
 explicitamente. Nível 140 e `health: 15000.0` do chefe continuam livres pra
 ajustar.

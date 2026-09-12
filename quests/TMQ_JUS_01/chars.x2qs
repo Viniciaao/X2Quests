@@ -258,7 +258,7 @@ QxdChar Yone
 
 	i12: 0
 	level: 120
-	health: -1.0
+	health: 2500.0
 	f24: -1.0
 	ki: -1.0
 	stamina: -1.0
@@ -306,7 +306,7 @@ QxdChar Yasha
 
 	i12: 0
 	level: 120
-	health: -1.0
+	health: 2500.0
 	f24: -1.0
 	ki: -1.0
 	stamina: -1.0
@@ -353,7 +353,7 @@ QxdChar Ezra
 	special_effect: -1
 
 	i12: 0
-	level: 140
+	level: 175
 	health: 2500.0
 	f24: -1.0
 	ki: -1.0
@@ -362,12 +362,12 @@ QxdChar Ezra
 	ki_atk: 1.5
 	super_atk: 1.5
 	super_ki: 1.5
-	atk_damage: -1.0
-	ki_damage: -1.0
-	super_atk_damage: -1.0
-	super_ki_damage: -1.0
+	atk_damage: -10.0
+	ki_damage: -10.0
+	super_atk_damage: -10.0
+	super_ki_damage: -10.0
 	guard_atk: -1.0
-	guard_damage: -1.0
+	guard_damage: -10.0
 	move_speed: -1.0
 	boost_speed: -1.0
 	f84: -1.0
@@ -404,7 +404,7 @@ QxdChar RayOc
 
 	i12: 0
 	level: 150
-	health: 2200.0
+	health: 2900.0
 	f24: -1.0
 	ki: -1.0
 	stamina: -1.0
@@ -412,16 +412,16 @@ QxdChar RayOc
 	ki_atk: 1.6
 	super_atk: 1.6
 	super_ki: 1.6
-	atk_damage: -1.0
-	ki_damage: -1.0
-	super_atk_damage: -1.0
-	super_ki_damage: -1.0
-	guard_atk: -1.0
-	guard_damage: -1.0
+	atk_damage: -10.0
+	ki_damage: -10.0
+	super_atk_damage: -10.0
+	super_ki_damage: -10.0
+	guard_atk: -10.0
+	guard_damage: -10.0
 	move_speed: -1.0
 	boost_speed: -1.0
 	f84: -1.0
-	ait_table_entry: 144
+	ait_table_entry: 256
 
 	super1: RaySpiritSwordRush
 	super2: RayGranRayCero
@@ -547,7 +547,7 @@ QxdChar ZeMorro
 	special_effect: -1
 
 	i12: 0
-	level: 150
+	level: 180
 	health: 2600.0
 	f24: -1.0
 	ki: -1.0
@@ -556,16 +556,16 @@ QxdChar ZeMorro
 	ki_atk: 1.7
 	super_atk: 1.7
 	super_ki: 1.7
-	atk_damage: -1.0
-	ki_damage: -1.0
-	super_atk_damage: -1.0
-	super_ki_damage: -1.0
+	atk_damage: -11.0
+	ki_damage: -11.0
+	super_atk_damage: -11.0
+	super_ki_damage: -11.0
 	guard_atk: -1.0
-	guard_damage: -1.0
+	guard_damage: -11.0
 	move_speed: -1.0
 	boost_speed: -1.0
 	f84: -1.0
-	ait_table_entry: 144
+	ait_table_entry: 254
 
 	super1: ZemOpMeteorCrash
 	super2: ZemBloodyBigBang
