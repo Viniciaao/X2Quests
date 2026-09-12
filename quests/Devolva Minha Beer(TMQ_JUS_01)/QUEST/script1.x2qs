@@ -1,0 +1,90 @@
+; ===========================================================================
+;  TMQ_JUS_01 - script vigia
+;
+;  Roda em paralelo com o script.x2qs e so observa o campo de batalha:
+;
+;    FlagFast        fecha a janela do bonus aos 600s (10 minutos)
+;    FlagJuseMorreu  o Juse ALIADO caiu -> o script.x2qs leva pro State 8 (falha)
+;    FlagJuseTaunts  ...e o Dimitztri ainda estava vivo, entao ele provoca antes
+;                    da tela de resultados
+;
+;  As flags sao compartilhadas com o script.x2qs (declaradas la).
+;
+;  A ordem dos events importa: eles sao avaliados em ordem de declaracao, entao
+;  o caso "Dimitztri vivo" vem ANTES do caso generico do stage 3.
+; ===========================================================================
+
+Script
+{
+	State 0
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		Event 0
+		{
+			Condition Always
+
+			Action GotoState(1)
+		}
+	}
+
+	State 1
+	{
+		Event -1
+		{
+			Condition Never
+		}
+
+		; --- passou dos 10 minutos: adeus bonus -------------------------------
+		Event 0
+		{
+			Condition TimePassed(>=, 600.0) ; 10 minutos
+
+			Action SetFlag(FlagFast, false)
+		}
+
+		; --- o Juse caiu no stage 3 COM o Dimitztri de pe ---------------------
+		; (tem que vir antes do Event 4, que e o caso generico do mesmo stage)
+		Event 1
+		{
+			Condition Ko(JuseAllyS3, false, -1); Juse (aliado, stage 3)
+			Condition IsAlive(DimitztriEnemy); Dimitztri ainda vivo
+			Condition CheckFlag(FlagJuseSaiu, false) ; ainda e o aliado, nao o chefe do bonus
+			Condition CheckFlag(FlagJuseMorreu, false)
+
+			Action SetFlag(FlagJuseTaunts, true)
+			Action SetFlag(FlagJuseMorreu, true)
+		}
+
+		; --- o Juse caiu no stage 1 -------------------------------------------
+		Event 2
+		{
+			Condition Ko(JuseAllyS1, false, -1); Juse (aliado, stage 1)
+			Condition CheckFlag(FlagJuseMorreu, false)
+
+			Action SetFlag(FlagJuseMorreu, true)
+		}
+
+		; --- o Juse caiu no stage 2 -------------------------------------------
+		Event 3
+		{
+			Condition Ko(JuseAllyS2, false, -1); Juse (aliado, stage 2)
+			Condition CheckFlag(FlagJuseMorreu, false)
+
+			Action SetFlag(FlagJuseMorreu, true)
+		}
+
+		; --- o Juse caiu no stage 3 sem o Dimitztri vivo ----------------------
+		Event 4
+		{
+			Condition Ko(JuseAllyS3, false, -1); Juse (aliado, stage 3)
+			Condition CheckFlag(FlagJuseSaiu, false)
+			Condition CheckFlag(FlagJuseMorreu, false)
+
+			Action SetFlag(FlagJuseMorreu, true)
+		}
+	}
+}
