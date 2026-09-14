@@ -1,0 +1,25 @@
+Script
+{
+	State 0
+	{
+		Event 0
+		{
+			Condition Always
+
+			Action DontRemoveOnKo(SuperBaby2Enemy); Super Baby 2 - Trajes do Super Baby 2
+			Action DontRemoveOnKo(FreezaFormaN1Enemy); Freeza (Forma Nº1) - Traje de Batalha 1
+			Action HealthCap(true, GokuEnemy, 45.0); Goku - Gi 1 da Tartaruga Eremita
+			Action HealthCap(true, BrolyContidoAlly, 1.0); Broly (Contido) - Gi
+			Action HealthCap(true, BrolyAlly, 1.0); Broly - Gi 1
+			Action HealthCap(true, BabyMacacoGiganteEnemy, 1.0); Baby (Macaco Gigante) - 0
+		}
+
+		Event 1
+		{
+			Condition DialogueFinish(Dialogue6); C-Curse you, Saiyan...! [MORE DIALOGUE PARTS]
+
+			Action HealthCap(false, BabyMacacoGiganteEnemy, 1.0); Baby (Macaco Gigante) - 0
+		}
+	}
+}
+

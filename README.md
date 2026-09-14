@@ -50,6 +50,14 @@ O build roda o linter antes e se recusa a empacotar com erro (`--force` ignora).
 Requer [Eternity Tools / XV2 Mods Installer](https://videogamemods.com/xenoverse/mods/eternity-tools-1031725)
 e o jogo já preparado com o xv2patcher.
 
+## Missões prontas
+
+| ID | Nome | Palco(s) | Ideia |
+| --- | --- | --- | --- |
+| `TMQ_URA_01` | Não coma o urânio! | `BFrrg` | [docs/IDEIA_MISSAO.md](docs/IDEIA_MISSAO.md) |
+| `TMQ_JUN_01` | 1 bilhão de Junins | `BFtol` | [docs/IDEIA_1BILHAO_DE_JUNINS.md](docs/IDEIA_1BILHAO_DE_JUNINS.md) |
+| `TMQ_JUS_01` | Devolva minha beer! | `BFkoh` → `BFsky` → `BFspe` | [docs/IDEIA_DEVOLVA_MINHA_BEER.md](docs/IDEIA_DEVOLVA_MINHA_BEER.md) |
+
 ## Criando a sua própria missão
 
 1. Copie `quests/TMQ_URA_01` para `quests/TMQ_SEU_ID` e troque o id do objeto

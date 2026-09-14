@@ -1,0 +1,13 @@
+Script
+{
+	State 0
+	{
+		Event 0
+		{
+			Condition EventDone(0, 6, 0)
+
+			Action SetFlag(Flag62, true)
+		}
+	}
+}
+

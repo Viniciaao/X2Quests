@@ -1,0 +1,961 @@
+Dialogue Dialogue0
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_00_0_EIB" ; Take over every planet and control the universe... That was my father's command.　
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_00_1_EIB" ; If you served my father, then make yourself useful.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_00_2_EIB" ; We're going.
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue1
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "SB2" ; Super Baby 2
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_01_0_SB2" ; This energy... It's Saiyan energy. You there! What do you want?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_01_1_EIB" ; We're here for your planet.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "SB2" ; Super Baby 2
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_01_2_SB2" ; You're going to steal this planet?! Ha ha ha ha! That's rich coming from a monkey like you!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "SB2" ; Super Baby 2
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_01_3_SB2" ; But enough nonsense. I will be stealing from YOU, Saiyan!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue3
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "SB2" ; Super Baby 2
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_02_0_SB2" ; Ngh... This power is unbelievable...
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "SB2" ; Super Baby 2
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_02_1_SB2" ; Bwa ha ha ha! This power will be most useful for my master plan!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_02_2_EIB" ; You said you'd steal something, didn't you?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "SB2" ; Super Baby 2
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_02_3_SB2" ; I did! And I will! That powerful body of yours is MINE!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue4
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "SB2" ; Super Baby 2
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_03_0_SB2" ; GAAAAAGH!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "SB2" ; Super Baby 2
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_03_1_SB2" ; I-I was bested... by a lowly Saiyan?!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_03_2_EIB" ; We've wasted enough time here. That fool is no longer in our way. To the next planet.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "SB2" ; Super Baby 2
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_03_3_SB2" ; This... This isn't over, you filthy Saiyan! You will know the wrath of the Tuffles!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue5
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "OBB" ; Baby (Macaco Gigante)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_04_0_OBB" ; Prepare yourself, puny monkey!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_04_1_EIB" ; You should've died when you had the chance...
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "OBB" ; Baby (Macaco Gigante)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_04_2_OBB" ; I... the Tuffles... will rule over the entire universe!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "OBB" ; Baby (Macaco Gigante)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_04_3_OBB" ; I will not fall to Saiyan scum! This ends here and now!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_04_4_EIB" ; Stubborn... You still want to fight? You should've just accepted death.
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue6
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "OBB" ; Baby (Macaco Gigante)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_05_0_OBB" ; C-Curse you, Saiyan...!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "OBB" ; Baby (Macaco Gigante)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_05_1_OBB" ; I've changed my mind! I don't want your body! I want you DEAD! I will kill you!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_05_2_EIB" ; Are you finished talking? Hurry up and show me your power.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "OBB" ; Baby (Macaco Gigante)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_05_3_OBB" ; Y-You… you mock me?!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue7
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "OBB" ; Baby (Macaco Gigante)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_06_0_OBB" ; H-How?! You're not even a Super Saiyan! You filthy monkey! Damn you! Damn you!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "OBB" ; Baby (Macaco Gigante)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_06_1_OBB" ; Y-You will know the wrath of the Tuffles! Someday... Someday Saiyans will perish!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_06_2_EIB" ; I'm not interested in your wrath. Just die already...
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_06_3_EIB" ; Off to the next planet. I will make sure the assault is quick.
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue8
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_07_0_EIB" ; So that's Earth, then?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FRZ" ; Freeza (Forma Nº1)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_07_1_FRZ" ; Oh, do you have business with Earth too?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_07_2_EIB" ; That is none of your business.
+		i8: 0
+		special_case_osq_0301: true
+	}
+
+	DialoguePart
+	{
+		actor: "FRZ" ; Freeza (Forma Nº1)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_07_3_FRZ" ; None of my business? Very well. But I can't have you interfering. You must die.
+		i8: 0
+		special_case_osq_0301: true
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_07_4_EIB" ; What are you? Do not get in my way!
+		i8: 0
+		special_case_osq_0301: true
+	}
+
+}
+
+Dialogue _Dialogue8
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_07_2_EIB" ; That is none of your business.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FRZ" ; Freeza (Forma Nº1)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_07_3_FRZ" ; None of my business? Very well. But I can't have you interfering. You must die.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_07_4_EIB" ; What are you? Do not get in my way!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue9
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "FRZ" ; Freeza (Forma Nº1)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_08_0_FRZ" ; You... are a Saiyan, aren't you? So there are still more of you, then...
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_08_1_EIB" ; And what about it? You're going to die here, so no point in saying any more.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FRZ" ; Freeza (Forma Nº1)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_08_2_FRZ" ; Heh heh... My, you're confident. Seems the feral dog needs to be put down.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FRZ" ; Freeza (Forma Nº1)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_08_3_FRZ" ; Ready yourselves, Zarbon! Dodoria! They will learn to fear us and our power!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue10
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "FRZ" ; Freeza (Forma Nº1)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_09_0_FRZ" ; Heh heh heh... I'm starting to get angry.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FRZ" ; Freeza (Forma Nº1)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_09_1_FRZ" ; I suppose I have no choice. I'll have to kill you with my true power.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_09_2_EIB" ; Accept that you lost and that you'll be dead soon.
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue11
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "FRZ" ; Freeza (Forma Nº1)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_10_0_FRZ" ; HAAAAAA!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue12
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_11_0_FRZ" ; Heh heh heh. You're going to regret forcing my hand like this. Don't bother begging for mercy.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_11_1_EIB" ; Hmph. You transformed. And? You're going to regret that it's still not enough.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_11_2_FRZ" ; You're awfully arrogant for a lowly Saiyan. I will see to it that mouth of yours never opens again.
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue13
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_12_0_FRZ" ; I will not allow a single Saiyan to survive. I will leave no trace of you behind!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_12_1_EIB" ; I'm the one who's going to kill you. A Saiyan will be the cause of your end!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue14
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "FR4" ; Freeza (Forma Final)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_13_0_FRZ" ; *gasp*... *wheeze*... H-How could a Saiyan... best... ME?!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_13_1_EIB" ; Didn't you hear me? You're going to die here.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_13_2_EIB" ; Now, off to Earth...
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue15
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "HIT" ; Hit
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_14_0_HIT" ; You're Broly, aren't you?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_14_1_EIB" ; ...
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "HIT" ; Hit
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_14_2_HIT" ; I've been hired to take you out.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_14_3_EIB" ; You're going to kill me? Hmph. You've got things backwards.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "HIT" ; Hit
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_14_4_HIT" ; Hmph. That's cute. Let's do this. I've got a job I need to complete.
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue16
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "HIT" ; Hit
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_15_0_HIT" ; You're better than I expected. So this is the legendary...
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_15_1_EIB" ; Your movements are weird! Enough of this!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "HIT" ; Hit
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_15_2_HIT" ; Hmph. You're struggling, it seems. Good. Time to turn this thing around.
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue17
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "HIT" ; Hit
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_16_0_HIT" ; Impossible... How can... this... be...?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "HIT" ; Hit
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_16_1_HIT" ; You're an impressive mark... Next time will be your last.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_16_2_EIB" ; ...Next time you'd better come for me while I'm asleep.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_16_3_EIB" ; Let's finally make Earth ours. Come...
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue18
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "GOK" ; Goku
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_17_0_GOK" ; The energy you guys have is out of this world! Wanna go a few rounds with me?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GOK" ; Goku
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_17_1_GOK" ; I was starting to get a little antsy here. How 'bout just a quick one, huh? Pleeease?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "EIB" ; Broly (Contido)
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_17_2_EIB" ; Kakarot...!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue19
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "BRL" ; Broly
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_18_0_BRL" ; KAKAROOOOT!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GOK" ; Goku
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_18_1_GOK" ; Whoa, you know my Saiyan name, huh? Guess that makes you a Saiyan too.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "BRL" ; Broly
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_18_2_BRL" ; And what if I am, Kakarot?! I'm going to bathe in your blood!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GOK" ; Goku
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_18_3_GOK" ; Wh-What's going on with your energy?! It's going wild!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "BRL" ; Broly
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_18_4_BRL" ; This is no time to be impressed! Come at me with all you've got, Kakarot!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue20
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "GOK" ; Goku
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_19_0_GOK" ; Oww... You're crazy strong, you know that?! You're not like a normal Super Saiyan. What's going on?
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "BRL" ; Broly
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_19_1_BRL" ; KAKAROOOOT!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GOK" ; Goku
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_19_2_GOK" ; Would you mind not calling me that so much? It's making this kinda weird for me...
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GOK" ; Goku
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_19_3_GOK" ; Ah, forget it. I'll give you what you want: my full power!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GOK" ; Goku
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_19_4_GOK" ; Ngaagh... HAAAAAAA!
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue21
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "BRL" ; Broly
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_20_0_BRL" ; Is that all you got, Kakarot? I'll squash you like a bug.
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "GOK" ; Goku
+		costume: -1
+		transformation: 102
+
+		text_audio: "CAQ_4200_20_1_GOK" ; Heh heh. Think you can take me? This isn't gonna be as easy as you think.
+		i8: 0
+	}
+
+}
+
+Dialogue Dialogue22
+{
+	i28: 0
+
+	DialoguePart
+	{
+		actor: "GOK" ; Goku
+		costume: -1
+		transformation: -1
+
+		text_audio: "CAQ_4200_21_0_GOK" ; Urgh! What the...? He's a monster...
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "BRL" ; Broly
+		costume: -1
+		transformation: 102
+
+		text_audio: "CAQ_4200_21_1_BRL" ; Bwa ha ha ha! Your life ends here and now, Kakarot!
+		i8: 0
+	}
+
+	DialoguePart
+	{
+		actor: "BRL" ; Broly
+		costume: -1
+		transformation: 102
+
+		text_audio: "CAQ_4200_21_2_BRL" ; I'll reduce you and your Earth to space dust! Goodbye, KAKAROT!
+		i8: 0
+	}
+
+}
+

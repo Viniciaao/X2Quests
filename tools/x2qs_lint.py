@@ -123,7 +123,11 @@ class Linter:
         self.allow_existing_id = allow_existing_id
         self.errors: list[str] = []
         self.warns: list[str] = []
-        self.declared: dict[str, str] = {}   # nome -> tipo de objeto
+        self.declared: dict[str, str] = {}   # nome MINUSCULO -> tipo de objeto
+        # O compilador X2QS NAO diferencia maiuscula/minuscula nos identificadores:
+        # "QxdChar Ray" colide com "X2mMod RAY" ("Ray" had already been defined).
+        # Por isso a tabela e indexada em minusculo e self.names guarda a grafia.
+        self.names: dict[str, str] = {}      # nome minusculo -> grafia original
         self.texts: dict[str, set[str]] = {}  # TextEntry/TextAudioEntry -> idiomas
         self.qml: dict[str, dict] = {}
         self.quest: dict[str, str] = {}
@@ -217,9 +221,14 @@ class Linter:
             if typ == "Flag":
                 # "Flag Flag0" nao tem corpo; tratado abaixo
                 continue
-            if name in self.declared:
-                self.err(f"{fname}:{line}: identificador duplicado '{name}'")
-            self.declared[name] = typ
+            if name.lower() in self.declared:
+                self.err(
+                    f"{fname}:{line}: identificador duplicado '{name}' "
+                    f"(o compilador ignora maiuscula/minuscula; ja existe "
+                    f"'{self.names[name.lower()]}' como {self.declared[name.lower()]})"
+                )
+            self.declared[name.lower()] = typ
+            self.names[name.lower()] = name
 
             if typ == "Quest":
                 self.quest_name = name
@@ -255,11 +264,13 @@ class Linter:
 
         # Flags: "Flag FlagN"
         for m in re.finditer(rf"^Flag\s+({IDENT})\s*$", text, re.M):
-            if m.group(1) in self.declared:
+            if m.group(1).lower() in self.declared:
                 self.err(f"{fname}: Flag duplicada '{m.group(1)}'")
-            self.declared[m.group(1)] = "Flag"
+            self.declared[m.group(1).lower()] = "Flag"
+            self.names.setdefault(m.group(1).lower(), m.group(1))
         for m in re.finditer(rf"^StringVar\s+({IDENT})\s*$", text, re.M):
-            self.declared.setdefault(m.group(1), "StringVar")
+            self.declared.setdefault(m.group(1).lower(), "StringVar")
+            self.names.setdefault(m.group(1).lower(), m.group(1))
 
     # ------------------------------------------------------------------ #
     def _check_quest(self, body: str, fname: str, line: int) -> None:
@@ -274,7 +285,7 @@ class Linter:
             val = m.group(1)
             if val.startswith('"'):
                 self.warn(f"{fname}:{line}: Quest.{key} usa id vanilla {val} em vez de TextEntry propria")
-            elif val not in self.declared:
+            elif val.lower() not in self.declared:
                 self.err(f"{fname}:{line}: Quest.{key} aponta para '{val}', que nao foi declarado")
         m = re.search(r'^\s*start_stage\s*:\s*"([^"]+)"', body, re.M)
         if m:
@@ -291,7 +302,7 @@ class Linter:
             it = re.search(r"item:\s*(\S+)", blk)
             if it and it.group(1).lstrip("-").isdigit():
                 pass  # id numerico de item
-            elif it and it.group(1) not in self.declared:
+            elif it and it.group(1).lower() not in self.declared:
                 self.err(f"{fname}:{line}: ItemReward referencia ItemCollection '{it.group(1)}' inexistente")
             for t in re.findall(r"type:\s*([A-Z0-9]+)", blk):
                 if t not in self.ref["reward_types"] and t not in ("COLLECTION",):
@@ -322,7 +333,7 @@ class Linter:
     def _check_char(self, code: str, fname: str, line: int) -> None:
         if code.lstrip("-").isdigit():
             return  # vanilla aceita id numerico de personagem em rewards/portraits
-        if self.declared.get(code) == "X2mMod":
+        if self.declared.get(code.lower()) == "X2mMod":
             return  # personagem vindo de um mod .x2m (char: NomeDoX2mMod)
         if code not in self.ref["char_codes"]:
             self.err(f"{fname}:{line}: codigo de personagem desconhecido '{code}'")
@@ -330,7 +341,7 @@ class Linter:
     def _check_skill(self, sid: str, fname: str, line: int) -> None:
         # a lista de skills vem dos comentarios dos quests vanilla, entao ela e
         # incompleta: id fora da lista e aviso, nao erro.
-        if self.declared.get(sid) == "X2mMod":
+        if self.declared.get(sid.lower()) == "X2mMod":
             return  # skill customizada de um mod .x2m
         if sid not in self.ref["skill_ids"]:
             self.warn(f"{fname}:{line}: id de skill '{sid}' nao aparece em nenhuma quest vanilla")
@@ -393,7 +404,7 @@ class Linter:
             val = ta.group(1)
             if val.startswith('"'):
                 self.warn(f"{fname}:{line}: text_audio usa id vanilla {val} (nao ha .msg customizado)")
-            elif val not in self.declared:
+            elif val.lower() not in self.declared:
                 self.err(f"{fname}:{line}: text_audio '{val}' nao foi declarado")
             actor = re.search(r'actor:\s*"([^"]+)"', p)
             if actor:
@@ -488,7 +499,7 @@ class Linter:
             return
         if not re.fullmatch(IDENT, a):
             return
-        got = self.declared.get(a)
+        got = self.declared.get(a.lower())
         if got is None:
             self.err(f"{fname}:{line}: {fn}() referencia '{a}', que nao foi declarado")
         elif got != role:
@@ -500,7 +511,7 @@ class Linter:
             return
         if a in LITERAL_WORDS or a in self.ref["constants"] or a in OPERATORS:
             return
-        if a not in self.declared:
+        if a.lower() not in self.declared:
             self.err(f"{fname}:{line}: identificador '{a}' nao declarado em lugar nenhum")
 
     # ------------------------------------------------------------------ #
@@ -542,8 +553,8 @@ class Linter:
         for p in self.positions:
             pass
         for name, typ in self.declared.items():
-            if typ == "Dialogue" and name not in used:
-                self.warn(f"Dialogue {name} nunca e tocada pelo script")
+            if typ == "Dialogue" and self.names.get(name, name) not in used:
+                self.warn(f"Dialogue {self.names.get(name, name)} nunca e tocada pelo script")
 
     # ------------------------------------------------------------------ #
     def run(self) -> int:
